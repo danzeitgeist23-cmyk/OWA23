@@ -1,0 +1,92 @@
+version: '3.8'
+
+# Production docker-compose - uses pre-built images from GHCR
+# Deploy with: docker compose -f docker-compose.prod.yml up -d
+
+services:
+  mongodb:
+    image: mongo:7.0
+    container_name: owa-mongodb
+    restart: unless-stopped
+    environment:
+      MONGO_INITDB_DATABASE: ${DB_NAME:-owa_db}
+    volumes:
+      - mongodb_data:/data/db
+      - mongodb_config:/data/configdb
+    networks:
+      - owa-internal
+    healthcheck:
+      test: echo 'db.runCommand("ping").ok' | mongosh localhost:27017/test --quiet
+      interval: 30s
+      timeout: 10s
+      retries: 5
+      start_period: 20s
+
+  backend:
+    image: ghcr.io/danzeitgeist23-cmyk/owa23/backend:latest
+    container_name: owa-backend
+    restart: unless-stopped
+    environment:
+      - MONGO_URL=mongodb://mongodb:27017
+      - DB_NAME=${DB_NAME:-owa_db}
+      - CORS_ORIGINS=${CORS_ORIGINS:-https://owawild.com,https://www.owawild.com}
+      - PYTHONUNBUFFERED=1
+    env_file:
+      - .env.production
+    networks:
+      - owa-internal
+      - owa-external
+    depends_on:
+      mongodb:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "python", "-c", "import requests; requests.get('http://localhost:8000/api/', timeout=2)"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 15s
+
+  frontend:
+    image: ghcr.io/danzeitgeist23-cmyk/owa23/frontend:latest
+    container_name: owa-frontend
+    restart: unless-stopped
+    networks:
+      - owa-external
+
+  nginx:
+    image: nginx:alpine
+    container_name: owa-nginx
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./nginx/conf.d:/etc/nginx/conf.d:ro
+      - ./nginx/ssl:/etc/letsencrypt:ro
+      - nginx_cache:/var/cache/nginx
+    networks:
+      - owa-external
+    depends_on:
+      - frontend
+      - backend
+    healthcheck:
+      test: ["CMD", "nginx", "-t"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+
+volumes:
+  mongodb_data:
+    driver: local
+  mongodb_config:
+    driver: local
+  nginx_cache:
+    driver: local
+
+networks:
+  owa-internal:
+    driver: bridge
+    internal: true
+  owa-external:
+    driver: bridge

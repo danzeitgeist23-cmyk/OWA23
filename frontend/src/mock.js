@@ -406,6 +406,207 @@ export const blogPosts = [
     excerpt: 'Canarias es santuario de cetáceos. Aprende a reconocerlos y descubre cuándo y dónde avistarlos con más probabilidad.',
     image: 'https://images.unsplash.com/photo-1437622368342-7a3d73a34c8f?auto=format&fit=crop&w=900&q=80',
     date: '01 Jul 2025',
+    readTime: '8 min',
+    author: 'Equipo OWA',
+    tags: ['ballenas', 'cetáceos', 'avistamiento', 'Gran Canaria', 'Tenerife', 'naturaleza'],
+    content: `Canarias es uno de los mejores lugares del mundo para el avistamiento de cetáceos. Sus aguas profundas, cercanas a la costa y ricas en nutrientes, convierten al archipiélago en un auténtico santuario natural donde viven o pasan más de **30 especies de cetáceos** durante todo el año. En esta guía te contamos las 5 especies de ballenas más emblemáticas que puedes encontrar, cómo identificarlas y los mejores consejos para que tu experiencia sea inolvidable.
+
+---
+
+## 1. Calderón tropical (Globicephala macrorhynchus) — El residente fiel
+
+El **calderón tropical** (o *pilot whale*) es la estrella indiscutible de las aguas canarias. Es la **especie más avistada** con diferencia: se estima que hay una población residente de unos **400-500 individuos** solo en el suroeste de Tenerife y sur de Gran Canaria, lo que garantiza avistamientos durante todo el año con tasas de éxito superiores al 95 %.
+
+### Cómo reconocerlo
+- **Talla:** 4-6 metros (machos hasta 7 m)
+- **Color:** Negro intenso o gris muy oscuro
+- **Cabeza:** Redondeada, bulbosa, sin pico marcado (de ahí su nombre)
+- **Aleta dorsal:** Ancha, redondeada y situada muy atrás, con base muy ancha
+- **Comportamiento:** Nadadores lentos, a menudo en reposo en superficie (*logging*); grupos de 10-30 individuos, muy cohesionados
+
+### Dónde y cuándo verlo
+- **Zona top:** Canal entre Tenerife y La Gomera, suroeste de Gran Canaria (Puerto Rico, Mogán)
+- **Época:** **Todo el año** — es sedentario, no migra
+- **Mejor hora:** Mañana temprano (mar más llano) o última hora de la tarde
+
+> **Dato curioso:** Los calderones tropicales son de la familia de los delfines (Delphinidae), no de las ballenas verdaderas. Son extremadamente sociales y tienen dialectos propios por grupo familiar.
+
+---
+
+## 2. Rorcual común (Balaenoptera physalus) — El gigante del Atlántico
+
+El **rorcual común** es el **segundo animal más grande del planeta** (solo superado por la ballena azul). En Canarias no es residente, pero **pasa regularmente** en sus rutas migratorias entre zonas de alimentación en el norte y zonas de cría en el sur.
+
+### Cómo reconocerlo
+- **Talla:** 18-24 metros (hembras mayores que machos)
+- **Color:** Gris pizarra dorsalmente, blanco ventralmente
+- **Cabeza:** En forma de V, asimétrica (mandíbula izquierda gris, derecha blanca)
+- **Soplido:** Alto, columnar, 4-6 metros, visible a gran distancia
+- **Aleta dorsal:** Pequeña, falcada, situada muy atrás (último tercio)
+- **Comportamiento:** Nada rápido, secuencia de 5-8 soplidos seguida de inmersión profunda (5-15 min); rara vez muestra la cola al sumergirse
+
+### Dónde y cuándo verlo
+- **Zona top:** Aguas profundas al norte de Gran Canaria, oeste de Fuerteventura, canal entre islas orientales
+- **Época:** **Invierno-primavera** (dic-jun) — paso migratorio hacia el norte
+- **Mejor hora:** Cualquier hora con buena visibilidad; requiere mar tranquilo (Beaufort ≤ 2)
+
+> **Conservación:** Catalogado como **Vulnerable** (UICN). Canarias es zona de paso crítica; el tráfico marítimo y el ruido submarino son sus mayores amenazas aquí.
+
+---
+
+## 3. Cachalote (Physeter macrocephalus) — El rey de lo profundo
+
+El **cachalote** es el mayor depredador dentado del mundo y el **cetáceo que más profundo bucea** (hasta 2.000-3.000 m). En Canarias existe una población **residente y semi-residente**, especialmente en el suroeste de Gran Canaria y aguas entre Tenerife y La Gomera.
+
+### Cómo reconocerlo
+- **Talla:** 11-18 m (machos mucho mayores que hembras)
+- **Color:** Gris oscuro a marrón, con piel arrugada característica
+- **Cabeza:** **Enorme** (1/3 del cuerpo), cuadrada, con el espiráculo desplazado a la izquierda
+- **Soplido:** Bajo, inclinado 45° hacia la izquierda, muy característico
+- **Aleta dorsal:** Joroba baja y redondeada + serie de «nudillos» dorsales tras ella
+- **Cola:** Ancha, triangular, **se muestra siempre al iniciar inmersión profunda**
+- **Comportamiento:** Inmersiones de 30-60 min; en superficie 8-12 min respirando; a menudo en grupos de hembras con crías
+
+### Dónde y cuándo verlo
+- **Zona top:** Sureste de Gran Canaria (Taliarte, Pasito Blanco), suroeste Tenerife
+- **Época:** **Todo el año** — población residente
+- **Mejor hora:** Mediodía-primeras horas de la tarde (bucean más cuando hay más luz para sus presas)
+
+> **Dato fascinante:** Su cerebro es el más grande del reino animal (hasta 8 kg). Usan *clicks* de alta intensidad (230 dB) para «ver» con sonar en la oscuridad total de las profundidades.
+
+---
+
+## 4. Ballena de Bryde (Balaenoptera edeni) — La gran desconocida
+
+La **ballena de Bryde** (pronunciada *bruu-da*) es un rorcual mediano de aguas templado-cálidas. En Canarias es **residente todo el año**, pero su comportamiento esquivo y su parecido con el rorcual común la hacen pasar desapercibida con frecuencia.
+
+### Cómo reconocerlo
+- **Talla:** 12-16 metros
+- **Color:** Gris oscuro dorsalmente, garganta con pliegues ventrales prominentes
+- **Cabeza:** **Tres crestas longitudinales** en el rostro (única ballena con 3 crestas)
+- **Soplido:** 3-4 metros, denso y columnar
+- **Aleta dorsal:** Falcada, erguida, situada en el último tercio — más alta y curvada que en rorcual común
+- **Comportamiento:** Nada errático, cambios bruscos de dirección; a menudo alimenta en superficie (lunge feeding); **muestra la cabeza al salir a respirar**
+
+### Dónde y cuándo verlo
+- **Zona top:** Aguas entre Gran Canaria y Fuerteventura, sur de Lanzarote
+- **Época:** **Todo el año** — población residente canaria
+- **Mejor hora:** Mañana con mar llano; busca concentraciones de peces (boquerones, sardinas) y aves marinas
+
+> **Clave de identificación:** Si ves un rorcual mediano que **muestra la cabeza al respirar**, tiene **3 crestas en el hocico** y una aleta dorsal **más alta y curvada**, es Bryde. El rorcual común solo tiene 1 cresta y aleta más pequeña.
+
+---
+
+## 5. Zifio de Cuvier (Ziphius cavirostris) — El fantasma de las profundidades
+
+El **zifio de Cuvier** ostenta el récord mundial de inmersión: **2.992 metros de profundidad** y **222 minutos** sin respirar. Es el cetáceo más esquivo de Canarias, pero el archipiélago alberga una de las **poblaciones mejor estudiadas del mundo** (especialmente en El Hierro y sur de Tenerife).
+
+### Cómo reconocerlo
+- **Talla:** 5-7 metros
+- **Color:** Variable: gris pizarra, marrón, blanquecino; machos muy cicatrizados (blancos) por luchas y depredadores
+- **Cabeza:** **Pico corto** (tipo «pico de ganso»), frente abombada, **dos dientes en la mandíbula inferior** (solo machos, visibles al saltar)
+- **Soplido:** Bajo, difuso, difícil de ver
+- **Aleta dorsal:** Pequeña, triangular, muy retrasada
+- **Comportamiento:** **Extremadamente esquivo**; evita barcos; inmersiones profundas de 40-60 min; en superficie solo 2-3 min; a menudo solo o en grupos de 2-3
+
+### Dónde y cuándo verlo
+- **Zona top:** Aguas profundas (>1.000 m) al sur de El Hierro, suroeste Tenerife, sur de La Palma
+- **Época:** **Todo el año** — residente
+- **Mejor hora:** Requiere **mar absolutamente llano (Beaufort 0-1)** y mucha paciencia; salida en zodiac o barco pequeño
+
+> **Nota realista:** Ver un zifio en Canarias es un **privilegio raro**. La mayoría de avistamientos son fortuitos durante travesías a actividades de buceo profundo o en barcos de investigación. Si lo ves, has tenido suerte de las que se cuentan.
+
+---
+
+## Tabla resumen: 5 ballenas canarias a golpe de vista
+
+| Especie | Talla | Residente | Mejor época | Dificultad | Zona estrella |
+|---------|-------|-----------|-------------|------------|---------------|
+| Calderón tropical | 4-7 m | ✅ Sí | **Todo el año** | ⭐ Fácil | SW Tenerife / S Gran Canaria |
+| Rorcual común | 18-24 m | ❌ Migratorio | Dic-Jun | ⭐⭐ Media | Norte Gran Canaria |
+| Cachalote | 11-18 m | ✅ Sí | **Todo el año** | ⭐⭐ Media | SE Gran Canaria |
+| Ballena de Bryde | 12-16 m | ✅ Sí | **Todo el año** | ⭐⭐⭐ Difícil | Entre GC y Fuerteventura |
+| Zifio de Cuvier | 5-7 m | ✅ Sí | **Todo el año** | ⭐⭐⭐⭐⭐ Muy difícil | El Hierro / SW Tenerife |
+
+---
+
+## Consejos prácticos para tu avistamiento
+
+### 1. Elige la excursión adecuada
+- **Barco pequeño / zodiac (8-12 pax):** Mejor maniobrabilidad, menos ruido, más respeto, más cerca del agua
+- **Guía biólogo marino a bordo:** Identifica especies, explica comportamiento, garantiza código de conducta
+- **Hidrófono a bordo:** Escucha *clicks* de cachalotes y calderones en tiempo real — experiencia única
+- **Código de conducta ACCOBAMS:** Barco que se acerca a < 60 m, no persigue, no separa grupos, motor en neutro cerca de animales
+
+### 2. Qué llevar
+- Prismáticos 7x50 o 8x42 (imprescindibles para rorcuales y zifios)
+- Cámara con teleobjetivo (200-400 mm) o móvil con zoom óptico
+- Protección solar, gorra, chaqueta cortaviento (en mar refresca)
+- Medicación mareo **30 min antes** si eres propenso
+
+### 3. Cuándo reservar
+- **Calderones y cachalotes:** Cualquier día del año, pero reserva con 2-3 días de antelación en verano
+- **Rorcual común:** Enero-junio, mira partes meteorológicos (mar llano imprescindible)
+- **Bryde y zifio:** Oportunidad + condiciones perfectas; no se garantizan
+
+### 4. Normativa y ética
+- **Real Decreto 1727/2007** y **ACCOBAMS**: Prohibido molestar, perseguir, alimentar, nadar con cetáceos
+- Distancia mínima: **60 m** (300 m si hay crías)
+- Tiempo máx. observación: **30 min** por grupo
+- Denuncia infracciones: 112 / Guardia Civil (SEPRONA)
+
+---
+
+## ¿Por qué Canarias es único para ballenas?
+
+1. **Profundidad inmediata:** A 2-3 km de la costa ya hay 1.000-3.000 m de fondo → especies oceánicas cerca de puerto
+2. **Afloramiento (upwelling) permanente:** Corrientes frías ricas en nutrientes → productividad alta → alimento abundante
+3. **Clima estable:** 300+ días de sol al año, vientos alisios moderados → operatividad casi continua
+4. **Diversidad sin igual:** 30+ especies cetáceas (residentes, estacionales, ocasionales) en 500 km de costa
+5. **Investigación pionera:** Universidad de La Laguna, SECAC, Gesellschaft für Meeressäugetiere — décadas de datos
+
+---
+
+## Vive la experiencia con OWA
+
+En **OWA Wild Adventure** salimos desde **Puerto Rico (Gran Canaria)** y **Costa Adeje (Tenerife)** con:
+
+- ✅ Barcos de 10-12 plazas (respeto total, sin masificación)
+- ✅ Guía biólogo marino certificado en cada salida
+- ✅ Hidrófono profesional para escuchar el océano
+- ✅ **98 % éxito en calderones** + avistamientos frecuentes de cachalotes, delfines mulares, manchados y tortugas
+- ✅ Baño en cala secreta incluido (actividad *Ocean Giants Cruise*)
+- ✅ Fotos de la experiencia regaladas
+- ✅ Código de conducta ACCOBAMS estricto
+
+> **¿Listo para conocer a los gigantes del Atlántico?**
+> 
+> 👉 [Reserva tu Ocean Giants Cruise](/actividad/ocean-giants-cruise) — 4 horas, desde 40 €
+> 
+> *¿Preguntas? [Escríbenos](/contacto) y te asesoramos sin compromiso.*
+
+---
+
+## Preguntas frecuentes (FAQ)
+
+### ¿Qué ballena se ve seguro al 100 %?
+**Ninguna es 100 % garantizada** (son animales salvajes), pero el **calderón tropical** roza el 98-99 % de éxito en salidas específicas desde SW Tenerife y S Gran Canaria.
+
+### ¿Puedo ver ballenas azules en Canarias?
+**Muy raro**. Hay registros esporádicos (últimos confirmados: 2017, 2021) en aguas profundas del norte. No es objetivo realista de una excursión comercial.
+
+### ¿Es mejor mañana o tarde?
+**Mañana temprano** (primer turno 9-10 h): mar más llano, mejor luz para fotos, animales más activos en superficie. Tarde: buena luz dorada, pero más viento alisio.
+
+### ¿Qué pasa si no vemos nada?
+En OWA, si no hay avistamiento de calderones en *Ocean Giants Cruise*, **te invitamos a repetir gratis** en la próxima salida disponible (sujeto a disponibilidad).
+
+### ¿Afecta el mareo a la experiencia?
+Sí. Barco pequeño = más movimiento. Toma biodramina/cafeína 30 min antes, mira al horizonte, estate en cubierta central. Si te mareas fuerte, avisa a la tripulación: tienen protocolos.
+
+---
+
+*Artículo escrito por el equipo de biólogos y guías de **OWA Wild Adventure**. Última actualización: julio 2025. Las tasas de avistamiento y zonas pueden variar según temporada y condiciones oceanográficas.`
   },
   {
     id: 'family-canarias',

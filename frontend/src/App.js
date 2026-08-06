@@ -8,6 +8,7 @@ import Activities from './pages/Activities';
 import ActivityDetail from './pages/ActivityDetail';
 import Destinations from './pages/Destinations';
 import Blog from './pages/Blog';
+import BlogDetail from './pages/BlogDetail';
 import About from './pages/About';
 import Contact from './pages/Contact';
 import { Toaster } from './components/ui/toaster';
@@ -33,6 +34,7 @@ function App() {
             <Route path="/actividad/:id" element={<ActivityDetail />} />
             <Route path="/destinos" element={<Destinations />} />
             <Route path="/blog" element={<Blog />} />
+            <Route path="/blog/:id" element={<BlogDetail />} />
             <Route path="/nosotros" element={<About />} />
             <Route path="/contacto" element={<Contact />} />
           </Routes>

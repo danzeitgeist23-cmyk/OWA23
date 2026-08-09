@@ -4,13 +4,13 @@ import { Waves, Instagram, Facebook, Youtube, Twitter, MapPin, Phone, Mail } fro
 
 export default function Footer() {
   return (
-    <footer className="bg-[#0a1929] text-white pt-20 pb-8">
+    <footer className="bg-[#0b1c26] text-white pt-20 pb-8">
       <div className="max-w-7xl mx-auto px-5 md:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-12">
           {/* Brand */}
           <div>
             <Link to="/" className="flex items-center gap-2 mb-5">
-              <div className="w-10 h-10 rounded-full bg-[#0b7285] flex items-center justify-center">
+              <div className="w-10 h-10 rounded-full bg-[#1fa5a3] flex items-center justify-center">
                 <Waves className="w-5 h-5 text-white" strokeWidth={2.5} />
               </div>
               <span className="font-extrabold text-2xl tracking-tight">OWA</span>
@@ -20,7 +20,7 @@ export default function Footer() {
             </p>
             <div className="flex items-center gap-3">
               {[Instagram, Facebook, Youtube, Twitter].map((Icon, i) => (
-                <a key={i} href="#" className="w-10 h-10 rounded-full border border-white/15 flex items-center justify-center hover:bg-[#0b7285] hover:border-[#0b7285] transition-all">
+                <a key={i} href="#" className="w-10 h-10 rounded-full border border-white/15 flex items-center justify-center hover:bg-[#1fa5a3] hover:border-[#1fa5a3] transition-all">
                   <Icon className="w-4 h-4" />
                 </a>
               ))}
@@ -29,7 +29,7 @@ export default function Footer() {
 
           {/* Company */}
           <div>
-            <h4 className="text-lg font-semibold mb-5" style={{ fontFamily: 'Manrope' }}>Compañía</h4>
+            <h4 className="text-lg font-semibold mb-5">Compañía</h4>
             <ul className="space-y-3 text-white/70 text-[15px]">
               <li><Link to="/nosotros" className="hover:text-white">Sobre nosotros</Link></li>
               <li><Link to="/blog" className="hover:text-white">Blog</Link></li>
@@ -41,7 +41,7 @@ export default function Footer() {
 
           {/* Support */}
           <div>
-            <h4 className="text-lg font-semibold mb-5" style={{ fontFamily: 'Manrope' }}>Ayuda</h4>
+            <h4 className="text-lg font-semibold mb-5">Ayuda</h4>
             <ul className="space-y-3 text-white/70 text-[15px]">
               <li><Link to="/contacto" className="hover:text-white">Centro de ayuda</Link></li>
               <li><Link to="/contacto" className="hover:text-white">Política de cancelación</Link></li>
@@ -53,18 +53,18 @@ export default function Footer() {
 
           {/* Contact */}
           <div>
-            <h4 className="text-lg font-semibold mb-5" style={{ fontFamily: 'Manrope' }}>Contacto</h4>
+            <h4 className="text-lg font-semibold mb-5">Contacto</h4>
             <ul className="space-y-4 text-white/70 text-[15px]">
               <li className="flex gap-3">
-                <MapPin className="w-4 h-4 text-[#f4623a] mt-1 flex-shrink-0" />
+                <MapPin className="w-4 h-4 text-[#c8a25a] mt-1 flex-shrink-0" />
                 <span>Avda. Marítima 24<br />Las Palmas de Gran Canaria, Islas Canarias</span>
               </li>
               <li className="flex gap-3">
-                <Phone className="w-4 h-4 text-[#f4623a] mt-1 flex-shrink-0" />
+                <Phone className="w-4 h-4 text-[#c8a25a] mt-1 flex-shrink-0" />
                 <span>+34 928 123 456</span>
               </li>
               <li className="flex gap-3">
-                <Mail className="w-4 h-4 text-[#f4623a] mt-1 flex-shrink-0" />
+                <Mail className="w-4 h-4 text-[#c8a25a] mt-1 flex-shrink-0" />
                 <span>hola@owawild.com</span>
               </li>
             </ul>

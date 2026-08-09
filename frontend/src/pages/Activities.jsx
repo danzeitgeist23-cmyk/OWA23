@@ -5,9 +5,11 @@ import { Checkbox } from '../components/ui/checkbox';
 import { activities, destinations, categories } from '../mock';
 import ActivityCard from '../components/ActivityCard';
 import { Filter, LayoutGrid, List, MapPin, Search } from 'lucide-react';
+import { useCurrency } from '../context/CurrencyContext';
 
 export default function Activities() {
   const [params] = useSearchParams();
+  const { currency, format: formatPrice } = useCurrency();
   const [q, setQ] = useState('');
   const [selectedDestinations, setSelectedDestinations] = useState([]);
   const [selectedCategories, setSelectedCategories] = useState([]);
@@ -39,10 +41,10 @@ export default function Activities() {
       {/* Hero */}
       <div className="relative h-[42vh] min-h-[300px] w-full flex items-center justify-center overflow-hidden">
         <img src="https://images.unsplash.com/photo-1647002408653-129115ac90e1?auto=format&fit=crop&w=2000&q=80" alt="" className="absolute inset-0 w-full h-full object-cover" />
-        <div className="absolute inset-0 bg-[#0a1929]/50" />
+        <div className="absolute inset-0 bg-[#0b1c26]/50" />
         <div className="relative text-center text-white px-5">
-          <p className="text-[#f4623a] text-sm font-semibold tracking-widest uppercase mb-3">Actividades</p>
-          <h1 className="text-4xl md:text-6xl font-bold" style={{ fontFamily: 'Playfair Display' }}>Todas las <span className="italic font-medium">aventuras</span></h1>
+          <p className="text-[#c8a25a] text-sm font-semibold tracking-widest uppercase mb-3">Actividades</p>
+          <h1 className="text-4xl md:text-6xl font-bold">Todas las <span className="italic font-medium">aventuras</span></h1>
           <p className="mt-4 text-white/80 max-w-xl mx-auto">Encuentra tu próxima experiencia entre más de 120 actividades curadas.</p>
         </div>
       </div>
@@ -60,7 +62,7 @@ export default function Activities() {
                 value={q}
                 onChange={(e) => setQ(e.target.value)}
                 placeholder="Buscar..."
-                className="w-full pl-9 pr-3 py-2.5 rounded-lg bg-white border border-gray-200 text-sm focus:outline-none focus:border-[#0b7285]"
+                className="w-full pl-9 pr-3 py-2.5 rounded-lg bg-white border border-gray-200 text-sm focus:outline-none focus:border-[#1fa5a3]"
               />
             </div>
           </div>
@@ -96,11 +98,11 @@ export default function Activities() {
           </div>
 
           <div>
-            <h4 className="font-semibold text-[#14213d] mb-4 text-sm uppercase tracking-wide">Precio (€)</h4>
+            <h4 className="font-semibold text-[#14213d] mb-4 text-sm uppercase tracking-wide">Precio ({currency})</h4>
             <Slider min={0} max={300} step={5} value={price} onValueChange={setPrice} />
             <div className="mt-3 flex justify-between text-sm text-gray-600">
-              <span>€{price[0]}</span>
-              <span>€{price[1]}</span>
+              <span>{formatPrice(price[0])}</span>
+              <span>{formatPrice(price[1])}</span>
             </div>
           </div>
         </aside>
@@ -111,7 +113,7 @@ export default function Activities() {
             <p className="text-gray-600"><span className="font-semibold text-[#14213d]">{filtered.length}</span> actividades encontradas</p>
             <div className="flex items-center gap-3">
               <label className="text-sm text-gray-500">Ordenar:</label>
-              <select value={sort} onChange={(e) => setSort(e.target.value)} className="bg-white border border-gray-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-[#0b7285]">
+              <select value={sort} onChange={(e) => setSort(e.target.value)} className="bg-white border border-gray-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-[#1fa5a3]">
                 <option value="featured">Destacados</option>
                 <option value="price-asc">Precio: menor a mayor</option>
                 <option value="price-desc">Precio: mayor a menor</option>

@@ -2,20 +2,22 @@ import React from 'react';
 import { blogPosts } from '../mock';
 import { useParams, Link } from 'react-router-dom';
 import { ArrowLeft, Calendar, Clock, User, Tag, ChevronRight } from 'lucide-react';
+import { useCurrency } from '../context/CurrencyContext';
 
 export default function BlogDetail() {
   const { id } = useParams();
+  const { formatText } = useCurrency();
   const post = blogPosts.find(p => p.id === id);
 
   if (!post) {
     return (
       <div className="pt-24 pb-20 bg-white">
         <div className="max-w-7xl mx-auto px-5 md:px-8 text-center">
-          <h1 className="text-3xl font-bold text-[#14213d]" style={{ fontFamily: 'Playfair Display' }}>
+          <h1 className="text-3xl font-bold text-[#14213d]">
             Artículo no encontrado
           </h1>
           <p className="text-gray-500 mt-4">El post que buscas no existe o ha sido eliminado.</p>
-          <Link to="/blog" className="inline-flex items-center gap-2 mt-6 text-[#f4623a] font-semibold hover:underline">
+          <Link to="/blog" className="inline-flex items-center gap-2 mt-6 text-[#c8a25a] font-semibold hover:underline">
             <ArrowLeft className="w-4 h-4" /> Volver al blog
           </Link>
         </div>
@@ -25,8 +27,8 @@ export default function BlogDetail() {
 
   const renderContent = (content) => {
     if (!content) return null;
-    
-    const lines = content.split('\n');
+
+    const lines = formatText(content).split('\n');
     const elements = [];
     let inList = false;
     let listItems = [];
@@ -45,7 +47,7 @@ export default function BlogDetail() {
       // Headers
       if (trimmed.startsWith('## ')) {
         if (inList) { elements.push(<ul key={`list-${index}`} className="list-disc list-inside text-gray-700 mb-6 space-y-2">{listItems}</ul>); listItems = []; inList = false; }
-        elements.push(<h2 key={index} className="text-2xl md:text-3xl font-bold text-[#14213d] mt-10 mb-4" style={{ fontFamily: 'Playfair Display' }}>{trimmed.replace('## ', '')}</h2>);
+        elements.push(<h2 key={index} className="text-2xl md:text-3xl font-bold text-[#14213d] mt-10 mb-4">{trimmed.replace('## ', '')}</h2>);
         return;
       }
       if (trimmed.startsWith('### ')) {
@@ -60,7 +62,7 @@ export default function BlogDetail() {
         const quoteText = trimmed.replace('> ', '');
         const isHighlight = quoteText.startsWith('**') || quoteText.includes('**¿Listo') || quoteText.includes('**Dato');
         elements.push(
-          <blockquote key={index} className={`border-l-4 border-[#f4623a] pl-6 italic text-gray-600 my-6 ${isHighlight ? 'bg-[#fff5f2] rounded-r-lg p-4' : ''}`}>
+          <blockquote key={index} className={`border-l-4 border-[#c8a25a] pl-6 italic text-gray-600 my-6 ${isHighlight ? 'bg-[#fff5f2] rounded-r-lg p-4' : ''}`}>
             <p className="whitespace-pre-wrap">{quoteText.replace(/\*\*(.*?)\*\*/g, (match, g1) => `<strong>${g1}</strong>`)}</p>
           </blockquote>
         );
@@ -103,7 +105,7 @@ export default function BlogDetail() {
             <div key={index} className="overflow-x-auto my-8">
               <table className="w-full border-collapse border border-gray-300">
                 <thead>
-                  <tr className="bg-[#0b7285] text-white">
+                  <tr className="bg-[#1fa5a3] text-white">
                     {headers.map((h, i) => <th key={i} className="border border-gray-300 px-4 py-3 text-left font-semibold">{h}</th>)}
                   </tr>
                 </thead>
@@ -139,7 +141,7 @@ export default function BlogDetail() {
         <div key="table-end" className="overflow-x-auto my-8">
           <table className="w-full border-collapse border border-gray-300">
             <thead>
-              <tr className="bg-[#0b7285] text-white">
+              <tr className="bg-[#1fa5a3] text-white">
                 {headers.map((h, i) => <th key={i} className="border border-gray-300 px-4 py-3 text-left font-semibold">{h}</th>)}
               </tr>
             </thead>
@@ -163,9 +165,9 @@ export default function BlogDetail() {
       <div className="max-w-4xl mx-auto px-5 md:px-8">
         {/* Breadcrumb */}
         <nav className="mb-8 flex items-center gap-2 text-sm text-gray-500" aria-label="Breadcrumb">
-          <Link to="/" className="hover:text-[#f4623a] transition-colors">Inicio</Link>
+          <Link to="/" className="hover:text-[#c8a25a] transition-colors">Inicio</Link>
           <ChevronRight className="w-4 h-4" />
-          <Link to="/blog" className="hover:text-[#f4623a] transition-colors">Blog</Link>
+          <Link to="/blog" className="hover:text-[#c8a25a] transition-colors">Blog</Link>
           <ChevronRight className="w-4 h-4" />
           <span className="text-[#14213d] font-medium truncate max-w-[200px]">{post.title}</span>
         </nav>
@@ -173,12 +175,12 @@ export default function BlogDetail() {
         {/* Post Header */}
         <header className="mb-10">
           <div className="flex flex-wrap items-center gap-3 mb-4">
-            <span className="px-3 py-1 rounded-md bg-[#0b7285]/10 text-[11px] font-bold tracking-wider text-[#0b7285]">{post.category}</span>
+            <span className="px-3 py-1 rounded-md bg-[#1fa5a3]/10 text-[11px] font-bold tracking-wider text-[#1fa5a3]">{post.category}</span>
             {post.tags && post.tags.map(tag => (
               <span key={tag} className="px-2 py-1 rounded bg-gray-100 text-[11px] font-medium text-gray-600">#{tag}</span>
             ))}
           </div>
-          <h1 className="text-3xl md:text-5xl font-bold text-[#14213d] leading-tight mb-6" style={{ fontFamily: 'Playfair Display' }}>
+          <h1 className="text-3xl md:text-5xl font-bold text-[#14213d] leading-tight mb-6">
             {post.title}
           </h1>
           <div className="flex flex-wrap items-center gap-6 text-gray-500 text-sm">
@@ -215,11 +217,11 @@ export default function BlogDetail() {
 
         {/* CTA Section */}
         {post.id === 'ballenas-canarias' && (
-          <div className="mt-16 p-8 rounded-2xl bg-gradient-to-r from-[#14213d] to-[#0b7285] text-white">
-            <h2 className="text-2xl md:text-3xl font-bold mb-4" style={{ fontFamily: 'Playfair Display' }}>
+          <div className="mt-16 p-8 rounded-2xl bg-gradient-to-r from-[#14213d] to-[#1fa5a3] text-white">
+            <h2 className="text-2xl md:text-3xl font-bold mb-4">
               ¿Listo para conocer a los gigantes del Atlántico?
             </h2>
-            <p className="text-[#0b7285]/90 mb-6 max-w-2xl">
+            <p className="text-[#1fa5a3]/90 mb-6 max-w-2xl">
               Sube a bordo del <strong>Ocean Giants Cruise</strong> y vive el avistamiento de calderones, cachalotes y delfines con guía biólogo marino, hidrófono y baño en cala secreta.
             </p>
             <div className="flex flex-wrap gap-4">
@@ -242,7 +244,7 @@ export default function BlogDetail() {
 
         {/* Back to Blog */}
         <div className="mt-12 pt-8 border-t border-gray-200">
-          <Link to="/blog" className="inline-flex items-center gap-2 text-[#f4623a] font-semibold hover:underline transition-colors">
+          <Link to="/blog" className="inline-flex items-center gap-2 text-[#c8a25a] font-semibold hover:underline transition-colors">
             <ArrowLeft className="w-4 h-4" /> Volver al blog
           </Link>
         </div>

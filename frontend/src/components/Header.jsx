@@ -1,6 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, ShoppingBag, User, Globe, ChevronDown, Waves } from 'lucide-react';
+import { Menu, X, ShoppingBag, User, Globe, ChevronDown, Waves, MoonStar, SunMedium, Check } from 'lucide-react';
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from './ui/dropdown-menu';
+import { useCurrency } from '../context/CurrencyContext';
 
 const navLinks = [
   { name: 'Inicio', to: '/' },
@@ -11,11 +20,18 @@ const navLinks = [
   { name: 'Contacto', to: '/contacto' },
 ];
 
-export default function Header() {
+export default function Header({ theme, onToggleTheme }) {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
   const location = useLocation();
   const isHome = location.pathname === '/';
+  const { currencies, currency, setCurrency } = useCurrency();
+
+  const currencyMeta = {
+    EUR: { label: 'Euro', symbol: '€' },
+    USD: { label: 'US Dollar', symbol: '$' },
+    GBP: { label: 'British Pound', symbol: '£' },
+  };
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
@@ -25,23 +41,23 @@ export default function Header() {
   }, []);
 
   const transparent = isHome && !scrolled;
+  const solidHeader = transparent ? 'bg-transparent' : 'bg-background/90 backdrop-blur border-b border-border/70 shadow-sm';
+  const iconButton = transparent
+    ? 'border-white/30 text-white hover:bg-white/10'
+    : 'border-border text-foreground hover:bg-muted';
+  const navBase = transparent ? 'text-white/90 hover:text-white' : 'text-foreground/80 hover:text-primary';
+  const activeNav = transparent ? 'text-white' : 'text-primary';
 
   return (
-    <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        transparent ? 'bg-transparent' : 'bg-white/95 backdrop-blur shadow-sm'
-      }`}
-    >
+    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${solidHeader}`}>
       <div className="max-w-7xl mx-auto px-5 md:px-8 h-20 flex items-center justify-between">
         <Link to="/" className="flex items-center gap-2 group">
           <div className={`w-10 h-10 rounded-full flex items-center justify-center ${
-            transparent ? 'bg-white/20 backdrop-blur' : 'bg-[#0b7285]'
+            transparent ? 'bg-white/20 backdrop-blur' : 'bg-brand-primary'
           }`}>
-            <Waves className={`w-5 h-5 ${transparent ? 'text-white' : 'text-white'}`} strokeWidth={2.5} />
+            <Waves className="w-5 h-5 text-white" strokeWidth={2.5} />
           </div>
-          <span className={`font-extrabold text-2xl tracking-tight ${transparent ? 'text-white' : 'text-[#0b7285]'}`}
-            style={{ fontFamily: 'Manrope' }}
-          >
+          <span className={`font-heading font-extrabold text-2xl tracking-tight ${transparent ? 'text-white' : 'text-primary'}`}>
             OWA
           </span>
         </Link>
@@ -55,17 +71,13 @@ export default function Header() {
                 to={l.to}
                 className={`px-4 py-2 text-[15px] font-medium rounded-md transition-all ${
                   active
-                    ? transparent
-                      ? 'text-white'
-                      : 'text-[#0b7285]'
-                    : transparent
-                    ? 'text-white/90 hover:text-white'
-                    : 'text-[#14213d] hover:text-[#0b7285]'
+                    ? activeNav
+                    : navBase
                 }`}
               >
                 {l.name}
                 {active && (
-                  <span className={`block h-[2px] mt-1 rounded-full ${transparent ? 'bg-white' : 'bg-[#f4623a]'}`} />
+                  <span className={`block h-[2px] mt-1 rounded-full ${transparent ? 'bg-white' : 'bg-accent'}`} />
                 )}
               </Link>
             );
@@ -73,45 +85,100 @@ export default function Header() {
         </nav>
 
         <div className="flex items-center gap-2">
-          <button className={`hidden md:flex items-center gap-1 px-3 py-2 rounded-md text-sm font-medium ${
-            transparent ? 'text-white' : 'text-[#14213d]'
-          }`}>
-            <Globe className="w-4 h-4" /> EUR <ChevronDown className="w-3.5 h-3.5" />
+          <DropdownMenu>
+            <DropdownMenuTrigger asChild>
+              <button
+                type="button"
+                className={`hidden md:inline-flex items-center gap-1.5 px-3 py-2 rounded-md text-sm font-medium transition-colors outline-none ${
+                  transparent ? 'text-white hover:bg-white/10' : 'text-foreground hover:bg-muted'
+                }`}
+                aria-label="Cambiar moneda"
+              >
+                <Globe className="w-4 h-4" />
+                {currency}
+                <ChevronDown className="w-3.5 h-3.5" />
+              </button>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent align="end" className="w-52">
+              <DropdownMenuLabel className="text-xs uppercase tracking-wider text-muted-foreground">Moneda</DropdownMenuLabel>
+              <DropdownMenuSeparator />
+              {currencies.map((code) => (
+                <DropdownMenuItem
+                  key={code}
+                  onClick={() => setCurrency(code)}
+                  className={`flex items-center justify-between cursor-pointer ${
+                    currency === code ? 'text-primary font-semibold' : ''
+                  }`}
+                >
+                  <span className="flex items-center gap-2">
+                    <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-primary/10 text-primary text-xs font-bold">
+                      {currencyMeta[code].symbol}
+                    </span>
+                    <span>{code}</span>
+                    <span className="text-muted-foreground text-xs">{currencyMeta[code].label}</span>
+                  </span>
+                  {currency === code && <Check className="w-4 h-4 text-primary" />}
+                </DropdownMenuItem>
+              ))}
+            </DropdownMenuContent>
+          </DropdownMenu>
+          <button
+            type="button"
+            onClick={onToggleTheme}
+            aria-label={theme === 'dark' ? 'Activar modo día' : 'Activar modo noche'}
+            className={`w-10 h-10 rounded-full flex items-center justify-center border transition-all ${iconButton}`}
+          >
+            {theme === 'dark' ? <SunMedium className="w-4 h-4" /> : <MoonStar className="w-4 h-4" />}
           </button>
-          <button className={`w-10 h-10 rounded-full flex items-center justify-center border ${
-            transparent ? 'border-white/40 text-white hover:bg-white/10' : 'border-[#e5e7eb] text-[#14213d] hover:bg-gray-50'
-          } transition-all`}>
+          <button className={`w-10 h-10 rounded-full flex items-center justify-center border transition-all ${iconButton}`}>
             <ShoppingBag className="w-4 h-4" />
           </button>
-          <button className={`w-10 h-10 rounded-full flex items-center justify-center border ${
-            transparent ? 'border-white/40 text-white hover:bg-white/10' : 'border-[#e5e7eb] text-[#14213d] hover:bg-gray-50'
-          } transition-all`}>
+          <button className={`w-10 h-10 rounded-full flex items-center justify-center border transition-all ${iconButton}`}>
             <User className="w-4 h-4" />
           </button>
           <button
-            className="lg:hidden w-10 h-10 flex items-center justify-center rounded-md"
+            className={`lg:hidden w-10 h-10 flex items-center justify-center rounded-md transition-colors ${transparent ? 'text-white' : 'text-foreground'}`}
             onClick={() => setOpen(!open)}
             aria-label="menu"
           >
-            {open ? <X className={transparent ? 'text-white' : 'text-[#14213d]'} /> : <Menu className={transparent ? 'text-white' : 'text-[#14213d]'} />}
+            {open ? <X /> : <Menu />}
           </button>
         </div>
       </div>
 
       {/* Mobile menu */}
       {open && (
-        <div className="lg:hidden bg-white border-t border-gray-100 shadow-md">
+        <div className="lg:hidden bg-background border-t border-border shadow-md">
           <div className="px-5 py-4 flex flex-col gap-1">
             {navLinks.map((l) => (
               <Link
                 key={l.to}
                 to={l.to}
                 onClick={() => setOpen(false)}
-                className="px-3 py-2.5 rounded-md text-[#14213d] hover:bg-gray-50 font-medium"
+                className="px-3 py-2.5 rounded-md text-foreground hover:bg-muted font-medium"
               >
                 {l.name}
               </Link>
             ))}
+            <div className="mt-3 pt-3 border-t border-border">
+              <div className="px-3 pb-2 text-xs uppercase tracking-wider text-muted-foreground font-semibold">Moneda</div>
+              <div className="flex gap-2 px-3">
+                {currencies.map((code) => (
+                  <button
+                    key={code}
+                    type="button"
+                    onClick={() => setCurrency(code)}
+                    className={`flex-1 py-2 rounded-md text-sm font-medium border transition-colors ${
+                      currency === code
+                        ? 'bg-primary text-primary-foreground border-primary'
+                        : 'bg-card text-foreground border-border hover:bg-muted'
+                    }`}
+                  >
+                    {currencyMeta[code].symbol} {code}
+                  </button>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       )}

@@ -24,14 +24,14 @@ export default function Newsletter() {
           alt=""
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-[#0a1929]/70" />
+        <div className="absolute inset-0 bg-[#0b1c26]/70" />
       </div>
 
       <div className="relative max-w-3xl mx-auto px-5 md:px-8 text-center text-white">
-        <div className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-[#f4623a] mb-6">
+        <div className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-[#c8a25a] mb-6">
           <Mail className="w-6 h-6" />
         </div>
-        <h2 className="text-4xl md:text-5xl font-bold" style={{ fontFamily: 'Playfair Display' }}>
+        <h2 className="text-4xl md:text-5xl font-bold">
           Ofertas exclusivas <span className="italic font-medium">para wild explorers</span>
         </h2>
         <p className="mt-4 text-white/70 text-lg">
@@ -49,7 +49,7 @@ export default function Newsletter() {
           />
           <button
             type="submit"
-            className="px-6 md:px-8 py-3 bg-[#f4623a] text-white rounded-full font-semibold hover:bg-[#e05027] transition-all"
+            className="px-6 md:px-8 py-3 bg-[#c8a25a] text-white rounded-full font-semibold hover:bg-[#b08c49] transition-all"
           >
             Suscribirme
           </button>

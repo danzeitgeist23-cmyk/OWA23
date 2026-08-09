@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import './App.css';
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 import Header from './components/Header';
@@ -12,6 +12,9 @@ import BlogDetail from './pages/BlogDetail';
 import About from './pages/About';
 import Contact from './pages/Contact';
 import { Toaster } from './components/ui/toaster';
+import { CurrencyProvider } from './context/CurrencyContext';
+
+const THEME_STORAGE_KEY = 'owa-theme';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -21,27 +24,53 @@ function ScrollToTop() {
   return null;
 }
 
+function getInitialTheme() {
+  if (typeof window === 'undefined') {
+    return 'light';
+  }
+
+  const storedTheme = window.localStorage.getItem(THEME_STORAGE_KEY);
+  if (storedTheme === 'light' || storedTheme === 'dark') {
+    return storedTheme;
+  }
+
+  return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+}
+
 function App() {
+  const [theme, setTheme] = useState(getInitialTheme);
+
+  useEffect(() => {
+    const root = document.documentElement;
+    const isDark = theme === 'dark';
+
+    root.classList.toggle('dark', isDark);
+    root.dataset.theme = theme;
+    window.localStorage.setItem(THEME_STORAGE_KEY, theme);
+  }, [theme]);
+
   return (
     <div className="App">
-      <BrowserRouter>
-        <ScrollToTop />
-        <Header />
-        <main>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/actividades" element={<Activities />} />
-            <Route path="/actividad/:id" element={<ActivityDetail />} />
-            <Route path="/destinos" element={<Destinations />} />
-            <Route path="/blog" element={<Blog />} />
-            <Route path="/blog/:id" element={<BlogDetail />} />
-            <Route path="/nosotros" element={<About />} />
-            <Route path="/contacto" element={<Contact />} />
-          </Routes>
-        </main>
-        <Footer />
-        <Toaster />
-      </BrowserRouter>
+      <CurrencyProvider>
+        <BrowserRouter>
+          <ScrollToTop />
+          <Header theme={theme} onToggleTheme={() => setTheme((currentTheme) => currentTheme === 'dark' ? 'light' : 'dark')} />
+          <main>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/actividades" element={<Activities />} />
+              <Route path="/actividad/:id" element={<ActivityDetail />} />
+              <Route path="/destinos" element={<Destinations />} />
+              <Route path="/blog" element={<Blog />} />
+              <Route path="/blog/:id" element={<BlogDetail />} />
+              <Route path="/nosotros" element={<About />} />
+              <Route path="/contacto" element={<Contact />} />
+            </Routes>
+          </main>
+          <Footer />
+          <Toaster />
+        </BrowserRouter>
+      </CurrencyProvider>
     </div>
   );
 }

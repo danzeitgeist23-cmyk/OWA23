@@ -1,9 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { MapPin, Clock, Star, Heart } from 'lucide-react';
+import { useCurrency } from '../context/CurrencyContext';
 
 export default function ActivityCard({ activity }) {
   const [saved, setSaved] = React.useState(false);
+  const { format } = useCurrency();
 
   return (
     <Link
@@ -16,12 +18,12 @@ export default function ActivityCard({ activity }) {
         {/* Badges */}
         <div className="absolute top-3 left-3 flex flex-col gap-1.5">
           {activity.featured && (
-            <span className="px-2.5 py-1 rounded-md bg-[#0b7285] text-white text-[11px] font-semibold uppercase tracking-wider">
+            <span className="px-2.5 py-1 rounded-md bg-[#1fa5a3] text-white text-[11px] font-semibold uppercase tracking-wider">
               Destacado
             </span>
           )}
           {activity.originalPrice && (
-            <span className="px-2.5 py-1 rounded-md bg-[#f4623a] text-white text-[11px] font-semibold uppercase tracking-wider">
+            <span className="px-2.5 py-1 rounded-md bg-[#c8a25a] text-white text-[11px] font-semibold uppercase tracking-wider">
               -{Math.round((1 - activity.price / activity.originalPrice) * 100)}%
             </span>
           )}
@@ -36,7 +38,7 @@ export default function ActivityCard({ activity }) {
           className="absolute top-3 right-3 w-9 h-9 rounded-full bg-white/90 backdrop-blur flex items-center justify-center hover:bg-white transition-all"
           aria-label="guardar"
         >
-          <Heart className={`w-4 h-4 ${saved ? 'fill-[#f4623a] text-[#f4623a]' : 'text-[#14213d]'}`} />
+          <Heart className={`w-4 h-4 ${saved ? 'fill-[#c8a25a] text-[#c8a25a]' : 'text-[#14213d]'}`} />
         </button>
       </div>
 
@@ -46,12 +48,12 @@ export default function ActivityCard({ activity }) {
           <span className="truncate">{activity.location}</span>
         </div>
 
-        <h3 className="text-[17px] font-semibold text-[#14213d] leading-snug min-h-[48px] group-hover:text-[#0b7285] transition-colors" style={{ fontFamily: 'Manrope' }}>
+        <h3 className="text-[17px] font-semibold text-[#14213d] leading-snug min-h-[48px] group-hover:text-[#1fa5a3] transition-colors">
           {activity.title}
         </h3>
 
         <div className="flex items-center gap-1.5 mt-3 text-sm">
-          <Star className="w-4 h-4 fill-[#fbbf24] text-[#fbbf24]" />
+          <Star className="w-4 h-4 fill-[#c8a25a] text-[#c8a25a]" />
           <span className="font-semibold text-[#14213d]">{activity.rating}</span>
           <span className="text-gray-500">({activity.reviews} reseñas)</span>
         </div>
@@ -60,9 +62,9 @@ export default function ActivityCard({ activity }) {
           <div>
             <p className="text-[11px] uppercase text-gray-400 tracking-wide font-medium">Desde</p>
             <div className="flex items-baseline gap-2">
-              <span className="text-2xl font-bold text-[#0b7285]">€{activity.price}</span>
+              <span className="text-2xl font-bold text-[#1fa5a3]">{format(activity.price)}</span>
               {activity.originalPrice && (
-                <span className="text-sm text-gray-400 line-through">€{activity.originalPrice}</span>
+                <span className="text-sm text-gray-400 line-through">{format(activity.originalPrice)}</span>
               )}
             </div>
           </div>

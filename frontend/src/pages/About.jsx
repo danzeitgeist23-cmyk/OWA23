@@ -14,7 +14,7 @@ export default function About() {
               Aventuras diseñadas <span className="italic font-medium">para exploradores</span>
             </h1>
             <p className="text-gray-600 text-lg mt-6 leading-relaxed">
-              OWA — Orient Wild Adventure nace en 2018 en Gran Canaria con un objetivo claro: ofrecer experiencias auténticas, sostenibles y memorables en las Islas Canarias. Nada de tours multitudinarios. Solo grupos pequeños, guías locales y las mejores localizaciones.
+              OWA — Origin Wild Adventure nace en 2018 en Gran Canaria con un objetivo claro: ofrecer experiencias auténticas, sostenibles y memorables en las Islas Canarias. Nada de tours multitudinarios. Solo grupos pequeños, guías locales y las mejores localizaciones.
             </p>
             <div className="grid grid-cols-2 gap-6 mt-10">
               {stats.map((s, i) => (

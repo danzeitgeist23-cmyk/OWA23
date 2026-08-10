@@ -53,7 +53,7 @@ export default function Header({ theme, onToggleTheme }) {
       <div className="max-w-7xl mx-auto px-5 md:px-8 h-20 flex items-center justify-between">
         <Link to="/" className="flex items-center gap-2 group">
           <img
-            src="%PUBLIC_URL%/owa-logo-horizontal.webp"
+            src="/owa-logo-horizontal.webp"
             alt="OWA Wild Adventure"
             className="h-8 w-auto"
           />

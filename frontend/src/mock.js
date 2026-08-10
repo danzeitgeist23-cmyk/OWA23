@@ -1,4 +1,4 @@
-// Mock data for OWA - Orient Wild Adventure
+// Mock data for OWA - Origin Wild Adventure
 
 export const destinations = [
   {

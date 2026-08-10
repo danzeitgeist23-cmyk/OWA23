@@ -11,13 +11,13 @@ export default function Footer() {
           <div>
             <Link to="/" className="flex items-center gap-2 mb-5">
               <img
-                src="%PUBLIC_URL%/owa-logo-footer.webp"
+                src="/owa-logo-footer.webp"
                 alt="OWA Wild Adventure"
                 className="h-8 w-auto"
               />
             </Link>
             <p className="text-white/70 text-[15px] leading-relaxed mb-5">
-              Orient Wild Adventure. Diseñada para quienes buscan más que un tour convencional en las Islas Canarias.
+              Origin Wild Adventure. Diseñada para quienes buscan más que un tour convencional en las Islas Canarias.
             </p>
             <div className="flex items-center gap-3">
               {[Instagram, Facebook, Youtube, Twitter].map((Icon, i) => (
@@ -58,7 +58,7 @@ export default function Footer() {
             <ul className="space-y-4 text-white/70 text-[15px]">
               <li className="flex gap-3">
                 <MapPin className="w-4 h-4 text-[#c8a25a] mt-1 flex-shrink-0" />
-                <span>Avda. Marítima 24<br />Las Palmas de Gran Canaria, Islas Canarias</span>
+                <span>Muelle Deportivo s/n<br />Las Palmas de Gran Canaria, Islas Canarias</span>
               </li>
               <li className="flex gap-3">
                 <Phone className="w-4 h-4 text-[#c8a25a] mt-1 flex-shrink-0" />
@@ -66,14 +66,14 @@ export default function Footer() {
               </li>
               <li className="flex gap-3">
                 <Mail className="w-4 h-4 text-[#c8a25a] mt-1 flex-shrink-0" />
-                <span>hola@owawild.com</span>
+                <span>info@owawild.com</span>
               </li>
             </ul>
           </div>
         </div>
 
         <div className="border-t border-white/10 pt-6 flex flex-col md:flex-row justify-between items-center gap-3 text-sm text-white/50">
-          <p>© 2025 OWA — Orient Wild Adventure. Todos los derechos reservados.</p>
+          <p>© 2025 OWA — Origin Wild Adventure. Todos los derechos reservados.</p>
           <p>Made with care in the Canary Islands</p>
         </div>
       </div>

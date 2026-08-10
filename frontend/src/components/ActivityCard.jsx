@@ -54,10 +54,18 @@ export default function ActivityCard({ activity }) {
           {activity.title}
         </h3>
 
-        <div className="flex items-center gap-1.5 mt-3 text-sm">
-          <Star className="w-4 h-4 fill-[#c8a25a] text-[#c8a25a]" />
-          <span className="font-semibold text-[#14213d]">{activity.rating}</span>
-          <span className="text-gray-500">({activity.reviews} {t('card.reviews')})</span>
+        <div className="flex items-center gap-1.5 mt-3 text-sm min-h-6">
+          {activity.rating && activity.reviews > 0 ? (
+            <>
+              <Star className="w-4 h-4 fill-[#c8a25a] text-[#c8a25a]" />
+              <span className="font-semibold text-[#14213d]">{activity.rating}</span>
+              <span className="text-gray-500">({activity.reviews} {t('card.reviews')})</span>
+            </>
+          ) : (
+            <span className="inline-flex items-center rounded-full bg-[#f7f9fb] px-2.5 py-1 text-xs font-semibold uppercase tracking-wide text-[#1fa5a3]">
+              {t('card.noReviews')}
+            </span>
+          )}
         </div>
 
         <div className="mt-4 pt-4 border-t border-gray-100 flex items-end justify-between">

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { activities } from '../mock';
+import { activities } from '../siteData';
 import ActivityCard from './ActivityCard';
 import { useT } from '../i18n/LanguageContext';
 

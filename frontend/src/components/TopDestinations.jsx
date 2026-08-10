@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { destinations } from '../mock';
+import { activities } from '../siteData';
 import { useT } from '../i18n/LanguageContext';
 
 export default function TopDestinations() {
@@ -21,7 +22,10 @@ export default function TopDestinations() {
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-5">
-          {destinations.map((d, idx) => (
+          {destinations.map((d) => {
+            const activityCount = activities.filter((activity) => activity.destination === d.id).length;
+            const countLabel = activityCount === 1 ? t('destinations.activityCountOne') : t('destinations.activityCount');
+            return (
             <Link
               key={d.id}
               to={`/actividades?destination=${d.id}`}
@@ -38,9 +42,10 @@ export default function TopDestinations() {
               <h3 className="text-lg font-semibold text-[#14213d] group-hover:text-[#1fa5a3]">
                 {d.name}
               </h3>
-              <p className="text-sm text-gray-500 mt-1">{d.activityCount} {t('destinations.activityCount')}</p>
+              <p className="text-sm text-gray-500 mt-1">{activityCount} {countLabel}</p>
             </Link>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>

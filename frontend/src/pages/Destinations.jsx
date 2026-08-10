@@ -1,5 +1,6 @@
 import React from 'react';
-import { destinations, activities } from '../mock';
+import { destinations } from '../mock';
+import { activities } from '../siteData';
 import { Link } from 'react-router-dom';
 import { MapPin } from 'lucide-react';
 

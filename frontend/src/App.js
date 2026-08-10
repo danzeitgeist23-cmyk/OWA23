@@ -11,6 +11,7 @@ import Blog from './pages/Blog';
 import BlogDetail from './pages/BlogDetail';
 import About from './pages/About';
 import Contact from './pages/Contact';
+import PaymentResult from './pages/PaymentResult';
 import { Toaster } from './components/ui/toaster';
 import { CurrencyProvider } from './context/CurrencyContext';
 import { LanguageProvider } from './i18n/LanguageContext';
@@ -69,6 +70,7 @@ function App() {
                 <Route path="/blog/:id" element={<BlogDetail />} />
                 <Route path="/nosotros" element={<About />} />
                 <Route path="/contacto" element={<Contact />} />
+                <Route path="/pago/resultado" element={<PaymentResult />} />
                 <Route path="/privacy" element={<Privacy />} />
                 <Route path="/terms" element={<Terms />} />
               </Routes>

@@ -2,8 +2,11 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { blogPosts } from '../mock';
 import { ArrowUpRight } from 'lucide-react';
+import { useT } from '../i18n/LanguageContext';
 
 export default function Stories() {
+  const t = useT();
+
   return (
     <section className="py-20 md:py-28 bg-white">
       <div className="max-w-7xl mx-auto px-5 md:px-8">

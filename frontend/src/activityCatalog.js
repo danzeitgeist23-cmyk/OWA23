@@ -1,0 +1,276 @@
+// Catálogo comercial inicial de OWA.
+//
+// Los precios y las políticas de cancelación se guardan por actividad para
+// evitar reglas genéricas que no coincidan con las condiciones del proveedor.
+// La comisión de OWA nunca se incluye en este archivo público.
+
+const sharedBoatImages = {
+  yacht: 'https://images.unsplash.com/photo-1571328532572-cb7899a8be7e?auto=format&fit=crop&w=900&q=80',
+  yachtWide: 'https://images.unsplash.com/photo-1571328532572-cb7899a8be7e?auto=format&fit=crop&w=1400&q=80',
+  ocean: 'https://images.unsplash.com/photo-1526621480041-c4e2027dfe69?auto=format&fit=crop&w=1400&q=80',
+  catamaran: 'https://images.unsplash.com/photo-1564555449603-b0eefe1b9094?auto=format&fit=crop&w=900&q=80',
+  catamaranWide: 'https://images.unsplash.com/photo-1564555449603-b0eefe1b9094?auto=format&fit=crop&w=1400&q=80',
+};
+
+const jetSkiImages = {
+  card: 'https://images.unsplash.com/photo-1564633351631-e85bd59a91af?auto=format&fit=crop&w=900&q=80',
+  wide: 'https://images.unsplash.com/photo-1564633351631-e85bd59a91af?auto=format&fit=crop&w=1400&q=80',
+};
+
+const infinityCancellation = {
+  verifiedOn: '2026-08-10',
+  noticeHours: 48,
+  short: 'Cancelación gratuita hasta 48 horas antes.',
+  details: 'Cancela con al menos 48 horas de antelación para recibir un reembolso completo.',
+  sourceUrl: 'https://www.infinityboatgc.com/',
+};
+
+const jetSkiCancellation = {
+  verifiedOn: '2026-08-10',
+  noticeHours: 24,
+  short: 'Cancelación gratuita hasta 24 horas antes.',
+  details: 'Las cancelaciones comunicadas con al menos 24 horas de antelación reciben un reembolso completo. Si el tour se cancela por meteorología o estado del mar, se reprograma o se reembolsa íntegramente.',
+  sourceUrl: 'https://maspalomasjetskitour.es/terminos-y-condiciones/',
+};
+
+const jetSkiBase = {
+  location: 'Pasito Blanco, Gran Canaria',
+  destination: 'gran-canaria',
+  category: 'nauticas',
+  rating: null,
+  reviews: 0,
+  featured: true,
+  image: jetSkiImages.card,
+  gallery: [jetSkiImages.wide],
+  languages: 'ES / EN',
+  groupSize: 'Hasta 2 pers. por moto',
+  insurance: 'Incluido',
+  meetingPoint: 'Puerto de Pasito Blanco, San Bartolomé de Tirajana',
+  pickup: 'Recogida gratuita en hoteles entre Maspalomas y Puerto Rico.',
+  provider: {
+    id: 'maspalomas-jet-ski-tour',
+    name: 'Maspalomas Jet Ski Tour',
+    activityUrl: 'https://maspalomasjetskitour.es/tours-en-moto-de-agua-maspalomas/',
+  },
+  cancellationPolicy: jetSkiCancellation,
+  restrictions: [
+    'Edad mínima para conducir: 16 años con autorización del padre, madre o tutor legal.',
+    'Edad mínima como acompañante: 7 años.',
+    'No recomendado durante el embarazo ni para personas con problemas cardíacos o lesiones de espalda o cuello.',
+    'Es necesario presentarse al menos 15 minutos antes.',
+  ],
+  ticketTypes: [
+    { id: 'single_jet_ski', label: 'Moto individual', price: null, min: 0, max: 6, default: 1, seats: 1 },
+    { id: 'double_jet_ski', label: 'Moto doble', price: null, min: 0, max: 6, default: 0, seats: 2 },
+  ],
+  priceUnit: 'moto de agua',
+  paymentCurrency: 'EUR',
+  bookingEnabled: false,
+};
+
+function jetSkiActivity({
+  id,
+  title,
+  price,
+  duration,
+  shortDescription,
+  description,
+  included,
+  notIncluded,
+}) {
+  return {
+    ...jetSkiBase,
+    id,
+    title,
+    price,
+    originalPrice: null,
+    duration,
+    shortDescription,
+    description,
+    included,
+    notIncluded,
+    ticketTypes: jetSkiBase.ticketTypes.map((ticket) => ({ ...ticket, price })),
+    timeSlots: ['Horario a confirmar'],
+  };
+}
+
+export const activities = [
+  {
+    id: 'infinity-yacht-premium-shared',
+    title: 'Excursión Compartida en Yate Premium',
+    location: 'Puerto Rico, Gran Canaria',
+    destination: 'gran-canaria',
+    category: 'nauticas',
+    price: 79.21,
+    originalPrice: null,
+    duration: '4 horas',
+    rating: null,
+    reviews: 0,
+    featured: true,
+    image: sharedBoatImages.yacht,
+    gallery: [sharedBoatImages.yachtWide, sharedBoatImages.ocean],
+    shortDescription: 'Navegación premium en grupo reducido con aperitivos, barra libre, snorkel y paddle surf.',
+    description: 'Salida desde Puerto Rico en un yate compartido para un máximo de 12 pasajeros. La ruta navega hacia Mogán y realiza una parada prolongada para baño, snorkel y paddle surf. El itinerario puede adaptarse a las condiciones del mar.',
+    included: [
+      'Recogida y regreso en alojamientos del sur con reserva previa',
+      'Capitán y guía',
+      'Copa de cava de bienvenida',
+      'Barra libre de cerveza, refrescos, sangría, agua y zumos',
+      'Surtido de aperitivos',
+      'Equipo de snorkel, 2 tablas de paddle surf y plataforma flotante',
+      'Seguro, impuestos y tasas',
+    ],
+    notIncluded: [
+      'Toallas',
+      'Cócteles, vino, cavas y combinados adicionales',
+      'Jet ski, sea scooter y parasailing opcionales',
+    ],
+    meetingPoint: 'Puerto Escala, Puerto Rico, Gran Canaria',
+    pickup: 'Recogida en alojamientos y hoteles del sur con reserva anticipada.',
+    groupSize: 'Máx. 12 pers.',
+    insurance: 'Incluido',
+    languages: 'ES / EN',
+    restrictions: [
+      'No se permiten mascotas, alcohol o drogas ni desnudez.',
+      'Se recomienda medicación preventiva a las personas propensas al mareo.',
+    ],
+    provider: {
+      id: 'infinity-boat-gc',
+      name: 'Infinity Boat Tours',
+      activityUrl: 'https://www.infinityboatgc.com/excursion-compartida-en-yate-premium',
+    },
+    cancellationPolicy: {
+      ...infinityCancellation,
+      sourceUrl: 'https://www.infinityboatgc.com/excursion-compartida-en-yate-premium',
+    },
+    ticketTypes: [
+      { id: 'adult', label: 'Adultos', price: 79.21, min: 0, max: 12, default: 2 },
+      { id: 'child', label: 'Niños (1-10)', price: 55, min: 0, max: 12, default: 0 },
+    ],
+    timeSlots: ['09:30', '13:30'],
+    priceUnit: 'persona',
+    paymentCurrency: 'EUR',
+    bookingEnabled: true,
+  },
+  {
+    id: 'infinity-catamaran-shared',
+    title: 'Crucero Compartido en Catamarán Paradise',
+    location: 'Pasito Blanco, Gran Canaria',
+    destination: 'gran-canaria',
+    category: 'nauticas',
+    price: 73.93,
+    originalPrice: null,
+    duration: '4 h 30 min',
+    rating: null,
+    reviews: 0,
+    featured: true,
+    image: sharedBoatImages.catamaran,
+    gallery: [sharedBoatImages.catamaranWide, sharedBoatImages.ocean],
+    shortDescription: 'Crucero por la costa sur con almuerzo, barra libre, snorkel, paddle surf y traslado.',
+    description: 'Excursión compartida desde Pasito Blanco a bordo del Paradise Cat. Navega por la costa sur, realiza una parada de baño de entre 90 y 120 minutos y disfruta de snorkel y paddle surf. El avistamiento de delfines puede ocurrir, pero no está garantizado.',
+    included: [
+      'Recogida y regreso desde puntos seleccionados del sur con reserva previa',
+      'Capitán y marinero',
+      'Copa de cava de bienvenida',
+      'Barra libre de cerveza, sangría, refrescos, agua y zumos',
+      'Almuerzo',
+      'Equipo de snorkel y tablas de paddle surf',
+      'Seguro, impuestos y tasas',
+    ],
+    notIncluded: [
+      'Toallas',
+      'Cócteles, vino y combinados adicionales',
+      'Jet ski, crazy sofa, sea scooter y parasailing opcionales',
+    ],
+    meetingPoint: 'Puerto de Pasito Blanco, Meloneras, Gran Canaria',
+    pickup: 'Recogida en puntos seleccionados de las zonas hoteleras del sur con reserva anticipada.',
+    groupSize: 'Máx. 45 pers.',
+    insurance: 'Incluido',
+    languages: 'ES / EN',
+    restrictions: [
+      'Actividad no apta para personas en silla de ruedas.',
+      'No se permiten mascotas, armas u objetos punzantes, alcohol o drogas ni desnudez.',
+    ],
+    provider: {
+      id: 'infinity-boat-gc',
+      name: 'Infinity Boat Tours',
+      activityUrl: 'https://www.infinityboatgc.com/excursion-en-catamaran-compartida',
+    },
+    cancellationPolicy: {
+      ...infinityCancellation,
+      sourceUrl: 'https://www.infinityboatgc.com/excursion-en-catamaran-compartida',
+    },
+    ticketTypes: [
+      { id: 'adult', label: 'Adultos', price: 73.93, min: 0, max: 45, default: 2 },
+      { id: 'child', label: 'Niños (3-10)', price: 50, min: 0, max: 45, default: 0 },
+    ],
+    timeSlots: ['10:30'],
+    priceUnit: 'persona',
+    paymentCurrency: 'EUR',
+    bookingEnabled: true,
+  },
+  jetSkiActivity({
+    id: 'maspalomas-jet-ski-express',
+    title: 'Jet Ski Tour Express — 30 minutos',
+    price: 75,
+    duration: '30 minutos',
+    shortDescription: 'Primera toma de contacto en moto de agua con briefing, conducción guiada y parada para fotos.',
+    description: 'Tour pensado para principiantes: salida guiada, parada para fotos y vídeos y tiempo de conducción libre antes de regresar al puerto.',
+    included: [
+      'Recogida y regreso al hotel en la zona incluida',
+      'Briefing de seguridad',
+      'Guía y material necesario',
+      'Botella de agua y fruta o chocolatina',
+      'Seguro de accidentes y responsabilidad civil',
+    ],
+    notIncluded: ['Fotos y vídeos: confirmar con el operador; sus páginas publican condiciones distintas', 'Traslado fuera del itinerario previsto'],
+  }),
+  jetSkiActivity({
+    id: 'maspalomas-jet-ski-adventure',
+    title: 'Jet Ski Tour Aventura — 60 minutos',
+    price: 120,
+    duration: '1 hora',
+    shortDescription: 'El recorrido favorito por la costa sur, dividido en dos tramos con opción de cambiar de conductor.',
+    description: 'Excursión de una hora en moto de agua por la costa de Gran Canaria. El recorrido se divide en dos partes de 30 minutos y los ocupantes pueden cambiar de conductor si cumplen los requisitos.',
+    included: [
+      'Recogida y regreso al hotel en la zona incluida',
+      'Briefing de seguridad',
+      'Guía y material necesario',
+      'Botella de agua y fruta o chocolatina',
+      'Seguro de accidentes y responsabilidad civil',
+    ],
+    notIncluded: ['Fotos y vídeos: confirmar con el operador; sus páginas publican condiciones distintas', 'Traslado fuera del itinerario previsto'],
+  }),
+  jetSkiActivity({
+    id: 'maspalomas-jet-ski-explorer',
+    title: 'Jet Ski Tour Explorer — 90 minutos',
+    price: 160,
+    duration: '1 h 30 min',
+    shortDescription: 'Ruta desde Maspalomas hacia Mogán para descubrir calas, cuevas y rincones de difícil acceso.',
+    description: 'Recorrido guiado de nivel intermedio por la costa sur, desde Maspalomas hacia Mogán, con acceso a calas y una cueva marina cuando las condiciones lo permiten.',
+    included: [
+      'Recogida y regreso al hotel en la zona incluida',
+      'Briefing de seguridad',
+      'Guía y material necesario',
+      'Botella de agua y fruta o chocolatina',
+      'Seguro de accidentes y responsabilidad civil',
+    ],
+    notIncluded: ['Fotos y vídeos: confirmar con el operador; sus páginas publican condiciones distintas', 'Traslado fuera del itinerario previsto'],
+  }),
+  jetSkiActivity({
+    id: 'maspalomas-jet-ski-gran-canaria',
+    title: 'Jet Ski Tour Gran Canaria — 120 minutos',
+    price: 200,
+    duration: '2 horas',
+    shortDescription: 'La ruta más completa para recorrer paisajes volcánicos y zonas de la costa accesibles solo por mar.',
+    description: 'Tour de dos horas por el litoral sur de Gran Canaria, diseñado para combinar navegación, paisaje y adrenalina en zonas a las que solo se puede llegar desde el mar.',
+    included: [
+      'Recogida y regreso al hotel en la zona incluida',
+      'Briefing de seguridad',
+      'Guía y material necesario',
+      'Botella de agua y fruta o chocolatina',
+      'Seguro de accidentes y responsabilidad civil',
+    ],
+    notIncluded: ['Fotos y vídeos: confirmar con el operador; sus páginas publican condiciones distintas', 'Traslado fuera del itinerario previsto'],
+  }),
+];

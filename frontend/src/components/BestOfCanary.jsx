@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { activities, categories } from '../mock';
+import { categories } from '../mock';
+import { activities } from '../siteData';
 import ActivityCard from './ActivityCard';
 import { Sailboat, Fish, Mountain, Wind, Leaf, UtensilsCrossed } from 'lucide-react';
 import { useT } from '../i18n/LanguageContext';

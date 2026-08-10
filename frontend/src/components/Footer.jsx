@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Waves, Instagram, Facebook, Youtube, Twitter, MapPin, Phone, Mail } from 'lucide-react';
+import { Instagram, Facebook, Youtube, Twitter, MapPin, Phone, Mail } from 'lucide-react';
 
 export default function Footer() {
   return (
@@ -10,10 +10,11 @@ export default function Footer() {
           {/* Brand */}
           <div>
             <Link to="/" className="flex items-center gap-2 mb-5">
-              <div className="w-10 h-10 rounded-full bg-[#1fa5a3] flex items-center justify-center">
-                <Waves className="w-5 h-5 text-white" strokeWidth={2.5} />
-              </div>
-              <span className="font-extrabold text-2xl tracking-tight">OWA</span>
+              <img
+                src="%PUBLIC_URL%/owa-logo-footer.webp"
+                alt="OWA Wild Adventure"
+                className="h-8 w-auto"
+              />
             </Link>
             <p className="text-white/70 text-[15px] leading-relaxed mb-5">
               Orient Wild Adventure. Diseñada para quienes buscan más que un tour convencional en las Islas Canarias.

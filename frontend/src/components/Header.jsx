@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, ShoppingBag, User, Globe, ChevronDown, Waves, MoonStar, SunMedium, Check } from 'lucide-react';
+import { Menu, X, ShoppingBag, User, Globe, ChevronDown, MoonStar, SunMedium, Check } from 'lucide-react';
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -52,14 +52,11 @@ export default function Header({ theme, onToggleTheme }) {
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${solidHeader}`}>
       <div className="max-w-7xl mx-auto px-5 md:px-8 h-20 flex items-center justify-between">
         <Link to="/" className="flex items-center gap-2 group">
-          <div className={`w-10 h-10 rounded-full flex items-center justify-center ${
-            transparent ? 'bg-white/20 backdrop-blur' : 'bg-brand-primary'
-          }`}>
-            <Waves className="w-5 h-5 text-white" strokeWidth={2.5} />
-          </div>
-          <span className={`font-heading font-extrabold text-2xl tracking-tight ${transparent ? 'text-white' : 'text-primary'}`}>
-            OWA
-          </span>
+          <img
+            src="%PUBLIC_URL%/owa-logo-horizontal.webp"
+            alt="OWA Wild Adventure"
+            className="h-8 w-auto"
+          />
         </Link>
 
         <nav className="hidden lg:flex items-center gap-1">

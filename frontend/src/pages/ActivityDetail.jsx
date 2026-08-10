@@ -199,7 +199,7 @@ export default function ActivityDetail() {
                   {[1,2,3].map((r) => (
                     <div key={r} className="p-6 rounded-xl bg-[#f7f9fb]">
                       <div className="flex items-center gap-3 mb-3">
-                        <img src={`https://i.pravatar.cc/60?img=${20+r}`} className="w-10 h-10 rounded-full" alt="" />
+                        <div className="w-10 h-10 rounded-full bg-[#1fa5a3]/20 flex items-center justify-center text-[#1fa5a3] font-bold text-sm">{['A','D','L'][r-1]}</div>
                         <div>
                           <div className="font-semibold text-[#14213d]">{['Ana P.', 'David M.', 'Lucia F.'][r-1]}</div>
                           <div className="flex gap-1 mt-1">{[1,2,3,4,5].map(i => <Star key={i} className="w-3.5 h-3.5 fill-[#c8a25a] text-[#c8a25a]" />)}</div>

@@ -13,6 +13,9 @@ import About from './pages/About';
 import Contact from './pages/Contact';
 import { Toaster } from './components/ui/toaster';
 import { CurrencyProvider } from './context/CurrencyContext';
+import { LanguageProvider } from './i18n/LanguageContext';
+import Privacy from './pages/Privacy';
+import Terms from './pages/Terms';
 
 const THEME_STORAGE_KEY = 'owa-theme';
 
@@ -52,25 +55,29 @@ function App() {
   return (
     <div className="App">
       <CurrencyProvider>
-        <BrowserRouter>
-          <ScrollToTop />
-          <Header theme={theme} onToggleTheme={() => setTheme((currentTheme) => currentTheme === 'dark' ? 'light' : 'dark')} />
-          <main>
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/actividades" element={<Activities />} />
-              <Route path="/actividad/:id" element={<ActivityDetail />} />
-              <Route path="/destinos" element={<Destinations />} />
-              <Route path="/blog" element={<Blog />} />
-              <Route path="/blog/:id" element={<BlogDetail />} />
-              <Route path="/nosotros" element={<About />} />
-              <Route path="/contacto" element={<Contact />} />
-            </Routes>
-          </main>
-          <Footer />
-          <Toaster />
-        </BrowserRouter>
-      </CurrencyProvider>
+      <LanguageProvider>
+          <BrowserRouter>
+            <ScrollToTop />
+            <Header theme={theme} onToggleTheme={() => setTheme((currentTheme) => currentTheme === 'dark' ? 'light' : 'dark')} />
+            <main>
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/actividades" element={<Activities />} />
+                <Route path="/actividad/:id" element={<ActivityDetail />} />
+                <Route path="/destinos" element={<Destinations />} />
+                <Route path="/blog" element={<Blog />} />
+                <Route path="/blog/:id" element={<BlogDetail />} />
+                <Route path="/nosotros" element={<About />} />
+                <Route path="/contacto" element={<Contact />} />
+                <Route path="/privacy" element={<Privacy />} />
+                <Route path="/terms" element={<Terms />} />
+              </Routes>
+            </main>
+            <Footer />
+            <Toaster />
+          </BrowserRouter>
+      </LanguageProvider>
+    </CurrencyProvider>
     </div>
   );
 }

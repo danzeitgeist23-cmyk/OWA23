@@ -1,37 +1,21 @@
 import React from 'react';
-import { Star, Quote } from 'lucide-react';
-import { testimonials } from '../mock';
+import { useT } from '../i18n/LanguageContext';
 
 export default function Testimonials() {
+  const t = useT();
+
   return (
     <section className="py-20 md:py-28 bg-[#f7f9fb]">
       <div className="max-w-7xl mx-auto px-5 md:px-8">
         <div className="text-center mb-14">
-          <p className="text-[#c8a25a] text-sm font-semibold tracking-widest uppercase mb-2">Testimonios</p>
+          <p className="text-[#c8a25a] text-sm font-semibold tracking-widest uppercase mb-2">{t('testimonials.eyebrow')}</p>
           <h2 className="text-4xl md:text-5xl font-bold text-[#14213d]">
-            Historias reales de <span className="italic font-medium">exploradores</span>
+            {t('testimonials.title').split(' ').slice(0, -1).join(' ')} <span className="italic font-medium">{t('testimonials.title').split(' ').slice(-1)[0]}</span>
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {testimonials.map((t) => (
-            <div key={t.id} className="bg-white rounded-2xl p-8 border border-gray-100 hover:shadow-[0_15px_40px_-15px_rgba(11,33,61,0.2)] transition-all">
-              <Quote className="w-8 h-8 text-[#c8a25a] mb-4" />
-              <div className="flex gap-1 mb-4">
-                {Array.from({ length: t.rating }).map((_, i) => (
-                  <Star key={i} className="w-4 h-4 fill-[#c8a25a] text-[#c8a25a]" />
-                ))}
-              </div>
-              <p className="text-[#14213d] leading-relaxed mb-6">“{t.text}”</p>
-              <div className="flex items-center gap-3 pt-4 border-t border-gray-100">
-                <img src={t.avatar} alt={t.name} className="w-11 h-11 rounded-full object-cover" />
-                <div>
-                  <div className="font-semibold text-[#14213d]">{t.name}</div>
-                  <div className="text-sm text-gray-500">{t.country} · {t.activity}</div>
-                </div>
-              </div>
-            </div>
-          ))}
+        <div className="text-center text-gray-500 text-lg py-12">
+          {t('testimonials.empty')}
         </div>
       </div>
     </section>

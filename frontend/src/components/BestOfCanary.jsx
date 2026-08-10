@@ -2,10 +2,12 @@ import React, { useState } from 'react';
 import { activities, categories } from '../mock';
 import ActivityCard from './ActivityCard';
 import { Sailboat, Fish, Mountain, Wind, Leaf, UtensilsCrossed } from 'lucide-react';
+import { useT } from '../i18n/LanguageContext';
 
 const iconMap = { Sailboat, Fish, Mountain, Wind, Leaf, UtensilsCrossed };
 
 export default function BestOfCanary() {
+  const t = useT();
   const [active, setActive] = useState('all');
   const filtered = active === 'all' ? activities : activities.filter((a) => a.category === active);
   const list = filtered.slice(0, 6);
@@ -14,12 +16,12 @@ export default function BestOfCanary() {
     <section className="py-20 md:py-28 bg-white">
       <div className="max-w-7xl mx-auto px-5 md:px-8">
         <div className="text-center mb-12">
-          <p className="text-[#c8a25a] text-sm font-semibold tracking-widest uppercase mb-2">Lo mejor de Canarias</p>
+          <p className="text-[#c8a25a] text-sm font-semibold tracking-widest uppercase mb-2">{t('bestOf.eyebrow')}</p>
           <h2 className="text-4xl md:text-5xl font-bold text-[#14213d]">
-            Best of <span className="italic font-medium">Canary</span>
+            {t('bestOf.title').split(' ').slice(0, -1).join(' ')} <span className="italic font-medium">{t('bestOf.title').split(' ').slice(-1)[0]}</span>
           </h2>
           <p className="max-w-2xl mx-auto text-gray-500 mt-4">
-            Actividades cuidadosamente seleccionadas por nuestros guías locales. Filtra por categoría y encuentra tu próxima aventura.
+            {t('bestOf.description')}
           </p>
         </div>
 
@@ -32,7 +34,7 @@ export default function BestOfCanary() {
                 : 'bg-white text-[#14213d] border-gray-200 hover:border-[#1fa5a3]'
             }`}
           >
-            Todas
+            {t('bestOf.filterAll')}
           </button>
           {categories.map((c) => {
             const Icon = iconMap[c.icon];

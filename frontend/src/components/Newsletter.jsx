@@ -1,17 +1,19 @@
 import React, { useState } from 'react';
 import { Mail } from 'lucide-react';
 import { useToast } from '../hooks/use-toast';
+import { useT } from '../i18n/LanguageContext';
 
 export default function Newsletter() {
   const [email, setEmail] = useState('');
   const { toast } = useToast();
+  const t = useT();
 
   const submit = (e) => {
     e.preventDefault();
     if (!email) return;
     toast({
-      title: '¡Estás dentro!',
-      description: 'Te enviaremos las mejores ofertas de aventuras en Canarias.',
+      title: t('newsletter.success'),
+      description: t('newsletter.description'),
     });
     setEmail('');
   };
@@ -32,10 +34,10 @@ export default function Newsletter() {
           <Mail className="w-6 h-6" />
         </div>
         <h2 className="text-4xl md:text-5xl font-bold">
-          Ofertas exclusivas <span className="italic font-medium">para wild explorers</span>
+          {t('newsletter.title')}
         </h2>
         <p className="mt-4 text-white/70 text-lg">
-          Suscríbete y recibe descuentos secretos y las mejores aventuras cada semana.
+          {t('newsletter.description')}
         </p>
 
         <form onSubmit={submit} className="mt-10 max-w-xl mx-auto bg-white rounded-full p-1.5 flex items-center">
@@ -44,18 +46,18 @@ export default function Newsletter() {
             required
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            placeholder="Tu email"
+            placeholder={t('newsletter.placeholder')}
             className="flex-1 px-5 py-3 bg-transparent text-[#14213d] outline-none placeholder-gray-400"
           />
           <button
             type="submit"
             className="px-6 md:px-8 py-3 bg-[#c8a25a] text-white rounded-full font-semibold hover:bg-[#b08c49] transition-all"
           >
-            Suscribirme
+            {t('newsletter.button')}
           </button>
         </form>
 
-        <p className="mt-4 text-white/50 text-sm">Sin spam. Puedes darte de baja en cualquier momento.</p>
+        <p className="mt-4 text-white/50 text-sm">{t('newsletter.disclaimer')}</p>
       </div>
     </section>
   );

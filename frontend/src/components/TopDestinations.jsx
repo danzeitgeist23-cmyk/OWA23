@@ -1,20 +1,22 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { destinations } from '../mock';
+import { useT } from '../i18n/LanguageContext';
 
 export default function TopDestinations() {
+  const t = useT();
   return (
     <section className="py-20 md:py-28 bg-white">
       <div className="max-w-7xl mx-auto px-5 md:px-8">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
           <div>
-            <p className="text-[#c8a25a] text-sm font-semibold tracking-widest uppercase mb-2">Explora</p>
+            <p className="text-[#c8a25a] text-sm font-semibold tracking-widest uppercase mb-2">{t('destinations.eyebrow')}</p>
             <h2 className="text-4xl md:text-5xl font-bold text-[#14213d]">
-              Los mejores destinos<br /><span className="italic font-medium">de Canarias</span>
+              {t('destinations.title')}<br /><span className="italic font-medium">{t('destinations.titleAccent')}</span>
             </h2>
           </div>
           <Link to="/destinos" className="text-[#1fa5a3] font-semibold hover:text-[#c8a25a] transition-colors self-start md:self-end">
-            Ver todos los destinos →
+            {t('destinations.viewAll')} →
           </Link>
         </div>
 
@@ -36,7 +38,7 @@ export default function TopDestinations() {
               <h3 className="text-lg font-semibold text-[#14213d] group-hover:text-[#1fa5a3]">
                 {d.name}
               </h3>
-              <p className="text-sm text-gray-500 mt-1">{d.activityCount} actividades</p>
+              <p className="text-sm text-gray-500 mt-1">{d.activityCount} {t('destinations.activityCount')}</p>
             </Link>
           ))}
         </div>

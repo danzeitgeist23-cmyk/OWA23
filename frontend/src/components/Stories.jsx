@@ -9,13 +9,13 @@ export default function Stories() {
       <div className="max-w-7xl mx-auto px-5 md:px-8">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
           <div>
-            <p className="text-[#c8a25a] text-sm font-semibold tracking-widest uppercase mb-2">Blog</p>
+            <p className="text-[#c8a25a] text-sm font-semibold tracking-widest uppercase mb-2">{t('blog.eyebrow')}</p>
             <h2 className="text-4xl md:text-5xl font-bold text-[#14213d]">
-              Stories, tips, <span className="italic font-medium">& guides</span>
+              {t('blog.title')}
             </h2>
           </div>
           <Link to="/blog" className="text-[#1fa5a3] font-semibold hover:text-[#c8a25a] transition-colors self-start md:self-end">
-            Ver todos los artículos →
+            {t('blog.viewAll')} →
           </Link>
         </div>
 

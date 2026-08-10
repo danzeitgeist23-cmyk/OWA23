@@ -1,31 +1,33 @@
 import React from 'react';
 import { Compass, Award, HeartHandshake, ShieldCheck } from 'lucide-react';
-import { stats } from '../mock';
-
-const features = [
-  {
-    icon: Compass,
-    title: 'Guías locales',
-    text: 'Nuestro equipo son canarios de nacimiento que conocen cada rincón de las islas.',
-  },
-  {
-    icon: Award,
-    title: 'Aventuras premium',
-    text: 'Experiencias cuidadas al detalle, no tours de agencia genéricos.',
-  },
-  {
-    icon: HeartHandshake,
-    title: 'Grupos pequeños',
-    text: 'Máximo 8 personas por actividad. Más cerca, más auténtico.',
-  },
-  {
-    icon: ShieldCheck,
-    title: 'Reserva segura',
-    text: 'Cancelación gratuita hasta 24 horas antes. Pago 100% seguro.',
-  },
-];
+import { useT } from '../i18n/LanguageContext';
 
 export default function WhyOWA() {
+  const t = useT();
+
+  const features = [
+    {
+      icon: Compass,
+      title: t('why.feature1Title'),
+      text: t('why.feature1Text'),
+    },
+    {
+      icon: Award,
+      title: t('why.feature2Title'),
+      text: t('why.feature2Text'),
+    },
+    {
+      icon: HeartHandshake,
+      title: t('why.feature3Title'),
+      text: t('why.feature3Text'),
+    },
+    {
+      icon: ShieldCheck,
+      title: t('why.feature4Title'),
+      text: t('why.feature4Text'),
+    },
+  ];
+
   return (
     <section className="py-20 md:py-28 bg-[#0b1c26] text-white overflow-hidden relative">
       <div className="absolute inset-0 opacity-[0.04] pointer-events-none">
@@ -35,22 +37,13 @@ export default function WhyOWA() {
       <div className="relative max-w-7xl mx-auto px-5 md:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div>
-            <p className="text-[#c8a25a] text-sm font-semibold tracking-widest uppercase mb-3">Where adventure begins</p>
+            <p className="text-[#c8a25a] text-sm font-semibold tracking-widest uppercase mb-3">{t('why.eyebrow')}</p>
             <h2 className="text-4xl md:text-5xl font-bold leading-tight">
-              No para todos.<br /><span className="italic font-medium text-white/80">Solo para exploradores.</span>
+              {t('why.title')}<br /><span className="italic font-medium text-white/80">{t('why.titleAccent')}</span>
             </h2>
             <p className="mt-6 text-white/70 text-lg leading-relaxed">
-              OWA nace de la pasión por lo salvaje. No vendemos tours: creamos aventuras a medida por mar, aire y tierra en las islas más espectaculares del Atlántico.
+              {t('why.description')}
             </p>
-
-            <div className="grid grid-cols-2 gap-6 mt-10">
-              {stats.map((s, i) => (
-                <div key={i} className="border-l-2 border-[#c8a25a] pl-4">
-                  <div className="text-3xl md:text-4xl font-bold text-white">{s.number}</div>
-                  <div className="text-sm text-white/60 mt-1">{s.label}</div>
-                </div>
-              ))}
-            </div>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">

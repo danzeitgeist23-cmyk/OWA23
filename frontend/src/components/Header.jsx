@@ -10,15 +10,8 @@ import {
   DropdownMenuTrigger,
 } from './ui/dropdown-menu';
 import { useCurrency } from '../context/CurrencyContext';
-
-const navLinks = [
-  { name: 'Inicio', to: '/' },
-  { name: 'Actividades', to: '/actividades' },
-  { name: 'Destinos', to: '/destinos' },
-  { name: 'Blog', to: '/blog' },
-  { name: 'Nosotros', to: '/nosotros' },
-  { name: 'Contacto', to: '/contacto' },
-];
+import { useT } from '../i18n/LanguageContext';
+import LanguageSelector from './LanguageSelector';
 
 export default function Header({ theme, onToggleTheme }) {
   const [scrolled, setScrolled] = useState(false);
@@ -26,6 +19,16 @@ export default function Header({ theme, onToggleTheme }) {
   const location = useLocation();
   const isHome = location.pathname === '/';
   const { currencies, currency, setCurrency } = useCurrency();
+  const t = useT();
+
+  const navLinks = [
+    { name: t('nav.home'), to: '/' },
+    { name: t('nav.activities'), to: '/actividades' },
+    { name: t('nav.destinations'), to: '/destinos' },
+    { name: t('nav.blog'), to: '/blog' },
+    { name: t('nav.about'), to: '/nosotros' },
+    { name: t('nav.contact'), to: '/contacto' },
+  ];
 
   const currencyMeta = {
     EUR: { label: 'Euro', symbol: '€' },
@@ -82,6 +85,7 @@ export default function Header({ theme, onToggleTheme }) {
         </nav>
 
         <div className="flex items-center gap-2">
+          <LanguageSelector />
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
               <button
@@ -97,7 +101,7 @@ export default function Header({ theme, onToggleTheme }) {
               </button>
             </DropdownMenuTrigger>
             <DropdownMenuContent align="end" className="w-52">
-              <DropdownMenuLabel className="text-xs uppercase tracking-wider text-muted-foreground">Moneda</DropdownMenuLabel>
+              <DropdownMenuLabel className="text-xs uppercase tracking-wider text-muted-foreground">{t('nav.currency')}</DropdownMenuLabel>
               <DropdownMenuSeparator />
               {currencies.map((code) => (
                 <DropdownMenuItem
@@ -122,7 +126,7 @@ export default function Header({ theme, onToggleTheme }) {
           <button
             type="button"
             onClick={onToggleTheme}
-            aria-label={theme === 'dark' ? 'Activar modo día' : 'Activar modo noche'}
+            aria-label={theme === 'dark' ? t('nav.dayMode') : t('nav.nightMode')}
             className={`w-10 h-10 rounded-full flex items-center justify-center border transition-all ${iconButton}`}
           >
             {theme === 'dark' ? <SunMedium className="w-4 h-4" /> : <MoonStar className="w-4 h-4" />}
@@ -158,7 +162,10 @@ export default function Header({ theme, onToggleTheme }) {
               </Link>
             ))}
             <div className="mt-3 pt-3 border-t border-border">
-              <div className="px-3 pb-2 text-xs uppercase tracking-wider text-muted-foreground font-semibold">Moneda</div>
+              <LanguageSelector variant="mobile" />
+            </div>
+            <div className="mt-3 pt-3 border-t border-border">
+              <div className="px-3 pb-2 text-xs uppercase tracking-wider text-muted-foreground font-semibold">{t('nav.currency')}</div>
               <div className="flex gap-2 px-3">
                 {currencies.map((code) => (
                   <button

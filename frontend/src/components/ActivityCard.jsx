@@ -2,10 +2,12 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { MapPin, Clock, Star, Heart } from 'lucide-react';
 import { useCurrency } from '../context/CurrencyContext';
+import { useT } from '../i18n/LanguageContext';
 
 export default function ActivityCard({ activity }) {
   const [saved, setSaved] = React.useState(false);
   const { format } = useCurrency();
+  const t = useT();
 
   return (
     <Link
@@ -19,7 +21,7 @@ export default function ActivityCard({ activity }) {
         <div className="absolute top-3 left-3 flex flex-col gap-1.5">
           {activity.featured && (
             <span className="px-2.5 py-1 rounded-md bg-[#1fa5a3] text-white text-[11px] font-semibold uppercase tracking-wider">
-              Destacado
+              {t('card.featured')}
             </span>
           )}
           {activity.originalPrice && (
@@ -55,12 +57,12 @@ export default function ActivityCard({ activity }) {
         <div className="flex items-center gap-1.5 mt-3 text-sm">
           <Star className="w-4 h-4 fill-[#c8a25a] text-[#c8a25a]" />
           <span className="font-semibold text-[#14213d]">{activity.rating}</span>
-          <span className="text-gray-500">({activity.reviews} reseñas)</span>
+          <span className="text-gray-500">({activity.reviews} {t('card.reviews')})</span>
         </div>
 
         <div className="mt-4 pt-4 border-t border-gray-100 flex items-end justify-between">
           <div>
-            <p className="text-[11px] uppercase text-gray-400 tracking-wide font-medium">Desde</p>
+            <p className="text-[11px] uppercase text-gray-400 tracking-wide font-medium">{t('card.from')}</p>
             <div className="flex items-baseline gap-2">
               <span className="text-2xl font-bold text-[#1fa5a3]">{format(activity.price)}</span>
               {activity.originalPrice && (

@@ -2,21 +2,23 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { activities } from '../mock';
 import ActivityCard from './ActivityCard';
+import { useT } from '../i18n/LanguageContext';
 
 export default function InspiredTrips() {
+  const t = useT();
   const inspired = activities.slice(0, 6);
   return (
     <section className="py-20 md:py-28 bg-[#f7f9fb]">
       <div className="max-w-7xl mx-auto px-5 md:px-8">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
           <div>
-            <p className="text-[#c8a25a] text-sm font-semibold tracking-widest uppercase mb-2">Inspiration</p>
+            <p className="text-[#c8a25a] text-sm font-semibold tracking-widest uppercase mb-2">{t('inspired.eyebrow')}</p>
             <h2 className="text-4xl md:text-5xl font-bold text-[#14213d]">
-              Get inspired for your <span className="italic font-medium">next trip</span>
+              {t('inspired.title')}
             </h2>
           </div>
           <Link to="/actividades" className="text-[#1fa5a3] font-semibold hover:text-[#c8a25a] transition-colors self-start md:self-end">
-            Ver todas las actividades →
+            {t('inspired.viewAll')} →
           </Link>
         </div>
 

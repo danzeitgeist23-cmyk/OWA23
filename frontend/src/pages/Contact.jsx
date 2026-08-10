@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { MapPin, Phone, Mail, Send } from 'lucide-react';
+import { MapPin, Mail, Send } from 'lucide-react';
 import { useToast } from '../hooks/use-toast';
 
 export default function Contact() {
@@ -24,7 +24,6 @@ export default function Contact() {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-12">
           {[
             { icon: MapPin, title: 'Oficina central', lines: ['Muelle Deportivo s/n', 'Las Palmas de Gran Canaria'] },
-            { icon: Phone, title: 'Llámanos', lines: ['+34 928 123 456', 'Lun – Dom 9:00 – 21:00'] },
             { icon: Mail, title: 'Email', lines: ['info@owawild.com', 'reservas@owawild.com'] },
           ].map((c, i) => (
             <div key={i} className="p-8 rounded-2xl bg-[#f7f9fb] hover:bg-white hover:shadow-[0_20px_50px_-15px_rgba(11,33,61,0.15)] transition-all">

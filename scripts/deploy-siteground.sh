@@ -4,12 +4,15 @@
 
 set -euo pipefail
 
-# Configuration
-FTP_HOST="ftp.owawild.com"
-FTP_USER="octano@owawild.com"
-FTP_PASS='***REMOVED-FTP-PASSWORD***'
-FTP_PORT="21"
-REMOTE_PATH="/owawild.com/public_html"
+# Resolve repo root so the script works from any CWD
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+REPO_ROOT="$(cd "$SCRIPT_DIR/.." && pwd)"
+
+# Credentials are loaded from a gitignored env file (see scripts/deploy.env.example).
+# Override the path with DEPLOY_ENV_FILE if needed.
+CRED_FILE="${DEPLOY_ENV_FILE:-$SCRIPT_DIR/deploy.env}"
+
+# Non-secret configuration
 LOCAL_BUILD_DIR="frontend/build"
 
 # Colors
@@ -23,6 +26,21 @@ log() { echo -e "${BLUE}[$(date '+%H:%M:%S')]${NC} $*"; }
 success() { echo -e "${GREEN}✅ $*${NC}"; }
 warn() { echo -e "${YELLOW}⚠️  $*${NC}"; }
 error() { echo -e "${RED}❌ $*${NC}"; exit 1; }
+
+# Load and validate credentials from the gitignored env file
+load_credentials() {
+    log "Loading credentials from ${CRED_FILE#$REPO_ROOT/}..."
+    [[ -f "$CRED_FILE" ]] || error "Credentials file not found: $CRED_FILE
+   Copy scripts/deploy.env.example to scripts/deploy.env and fill in the real values."
+    # shellcheck disable=SC1090
+    set -a; source "$CRED_FILE"; set +a
+    local missing=()
+    for var in FTP_HOST FTP_USER FTP_PASS FTP_PORT REMOTE_PATH; do
+        [[ -n "${!var:-}" ]] || missing+=("$var")
+    done
+    [[ ${#missing[@]} -eq 0 ]] || error "Missing values in $CRED_FILE: ${missing[*]}"
+    success "Credentials loaded"
+}
 
 # Check requirements
 check_requirements() {
@@ -72,8 +90,11 @@ verify() {
 # Main
 main() {
     log "🚀 OWA SiteGround Deploy"
+    cd "$REPO_ROOT"
+
+    load_credentials
     log "Target: $FTP_HOST:$REMOTE_PATH"
-    
+
     check_requirements
     build_frontend
     deploy_ftp

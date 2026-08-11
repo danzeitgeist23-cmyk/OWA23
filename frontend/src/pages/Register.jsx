@@ -36,7 +36,7 @@ export default function Register() {
         password: values.password,
       });
 
-      navigate('/mi-cuenta', { replace: true });
+      navigate('/account', { replace: true });
     } catch (requestError) {
       setError(requestError.message || 'No se pudo crear la cuenta.');
     } finally {
@@ -145,7 +145,7 @@ export default function Register() {
 
             <div className="md:col-span-2 flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
               <Link
-                to="/acceso"
+                to="/login"
                 data-testid={REGISTER.loginLink}
                 className="inline-flex items-center gap-2 text-sm font-semibold text-[#1fa5a3]"
               >

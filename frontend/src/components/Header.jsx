@@ -23,11 +23,11 @@ export default function Header({ theme, onToggleTheme }) {
 
   const navLinks = [
     { name: t('nav.home'), to: '/' },
-    { name: t('nav.activities'), to: '/actividades' },
-    { name: t('nav.destinations'), to: '/destinos' },
+    { name: t('nav.activities'), to: '/activities' },
+    { name: t('nav.destinations'), to: '/destinations' },
     { name: t('nav.blog'), to: '/blog' },
-    { name: t('nav.about'), to: '/nosotros' },
-    { name: t('nav.contact'), to: '/contacto' },
+    { name: t('nav.about'), to: '/about' },
+    { name: t('nav.contact'), to: '/contact' },
   ];
 
   const currencyMeta = {
@@ -131,10 +131,10 @@ export default function Header({ theme, onToggleTheme }) {
           >
             {theme === 'dark' ? <SunMedium className="w-4 h-4" /> : <MoonStar className="w-4 h-4" />}
           </button>
-          <Link to="/mi-cuenta" className={`w-10 h-10 rounded-full flex items-center justify-center border transition-all ${iconButton}`} aria-label="Ir a mis reservas">
+          <Link to="/account" className={`w-10 h-10 rounded-full flex items-center justify-center border transition-all ${iconButton}`} aria-label="Ir a mis reservas">
             <ShoppingBag className="w-4 h-4" />
           </Link>
-          <Link to="/acceso" className={`w-10 h-10 rounded-full flex items-center justify-center border transition-all ${iconButton}`} aria-label="Acceso de usuario">
+          <Link to="/login" className={`w-10 h-10 rounded-full flex items-center justify-center border transition-all ${iconButton}`} aria-label="Acceso de usuario">
             <User className="w-4 h-4" />
           </Link>
           <button
@@ -164,14 +164,14 @@ export default function Header({ theme, onToggleTheme }) {
             <div className="mt-3 pt-3 border-t border-border">
               <div className="grid grid-cols-2 gap-2 px-3 pb-3">
                 <Link
-                  to="/acceso"
+                  to="/login"
                   onClick={() => setOpen(false)}
                   className="rounded-md bg-primary text-primary-foreground px-3 py-2.5 text-center text-sm font-semibold"
                 >
                   Acceso
                 </Link>
                 <Link
-                  to="/mi-cuenta"
+                  to="/account"
                   onClick={() => setOpen(false)}
                   className="rounded-md border border-border px-3 py-2.5 text-center text-sm font-semibold text-foreground"
                 >

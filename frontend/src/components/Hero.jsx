@@ -23,7 +23,7 @@ export default function Hero() {
     if (location) params.set('destination', location);
     if (startDate) params.set('from', format(startDate, 'yyyy-MM-dd'));
     if (endDate) params.set('to', format(endDate, 'yyyy-MM-dd'));
-    navigate(`/actividades?${params.toString()}`);
+    navigate(`/activities?${params.toString()}`);
   };
 
   return (

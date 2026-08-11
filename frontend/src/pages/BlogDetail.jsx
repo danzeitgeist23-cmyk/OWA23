@@ -226,14 +226,14 @@ export default function BlogDetail() {
             </p>
             <div className="flex flex-wrap gap-4">
               <Link 
-                to="/actividad/ocean-giants-cruise" 
+                to="/activity/ocean-giants-cruise" 
                 className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-white text-[#14213d] font-semibold hover:bg-gray-100 transition-colors"
               >
                 Reservar Ocean Giants Cruise
                 <ChevronRight className="w-4 h-4" />
               </Link>
               <Link 
-                to="/contacto" 
+                to="/contact" 
                 className="inline-flex items-center gap-2 px-6 py-3 rounded-lg border-2 border-white text-white font-semibold hover:bg-white/10 transition-colors"
               >
                 Preguntarnos lo que quieras

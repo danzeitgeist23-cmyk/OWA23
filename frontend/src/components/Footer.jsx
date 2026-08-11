@@ -35,11 +35,11 @@ export default function Footer() {
           <div>
             <h4 className="text-lg font-semibold mb-5">{t('footer.company')}</h4>
             <ul className="space-y-3 text-white/70 text-[15px]">
-              <li><Link to="/nosotros" className="hover:text-white">{t('footer.about')}</Link></li>
+              <li><Link to="/about" className="hover:text-white">{t('footer.about')}</Link></li>
               <li><Link to="/blog" className="hover:text-white">{t('footer.blog')}</Link></li>
-              <li><Link to="/contacto" className="hover:text-white">{t('footer.careers')}</Link></li>
-              <li><Link to="/contacto" className="hover:text-white">{t('footer.press')}</Link></li>
-              <li><Link to="/contacto" className="hover:text-white">{t('footer.affiliates')}</Link></li>
+              <li><Link to="/contact" className="hover:text-white">{t('footer.careers')}</Link></li>
+              <li><Link to="/contact" className="hover:text-white">{t('footer.press')}</Link></li>
+              <li><Link to="/contact" className="hover:text-white">{t('footer.affiliates')}</Link></li>
             </ul>
           </div>
 
@@ -47,7 +47,7 @@ export default function Footer() {
           <div>
             <h4 className="text-lg font-semibold mb-5">{t('footer.help')}</h4>
             <ul className="space-y-3 text-white/70 text-[15px]">
-              <li><Link to="/contacto" className="hover:text-white">{t('footer.helpCenter')}</Link></li>
+              <li><Link to="/contact" className="hover:text-white">{t('footer.helpCenter')}</Link></li>
               <li><a href="/terms#cancellation" className="hover:text-white">{t('footer.cancellation')}</a></li>
               <li><a href="/terms#safety" className="hover:text-white">{t('footer.safety')}</a></li>
               <li><a href="/terms" className="hover:text-white">{t('footer.terms')}</a></li>

@@ -581,9 +581,9 @@ En **OWA Wild Adventure** salimos desde **Puerto Rico (Gran Canaria)** y **Costa
 
 > **¿Listo para conocer a los gigantes del Atlántico?**
 > 
-> 👉 [Reserva tu Ocean Giants Cruise](/actividad/ocean-giants-cruise) — 4 horas, desde 40 €
+> 👉 [Reserva tu Ocean Giants Cruise](/activity/ocean-giants-cruise) — 4 horas, desde 40 €
 > 
-> *¿Preguntas? [Escríbenos](/contacto) y te asesoramos sin compromiso.*
+> *¿Preguntas? [Escríbenos](/contact) y te asesoramos sin compromiso.*
 
 ---
 

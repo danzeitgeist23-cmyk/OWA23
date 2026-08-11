@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import './App.css';
-import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, useLocation, Navigate } from 'react-router-dom';
 import Header from './components/Header';
+import LegacyActivityRedirect from './components/LegacyActivityRedirect';
 import Footer from './components/Footer';
 import Seo from './components/Seo';
 import Home from './pages/Home';
@@ -78,20 +79,32 @@ function App() {
             <main>
               <Routes>
                 <Route path="/" element={<Home />} />
-                <Route path="/actividades" element={<Activities />} />
-                <Route path="/actividad/:id" element={<ActivityDetail />} />
-                <Route path="/destinos" element={<Destinations />} />
+                <Route path="/activities" element={<Activities />} />
+                <Route path="/activity/:id" element={<ActivityDetail />} />
+                <Route path="/destinations" element={<Destinations />} />
                 <Route path="/blog" element={<Blog />} />
                 <Route path="/blog/:id" element={<BlogDetail />} />
-                <Route path="/nosotros" element={<About />} />
-                <Route path="/contacto" element={<Contact />} />
+                <Route path="/about" element={<About />} />
+                <Route path="/contact" element={<Contact />} />
+                <Route path="/account" element={<MyAccount />} />
+                <Route path="/login" element={<Login />} />
+                <Route path="/register" element={<Register />} />
+                {/* SumUp payment return — /pago/resultado is the live redirect_url in the backend; keep it working */}
                 <Route path="/pago/resultado" element={<PaymentResult />} />
+                <Route path="/payment/result" element={<PaymentResult />} />
                 <Route path="/privacy" element={<Privacy />} />
                 <Route path="/terms" element={<Terms />} />
-                <Route path="/acceso" element={<Login />} />
-                <Route path="/registro" element={<Register />} />
-                <Route path="/mi-cuenta" element={<MyAccount />} />
                 <Route path="/admin/media" element={<AdminMedia />} />
+
+                {/* Legacy Spanish routes → permanent redirects so previously shared links keep working */}
+                <Route path="/actividades" element={<Navigate to="/activities" replace />} />
+                <Route path="/actividad/:id" element={<LegacyActivityRedirect />} />
+                <Route path="/destinos" element={<Navigate to="/destinations" replace />} />
+                <Route path="/nosotros" element={<Navigate to="/about" replace />} />
+                <Route path="/contacto" element={<Navigate to="/contact" replace />} />
+                <Route path="/mi-cuenta" element={<Navigate to="/account" replace />} />
+                <Route path="/acceso" element={<Navigate to="/login" replace />} />
+                <Route path="/registro" element={<Navigate to="/register" replace />} />
               </Routes>
             </main>
             <Footer />

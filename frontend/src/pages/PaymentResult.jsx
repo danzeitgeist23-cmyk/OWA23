@@ -119,7 +119,7 @@ export default function PaymentResult() {
                 Actualizar estado
               </button>
             )}
-            <Link to="/actividades" className="px-6 py-3 border border-gray-200 hover:border-[#1fa5a3] text-[#14213d] rounded-full font-semibold transition-all">
+            <Link to="/activities" className="px-6 py-3 border border-gray-200 hover:border-[#1fa5a3] text-[#14213d] rounded-full font-semibold transition-all">
               Ver actividades
             </Link>
           </div>

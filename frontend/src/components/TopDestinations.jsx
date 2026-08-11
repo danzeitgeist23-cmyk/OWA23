@@ -16,7 +16,7 @@ export default function TopDestinations() {
               {t('destinations.title')}<br /><span className="italic font-medium">{t('destinations.titleAccent')}</span>
             </h2>
           </div>
-          <Link to="/destinos" className="text-[#1fa5a3] font-semibold hover:text-[#c8a25a] transition-colors self-start md:self-end">
+          <Link to="/destinations" className="text-[#1fa5a3] font-semibold hover:text-[#c8a25a] transition-colors self-start md:self-end">
             {t('destinations.viewAll')} →
           </Link>
         </div>
@@ -28,7 +28,7 @@ export default function TopDestinations() {
             return (
             <Link
               key={d.id}
-              to={`/actividades?destination=${d.id}`}
+              to={`/activities?destination=${d.id}`}
               className="group flex flex-col items-center text-center"
             >
               <div className="relative w-full aspect-square rounded-full overflow-hidden mb-4 owa-card">

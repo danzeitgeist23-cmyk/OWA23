@@ -77,10 +77,10 @@ export default function MyAccount() {
               </p>
             </div>
             <div className="flex flex-wrap gap-3">
-              <Link to="/acceso" className="rounded-full bg-[#14213d] px-5 py-3 text-sm font-semibold text-white transition hover:bg-[#0f1a31]">
+              <Link to="/login" className="rounded-full bg-[#14213d] px-5 py-3 text-sm font-semibold text-white transition hover:bg-[#0f1a31]">
                 Iniciar sesion
               </Link>
-              <Link to="/registro" className="rounded-full border border-slate-200 px-5 py-3 text-sm font-semibold text-[#14213d] transition hover:border-[#1fa5a3] hover:text-[#1fa5a3]">
+              <Link to="/register" className="rounded-full border border-slate-200 px-5 py-3 text-sm font-semibold text-[#14213d] transition hover:border-[#1fa5a3] hover:text-[#1fa5a3]">
                 Crear cuenta
               </Link>
             </div>

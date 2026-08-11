@@ -11,7 +11,7 @@ export default function Login() {
   const [values, setValues] = useState({ email: '', password: '' });
   const [error, setError] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const nextPath = location.state?.from?.pathname || '/mi-cuenta';
+  const nextPath = location.state?.from?.pathname || '/account';
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -65,7 +65,7 @@ export default function Login() {
                   Contrasena
                 </label>
                 <Link
-                  to="/contacto"
+                  to="/contact"
                   data-testid={LOGIN.forgotPasswordLink}
                   className="text-sm font-medium text-[#1fa5a3] hover:text-[#158582]"
                 >
@@ -105,7 +105,7 @@ export default function Login() {
           <div className="mt-6 flex items-center justify-between gap-4 rounded-2xl border border-slate-100 bg-slate-50 px-4 py-4 text-sm text-slate-600">
             <span>Todavia no tienes cuenta de cliente?</span>
             <Link
-              to="/registro"
+              to="/register"
               data-testid={LOGIN.registerLink}
               className="inline-flex items-center gap-2 font-semibold text-[#1fa5a3]"
             >

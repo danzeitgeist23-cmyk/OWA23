@@ -22,7 +22,7 @@ export default function Destinations() {
             return (
               <Link
                 key={d.id}
-                to={`/actividades?destination=${d.id}`}
+                to={`/activities?destination=${d.id}`}
                 className="group relative overflow-hidden rounded-2xl aspect-[4/5] owa-card shadow-[0_15px_40px_-15px_rgba(11,33,61,0.2)]"
               >
                 <img src={d.image} alt={d.name} className="absolute inset-0 w-full h-full object-cover owa-card-image" />

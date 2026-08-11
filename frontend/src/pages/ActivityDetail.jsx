@@ -73,7 +73,7 @@ export default function ActivityDetail() {
     return (
       <div className="pt-40 pb-20 text-center">
         <p>Actividad no encontrada.</p>
-        <Link to="/actividades" className="text-[#1fa5a3] underline">Volver a actividades</Link>
+        <Link to="/activities" className="text-[#1fa5a3] underline">Volver a actividades</Link>
       </div>
     );
   }
@@ -222,7 +222,7 @@ export default function ActivityDetail() {
     <div className="pt-24 pb-20 bg-white">
       <div className="max-w-7xl mx-auto px-5 md:px-8">
         <div className="text-sm text-gray-500 mb-6">
-          <Link to="/" className="hover:text-[#1fa5a3]">Inicio</Link> / <Link to="/actividades" className="hover:text-[#1fa5a3]">Actividades</Link> / <span className="text-[#14213d]">{activity.title}</span>
+          <Link to="/" className="hover:text-[#1fa5a3]">Inicio</Link> / <Link to="/activities" className="hover:text-[#1fa5a3]">Actividades</Link> / <span className="text-[#14213d]">{activity.title}</span>
         </div>
 
         <div className="mb-8">

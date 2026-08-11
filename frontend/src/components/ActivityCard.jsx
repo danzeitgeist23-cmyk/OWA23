@@ -11,7 +11,7 @@ export default function ActivityCard({ activity }) {
 
   return (
     <Link
-      to={`/actividad/${activity.id}`}
+      to={`/activity/${activity.id}`}
       className="group block bg-white rounded-2xl overflow-hidden owa-card shadow-[0_10px_30px_-15px_rgba(11,33,61,0.15)] hover:shadow-[0_20px_50px_-15px_rgba(11,33,61,0.28)]"
     >
       <div className="relative aspect-[4/3] overflow-hidden">

@@ -8,6 +8,9 @@ import {
   testimonials,
 } from './mock';
 
+const bookableIds = new Set(bookableActivities.map((activity) => activity.id));
+const remainingLegacyActivities = legacyActivities.filter((activity) => !bookableIds.has(activity.id));
+
 function interleaveActivities(primary, secondary) {
   const mixed = [];
   const maxLength = Math.max(primary.length, secondary.length);
@@ -20,5 +23,5 @@ function interleaveActivities(primary, secondary) {
   return mixed;
 }
 
-export const activities = interleaveActivities(bookableActivities, legacyActivities);
+export const activities = interleaveActivities(bookableActivities, remainingLegacyActivities);
 export { blogPosts, categories, destinations, stats, testimonials };

@@ -14,7 +14,7 @@ export default function Activities() {
   const [q, setQ] = useState('');
   const [selectedDestinations, setSelectedDestinations] = useState([]);
   const [selectedCategories, setSelectedCategories] = useState([]);
-  const [price, setPrice] = useState([0, 300]);
+  const [price, setPrice] = useState([0, 1200]);
   const [sort, setSort] = useState('featured');
 
   useEffect(() => {
@@ -100,7 +100,7 @@ export default function Activities() {
 
           <div>
             <h4 className="font-semibold text-[#14213d] mb-4 text-sm uppercase tracking-wide">Precio ({currency})</h4>
-            <Slider min={0} max={300} step={5} value={price} onValueChange={setPrice} />
+            <Slider min={0} max={1200} step={10} value={price} onValueChange={setPrice} />
             <div className="mt-3 flex justify-between text-sm text-gray-600">
               <span>{formatPrice(price[0])}</span>
               <span>{formatPrice(price[1])}</span>

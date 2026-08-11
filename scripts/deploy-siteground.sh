@@ -64,15 +64,22 @@ build_frontend() {
 deploy_ftp() {
     log "Deploying to SiteGround via FTP..."
     
+    # Force explicit FTPS (TLS) so the login and the uploaded data travel
+    # encrypted. Certificate verification is disabled because SiteGround shared
+    # hosting presents a server cert whose CN does not match ftp.<domain>
+    # (verified: "certificate common name doesn't match"). TLS still protects
+    # the credentials/data in transit; for full cert validation switch to SFTP.
     lftp -c "
-        set ftp:ssl-allow no
+        set ftp:ssl-force true
+        set ftp:ssl-protect-data true
+        set ssl:verify-certificate no
         set ftp:passive-mode on
         set net:timeout 30
         set net:max-retries 3
         open -u '$FTP_USER','$FTP_PASS' -p $FTP_PORT $FTP_HOST
         mirror --reverse --delete --verbose --parallel=4 $LOCAL_BUILD_DIR $REMOTE_PATH
         bye
-    " || error "FTP deploy failed"
+    " || error "FTPS deploy failed"
     
     success "Deploy complete"
 }

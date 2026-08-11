@@ -4,6 +4,8 @@
 // evitar reglas genéricas que no coincidan con las condiciones del proveedor.
 // La comisión de OWA nunca se incluye en este archivo público.
 
+import { additionalActivities } from './additionalActivityCatalog';
+
 const sharedBoatImages = {
   yacht: 'https://images.unsplash.com/photo-1571328532572-cb7899a8be7e?auto=format&fit=crop&w=900&q=80',
   yachtWide: 'https://images.unsplash.com/photo-1571328532572-cb7899a8be7e?auto=format&fit=crop&w=1400&q=80',
@@ -745,4 +747,7 @@ export const activities = [
     providerName: 'OWA Stargazing La Palma Partner',
     restrictions: ['Abrigo recomendado incluso en verano.', 'Actividad sujeta a nubosidad y viento.'],
   }),
+  // Actividades verificadas de Gran Canaria aportadas por el catálogo Skywork
+  // (confirmación por WhatsApp hasta contrato operativo / disponibilidad en vivo).
+  ...additionalActivities,
 ];

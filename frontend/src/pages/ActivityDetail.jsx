@@ -2,6 +2,10 @@ import React, { useEffect, useMemo, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { activities } from '../siteData';
 import { apiRequest } from '../lib/api';
+import {
+  buildActivityWhatsAppMessage,
+  buildWhatsAppUrl,
+} from '../lib/whatsapp';
 import { Calendar } from '../components/ui/calendar';
 import { Checkbox } from '../components/ui/checkbox';
 import { Popover, PopoverContent, PopoverTrigger } from '../components/ui/popover';
@@ -12,7 +16,7 @@ import { es } from 'date-fns/locale';
 import { useCurrency } from '../context/CurrencyContext';
 import {
   Star, MapPin, Clock, Users, Calendar as CalendarIcon, Check, X,
-  ShieldCheck, Award, ChevronLeft, ChevronRight, Share2, Heart,
+  ShieldCheck, Award, ChevronLeft, ChevronRight, Share2, Heart, MessageCircle,
 } from 'lucide-react';
 
 function buildTicketTypes(activity) {
@@ -199,6 +203,19 @@ export default function ActivityDetail() {
       });
       setIsBooking(false);
     }
+  };
+
+  const handleWhatsApp = () => {
+    const selectedDate = date
+      ? format(date, 'd MMM yyyy', { locale: es })
+      : '';
+    const message = buildActivityWhatsAppMessage({
+      activity,
+      date: selectedDate,
+      timeSlot,
+      quantities,
+    });
+    window.open(buildWhatsAppUrl(message), '_blank', 'noopener,noreferrer');
   };
 
   return (
@@ -511,6 +528,20 @@ export default function ActivityDetail() {
                   {canPayOnline
                     ? (isBooking ? 'Abriendo SumUp...' : 'Pagar de forma segura con SumUp')
                     : (paymentReady ? 'Pago online en preparacion' : (isBooking ? 'Enviando solicitud...' : 'Solicitar reserva'))}
+                </button>
+                <button
+                  type="button"
+                  onClick={handleWhatsApp}
+                  className={`w-full inline-flex items-center justify-center gap-2 py-3.5 rounded-full font-semibold transition-all ${
+                    canPayOnline || paymentReady
+                      ? 'border border-[#25D366] text-[#168f43] hover:bg-[#ecfff2]'
+                      : 'bg-[#25D366] hover:bg-[#20bd5a] text-white'
+                  }`}
+                >
+                  <MessageCircle className="w-5 h-5" />
+                  {canPayOnline || paymentReady
+                    ? '¿Tienes dudas? Escríbenos por WhatsApp'
+                    : 'Confirmar disponibilidad por WhatsApp'}
                 </button>
                 <p className="text-xs text-center text-gray-500">
                   {canPayOnline

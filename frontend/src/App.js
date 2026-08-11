@@ -13,6 +13,7 @@ import BlogDetail from './pages/BlogDetail';
 import About from './pages/About';
 import Contact from './pages/Contact';
 import PaymentResult from './pages/PaymentResult';
+import FloatingWhatsApp from './components/FloatingWhatsApp';
 import { Toaster } from './components/ui/toaster';
 import { CurrencyProvider } from './context/CurrencyContext';
 import { LanguageProvider } from './i18n/LanguageContext';
@@ -94,6 +95,7 @@ function App() {
               </Routes>
             </main>
             <Footer />
+            <FloatingWhatsApp />
             <Toaster />
           </BrowserRouter>
       </LanguageProvider>

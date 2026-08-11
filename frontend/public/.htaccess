@@ -1,0 +1,12 @@
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  # Serve real files/directories (assets, sitemap.xml, robots.txt) directly
+  RewriteRule ^index\.html$ - [L]
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+
+  # SPA fallback: send everything else to index.html so React Router handles it
+  RewriteRule . /index.html [L]
+</IfModule>

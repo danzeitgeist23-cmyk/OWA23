@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useMemo } from 'react';
 import { categories } from '../mock';
 import { activities } from '../siteData';
 import ActivityCard from './ActivityCard';
@@ -10,8 +10,34 @@ const iconMap = { Sailboat, Fish, Mountain, Wind, Leaf, UtensilsCrossed };
 export default function BestOfCanary() {
   const t = useT();
   const [active, setActive] = useState('all');
+
   const filtered = active === 'all' ? activities : activities.filter((a) => a.category === active);
-  const list = filtered.slice(0, 6);
+
+  const list = useMemo(() => {
+    if (active !== 'all') {
+      return filtered.slice(0, 6);
+    }
+    // When showing all categories, diversify by picking from different categories
+    const seenCategories = new Set();
+    const selected = [];
+    for (const activity of filtered) {
+      if (selected.length >= 6) break;
+      if (!seenCategories.has(activity.category)) {
+        selected.push(activity);
+        seenCategories.add(activity.category);
+      }
+    }
+    // Fill remaining slots if fewer than 6 categories
+    if (selected.length < 6) {
+      for (const activity of filtered) {
+        if (selected.length >= 6) break;
+        if (!selected.includes(activity)) {
+          selected.push(activity);
+        }
+      }
+    }
+    return selected;
+  }, [active, filtered]);
 
   return (
     <section className="py-20 md:py-28 bg-white">

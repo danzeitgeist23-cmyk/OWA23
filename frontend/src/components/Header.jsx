@@ -131,12 +131,12 @@ export default function Header({ theme, onToggleTheme }) {
           >
             {theme === 'dark' ? <SunMedium className="w-4 h-4" /> : <MoonStar className="w-4 h-4" />}
           </button>
-          <button className={`w-10 h-10 rounded-full flex items-center justify-center border transition-all ${iconButton}`}>
+          <Link to="/mi-cuenta" className={`w-10 h-10 rounded-full flex items-center justify-center border transition-all ${iconButton}`} aria-label="Ir a mis reservas">
             <ShoppingBag className="w-4 h-4" />
-          </button>
-          <button className={`w-10 h-10 rounded-full flex items-center justify-center border transition-all ${iconButton}`}>
+          </Link>
+          <Link to="/acceso" className={`w-10 h-10 rounded-full flex items-center justify-center border transition-all ${iconButton}`} aria-label="Acceso de usuario">
             <User className="w-4 h-4" />
-          </button>
+          </Link>
           <button
             className={`lg:hidden w-10 h-10 flex items-center justify-center rounded-md transition-colors ${transparent ? 'text-white' : 'text-foreground'}`}
             onClick={() => setOpen(!open)}
@@ -161,6 +161,24 @@ export default function Header({ theme, onToggleTheme }) {
                 {l.name}
               </Link>
             ))}
+            <div className="mt-3 pt-3 border-t border-border">
+              <div className="grid grid-cols-2 gap-2 px-3 pb-3">
+                <Link
+                  to="/acceso"
+                  onClick={() => setOpen(false)}
+                  className="rounded-md bg-primary text-primary-foreground px-3 py-2.5 text-center text-sm font-semibold"
+                >
+                  Acceso
+                </Link>
+                <Link
+                  to="/mi-cuenta"
+                  onClick={() => setOpen(false)}
+                  className="rounded-md border border-border px-3 py-2.5 text-center text-sm font-semibold text-foreground"
+                >
+                  Mi cuenta
+                </Link>
+              </div>
+            </div>
             <div className="mt-3 pt-3 border-t border-border">
               <LanguageSelector variant="mobile" />
             </div>

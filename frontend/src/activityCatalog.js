@@ -65,7 +65,7 @@ const jetSkiBase = {
   ],
   priceUnit: 'moto de agua',
   paymentCurrency: 'EUR',
-  bookingEnabled: false,
+  bookingEnabled: true,
 };
 
 function jetSkiActivity({
@@ -127,7 +127,7 @@ function legacyExperience({
   timeSlots = ['Horario a confirmar'],
   priceUnit = 'persona',
   paymentCurrency = 'EUR',
-  bookingEnabled = false,
+  bookingEnabled = true,
 }) {
   const normalizedTicketTypes = ticketTypes || [
     {

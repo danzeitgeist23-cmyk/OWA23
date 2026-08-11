@@ -121,22 +121,54 @@ export default function ActivityDetail() {
       return;
     }
 
-    if (!canPayOnline) {
-      toast({
-        title: paymentReady ? 'Pago online en preparacion' : 'Solicitud de reserva enviada',
-        description: paymentReady
-          ? 'La integracion con SumUp ya esta hecha, pero falta publicar el backend seguro y las credenciales reales antes de activarla.'
-          : `${activity.title} · ${format(date, 'd MMM yyyy', { locale: es })} · ${timeSlot}`,
-      });
-      return;
-    }
-
     if (!customer.name.trim() || !customer.email.trim() || !customer.phone.trim()) {
       toast({ title: 'Completa tus datos', description: 'Necesitamos nombre, email y telefono para gestionar la reserva.' });
       return;
     }
     if (!acceptedTerms) {
       toast({ title: 'Acepta la cancelacion', description: 'Debes aceptar la politica especifica de esta actividad.' });
+      return;
+    }
+
+    if (!canPayOnline) {
+      if (!paymentReady || hasPublicApi) {
+        setIsBooking(true);
+        try {
+          await apiRequest('/api/booking-requests', {
+            method: 'POST',
+            body: JSON.stringify({
+              activity_id: activity.id,
+              service_date: format(date, 'yyyy-MM-dd'),
+              time_slot: timeSlot,
+              quantities,
+              customer: {
+                name: customer.name.trim(),
+                email: customer.email.trim(),
+                phone: customer.phone.trim(),
+              },
+              accepted_terms: true,
+            }),
+          });
+          toast({
+            title: 'Solicitud enviada',
+            description: 'Te contactaremos muy pronto para confirmar disponibilidad y condiciones finales.',
+          });
+        } catch (error) {
+          toast({
+            title: 'No se pudo enviar la solicitud',
+            description: error.message || 'Intentalo de nuevo en unos minutos.',
+            variant: 'destructive',
+          });
+        } finally {
+          setIsBooking(false);
+        }
+        return;
+      }
+
+      toast({
+        title: 'Pago online en preparacion',
+        description: 'El checkout ya esta listo en el codigo. Falta publicar la API segura y las credenciales reales para activarlo en la web.',
+      });
       return;
     }
 
@@ -429,24 +461,22 @@ export default function ActivityDetail() {
                   })}
                 </div>
 
-                {paymentReady && (
-                  <div className="grid grid-cols-1 gap-3">
+                <div className="grid grid-cols-1 gap-3">
+                  <div>
+                    <label htmlFor="booking-name" className="text-xs font-semibold uppercase text-gray-500 tracking-wider mb-1.5 block">Nombre completo</label>
+                    <input id="booking-name" value={customer.name} onChange={(event) => updateCustomer('name', event.target.value)} autoComplete="name" className="w-full px-4 py-2.5 border border-gray-200 rounded-lg focus:outline-none focus:border-[#1fa5a3]" />
+                  </div>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                     <div>
-                      <label htmlFor="booking-name" className="text-xs font-semibold uppercase text-gray-500 tracking-wider mb-1.5 block">Nombre completo</label>
-                      <input id="booking-name" value={customer.name} onChange={(event) => updateCustomer('name', event.target.value)} autoComplete="name" className="w-full px-4 py-2.5 border border-gray-200 rounded-lg focus:outline-none focus:border-[#1fa5a3]" />
+                      <label htmlFor="booking-email" className="text-xs font-semibold uppercase text-gray-500 tracking-wider mb-1.5 block">Email</label>
+                      <input id="booking-email" type="email" value={customer.email} onChange={(event) => updateCustomer('email', event.target.value)} autoComplete="email" className="w-full px-4 py-2.5 border border-gray-200 rounded-lg focus:outline-none focus:border-[#1fa5a3]" />
                     </div>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                      <div>
-                        <label htmlFor="booking-email" className="text-xs font-semibold uppercase text-gray-500 tracking-wider mb-1.5 block">Email</label>
-                        <input id="booking-email" type="email" value={customer.email} onChange={(event) => updateCustomer('email', event.target.value)} autoComplete="email" className="w-full px-4 py-2.5 border border-gray-200 rounded-lg focus:outline-none focus:border-[#1fa5a3]" />
-                      </div>
-                      <div>
-                        <label htmlFor="booking-phone" className="text-xs font-semibold uppercase text-gray-500 tracking-wider mb-1.5 block">Telefono</label>
-                        <input id="booking-phone" type="tel" value={customer.phone} onChange={(event) => updateCustomer('phone', event.target.value)} autoComplete="tel" className="w-full px-4 py-2.5 border border-gray-200 rounded-lg focus:outline-none focus:border-[#1fa5a3]" />
-                      </div>
+                    <div>
+                      <label htmlFor="booking-phone" className="text-xs font-semibold uppercase text-gray-500 tracking-wider mb-1.5 block">Telefono</label>
+                      <input id="booking-phone" type="tel" value={customer.phone} onChange={(event) => updateCustomer('phone', event.target.value)} autoComplete="tel" className="w-full px-4 py-2.5 border border-gray-200 rounded-lg focus:outline-none focus:border-[#1fa5a3]" />
                     </div>
                   </div>
-                )}
+                </div>
 
                 <div className="pt-4 border-t border-gray-100 space-y-2 text-sm">
                   {ticketTypes.map((ticket) => {
@@ -468,14 +498,10 @@ export default function ActivityDetail() {
                   )}
                 </div>
 
-                {paymentReady ? (
-                  <label htmlFor="accept-cancellation" className="flex items-start gap-2 cursor-pointer text-xs text-gray-600 leading-relaxed">
-                    <Checkbox id="accept-cancellation" checked={acceptedTerms} onCheckedChange={(checked) => setAcceptedTerms(checked === true)} className="mt-0.5" />
-                    <span>Acepto la politica de esta actividad: {cancellationPolicy.short}</span>
-                  </label>
-                ) : (
-                  <p className="text-xs text-gray-500">{cancellationPolicy.short}</p>
-                )}
+                <label htmlFor="accept-cancellation" className="flex items-start gap-2 cursor-pointer text-xs text-gray-600 leading-relaxed">
+                  <Checkbox id="accept-cancellation" checked={acceptedTerms} onCheckedChange={(checked) => setAcceptedTerms(checked === true)} className="mt-0.5" />
+                  <span>Acepto la politica de esta actividad: {cancellationPolicy.short}</span>
+                </label>
 
                 <button
                   onClick={handleBook}
@@ -484,7 +510,7 @@ export default function ActivityDetail() {
                 >
                   {canPayOnline
                     ? (isBooking ? 'Abriendo SumUp...' : 'Pagar de forma segura con SumUp')
-                    : (paymentReady ? 'Pago online en preparacion' : 'Solicitar reserva')}
+                    : (paymentReady ? 'Pago online en preparacion' : (isBooking ? 'Enviando solicitud...' : 'Solicitar reserva'))}
                 </button>
                 <p className="text-xs text-center text-gray-500">
                   {canPayOnline

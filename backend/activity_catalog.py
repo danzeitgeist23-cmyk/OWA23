@@ -56,7 +56,7 @@ def _jet_ski_activity(title: str, price_cents: int) -> BookableActivity:
             ),
         },
         capacity=12,
-        online_booking_enabled=False,
+        online_booking_enabled=True,
     )
 
 
@@ -82,7 +82,7 @@ def _legacy_activity(
         allowed_time_slots=allowed_time_slots,
         tickets=tickets,
         capacity=capacity,
-        online_booking_enabled=False,
+        online_booking_enabled=True,
         commercial_terms_verified_on="2026-08-11",
     )
 
@@ -162,7 +162,7 @@ BOOKABLE_ACTIVITIES: Dict[str, BookableActivity] = {
             "adult": TicketType(label="Adultos", price_cents=1700, minimum=1),
             "child": TicketType(label="Ninos", price_cents=1700),
         },
-        capacity=24,
+        capacity=12,
     ),
     "ocean-giants-cruise": _legacy_activity(
         title="Ocean Giants Boat Cruise",
@@ -224,7 +224,7 @@ BOOKABLE_ACTIVITIES: Dict[str, BookableActivity] = {
         provider_id="banana-boat",
         provider_name="OWA Partner",
         tickets={
-            "adult": TicketType(label="Adultos", price_cents=2800, minimum=1),
+            "adult": TicketType(label="Adultos", price_cents=2500, minimum=1),
         },
         capacity=12,
     ),
@@ -267,7 +267,7 @@ BOOKABLE_ACTIVITIES: Dict[str, BookableActivity] = {
         provider_id="buceo-lanzarote",
         provider_name="OWA Partner",
         tickets={
-            "adult": TicketType(label="Adultos", price_cents=8900, minimum=1),
+            "adult": TicketType(label="Adultos", price_cents=8000, minimum=1),
         },
         capacity=12,
     ),
@@ -276,7 +276,7 @@ BOOKABLE_ACTIVITIES: Dict[str, BookableActivity] = {
         provider_id="kayak-cuevas",
         provider_name="OWA Partner",
         tickets={
-            "adult": TicketType(label="Adultos", price_cents=3900, minimum=1),
+            "adult": TicketType(label="Adultos", price_cents=3500, minimum=1),
         },
         capacity=12,
     ),
@@ -285,7 +285,7 @@ BOOKABLE_ACTIVITIES: Dict[str, BookableActivity] = {
         provider_id="teide-hike",
         provider_name="OWA Partner",
         tickets={
-            "adult": TicketType(label="Adultos", price_cents=4900, minimum=1),
+            "adult": TicketType(label="Adultos", price_cents=11000, minimum=1),
         },
         capacity=12,
     ),
@@ -294,7 +294,7 @@ BOOKABLE_ACTIVITIES: Dict[str, BookableActivity] = {
         provider_id="paragliding",
         provider_name="OWA Partner",
         tickets={
-            "adult": TicketType(label="Adultos", price_cents=11000, minimum=1),
+            "adult": TicketType(label="Adultos", price_cents=12000, minimum=1),
         },
         capacity=12,
     ),
@@ -303,7 +303,7 @@ BOOKABLE_ACTIVITIES: Dict[str, BookableActivity] = {
         provider_id="stand-up-paddle",
         provider_name="OWA Partner",
         tickets={
-            "adult": TicketType(label="Adultos", price_cents=2500, minimum=1),
+            "adult": TicketType(label="Adultos", price_cents=3000, minimum=1),
         },
         capacity=12,
     ),
@@ -312,7 +312,7 @@ BOOKABLE_ACTIVITIES: Dict[str, BookableActivity] = {
         provider_id="wine-tour",
         provider_name="OWA Partner",
         tickets={
-            "adult": TicketType(label="Adultos", price_cents=6900, minimum=1),
+            "adult": TicketType(label="Adultos", price_cents=6000, minimum=1),
         },
         capacity=12,
     ),
@@ -321,7 +321,7 @@ BOOKABLE_ACTIVITIES: Dict[str, BookableActivity] = {
         provider_id="stargazing",
         provider_name="OWA Partner",
         tickets={
-            "adult": TicketType(label="Adultos", price_cents=5900, minimum=1),
+            "adult": TicketType(label="Adultos", price_cents=5000, minimum=1),
         },
         capacity=12,
     ),

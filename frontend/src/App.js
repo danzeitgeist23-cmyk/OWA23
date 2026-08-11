@@ -3,6 +3,7 @@ import './App.css';
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import Seo from './components/Seo';
 import Home from './pages/Home';
 import Activities from './pages/Activities';
 import ActivityDetail from './pages/ActivityDetail';
@@ -17,6 +18,11 @@ import { CurrencyProvider } from './context/CurrencyContext';
 import { LanguageProvider } from './i18n/LanguageContext';
 import Privacy from './pages/Privacy';
 import Terms from './pages/Terms';
+import Login from './pages/Login';
+import Register from './pages/Register';
+import MyAccount from './pages/MyAccount';
+import AdminMedia from './pages/AdminMedia';
+import { getRouteSeo } from './lib/seo';
 
 const THEME_STORAGE_KEY = 'owa-theme';
 
@@ -26,6 +32,13 @@ function ScrollToTop() {
     window.scrollTo({ top: 0, behavior: 'instant' });
   }, [pathname]);
   return null;
+}
+
+function RouteMetadata() {
+  const location = useLocation();
+  const meta = getRouteSeo(location.pathname);
+
+  return <Seo {...meta} />;
 }
 
 function getInitialTheme() {
@@ -59,6 +72,7 @@ function App() {
       <LanguageProvider>
           <BrowserRouter>
             <ScrollToTop />
+            <RouteMetadata />
             <Header theme={theme} onToggleTheme={() => setTheme((currentTheme) => currentTheme === 'dark' ? 'light' : 'dark')} />
             <main>
               <Routes>
@@ -73,6 +87,10 @@ function App() {
                 <Route path="/pago/resultado" element={<PaymentResult />} />
                 <Route path="/privacy" element={<Privacy />} />
                 <Route path="/terms" element={<Terms />} />
+                <Route path="/acceso" element={<Login />} />
+                <Route path="/registro" element={<Register />} />
+                <Route path="/mi-cuenta" element={<MyAccount />} />
+                <Route path="/admin/media" element={<AdminMedia />} />
               </Routes>
             </main>
             <Footer />

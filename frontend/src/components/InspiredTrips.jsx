@@ -1,12 +1,36 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import { activities } from '../siteData';
 import ActivityCard from './ActivityCard';
 import { useT } from '../i18n/LanguageContext';
 
 export default function InspiredTrips() {
-  const t = useT();
-  const inspired = activities.slice(0, 6);
+  const t = useT()
+
+  const inspired = useMemo(() => {
+    const seenCategories = new Set()
+    const selected = []
+
+    for (const activity of activities) {
+      if (selected.length >= 6) break
+      if (!seenCategories.has(activity.category)) {
+        selected.push(activity)
+        seenCategories.add(activity.category)
+      }
+    }
+
+    if (selected.length < 6) {
+      for (const activity of activities) {
+        if (selected.length >= 6) break
+        if (!selected.includes(activity)) {
+          selected.push(activity)
+        }
+      }
+    }
+
+    return selected
+  }, [])
+
   return (
     <section className="py-20 md:py-28 bg-[#f7f9fb]">
       <div className="max-w-7xl mx-auto px-5 md:px-8">
@@ -17,7 +41,7 @@ export default function InspiredTrips() {
               {t('inspired.title')}
             </h2>
           </div>
-          <Link to="/actividades" className="text-[#1fa5a3] font-semibold hover:text-[#c8a25a] transition-colors self-start md:self-end">
+          <Link to="/activities" className="text-[#1fa5a3] font-semibold hover:text-[#c8a25a] transition-colors self-start md:self-end">
             {t('inspired.viewAll')} →
           </Link>
         </div>

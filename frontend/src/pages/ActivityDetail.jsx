@@ -74,7 +74,9 @@ export default function ActivityDetail() {
     );
   }
 
-  const canPayOnline = activity.bookingEnabled === true;
+  const hasPublicApi = Boolean(process.env.REACT_APP_API_BASE_URL);
+  const canPayOnline = activity.bookingEnabled === true && hasPublicApi;
+  const paymentReady = activity.bookingEnabled === true;
   const timeSlots = activity.timeSlots?.length ? activity.timeSlots : ['09:00', '10:00', '11:30', '14:00', '15:30', '17:00'];
   const gallery = activity.gallery?.length ? activity.gallery : [activity.image];
   const providerUrl = activity.provider?.activityUrl;
@@ -121,8 +123,10 @@ export default function ActivityDetail() {
 
     if (!canPayOnline) {
       toast({
-        title: 'Solicitud de reserva enviada',
-        description: `${activity.title} · ${format(date, 'd MMM yyyy', { locale: es })} · ${timeSlot}`,
+        title: paymentReady ? 'Pago online en preparacion' : 'Solicitud de reserva enviada',
+        description: paymentReady
+          ? 'La integracion con SumUp ya esta hecha, pero falta publicar el backend seguro y las credenciales reales antes de activarla.'
+          : `${activity.title} · ${format(date, 'd MMM yyyy', { locale: es })} · ${timeSlot}`,
       });
       return;
     }
@@ -198,7 +202,7 @@ export default function ActivityDetail() {
             <span className="text-gray-300">•</span>
             <div className="flex items-center gap-1.5 text-gray-600"><Clock className="w-4 h-4" /> {activity.duration}</div>
             <span className="text-gray-300">•</span>
-            <div className="flex items-center gap-1.5 text-gray-600"><Award className="w-4 h-4" /> {canPayOnline ? 'Operador local verificado' : 'Reserva bajo peticion'}</div>
+            <div className="flex items-center gap-1.5 text-gray-600"><Award className="w-4 h-4" /> {paymentReady ? 'Operador local verificado' : 'Reserva bajo peticion'}</div>
           </div>
         </div>
 
@@ -425,7 +429,7 @@ export default function ActivityDetail() {
                   })}
                 </div>
 
-                {canPayOnline && (
+                {paymentReady && (
                   <div className="grid grid-cols-1 gap-3">
                     <div>
                       <label htmlFor="booking-name" className="text-xs font-semibold uppercase text-gray-500 tracking-wider mb-1.5 block">Nombre completo</label>
@@ -459,12 +463,12 @@ export default function ActivityDetail() {
                     <span className="text-[#14213d]">Total</span>
                     <span className="text-[#1fa5a3]">{formatPrice(totalPrice, { decimals: priceDecimals(totalPrice) })}</span>
                   </div>
-                  {canPayOnline && currency !== (activity.paymentCurrency || 'EUR') && (
+                  {paymentReady && currency !== (activity.paymentCurrency || 'EUR') && (
                     <p className="text-xs text-gray-500">El importe definitivo se procesa en EUR al precio oficial del proveedor.</p>
                   )}
                 </div>
 
-                {canPayOnline ? (
+                {paymentReady ? (
                   <label htmlFor="accept-cancellation" className="flex items-start gap-2 cursor-pointer text-xs text-gray-600 leading-relaxed">
                     <Checkbox id="accept-cancellation" checked={acceptedTerms} onCheckedChange={(checked) => setAcceptedTerms(checked === true)} className="mt-0.5" />
                     <span>Acepto la politica de esta actividad: {cancellationPolicy.short}</span>
@@ -480,12 +484,14 @@ export default function ActivityDetail() {
                 >
                   {canPayOnline
                     ? (isBooking ? 'Abriendo SumUp...' : 'Pagar de forma segura con SumUp')
-                    : 'Solicitar reserva'}
+                    : (paymentReady ? 'Pago online en preparacion' : 'Solicitar reserva')}
                 </button>
                 <p className="text-xs text-center text-gray-500">
                   {canPayOnline
                     ? `${cancellationPolicy.short} · Pago total en EUR`
-                    : 'Te contactaremos para confirmar disponibilidad y condiciones finales.'}
+                    : (paymentReady
+                      ? 'El checkout ya esta integrado. Falta publicar el backend seguro y las credenciales reales.'
+                      : 'Te contactaremos para confirmar disponibilidad y condiciones finales.')}
                 </p>
               </div>
             </div>

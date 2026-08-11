@@ -8,5 +8,17 @@ import {
   testimonials,
 } from './mock';
 
-export const activities = [...bookableActivities, ...legacyActivities];
+function interleaveActivities(primary, secondary) {
+  const mixed = [];
+  const maxLength = Math.max(primary.length, secondary.length);
+
+  for (let index = 0; index < maxLength; index += 1) {
+    if (primary[index]) mixed.push(primary[index]);
+    if (secondary[index]) mixed.push(secondary[index]);
+  }
+
+  return mixed;
+}
+
+export const activities = interleaveActivities(bookableActivities, legacyActivities);
 export { blogPosts, categories, destinations, stats, testimonials };

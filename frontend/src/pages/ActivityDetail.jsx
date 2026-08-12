@@ -84,7 +84,6 @@ export default function ActivityDetail() {
   const timeSlots = activity.timeSlots?.length ? activity.timeSlots : ['09:00', '10:00', '11:30', '14:00', '15:30', '17:00'];
   const gallery = activity.gallery?.length ? activity.gallery : [activity.image];
   const providerUrl = activity.provider?.activityUrl;
-  const providerName = activity.provider?.name || 'OWA';
   const cancellationPolicy = activity.cancellationPolicy || {
     short: 'Cancelacion sujeta a confirmacion del operador.',
     details: 'Contactaremos contigo para confirmar disponibilidad y condiciones finales antes de cerrar la reserva.',
@@ -325,11 +324,6 @@ export default function ActivityDetail() {
                 <div className="mt-8 p-5 rounded-xl bg-[#f7f9fb]">
                   <h4 className="font-semibold text-[#14213d] mb-2">Politica de cancelacion</h4>
                   <p className="text-gray-600">{cancellationPolicy.details}</p>
-                  {cancellationPolicy.sourceUrl && (
-                    <a href={cancellationPolicy.sourceUrl} target="_blank" rel="noreferrer" className="inline-block mt-2 text-sm font-semibold text-[#1fa5a3] hover:text-[#c8a25a]">
-                      Ver condiciones del proveedor →
-                    </a>
-                  )}
                 </div>
 
                 {restrictions.length > 0 && (
@@ -375,11 +369,6 @@ export default function ActivityDetail() {
                 <h4 className="font-semibold mb-4 text-[#14213d]">Donde nos encontramos</h4>
                 <p className="text-gray-600 mb-2">{activity.meetingPoint}</p>
                 <p className="text-sm text-gray-500 mb-4">{pickupText}</p>
-                {providerUrl && (
-                  <p className="text-sm text-gray-500 mb-5">
-                    Operador: <a href={providerUrl} target="_blank" rel="noreferrer" className="font-semibold text-[#1fa5a3] hover:text-[#c8a25a]">{providerName}</a>
-                  </p>
-                )}
                 <div className="aspect-video rounded-2xl overflow-hidden">
                   <iframe
                     title="map"
@@ -395,7 +384,7 @@ export default function ActivityDetail() {
                   <div className="p-8 rounded-xl bg-[#f7f9fb] text-center">
                     <Star className="w-7 h-7 text-[#c8a25a] mx-auto mb-3" />
                     <h4 className="font-semibold text-[#14213d]">{activity.rating} sobre 5</h4>
-                    <p className="text-gray-500 mt-2">{activity.reviews} resenas mostradas por el proveedor. Publicaremos resenas verificadas propias cuando haya reservas directas en OWA.</p>
+                    <p className="text-gray-500 mt-2">{activity.reviews} valoraciones de referencia. Publicaremos resenas verificadas propias cuando haya reservas directas en OWA.</p>
                   </div>
                 ) : (
                   <div className="p-8 rounded-xl bg-[#f7f9fb] text-center">
@@ -511,7 +500,7 @@ export default function ActivityDetail() {
                     <span className="text-[#1fa5a3]">{formatPrice(totalPrice, { decimals: priceDecimals(totalPrice) })}</span>
                   </div>
                   {paymentReady && currency !== (activity.paymentCurrency || 'EUR') && (
-                    <p className="text-xs text-gray-500">El importe definitivo se procesa en EUR al precio oficial del proveedor.</p>
+                    <p className="text-xs text-gray-500">El importe definitivo se procesa en EUR al precio oficial de la actividad.</p>
                   )}
                 </div>
 

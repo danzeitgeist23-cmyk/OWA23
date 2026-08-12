@@ -121,7 +121,7 @@ function manualActivity({
   meetingPoint,
   pickup = 'Consultar disponibilidad de recogida con OWA.',
   groupSize = 'Grupo a confirmar',
-  insurance = 'Según condiciones del proveedor',
+  insurance = 'Según condiciones de la actividad',
   languages = 'ES / EN',
   restrictions = ['La actividad está sujeta a disponibilidad y condiciones meteorológicas.'],
   cancellationPolicy,

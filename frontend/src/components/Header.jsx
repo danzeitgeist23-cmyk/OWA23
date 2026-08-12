@@ -58,7 +58,7 @@ export default function Header({ theme, onToggleTheme }) {
           <img
             src="/owa-logo-horizontal.webp"
             alt="OWA Wild Adventure"
-            className="h-8 w-auto"
+            className="h-10 md:h-12 w-auto"
           />
         </Link>
 

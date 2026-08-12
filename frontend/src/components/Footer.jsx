@@ -16,7 +16,7 @@ export default function Footer() {
               <img
                 src="/owa-logo-footer.webp"
                 alt="OWA Wild Adventure"
-                className="h-8 w-auto"
+                className="h-12 md:h-14 w-auto"
               />
             </Link>
             <p className="text-white/70 text-[15px] leading-relaxed mb-5">

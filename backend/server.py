@@ -1164,6 +1164,132 @@ async def get_destination(slug: str, lang: str = Query(None)):
     return _localize(doc, lang) if lang else doc
 
 
+# ---------------------------------------------------------------------------
+# Admin content management (protected with require_admin_user).
+# Activities become DB-driven: create/edit from the admin, no code changes.
+# Booking/pricing still validated server-side by activity_catalog.py via slug.
+# ---------------------------------------------------------------------------
+
+I18nStr = Dict[str, str]
+
+
+class ActivityUpsert(BaseModel):
+    model_config = ConfigDict(extra="ignore")
+
+    slug: str = Field(min_length=1, max_length=140)
+    title: I18nStr
+    excerpt: I18nStr | None = None
+    description: I18nStr | None = None
+    island: str
+    location: str | None = None
+    category: str
+    duration: str | None = None
+    price: float = Field(ge=0)
+    original_price: float | None = None
+    price_unit: str = "persona"
+    currency: str = "EUR"
+    image: str | None = None
+    gallery: List[str] = []
+    featured: bool = False
+    booking_enabled: bool = False
+    included: List[I18nStr] = []
+    not_included: List[I18nStr] = []
+    meeting_point: str | None = None
+    provider: Dict[str, Any] | None = None
+    cancellation_policy: Dict[str, Any] | None = None
+    ticket_types: List[Dict[str, Any]] = []
+    time_slots: List[str] = []
+    active: bool = True
+
+
+class DestinationUpsert(BaseModel):
+    model_config = ConfigDict(extra="ignore")
+
+    slug: str = Field(min_length=1, max_length=140)
+    name: I18nStr
+    image: str | None = None
+    active: bool = True
+
+
+@api_router.post("/admin/activities", status_code=status.HTTP_201_CREATED)
+async def admin_create_activity(
+    payload: ActivityUpsert,
+    _admin: Dict[str, Any] = Depends(require_admin_user),
+):
+    if await db.activities.find_one({"slug": payload.slug}):
+        raise HTTPException(status_code=status.HTTP_409_CONFLICT, detail="Ya existe una actividad con ese slug.")
+    now = datetime.now(timezone.utc)
+    doc = payload.model_dump()
+    doc["bookable"] = payload.slug in BOOKABLE_ACTIVITIES
+    doc["created_at"] = now
+    doc["updated_at"] = now
+    await db.activities.insert_one(doc)
+    return {"slug": payload.slug, "created": True}
+
+
+@api_router.put("/admin/activities/{slug}")
+async def admin_update_activity(
+    slug: str,
+    payload: ActivityUpsert,
+    _admin: Dict[str, Any] = Depends(require_admin_user),
+):
+    now = datetime.now(timezone.utc)
+    doc = payload.model_dump()
+    doc["slug"] = slug
+    doc["bookable"] = slug in BOOKABLE_ACTIVITIES
+    doc["updated_at"] = now
+    await db.activities.update_one(
+        {"slug": slug},
+        {"$set": doc, "$setOnInsert": {"created_at": now}},
+        upsert=True,
+    )
+    return {"slug": slug, "updated": True}
+
+
+@api_router.delete("/admin/activities/{slug}", status_code=status.HTTP_204_NO_CONTENT)
+async def admin_delete_activity(
+    slug: str,
+    _admin: Dict[str, Any] = Depends(require_admin_user),
+):
+    result = await db.activities.update_one(
+        {"slug": slug}, {"$set": {"active": False, "updated_at": datetime.now(timezone.utc)}}
+    )
+    if result.matched_count == 0:
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Activity not found")
+    return Response(status_code=status.HTTP_204_NO_CONTENT)
+
+
+@api_router.put("/admin/destinations/{slug}")
+async def admin_upsert_destination(
+    slug: str,
+    payload: DestinationUpsert,
+    _admin: Dict[str, Any] = Depends(require_admin_user),
+):
+    now = datetime.now(timezone.utc)
+    doc = payload.model_dump()
+    doc["slug"] = slug
+    doc["updated_at"] = now
+    await db.destinations.update_one(
+        {"slug": slug},
+        {"$set": doc, "$setOnInsert": {"created_at": now}},
+        upsert=True,
+    )
+    return {"slug": slug, "updated": True}
+
+
+@api_router.delete("/admin/destinations/{slug}", status_code=status.HTTP_204_NO_CONTENT)
+async def admin_delete_destination(
+    slug: str,
+    _admin: Dict[str, Any] = Depends(require_admin_user),
+):
+    result = await db.destinations.update_one(
+        {"slug": slug}, {"$set": {"active": False, "updated_at": datetime.now(timezone.utc)}}
+    )
+    if result.matched_count == 0:
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Destination not found")
+    return Response(status_code=status.HTTP_204_NO_CONTENT)
+
+
 app.include_router(api_router)
 
 app.add_middleware(

@@ -2,6 +2,19 @@
   RewriteEngine On
   RewriteBase /
 
+  # --- Permanent 301 redirects: legacy Spanish routes -> English canonical ---
+  # Server-side so search engines and external links get a real 301 (better SEO
+  # than the client-side redirects, which stay as an in-app fallback). Query
+  # strings are preserved automatically.
+  RewriteRule ^actividades/?$        /activities   [R=301,L]
+  RewriteRule ^actividad/(.+)$       /activity/$1   [R=301,L]
+  RewriteRule ^destinos/?$           /destinations [R=301,L]
+  RewriteRule ^nosotros/?$           /about        [R=301,L]
+  RewriteRule ^contacto/?$           /contact      [R=301,L]
+  RewriteRule ^mi-cuenta/?$          /account      [R=301,L]
+  RewriteRule ^acceso/?$             /login        [R=301,L]
+  RewriteRule ^registro/?$           /register     [R=301,L]
+
   # Serve real files/directories (assets, sitemap.xml, robots.txt) directly
   RewriteRule ^index\.html$ - [L]
   RewriteCond %{REQUEST_FILENAME} !-f

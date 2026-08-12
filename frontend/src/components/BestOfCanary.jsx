@@ -1,15 +1,17 @@
 import React, { useState, useMemo } from 'react';
 import { categories } from '../mock';
-import { activities } from '../siteData';
 import ActivityCard from './ActivityCard';
 import { Sailboat, Fish, Mountain, Wind, Leaf, UtensilsCrossed } from 'lucide-react';
 import { useT } from '../i18n/LanguageContext';
+import { useActivities } from '../hooks/use-activities';
 
 const iconMap = { Sailboat, Fish, Mountain, Wind, Leaf, UtensilsCrossed };
 
 export default function BestOfCanary() {
   const t = useT();
   const [active, setActive] = useState('all');
+  const { data } = useActivities({ limit: 200 });
+  const activities = data?.items || [];
 
   const filtered = active === 'all' ? activities : activities.filter((a) => a.category === active);
 

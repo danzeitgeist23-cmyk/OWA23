@@ -3,11 +3,11 @@ import { useSearchParams } from 'react-router-dom';
 import { Slider } from '../components/ui/slider';
 import { Checkbox } from '../components/ui/checkbox';
 import { destinations, categories } from '../mock';
-import { activities } from '../siteData';
 import ActivityCard from '../components/ActivityCard';
 import ActivityListCard from '../components/ActivityListCard';
 import { Filter, LayoutGrid, List, Search } from 'lucide-react';
 import { useCurrency } from '../context/CurrencyContext';
+import { useActivities } from '../hooks/use-activities';
 
 export default function Activities() {
   const [params] = useSearchParams();
@@ -18,6 +18,8 @@ export default function Activities() {
   const [price, setPrice] = useState([0, 1200]);
   const [sort, setSort] = useState('featured');
   const [view, setView] = useState('list');
+  const { data, isLoading, isError } = useActivities({ limit: 200 });
+  const activities = useMemo(() => data?.items || [], [data]);
 
   useEffect(() => {
     const d = params.get('destination');
@@ -37,7 +39,7 @@ export default function Activities() {
     if (sort === 'rating') list.sort((a, b) => b.rating - a.rating);
     if (sort === 'featured') list.sort((a, b) => (b.featured ? 1 : 0) - (a.featured ? 1 : 0));
     return list;
-  }, [q, selectedDestinations, selectedCategories, price, sort]);
+  }, [activities, q, selectedDestinations, selectedCategories, price, sort]);
 
   const toggle = (arr, setArr, v) => setArr(arr.includes(v) ? arr.filter((x) => x !== v) : [...arr, v]);
 
@@ -148,7 +150,17 @@ export default function Activities() {
             </div>
           </div>
 
-          {filtered.length ? (
+          {isLoading ? (
+            <div className="space-y-4">
+              {Array.from({ length: 6 }).map((_, i) => (
+                <div key={i} className="rounded-2xl border border-gray-100 bg-gray-100 h-40 animate-pulse" />
+              ))}
+            </div>
+          ) : isError ? (
+            <div className="text-center py-20 text-gray-500">
+              No pudimos cargar las actividades ahora mismo. Inténtalo de nuevo en unos minutos.
+            </div>
+          ) : filtered.length ? (
             view === 'grid' ? (
               <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
                 {filtered.map((a) => <ActivityCard key={a.id} activity={a} />)}

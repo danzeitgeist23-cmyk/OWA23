@@ -1,6 +1,6 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { activities } from '../siteData';
+import { useActivity } from '../hooks/use-activities';
 import { apiRequest } from '../lib/api';
 import {
   buildActivityWhatsAppMessage,
@@ -43,7 +43,7 @@ export default function ActivityDetail() {
   const { id } = useParams();
   const { toast } = useToast();
   const { currency, format: formatPrice, formatText } = useCurrency();
-  const activity = activities.find((item) => item.id === id);
+  const { data: activity, isLoading } = useActivity(id);
 
   const [selectedImage, setSelectedImage] = useState(0);
   const [date, setDate] = useState();
@@ -68,6 +68,10 @@ export default function ActivityDetail() {
     ),
     [quantities, ticketTypes]
   );
+
+  if (isLoading) {
+    return <div className="pt-40 pb-20 text-center text-gray-500">Cargando actividad…</div>;
+  }
 
   if (!activity) {
     return (

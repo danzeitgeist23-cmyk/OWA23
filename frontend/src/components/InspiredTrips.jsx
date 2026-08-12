@@ -1,11 +1,13 @@
 import React, { useMemo } from 'react';
 import { Link } from 'react-router-dom';
-import { activities } from '../siteData';
 import ActivityCard from './ActivityCard';
 import { useT } from '../i18n/LanguageContext';
+import { useActivities } from '../hooks/use-activities';
 
 export default function InspiredTrips() {
   const t = useT()
+  const { data } = useActivities({ limit: 200 })
+  const activities = data?.items || []
 
   const inspired = useMemo(() => {
     const seenCategories = new Set()
@@ -29,7 +31,7 @@ export default function InspiredTrips() {
     }
 
     return selected
-  }, [])
+  }, [activities])
 
   return (
     <section className="py-20 md:py-28 bg-[#f7f9fb]">

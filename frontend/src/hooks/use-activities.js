@@ -40,6 +40,40 @@ function staticDestinationList() {
 
 const STATIC_RESULT = { isLoading: false, isError: false, error: null, isFetching: false };
 
+// Map an API activity doc (snake_case + island/excerpt, localized via ?lang=)
+// to the camelCase shape the components already expect, so nothing else changes
+// whether data comes from the API or the bundled static content.
+function normalizeActivity(doc) {
+  if (!doc || typeof doc !== 'object') return doc;
+  return {
+    id: doc.slug ?? doc.id,
+    title: doc.title,
+    shortDescription: doc.excerpt ?? doc.shortDescription,
+    description: doc.description,
+    location: doc.location,
+    destination: doc.island ?? doc.destination,
+    category: doc.category,
+    duration: doc.duration,
+    price: doc.price,
+    originalPrice: doc.original_price ?? doc.originalPrice ?? null,
+    priceUnit: doc.price_unit ?? doc.priceUnit,
+    paymentCurrency: doc.currency ?? doc.paymentCurrency ?? 'EUR',
+    rating: doc.rating,
+    reviews: doc.review_count ?? doc.reviews ?? 0,
+    featured: doc.featured,
+    bookingEnabled: doc.booking_enabled ?? doc.bookingEnabled ?? false,
+    image: doc.image,
+    gallery: doc.gallery || [],
+    included: doc.included || [],
+    notIncluded: doc.not_included ?? doc.notIncluded ?? [],
+    meetingPoint: doc.meeting_point ?? doc.meetingPoint,
+    provider: doc.provider,
+    cancellationPolicy: doc.cancellation_policy ?? doc.cancellationPolicy,
+    ticketTypes: doc.ticket_types ?? doc.ticketTypes ?? [],
+    timeSlots: doc.time_slots ?? doc.timeSlots ?? [],
+  };
+}
+
 // --- Hooks -------------------------------------------------------------------
 // useQuery is always called (Rules of Hooks) but stays disabled when there is no
 // backend; in that case we return the static shape instead of the query result.
@@ -52,6 +86,7 @@ export function useActivities(filters = {}) {
     queryFn: () => apiRequest('/api/activities', { query: params }),
     enabled: apiEnabled,
     staleTime: 5 * 60 * 1000,
+    select: (res) => ({ items: (res.items || []).map(normalizeActivity), total: res.total }),
   });
   if (!apiEnabled) return { ...STATIC_RESULT, data: filterStatic(filters) };
   return query;
@@ -64,6 +99,7 @@ export function useActivity(slug) {
     queryFn: () => apiRequest(`/api/activities/${slug}`, { query: { lang } }),
     enabled: apiEnabled && Boolean(slug),
     staleTime: 5 * 60 * 1000,
+    select: normalizeActivity,
   });
   if (!apiEnabled) {
     const found = staticActivities.find((a) => a.id === slug) || null;

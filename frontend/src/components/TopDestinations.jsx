@@ -1,12 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { MapPin, ArrowRight } from 'lucide-react';
-import { destinations } from '../mock';
-import { activities } from '../siteData';
 import { useT } from '../i18n/LanguageContext';
+import { useDestinations } from '../hooks/use-activities';
 
 export default function TopDestinations() {
   const t = useT();
+  const { data } = useDestinations();
+  const destinations = data || [];
   return (
     <section className="py-20 md:py-28 bg-white">
       <div className="max-w-7xl mx-auto px-5 md:px-8">
@@ -24,12 +25,12 @@ export default function TopDestinations() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {destinations.map((d) => {
-            const activityCount = activities.filter((activity) => activity.destination === d.id).length;
+            const activityCount = d.activity_count;
             const countLabel = activityCount === 1 ? t('destinations.activityCountOne') : t('destinations.activityCount');
             return (
             <Link
-              key={d.id}
-              to={`/activities?destination=${d.id}`}
+              key={d.slug}
+              to={`/activities?destination=${d.slug}`}
               className="group relative min-h-[210px] min-w-0 overflow-hidden rounded-xl bg-[#0b1c26] aspect-[16/10] shadow-[0_16px_35px_-24px_rgba(11,33,61,0.55)]"
             >
               <img

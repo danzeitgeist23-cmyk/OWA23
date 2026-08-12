@@ -1,0 +1,4223 @@
+[
+ {
+  "id": "infinity-yacht-premium-shared",
+  "title": "Excursión Compartida en Yate Premium",
+  "location": "Puerto Rico, Gran Canaria",
+  "destination": "gran-canaria",
+  "category": "nauticas",
+  "price": 79.21,
+  "originalPrice": null,
+  "duration": "4 horas",
+  "rating": null,
+  "reviews": 0,
+  "featured": true,
+  "image": "https://images.unsplash.com/photo-1571328532572-cb7899a8be7e?auto=format&fit=crop&w=900&q=80",
+  "gallery": [
+   "https://images.unsplash.com/photo-1571328532572-cb7899a8be7e?auto=format&fit=crop&w=1400&q=80",
+   "https://images.unsplash.com/photo-1526621480041-c4e2027dfe69?auto=format&fit=crop&w=1400&q=80"
+  ],
+  "shortDescription": "Navegación premium en grupo reducido con aperitivos, barra libre, snorkel y paddle surf.",
+  "description": "Salida desde Puerto Rico en un yate compartido para un máximo de 12 pasajeros. La ruta navega hacia Mogán y realiza una parada prolongada para baño, snorkel y paddle surf. El itinerario puede adaptarse a las condiciones del mar.",
+  "included": [
+   "Recogida y regreso en alojamientos del sur con reserva previa",
+   "Capitán y guía",
+   "Copa de cava de bienvenida",
+   "Barra libre de cerveza, refrescos, sangría, agua y zumos",
+   "Surtido de aperitivos",
+   "Equipo de snorkel, 2 tablas de paddle surf y plataforma flotante",
+   "Seguro, impuestos y tasas"
+  ],
+  "notIncluded": [
+   "Toallas",
+   "Cócteles, vino, cavas y combinados adicionales",
+   "Jet ski, sea scooter y parasailing opcionales"
+  ],
+  "meetingPoint": "Puerto Escala, Puerto Rico, Gran Canaria",
+  "pickup": "Recogida en alojamientos y hoteles del sur con reserva anticipada.",
+  "groupSize": "Máx. 12 pers.",
+  "insurance": "Incluido",
+  "languages": "ES / EN",
+  "restrictions": [
+   "No se permiten mascotas, alcohol o drogas ni desnudez.",
+   "Se recomienda medicación preventiva a las personas propensas al mareo."
+  ],
+  "provider": {
+   "id": "infinity-boat-gc",
+   "name": "Infinity Boat Tours",
+   "activityUrl": "https://www.infinityboatgc.com/excursion-compartida-en-yate-premium"
+  },
+  "cancellationPolicy": {
+   "verifiedOn": "2026-08-10",
+   "noticeHours": 48,
+   "short": "Cancelación gratuita hasta 48 horas antes.",
+   "details": "Cancela con al menos 48 horas de antelación para recibir un reembolso completo.",
+   "sourceUrl": "https://www.infinityboatgc.com/excursion-compartida-en-yate-premium"
+  },
+  "ticketTypes": [
+   {
+    "id": "adult",
+    "label": "Adultos",
+    "price": 79.21,
+    "min": 0,
+    "max": 12,
+    "default": 2
+   },
+   {
+    "id": "child",
+    "label": "Niños (1-10)",
+    "price": 55,
+    "min": 0,
+    "max": 12,
+    "default": 0
+   }
+  ],
+  "timeSlots": [
+   "09:30",
+   "13:30"
+  ],
+  "priceUnit": "persona",
+  "paymentCurrency": "EUR",
+  "bookingEnabled": true
+ },
+ {
+  "id": "infinity-catamaran-shared",
+  "title": "Crucero Compartido en Catamarán Paradise",
+  "location": "Pasito Blanco, Gran Canaria",
+  "destination": "gran-canaria",
+  "category": "nauticas",
+  "price": 73.93,
+  "originalPrice": null,
+  "duration": "4 h 30 min",
+  "rating": null,
+  "reviews": 0,
+  "featured": true,
+  "image": "https://images.unsplash.com/photo-1564555449603-b0eefe1b9094?auto=format&fit=crop&w=900&q=80",
+  "gallery": [
+   "https://images.unsplash.com/photo-1564555449603-b0eefe1b9094?auto=format&fit=crop&w=1400&q=80",
+   "https://images.unsplash.com/photo-1526621480041-c4e2027dfe69?auto=format&fit=crop&w=1400&q=80"
+  ],
+  "shortDescription": "Crucero por la costa sur con almuerzo, barra libre, snorkel, paddle surf y traslado.",
+  "description": "Excursión compartida desde Pasito Blanco a bordo del Paradise Cat. Navega por la costa sur, realiza una parada de baño de entre 90 y 120 minutos y disfruta de snorkel y paddle surf. El avistamiento de delfines puede ocurrir, pero no está garantizado.",
+  "included": [
+   "Recogida y regreso desde puntos seleccionados del sur con reserva previa",
+   "Capitán y marinero",
+   "Copa de cava de bienvenida",
+   "Barra libre de cerveza, sangría, refrescos, agua y zumos",
+   "Almuerzo",
+   "Equipo de snorkel y tablas de paddle surf",
+   "Seguro, impuestos y tasas"
+  ],
+  "notIncluded": [
+   "Toallas",
+   "Cócteles, vino y combinados adicionales",
+   "Jet ski, crazy sofa, sea scooter y parasailing opcionales"
+  ],
+  "meetingPoint": "Puerto de Pasito Blanco, Meloneras, Gran Canaria",
+  "pickup": "Recogida en puntos seleccionados de las zonas hoteleras del sur con reserva anticipada.",
+  "groupSize": "Máx. 45 pers.",
+  "insurance": "Incluido",
+  "languages": "ES / EN",
+  "restrictions": [
+   "Actividad no apta para personas en silla de ruedas.",
+   "No se permiten mascotas, armas u objetos punzantes, alcohol o drogas ni desnudez."
+  ],
+  "provider": {
+   "id": "infinity-boat-gc",
+   "name": "Infinity Boat Tours",
+   "activityUrl": "https://www.infinityboatgc.com/excursion-en-catamaran-compartida"
+  },
+  "cancellationPolicy": {
+   "verifiedOn": "2026-08-10",
+   "noticeHours": 48,
+   "short": "Cancelación gratuita hasta 48 horas antes.",
+   "details": "Cancela con al menos 48 horas de antelación para recibir un reembolso completo.",
+   "sourceUrl": "https://www.infinityboatgc.com/excursion-en-catamaran-compartida"
+  },
+  "ticketTypes": [
+   {
+    "id": "adult",
+    "label": "Adultos",
+    "price": 73.93,
+    "min": 0,
+    "max": 45,
+    "default": 2
+   },
+   {
+    "id": "child",
+    "label": "Niños (3-10)",
+    "price": 50,
+    "min": 0,
+    "max": 45,
+    "default": 0
+   }
+  ],
+  "timeSlots": [
+   "10:30"
+  ],
+  "priceUnit": "persona",
+  "paymentCurrency": "EUR",
+  "bookingEnabled": true
+ },
+ {
+  "location": "Pasito Blanco, Gran Canaria",
+  "destination": "gran-canaria",
+  "category": "nauticas",
+  "rating": null,
+  "reviews": 0,
+  "featured": true,
+  "image": "https://images.unsplash.com/photo-1564633351631-e85bd59a91af?auto=format&fit=crop&w=900&q=80",
+  "gallery": [
+   "https://images.unsplash.com/photo-1564633351631-e85bd59a91af?auto=format&fit=crop&w=1400&q=80"
+  ],
+  "languages": "ES / EN",
+  "groupSize": "Hasta 2 pers. por moto",
+  "insurance": "Incluido",
+  "meetingPoint": "Puerto de Pasito Blanco, San Bartolomé de Tirajana",
+  "pickup": "Recogida gratuita en hoteles entre Maspalomas y Puerto Rico.",
+  "provider": {
+   "id": "maspalomas-jet-ski-tour",
+   "name": "Maspalomas Jet Ski Tour",
+   "activityUrl": "https://maspalomasjetskitour.es/tours-en-moto-de-agua-maspalomas/"
+  },
+  "cancellationPolicy": {
+   "verifiedOn": "2026-08-10",
+   "noticeHours": 24,
+   "short": "Cancelación gratuita hasta 24 horas antes.",
+   "details": "Las cancelaciones comunicadas con al menos 24 horas de antelación reciben un reembolso completo. Si el tour se cancela por meteorología o estado del mar, se reprograma o se reembolsa íntegramente.",
+   "sourceUrl": "https://maspalomasjetskitour.es/terminos-y-condiciones/"
+  },
+  "restrictions": [
+   "Edad mínima para conducir: 16 años con autorización del padre, madre o tutor legal.",
+   "Edad mínima como acompañante: 7 años.",
+   "No recomendado durante el embarazo ni para personas con problemas cardíacos o lesiones de espalda o cuello.",
+   "Es necesario presentarse al menos 15 minutos antes."
+  ],
+  "ticketTypes": [
+   {
+    "id": "single_jet_ski",
+    "label": "Moto individual",
+    "price": 75,
+    "min": 0,
+    "max": 6,
+    "default": 1,
+    "seats": 1
+   },
+   {
+    "id": "double_jet_ski",
+    "label": "Moto doble",
+    "price": 75,
+    "min": 0,
+    "max": 6,
+    "default": 0,
+    "seats": 2
+   }
+  ],
+  "priceUnit": "moto de agua",
+  "paymentCurrency": "EUR",
+  "bookingEnabled": true,
+  "id": "maspalomas-jet-ski-express",
+  "title": "Jet Ski Tour Express — 30 minutos",
+  "price": 75,
+  "originalPrice": null,
+  "duration": "30 minutos",
+  "shortDescription": "Primera toma de contacto en moto de agua con briefing, conducción guiada y parada para fotos.",
+  "description": "Tour pensado para principiantes: salida guiada, parada para fotos y vídeos y tiempo de conducción libre antes de regresar al puerto.",
+  "included": [
+   "Recogida y regreso al hotel en la zona incluida",
+   "Briefing de seguridad",
+   "Guía y material necesario",
+   "Botella de agua y fruta o chocolatina",
+   "Seguro de accidentes y responsabilidad civil"
+  ],
+  "notIncluded": [
+   "Fotos y vídeos: confirmar con el operador; sus páginas publican condiciones distintas",
+   "Traslado fuera del itinerario previsto"
+  ],
+  "timeSlots": [
+   "Horario a confirmar"
+  ]
+ },
+ {
+  "location": "Pasito Blanco, Gran Canaria",
+  "destination": "gran-canaria",
+  "category": "nauticas",
+  "rating": null,
+  "reviews": 0,
+  "featured": true,
+  "image": "https://images.unsplash.com/photo-1564633351631-e85bd59a91af?auto=format&fit=crop&w=900&q=80",
+  "gallery": [
+   "https://images.unsplash.com/photo-1564633351631-e85bd59a91af?auto=format&fit=crop&w=1400&q=80"
+  ],
+  "languages": "ES / EN",
+  "groupSize": "Hasta 2 pers. por moto",
+  "insurance": "Incluido",
+  "meetingPoint": "Puerto de Pasito Blanco, San Bartolomé de Tirajana",
+  "pickup": "Recogida gratuita en hoteles entre Maspalomas y Puerto Rico.",
+  "provider": {
+   "id": "maspalomas-jet-ski-tour",
+   "name": "Maspalomas Jet Ski Tour",
+   "activityUrl": "https://maspalomasjetskitour.es/tours-en-moto-de-agua-maspalomas/"
+  },
+  "cancellationPolicy": {
+   "verifiedOn": "2026-08-10",
+   "noticeHours": 24,
+   "short": "Cancelación gratuita hasta 24 horas antes.",
+   "details": "Las cancelaciones comunicadas con al menos 24 horas de antelación reciben un reembolso completo. Si el tour se cancela por meteorología o estado del mar, se reprograma o se reembolsa íntegramente.",
+   "sourceUrl": "https://maspalomasjetskitour.es/terminos-y-condiciones/"
+  },
+  "restrictions": [
+   "Edad mínima para conducir: 16 años con autorización del padre, madre o tutor legal.",
+   "Edad mínima como acompañante: 7 años.",
+   "No recomendado durante el embarazo ni para personas con problemas cardíacos o lesiones de espalda o cuello.",
+   "Es necesario presentarse al menos 15 minutos antes."
+  ],
+  "ticketTypes": [
+   {
+    "id": "single_jet_ski",
+    "label": "Moto individual",
+    "price": 120,
+    "min": 0,
+    "max": 6,
+    "default": 1,
+    "seats": 1
+   },
+   {
+    "id": "double_jet_ski",
+    "label": "Moto doble",
+    "price": 120,
+    "min": 0,
+    "max": 6,
+    "default": 0,
+    "seats": 2
+   }
+  ],
+  "priceUnit": "moto de agua",
+  "paymentCurrency": "EUR",
+  "bookingEnabled": true,
+  "id": "maspalomas-jet-ski-adventure",
+  "title": "Jet Ski Tour Aventura — 60 minutos",
+  "price": 120,
+  "originalPrice": null,
+  "duration": "1 hora",
+  "shortDescription": "El recorrido favorito por la costa sur, dividido en dos tramos con opción de cambiar de conductor.",
+  "description": "Excursión de una hora en moto de agua por la costa de Gran Canaria. El recorrido se divide en dos partes de 30 minutos y los ocupantes pueden cambiar de conductor si cumplen los requisitos.",
+  "included": [
+   "Recogida y regreso al hotel en la zona incluida",
+   "Briefing de seguridad",
+   "Guía y material necesario",
+   "Botella de agua y fruta o chocolatina",
+   "Seguro de accidentes y responsabilidad civil"
+  ],
+  "notIncluded": [
+   "Fotos y vídeos: confirmar con el operador; sus páginas publican condiciones distintas",
+   "Traslado fuera del itinerario previsto"
+  ],
+  "timeSlots": [
+   "Horario a confirmar"
+  ]
+ },
+ {
+  "location": "Pasito Blanco, Gran Canaria",
+  "destination": "gran-canaria",
+  "category": "nauticas",
+  "rating": null,
+  "reviews": 0,
+  "featured": true,
+  "image": "https://images.unsplash.com/photo-1564633351631-e85bd59a91af?auto=format&fit=crop&w=900&q=80",
+  "gallery": [
+   "https://images.unsplash.com/photo-1564633351631-e85bd59a91af?auto=format&fit=crop&w=1400&q=80"
+  ],
+  "languages": "ES / EN",
+  "groupSize": "Hasta 2 pers. por moto",
+  "insurance": "Incluido",
+  "meetingPoint": "Puerto de Pasito Blanco, San Bartolomé de Tirajana",
+  "pickup": "Recogida gratuita en hoteles entre Maspalomas y Puerto Rico.",
+  "provider": {
+   "id": "maspalomas-jet-ski-tour",
+   "name": "Maspalomas Jet Ski Tour",
+   "activityUrl": "https://maspalomasjetskitour.es/tours-en-moto-de-agua-maspalomas/"
+  },
+  "cancellationPolicy": {
+   "verifiedOn": "2026-08-10",
+   "noticeHours": 24,
+   "short": "Cancelación gratuita hasta 24 horas antes.",
+   "details": "Las cancelaciones comunicadas con al menos 24 horas de antelación reciben un reembolso completo. Si el tour se cancela por meteorología o estado del mar, se reprograma o se reembolsa íntegramente.",
+   "sourceUrl": "https://maspalomasjetskitour.es/terminos-y-condiciones/"
+  },
+  "restrictions": [
+   "Edad mínima para conducir: 16 años con autorización del padre, madre o tutor legal.",
+   "Edad mínima como acompañante: 7 años.",
+   "No recomendado durante el embarazo ni para personas con problemas cardíacos o lesiones de espalda o cuello.",
+   "Es necesario presentarse al menos 15 minutos antes."
+  ],
+  "ticketTypes": [
+   {
+    "id": "single_jet_ski",
+    "label": "Moto individual",
+    "price": 160,
+    "min": 0,
+    "max": 6,
+    "default": 1,
+    "seats": 1
+   },
+   {
+    "id": "double_jet_ski",
+    "label": "Moto doble",
+    "price": 160,
+    "min": 0,
+    "max": 6,
+    "default": 0,
+    "seats": 2
+   }
+  ],
+  "priceUnit": "moto de agua",
+  "paymentCurrency": "EUR",
+  "bookingEnabled": true,
+  "id": "maspalomas-jet-ski-explorer",
+  "title": "Jet Ski Tour Explorer — 90 minutos",
+  "price": 160,
+  "originalPrice": null,
+  "duration": "1 h 30 min",
+  "shortDescription": "Ruta desde Maspalomas hacia Mogán para descubrir calas, cuevas y rincones de difícil acceso.",
+  "description": "Recorrido guiado de nivel intermedio por la costa sur, desde Maspalomas hacia Mogán, con acceso a calas y una cueva marina cuando las condiciones lo permiten.",
+  "included": [
+   "Recogida y regreso al hotel en la zona incluida",
+   "Briefing de seguridad",
+   "Guía y material necesario",
+   "Botella de agua y fruta o chocolatina",
+   "Seguro de accidentes y responsabilidad civil"
+  ],
+  "notIncluded": [
+   "Fotos y vídeos: confirmar con el operador; sus páginas publican condiciones distintas",
+   "Traslado fuera del itinerario previsto"
+  ],
+  "timeSlots": [
+   "Horario a confirmar"
+  ]
+ },
+ {
+  "location": "Pasito Blanco, Gran Canaria",
+  "destination": "gran-canaria",
+  "category": "nauticas",
+  "rating": null,
+  "reviews": 0,
+  "featured": true,
+  "image": "https://images.unsplash.com/photo-1564633351631-e85bd59a91af?auto=format&fit=crop&w=900&q=80",
+  "gallery": [
+   "https://images.unsplash.com/photo-1564633351631-e85bd59a91af?auto=format&fit=crop&w=1400&q=80"
+  ],
+  "languages": "ES / EN",
+  "groupSize": "Hasta 2 pers. por moto",
+  "insurance": "Incluido",
+  "meetingPoint": "Puerto de Pasito Blanco, San Bartolomé de Tirajana",
+  "pickup": "Recogida gratuita en hoteles entre Maspalomas y Puerto Rico.",
+  "provider": {
+   "id": "maspalomas-jet-ski-tour",
+   "name": "Maspalomas Jet Ski Tour",
+   "activityUrl": "https://maspalomasjetskitour.es/tours-en-moto-de-agua-maspalomas/"
+  },
+  "cancellationPolicy": {
+   "verifiedOn": "2026-08-10",
+   "noticeHours": 24,
+   "short": "Cancelación gratuita hasta 24 horas antes.",
+   "details": "Las cancelaciones comunicadas con al menos 24 horas de antelación reciben un reembolso completo. Si el tour se cancela por meteorología o estado del mar, se reprograma o se reembolsa íntegramente.",
+   "sourceUrl": "https://maspalomasjetskitour.es/terminos-y-condiciones/"
+  },
+  "restrictions": [
+   "Edad mínima para conducir: 16 años con autorización del padre, madre o tutor legal.",
+   "Edad mínima como acompañante: 7 años.",
+   "No recomendado durante el embarazo ni para personas con problemas cardíacos o lesiones de espalda o cuello.",
+   "Es necesario presentarse al menos 15 minutos antes."
+  ],
+  "ticketTypes": [
+   {
+    "id": "single_jet_ski",
+    "label": "Moto individual",
+    "price": 200,
+    "min": 0,
+    "max": 6,
+    "default": 1,
+    "seats": 1
+   },
+   {
+    "id": "double_jet_ski",
+    "label": "Moto doble",
+    "price": 200,
+    "min": 0,
+    "max": 6,
+    "default": 0,
+    "seats": 2
+   }
+  ],
+  "priceUnit": "moto de agua",
+  "paymentCurrency": "EUR",
+  "bookingEnabled": true,
+  "id": "maspalomas-jet-ski-gran-canaria",
+  "title": "Jet Ski Tour Gran Canaria — 120 minutos",
+  "price": 200,
+  "originalPrice": null,
+  "duration": "2 horas",
+  "shortDescription": "La ruta más completa para recorrer paisajes volcánicos y zonas de la costa accesibles solo por mar.",
+  "description": "Tour de dos horas por el litoral sur de Gran Canaria, diseñado para combinar navegación, paisaje y adrenalina en zonas a las que solo se puede llegar desde el mar.",
+  "included": [
+   "Recogida y regreso al hotel en la zona incluida",
+   "Briefing de seguridad",
+   "Guía y material necesario",
+   "Botella de agua y fruta o chocolatina",
+   "Seguro de accidentes y responsabilidad civil"
+  ],
+  "notIncluded": [
+   "Fotos y vídeos: confirmar con el operador; sus páginas publican condiciones distintas",
+   "Traslado fuera del itinerario previsto"
+  ],
+  "timeSlots": [
+   "Horario a confirmar"
+  ]
+ },
+ {
+  "id": "water-taxi-lobos",
+  "title": "Isla de Lobos Escape — Water Taxi Experience",
+  "location": "Corralejo, Fuerteventura",
+  "destination": "fuerteventura",
+  "category": "nauticas",
+  "price": 17,
+  "originalPrice": null,
+  "duration": "2-3 horas",
+  "rating": 4.9,
+  "reviews": 127,
+  "featured": true,
+  "image": "https://images.unsplash.com/photo-1696454138713-570f884ba261?auto=format&fit=crop&w=900&q=80",
+  "gallery": [
+   "https://images.unsplash.com/photo-1696454138713-570f884ba261?auto=format&fit=crop&w=1400&q=80",
+   "https://images.unsplash.com/photo-1526621480041-c4e2027dfe69?auto=format&fit=crop&w=1400&q=80",
+   "https://images.unsplash.com/photo-1571328532572-cb7899a8be7e?auto=format&fit=crop&w=1400&q=80"
+  ],
+  "shortDescription": "Cruza a la Isla de Lobos en un cómodo water taxi y explora una reserva natural de aguas turquesas.",
+  "description": "Descubre uno de los rincones más vírgenes del archipiélago canario. Nuestro water taxi te lleva directamente desde Corralejo hasta la mágica Isla de Lobos, donde tendrás tiempo libre para nadar, hacer snorkel y disfrutar de la reserva natural.",
+  "included": [
+   "Trayecto en barco ida y vuelta",
+   "Chaleco salvavidas",
+   "Guía a bordo",
+   "Seguro de actividad"
+  ],
+  "notIncluded": [
+   "Comida y bebidas",
+   "Equipo de snorkel (alquiler disponible)"
+  ],
+  "meetingPoint": "Puerto de Corralejo, muelle norte",
+  "pickup": "Presentacion directa en el muelle. Check-in 20 minutos antes.",
+  "groupSize": "Hasta 12 pers.",
+  "insurance": "Incluido",
+  "languages": "ES / EN",
+  "provider": {
+   "id": "water-taxi-lobos",
+   "name": "OWA Lobos Partner",
+   "activityUrl": ""
+  },
+  "cancellationPolicy": {
+   "verifiedOn": "2026-08-11",
+   "noticeHours": 24,
+   "short": "Cancelacion gratuita hasta 24 horas antes.",
+   "details": "Consulta las condiciones finales con el operador antes de confirmar la reserva.",
+   "sourceUrl": ""
+  },
+  "restrictions": [
+   "Llevar agua, proteccion solar y calzado comodo.",
+   "La autorizacion de acceso a la isla puede ser necesaria segun la temporada."
+  ],
+  "ticketTypes": [
+   {
+    "id": "adult",
+    "label": "Adultos",
+    "price": 17,
+    "min": 1,
+    "max": 12,
+    "default": 2,
+    "seats": 1
+   },
+   {
+    "id": "child",
+    "label": "Ninos",
+    "price": 17,
+    "min": 0,
+    "max": 12,
+    "default": 0,
+    "seats": 1
+   }
+  ],
+  "timeSlots": [
+   "Horario a confirmar"
+  ],
+  "priceUnit": "persona",
+  "paymentCurrency": "EUR",
+  "bookingEnabled": true
+ },
+ {
+  "id": "ocean-giants-cruise",
+  "title": "Ocean Giants: Atlantic Wildlife Cruise — Gran Canaria",
+  "location": "Puerto Rico, Gran Canaria",
+  "destination": "gran-canaria",
+  "category": "naturaleza",
+  "price": 40,
+  "originalPrice": 55,
+  "duration": "4 horas",
+  "rating": 4.8,
+  "reviews": 342,
+  "featured": true,
+  "image": "https://images.unsplash.com/photo-1518399681705-1c1a55e5e883?auto=format&fit=crop&w=900&q=80",
+  "gallery": [
+   "https://images.unsplash.com/photo-1518399681705-1c1a55e5e883?auto=format&fit=crop&w=1400&q=80",
+   "https://images.unsplash.com/photo-1568430462989-44163eb1752f?auto=format&fit=crop&w=1400&q=80"
+  ],
+  "shortDescription": "Avistamiento de ballenas y delfines en su hábitat natural con guía biólogo marino.",
+  "description": "Embárcate en una expedición de 4 horas por las aguas del Atlántico frente a Gran Canaria. Con más del 98% de éxito en avistamientos, es una experiencia inolvidable para toda la familia.",
+  "included": [
+   "Bebidas y snacks a bordo",
+   "Guía biólogo marino",
+   "Baño en cala secreta",
+   "Seguro completo"
+  ],
+  "notIncluded": [
+   "Traslado al puerto",
+   "Propinas"
+  ],
+  "meetingPoint": "Puerto Rico Marina, Gran Canaria",
+  "pickup": "Confirmaremos el punto exacto y la logistica al cerrar la reserva.",
+  "groupSize": "Grupo reducido",
+  "insurance": "Incluido",
+  "languages": "ES / EN",
+  "provider": {
+   "id": "ocean-giants-cruise",
+   "name": "OWA Marine Wildlife Partner",
+   "activityUrl": ""
+  },
+  "cancellationPolicy": {
+   "verifiedOn": "2026-08-11",
+   "noticeHours": 24,
+   "short": "Cancelacion gratuita hasta 24 horas antes.",
+   "details": "Consulta las condiciones finales con el operador antes de confirmar la reserva.",
+   "sourceUrl": ""
+  },
+  "restrictions": [
+   "Actividad sujeta a condiciones del mar y fauna salvaje.",
+   "No se garantizan avistamientos al 100%."
+  ],
+  "ticketTypes": [
+   {
+    "id": "adult",
+    "label": "Adultos",
+    "price": 40,
+    "min": 1,
+    "max": 12,
+    "default": 2,
+    "seats": 1
+   },
+   {
+    "id": "child",
+    "label": "Ninos",
+    "price": 30,
+    "min": 0,
+    "max": 12,
+    "default": 0,
+    "seats": 1
+   }
+  ],
+  "timeSlots": [
+   "Horario a confirmar"
+  ],
+  "priceUnit": "persona",
+  "paymentCurrency": "EUR",
+  "bookingEnabled": true
+ },
+ {
+  "id": "safari-buggy",
+  "title": "Safari Buggy — Barrancos Volcánicos y Cañones del Sur",
+  "location": "Maspalomas, Gran Canaria",
+  "destination": "gran-canaria",
+  "category": "aventura",
+  "price": 95,
+  "originalPrice": null,
+  "duration": "2.5 horas",
+  "rating": 4.9,
+  "reviews": 218,
+  "featured": true,
+  "image": "https://images.unsplash.com/photo-1704287824391-b3bc1e04ea33?auto=format&fit=crop&w=900&q=80",
+  "gallery": [
+   "https://images.unsplash.com/photo-1704287824391-b3bc1e04ea33?auto=format&fit=crop&w=1400&q=80",
+   "https://images.unsplash.com/photo-1704287994766-3d76e0ca3264?auto=format&fit=crop&w=1400&q=80",
+   "https://images.unsplash.com/photo-1698245674677-6267b312d29d?auto=format&fit=crop&w=1400&q=80"
+  ],
+  "shortDescription": "Conduce un buggy por barrancos volcánicos, cañones y miradores del sur de Gran Canaria.",
+  "description": "Vive una aventura off-road única atravesando paisajes volcánicos, cañones ancestrales y miradores impresionantes. Ideal para quienes buscan adrenalina y descubrir la cara salvaje de Gran Canaria.",
+  "included": [
+   "Buggy 2 plazas",
+   "Casco y gafas",
+   "Guía en ruta",
+   "Fotos incluidas"
+  ],
+  "notIncluded": [
+   "Combustible (aprox 15€)",
+   "Almuerzo"
+  ],
+  "meetingPoint": "Base OWA Maspalomas",
+  "pickup": "Confirmaremos el punto exacto y la logistica al cerrar la reserva.",
+  "groupSize": "Hasta 2 pers. por buggy",
+  "insurance": "Incluido",
+  "languages": "ES / EN",
+  "provider": {
+   "id": "safari-buggy",
+   "name": "OWA Buggy Partner",
+   "activityUrl": ""
+  },
+  "cancellationPolicy": {
+   "verifiedOn": "2026-08-11",
+   "noticeHours": 24,
+   "short": "Cancelacion gratuita hasta 24 horas antes.",
+   "details": "Consulta las condiciones finales con el operador antes de confirmar la reserva.",
+   "sourceUrl": ""
+  },
+  "restrictions": [
+   "Permiso de conducir B requerido para conducir.",
+   "Calzado cerrado recomendado."
+  ],
+  "ticketTypes": [
+   {
+    "id": "buggy",
+    "label": "Buggy 2 plazas",
+    "price": 95,
+    "min": 1,
+    "max": 6,
+    "default": 1,
+    "seats": 2
+   }
+  ],
+  "timeSlots": [
+   "Horario a confirmar"
+  ],
+  "priceUnit": "buggy",
+  "paymentCurrency": "EUR",
+  "bookingEnabled": true
+ },
+ {
+  "id": "jet-ski-tenerife",
+  "title": "Moto de Agua & Circuito Costero — Tenerife Sur",
+  "location": "Los Cristianos, Tenerife",
+  "destination": "tenerife",
+  "category": "nauticas",
+  "price": 65,
+  "originalPrice": 80,
+  "duration": "1 hora",
+  "rating": 4.9,
+  "reviews": 189,
+  "featured": false,
+  "image": "https://images.unsplash.com/photo-1564633351631-e85bd59a91af?auto=format&fit=crop&w=900&q=80",
+  "gallery": [
+   "https://images.unsplash.com/photo-1564633351631-e85bd59a91af?auto=format&fit=crop&w=1400&q=80"
+  ],
+  "shortDescription": "Pilota una moto de agua Yamaha por la costa sur de Tenerife.",
+  "description": "Siente la velocidad y libertad pilotando una moto de agua última generación. Recorre acantilados, playas escondidas y descubre la costa sur de Tenerife como nunca.",
+  "included": [
+   "Moto de agua Yamaha VX",
+   "Instructor",
+   "Chaleco salvavidas",
+   "Combustible"
+  ],
+  "notIncluded": [
+   "Fotos (opcional 15€)"
+  ],
+  "meetingPoint": "Marina Los Cristianos",
+  "pickup": "Confirmaremos el punto exacto y la logistica al cerrar la reserva.",
+  "groupSize": "Hasta 2 pers. por moto",
+  "insurance": "Incluido",
+  "languages": "ES / EN",
+  "provider": {
+   "id": "jet-ski-tenerife",
+   "name": "OWA Tenerife Jet Ski Partner",
+   "activityUrl": ""
+  },
+  "cancellationPolicy": {
+   "verifiedOn": "2026-08-11",
+   "noticeHours": 24,
+   "short": "Cancelacion gratuita hasta 24 horas antes.",
+   "details": "Consulta las condiciones finales con el operador antes de confirmar la reserva.",
+   "sourceUrl": ""
+  },
+  "restrictions": [
+   "Edad minima 16 anos para conducir segun operador.",
+   "Actividad sujeta al estado del mar."
+  ],
+  "ticketTypes": [
+   {
+    "id": "single_jet_ski",
+    "label": "Moto individual",
+    "price": 65,
+    "min": 1,
+    "max": 6,
+    "default": 1,
+    "seats": 1
+   },
+   {
+    "id": "double_jet_ski",
+    "label": "Moto doble",
+    "price": 80,
+    "min": 0,
+    "max": 6,
+    "default": 0,
+    "seats": 2
+   }
+  ],
+  "timeSlots": [
+   "Horario a confirmar"
+  ],
+  "priceUnit": "moto",
+  "paymentCurrency": "EUR",
+  "bookingEnabled": true
+ },
+ {
+  "id": "parasailing-lanzarote",
+  "title": "Parasailing sobre Playa Blanca — Vuelo Panorámico",
+  "location": "Playa Blanca, Lanzarote",
+  "destination": "lanzarote",
+  "category": "aire",
+  "price": 55,
+  "originalPrice": null,
+  "duration": "45 minutos",
+  "rating": 4.8,
+  "reviews": 156,
+  "featured": false,
+  "image": "https://images.unsplash.com/photo-1560419656-c2fe828696af?auto=format&fit=crop&w=900&q=80",
+  "gallery": [
+   "https://images.unsplash.com/photo-1560419656-c2fe828696af?auto=format&fit=crop&w=1400&q=80"
+  ],
+  "shortDescription": "Vuela a 80 metros sobre el mar con vistas a los Volcanes de Timanfaya.",
+  "description": "El parasailing es la mejor forma de admirar Lanzarote desde las alturas. Vuela solo, en pareja o incluso trío sobre las aguas cristalinas frente a Playa Blanca.",
+  "included": [
+   "Vuelo 15-20 min",
+   "Equipo homologado",
+   "Traslado en lancha",
+   "Foto digital"
+  ],
+  "notIncluded": [
+   "Video HD (opcional 20€)"
+  ],
+  "meetingPoint": "Muelle deportivo Playa Blanca",
+  "pickup": "Confirmaremos el punto exacto y la logistica al cerrar la reserva.",
+  "groupSize": "Grupo reducido",
+  "insurance": "Incluido",
+  "languages": "ES / EN",
+  "provider": {
+   "id": "parasailing-lanzarote",
+   "name": "OWA Parasailing Lanzarote Partner",
+   "activityUrl": ""
+  },
+  "cancellationPolicy": {
+   "verifiedOn": "2026-08-11",
+   "noticeHours": 24,
+   "short": "Cancelacion gratuita hasta 24 horas antes.",
+   "details": "Consulta las condiciones finales con el operador antes de confirmar la reserva.",
+   "sourceUrl": ""
+  },
+  "restrictions": [
+   "Peso y meteorologia sujetos a validacion del operador."
+  ],
+  "ticketTypes": [
+   {
+    "id": "adult",
+    "label": "Adultos",
+    "price": 55,
+    "min": 1,
+    "max": 12,
+    "default": 2,
+    "seats": 1
+   }
+  ],
+  "timeSlots": [
+   "Horario a confirmar"
+  ],
+  "priceUnit": "persona",
+  "paymentCurrency": "EUR",
+  "bookingEnabled": true
+ },
+ {
+  "id": "banana-boat",
+  "title": "Banana Boat & Sofá Volador — Diversión en Familia",
+  "location": "Corralejo, Fuerteventura",
+  "destination": "fuerteventura",
+  "category": "nauticas",
+  "price": 25,
+  "originalPrice": null,
+  "duration": "30 minutos",
+  "rating": 4.7,
+  "reviews": 98,
+  "featured": false,
+  "image": "https://images.unsplash.com/photo-1505738313577-5357ff512f16?auto=format&fit=crop&w=900&q=80",
+  "gallery": [
+   "https://images.unsplash.com/photo-1505738313577-5357ff512f16?auto=format&fit=crop&w=1400&q=80"
+  ],
+  "shortDescription": "Diversión garantizada para toda la familia sobre la clásica banana hinchable.",
+  "description": "Un clásico de las vacaciones. Sube a la banana boat con hasta 6 personas y déjate arrastrar por lanchas rápidas por la costa de Corralejo. Risas garantizadas.",
+  "included": [
+   "30 min de recorrido",
+   "Chaleco salvavidas",
+   "Instructor"
+  ],
+  "notIncluded": [
+   "Fotos"
+  ],
+  "meetingPoint": "Playa de Corralejo Viejo",
+  "pickup": "Confirmaremos el punto exacto y la logistica al cerrar la reserva.",
+  "groupSize": "Grupo reducido",
+  "insurance": "Incluido",
+  "languages": "ES / EN",
+  "provider": {
+   "id": "banana-boat",
+   "name": "OWA Fun Rides Partner",
+   "activityUrl": ""
+  },
+  "cancellationPolicy": {
+   "verifiedOn": "2026-08-11",
+   "noticeHours": 24,
+   "short": "Cancelacion gratuita hasta 24 horas antes.",
+   "details": "Consulta las condiciones finales con el operador antes de confirmar la reserva.",
+   "sourceUrl": ""
+  },
+  "restrictions": [
+   "Edad minima segun condiciones del operador y estado del mar."
+  ],
+  "ticketTypes": [
+   {
+    "id": "adult",
+    "label": "Adultos",
+    "price": 25,
+    "min": 1,
+    "max": 12,
+    "default": 2,
+    "seats": 1
+   }
+  ],
+  "timeSlots": [
+   "Horario a confirmar"
+  ],
+  "priceUnit": "persona",
+  "paymentCurrency": "EUR",
+  "bookingEnabled": true
+ },
+ {
+  "id": "boat-rental",
+  "title": "Alquiler de Barco sin Licencia — Día Completo",
+  "location": "Puerto Mogán, Gran Canaria",
+  "destination": "gran-canaria",
+  "category": "nauticas",
+  "price": 180,
+  "originalPrice": 220,
+  "duration": "8 horas",
+  "rating": 4.9,
+  "reviews": 76,
+  "featured": true,
+  "image": "https://images.unsplash.com/photo-1571328532572-cb7899a8be7e?auto=format&fit=crop&w=900&q=80",
+  "gallery": [
+   "https://images.unsplash.com/photo-1571328532572-cb7899a8be7e?auto=format&fit=crop&w=1400&q=80"
+  ],
+  "shortDescription": "Alquila un barco de recreo sin licencia y navega libremente por la costa sur.",
+  "description": "Vive un día en el mar a tu ritmo. Barcos modernos de 40cv sin licencia, aptos para hasta 6 personas. Ideal para calas, snorkel y baño en aguas turquesas.",
+  "included": [
+   "Barco hasta 6 pers.",
+   "Combustible incluido",
+   "Nevera con hielo",
+   "Ancla y equipo náutico"
+  ],
+  "notIncluded": [
+   "Comida",
+   "Snorkel (alquiler 5€)"
+  ],
+  "meetingPoint": "Puerto Mogán",
+  "pickup": "Confirmaremos el punto exacto y la logistica al cerrar la reserva.",
+  "groupSize": "Hasta 6 pers.",
+  "insurance": "Incluido",
+  "languages": "ES / EN",
+  "provider": {
+   "id": "boat-rental",
+   "name": "OWA Boat Rental Partner",
+   "activityUrl": ""
+  },
+  "cancellationPolicy": {
+   "verifiedOn": "2026-08-11",
+   "noticeHours": 24,
+   "short": "Cancelacion gratuita hasta 24 horas antes.",
+   "details": "Consulta las condiciones finales con el operador antes de confirmar la reserva.",
+   "sourceUrl": ""
+  },
+  "restrictions": [
+   "Se requiere documentacion valida del responsable de la salida.",
+   "Condiciones sujetas a fianza y meteorologia."
+  ],
+  "ticketTypes": [
+   {
+    "id": "boat",
+    "label": "Barco completo",
+    "price": 180,
+    "min": 1,
+    "max": 2,
+    "default": 1,
+    "seats": 6
+   }
+  ],
+  "timeSlots": [
+   "Horario a confirmar"
+  ],
+  "priceUnit": "barco",
+  "paymentCurrency": "EUR",
+  "bookingEnabled": true
+ },
+ {
+  "id": "catamaran-sunset",
+  "title": "Catamarán al Atardecer con Cena a Bordo",
+  "location": "Costa Adeje, Tenerife",
+  "destination": "tenerife",
+  "category": "nauticas",
+  "price": 75,
+  "originalPrice": null,
+  "duration": "3 horas",
+  "rating": 4.9,
+  "reviews": 412,
+  "featured": true,
+  "image": "https://images.unsplash.com/photo-1564555449603-b0eefe1b9094?auto=format&fit=crop&w=900&q=80",
+  "gallery": [
+   "https://images.unsplash.com/photo-1564555449603-b0eefe1b9094?auto=format&fit=crop&w=1400&q=80"
+  ],
+  "shortDescription": "Vive el atardecer más romántico navegando en catamarán con cena y barra libre.",
+  "description": "Navega frente a los acantilados de Los Gigantes mientras el sol se pone. Incluye cena, barra libre de bebidas locales y música en directo.",
+  "included": [
+   "Cena buffet",
+   "Barra libre",
+   "DJ a bordo",
+   "Baño en cala"
+  ],
+  "notIncluded": [
+   "Traslado"
+  ],
+  "meetingPoint": "Puerto Colón, Costa Adeje",
+  "pickup": "Confirmaremos el punto exacto y la logistica al cerrar la reserva.",
+  "groupSize": "Catamaran compartido",
+  "insurance": "Incluido",
+  "languages": "ES / EN",
+  "provider": {
+   "id": "catamaran-sunset",
+   "name": "OWA Sunset Catamaran Partner",
+   "activityUrl": ""
+  },
+  "cancellationPolicy": {
+   "verifiedOn": "2026-08-11",
+   "noticeHours": 48,
+   "short": "Cancelacion gratuita hasta 48 horas antes.",
+   "details": "Consulta las condiciones finales con el operador antes de confirmar la reserva.",
+   "sourceUrl": ""
+  },
+  "restrictions": [],
+  "ticketTypes": [
+   {
+    "id": "adult",
+    "label": "Adultos",
+    "price": 75,
+    "min": 1,
+    "max": 24,
+    "default": 2,
+    "seats": 1
+   },
+   {
+    "id": "child",
+    "label": "Ninos",
+    "price": 55,
+    "min": 0,
+    "max": 24,
+    "default": 0,
+    "seats": 1
+   }
+  ],
+  "timeSlots": [
+   "Horario a confirmar"
+  ],
+  "priceUnit": "persona",
+  "paymentCurrency": "EUR",
+  "bookingEnabled": true
+ },
+ {
+  "id": "snorkel-teno",
+  "title": "Snorkel en Reserva Marina de Teno",
+  "location": "Los Gigantes, Tenerife",
+  "destination": "tenerife",
+  "category": "buceo",
+  "price": 45,
+  "originalPrice": null,
+  "duration": "3 horas",
+  "rating": 4.8,
+  "reviews": 203,
+  "featured": false,
+  "image": "https://images.unsplash.com/photo-1524482131769-b23c0f633d7c?auto=format&fit=crop&w=900&q=80",
+  "gallery": [
+   "https://images.unsplash.com/photo-1524482131769-b23c0f633d7c?auto=format&fit=crop&w=1400&q=80"
+  ],
+  "shortDescription": "Descubre la biodiversidad marina en la reserva protegida de Teno.",
+  "description": "Bucea con tortugas, peces loro, morenas y bancos de sardinas en una de las reservas marinas mejor conservadas de Canarias.",
+  "included": [
+   "Equipo completo de snorkel",
+   "Instructor titulado",
+   "Traslado en lancha",
+   "Bebida"
+  ],
+  "notIncluded": [
+   "Fotos submarinas"
+  ],
+  "meetingPoint": "Puerto Los Gigantes",
+  "pickup": "Confirmaremos el punto exacto y la logistica al cerrar la reserva.",
+  "groupSize": "Grupo reducido",
+  "insurance": "Incluido",
+  "languages": "ES / EN",
+  "provider": {
+   "id": "snorkel-teno",
+   "name": "OWA Snorkel Tenerife Partner",
+   "activityUrl": ""
+  },
+  "cancellationPolicy": {
+   "verifiedOn": "2026-08-11",
+   "noticeHours": 24,
+   "short": "Cancelacion gratuita hasta 24 horas antes.",
+   "details": "Consulta las condiciones finales con el operador antes de confirmar la reserva.",
+   "sourceUrl": ""
+  },
+  "restrictions": [
+   "Saber nadar es obligatorio."
+  ],
+  "ticketTypes": [
+   {
+    "id": "adult",
+    "label": "Adultos",
+    "price": 45,
+    "min": 1,
+    "max": 12,
+    "default": 2,
+    "seats": 1
+   }
+  ],
+  "timeSlots": [
+   "Horario a confirmar"
+  ],
+  "priceUnit": "persona",
+  "paymentCurrency": "EUR",
+  "bookingEnabled": true
+ },
+ {
+  "id": "buceo-lanzarote",
+  "title": "Bautismo de Buceo en Arrecifes Volcánicos",
+  "location": "Puerto del Carmen, Lanzarote",
+  "destination": "lanzarote",
+  "category": "buceo",
+  "price": 80,
+  "originalPrice": null,
+  "duration": "3 horas",
+  "rating": 5,
+  "reviews": 145,
+  "featured": false,
+  "image": "https://images.unsplash.com/photo-1658298208155-ab71765747a1?auto=format&fit=crop&w=900&q=80",
+  "gallery": [
+   "https://images.unsplash.com/photo-1658298208155-ab71765747a1?auto=format&fit=crop&w=1400&q=80"
+  ],
+  "shortDescription": "Tu primera inmersión de buceo con instructor PADI, sin experiencia previa.",
+  "description": "Sumérgete hasta 6m con instructor PADI en formaciones volcánicas y cuevas submarinas únicas del atlántico canario.",
+  "included": [
+   "Equipo completo de buceo",
+   "Instructor PADI",
+   "Seguro de buceo",
+   "Certificado PADI Discover"
+  ],
+  "notIncluded": [
+   "Traslado",
+   "Fotos"
+  ],
+  "meetingPoint": "Centro de buceo Puerto del Carmen",
+  "pickup": "Confirmaremos el punto exacto y la logistica al cerrar la reserva.",
+  "groupSize": "Grupo reducido",
+  "insurance": "Incluido",
+  "languages": "ES / EN",
+  "provider": {
+   "id": "buceo-lanzarote",
+   "name": "OWA Diving Lanzarote Partner",
+   "activityUrl": ""
+  },
+  "cancellationPolicy": {
+   "verifiedOn": "2026-08-11",
+   "noticeHours": 24,
+   "short": "Cancelacion gratuita hasta 24 horas antes.",
+   "details": "Consulta las condiciones finales con el operador antes de confirmar la reserva.",
+   "sourceUrl": ""
+  },
+  "restrictions": [
+   "No apto para viajar en avion el mismo dia.",
+   "Cuestionario medico requerido antes de bucear."
+  ],
+  "ticketTypes": [
+   {
+    "id": "adult",
+    "label": "Adultos",
+    "price": 80,
+    "min": 1,
+    "max": 12,
+    "default": 2,
+    "seats": 1
+   }
+  ],
+  "timeSlots": [
+   "Horario a confirmar"
+  ],
+  "priceUnit": "persona",
+  "paymentCurrency": "EUR",
+  "bookingEnabled": true
+ },
+ {
+  "id": "kayak-cuevas",
+  "title": "Kayak & Cuevas Marinas — Mogán",
+  "location": "Puerto Mogán, Gran Canaria",
+  "destination": "gran-canaria",
+  "category": "nauticas",
+  "price": 35,
+  "originalPrice": null,
+  "duration": "3 horas",
+  "rating": 4.8,
+  "reviews": 167,
+  "featured": false,
+  "image": "https://images.unsplash.com/photo-1620903669944-de50fbe78210?auto=format&fit=crop&w=900&q=80",
+  "gallery": [
+   "https://images.unsplash.com/photo-1620903669944-de50fbe78210?auto=format&fit=crop&w=1400&q=80"
+  ],
+  "shortDescription": "Explora cuevas marinas y calas ocultas remando en kayak transparente.",
+  "description": "Recorre acantilados vírgenes, cuevas marinas y bahías escondidas remando en kayak transparente con guía experto.",
+  "included": [
+   "Kayak individual/doble",
+   "Chaleco",
+   "Snorkel",
+   "Guía + fotos"
+  ],
+  "notIncluded": [
+   "Bebidas"
+  ],
+  "meetingPoint": "Playa de Mogán",
+  "pickup": "Confirmaremos el punto exacto y la logistica al cerrar la reserva.",
+  "groupSize": "Grupo reducido",
+  "insurance": "Incluido",
+  "languages": "ES / EN",
+  "provider": {
+   "id": "kayak-cuevas",
+   "name": "OWA Kayak Mogán Partner",
+   "activityUrl": ""
+  },
+  "cancellationPolicy": {
+   "verifiedOn": "2026-08-11",
+   "noticeHours": 24,
+   "short": "Cancelacion gratuita hasta 24 horas antes.",
+   "details": "Consulta las condiciones finales con el operador antes de confirmar la reserva.",
+   "sourceUrl": ""
+  },
+  "restrictions": [
+   "Actividad sujeta al estado del mar y nivel fisico basico."
+  ],
+  "ticketTypes": [
+   {
+    "id": "adult",
+    "label": "Adultos",
+    "price": 35,
+    "min": 1,
+    "max": 12,
+    "default": 2,
+    "seats": 1
+   }
+  ],
+  "timeSlots": [
+   "Horario a confirmar"
+  ],
+  "priceUnit": "persona",
+  "paymentCurrency": "EUR",
+  "bookingEnabled": true
+ },
+ {
+  "id": "teide-hike",
+  "title": "Ascenso al Teide al Amanecer + Estrellas",
+  "location": "Parque Nacional del Teide, Tenerife",
+  "destination": "tenerife",
+  "category": "aventura",
+  "price": 110,
+  "originalPrice": 130,
+  "duration": "10 horas",
+  "rating": 5,
+  "reviews": 89,
+  "featured": true,
+  "image": "https://images.unsplash.com/photo-1616628950295-d3288bd7a96d?auto=format&fit=crop&w=900&q=80",
+  "gallery": [
+   "https://images.unsplash.com/photo-1616628950295-d3288bd7a96d?auto=format&fit=crop&w=1400&q=80"
+  ],
+  "shortDescription": "Sube al pico más alto de España al amanecer y observa las estrellas antes.",
+  "description": "Una experiencia única: observación astronómica desde 2.400m, cena en refugio de montaña, ascenso nocturno al Teide y amanecer sobre el mar de nubes.",
+  "included": [
+   "Guía de montaña",
+   "Cena",
+   "Permiso Teide",
+   "Telescopio",
+   "Traslado"
+  ],
+  "notIncluded": [
+   "Equipo personal"
+  ],
+  "meetingPoint": "Punto encuentro Puerto de la Cruz",
+  "pickup": "Confirmaremos el punto exacto y la logistica al cerrar la reserva.",
+  "groupSize": "Grupo guiado",
+  "insurance": "Incluido",
+  "languages": "ES / EN",
+  "provider": {
+   "id": "teide-hike",
+   "name": "OWA Teide Trek Partner",
+   "activityUrl": ""
+  },
+  "cancellationPolicy": {
+   "verifiedOn": "2026-08-11",
+   "noticeHours": 48,
+   "short": "Cancelacion gratuita hasta 48 horas antes.",
+   "details": "Consulta las condiciones finales con el operador antes de confirmar la reserva.",
+   "sourceUrl": ""
+  },
+  "restrictions": [
+   "No apto para personas con problemas cardiacos o de altura.",
+   "Ropa de abrigo obligatoria."
+  ],
+  "ticketTypes": [
+   {
+    "id": "adult",
+    "label": "Adultos",
+    "price": 110,
+    "min": 1,
+    "max": 12,
+    "default": 2,
+    "seats": 1
+   }
+  ],
+  "timeSlots": [
+   "Horario a confirmar"
+  ],
+  "priceUnit": "persona",
+  "paymentCurrency": "EUR",
+  "bookingEnabled": true
+ },
+ {
+  "id": "paragliding",
+  "title": "Parapente Biplaza sobre Costa Sur",
+  "location": "Ifonche, Tenerife",
+  "destination": "tenerife",
+  "category": "aire",
+  "price": 120,
+  "originalPrice": null,
+  "duration": "1.5 horas",
+  "rating": 4.9,
+  "reviews": 74,
+  "featured": false,
+  "image": "https://images.unsplash.com/photo-1620649332832-45f944292179?auto=format&fit=crop&w=900&q=80",
+  "gallery": [
+   "https://images.unsplash.com/photo-1620649332832-45f944292179?auto=format&fit=crop&w=1400&q=80"
+  ],
+  "shortDescription": "Vuelo tándem en parapente sobre acantilados y mar con piloto certificado.",
+  "description": "Despega desde 800m en Ifonche y aterriza en la playa. Vuelo de 20-25 min con piloto profesional. Video HD incluido.",
+  "included": [
+   "Piloto certificado",
+   "Equipo completo",
+   "Video HD + fotos",
+   "Traslado despegue"
+  ],
+  "notIncluded": [
+   "Traslado desde hotel"
+  ],
+  "meetingPoint": "Base Ifonche, Adeje",
+  "pickup": "Confirmaremos el punto exacto y la logistica al cerrar la reserva.",
+  "groupSize": "Grupo reducido",
+  "insurance": "Incluido",
+  "languages": "ES / EN",
+  "provider": {
+   "id": "paragliding",
+   "name": "OWA Paragliding Tenerife Partner",
+   "activityUrl": ""
+  },
+  "cancellationPolicy": {
+   "verifiedOn": "2026-08-11",
+   "noticeHours": 24,
+   "short": "Cancelacion gratuita hasta 24 horas antes.",
+   "details": "Consulta las condiciones finales con el operador antes de confirmar la reserva.",
+   "sourceUrl": ""
+  },
+  "restrictions": [
+   "Peso y viento sujetos a validacion del piloto.",
+   "Calzado cerrado obligatorio."
+  ],
+  "ticketTypes": [
+   {
+    "id": "adult",
+    "label": "Adultos",
+    "price": 120,
+    "min": 1,
+    "max": 12,
+    "default": 2,
+    "seats": 1
+   }
+  ],
+  "timeSlots": [
+   "Horario a confirmar"
+  ],
+  "priceUnit": "persona",
+  "paymentCurrency": "EUR",
+  "bookingEnabled": true
+ },
+ {
+  "id": "stand-up-paddle",
+  "title": "Stand Up Paddle al Atardecer",
+  "location": "Sotavento, Fuerteventura",
+  "destination": "fuerteventura",
+  "category": "nauticas",
+  "price": 30,
+  "originalPrice": null,
+  "duration": "2 horas",
+  "rating": 4.7,
+  "reviews": 112,
+  "featured": false,
+  "image": "https://images.unsplash.com/photo-1613857794632-052edbb98d58?auto=format&fit=crop&w=900&q=80",
+  "gallery": [
+   "https://images.unsplash.com/photo-1613857794632-052edbb98d58?auto=format&fit=crop&w=1400&q=80"
+  ],
+  "shortDescription": "Sesión guiada de SUP en la laguna de Sotavento al atardecer.",
+  "description": "Aprende SUP en las aguas tranquilas de la laguna de Sotavento, uno de los mejores spots del mundo, con guía profesional.",
+  "included": [
+   "Tabla SUP",
+   "Traje neopreno",
+   "Instructor",
+   "Fotos"
+  ],
+  "notIncluded": [
+   "Traslado"
+  ],
+  "meetingPoint": "Playa Sotavento",
+  "pickup": "Confirmaremos el punto exacto y la logistica al cerrar la reserva.",
+  "groupSize": "Grupo reducido",
+  "insurance": "Incluido",
+  "languages": "ES / EN",
+  "provider": {
+   "id": "stand-up-paddle",
+   "name": "OWA SUP Fuerteventura Partner",
+   "activityUrl": ""
+  },
+  "cancellationPolicy": {
+   "verifiedOn": "2026-08-11",
+   "noticeHours": 24,
+   "short": "Cancelacion gratuita hasta 24 horas antes.",
+   "details": "Consulta las condiciones finales con el operador antes de confirmar la reserva.",
+   "sourceUrl": ""
+  },
+  "restrictions": [],
+  "ticketTypes": [
+   {
+    "id": "adult",
+    "label": "Adultos",
+    "price": 30,
+    "min": 1,
+    "max": 12,
+    "default": 2,
+    "seats": 1
+   }
+  ],
+  "timeSlots": [
+   "Horario a confirmar"
+  ],
+  "priceUnit": "persona",
+  "paymentCurrency": "EUR",
+  "bookingEnabled": true
+ },
+ {
+  "id": "wine-tour",
+  "title": "Ruta del Vino & Bodegas Volcánicas",
+  "location": "La Geria, Lanzarote",
+  "destination": "lanzarote",
+  "category": "gastronomia",
+  "price": 60,
+  "originalPrice": null,
+  "duration": "5 horas",
+  "rating": 4.8,
+  "reviews": 92,
+  "featured": false,
+  "image": "https://images.unsplash.com/photo-1575450411797-d1aed117d091?auto=format&fit=crop&w=900&q=80",
+  "gallery": [
+   "https://images.unsplash.com/photo-1575450411797-d1aed117d091?auto=format&fit=crop&w=1400&q=80"
+  ],
+  "shortDescription": "Cata de vinos volcánicos con visita a 3 bodegas históricas.",
+  "description": "Descubre el sabor único de los vinos malvasía cultivados en suelo volcánico. Visita 3 bodegas familiares con maridaje canario.",
+  "included": [
+   "Traslado",
+   "Guía",
+   "3 bodegas",
+   "Cata + tapas"
+  ],
+  "notIncluded": [
+   "Compras adicionales"
+  ],
+  "meetingPoint": "Playa Blanca / Puerto del Carmen",
+  "pickup": "Confirmaremos el punto exacto y la logistica al cerrar la reserva.",
+  "groupSize": "Grupo degustacion",
+  "insurance": "Incluido",
+  "languages": "ES / EN",
+  "provider": {
+   "id": "wine-tour",
+   "name": "OWA Wine Lanzarote Partner",
+   "activityUrl": ""
+  },
+  "cancellationPolicy": {
+   "verifiedOn": "2026-08-11",
+   "noticeHours": 24,
+   "short": "Cancelacion gratuita hasta 24 horas antes.",
+   "details": "Consulta las condiciones finales con el operador antes de confirmar la reserva.",
+   "sourceUrl": ""
+  },
+  "restrictions": [],
+  "ticketTypes": [
+   {
+    "id": "adult",
+    "label": "Adultos",
+    "price": 60,
+    "min": 1,
+    "max": 12,
+    "default": 2,
+    "seats": 1
+   }
+  ],
+  "timeSlots": [
+   "Horario a confirmar"
+  ],
+  "priceUnit": "persona",
+  "paymentCurrency": "EUR",
+  "bookingEnabled": true
+ },
+ {
+  "id": "stargazing",
+  "title": "Observación de Estrellas — Cielos La Palma",
+  "location": "Roque de los Muchachos, La Palma",
+  "destination": "la-palma",
+  "category": "naturaleza",
+  "price": 50,
+  "originalPrice": null,
+  "duration": "3 horas",
+  "rating": 4.9,
+  "reviews": 65,
+  "featured": false,
+  "image": "https://images.unsplash.com/photo-1488330890490-c291ecf62571?auto=format&fit=crop&w=900&q=80",
+  "gallery": [
+   "https://images.unsplash.com/photo-1488330890490-c291ecf62571?auto=format&fit=crop&w=1400&q=80"
+  ],
+  "shortDescription": "La Palma es Reserva Starlight: observa la Vía Láctea desde el mejor cielo del mundo.",
+  "description": "Con guía astrónomo y telescopio profesional observarás planetas, galaxias y nebulosas desde el Roque de los Muchachos, uno de los mejores puntos de observación del planeta.",
+  "included": [
+   "Telescopio profesional",
+   "Astrónomo guía",
+   "Manta térmica",
+   "Chocolate caliente"
+  ],
+  "notIncluded": [
+   "Traslado"
+  ],
+  "meetingPoint": "El Paso, La Palma",
+  "pickup": "Confirmaremos el punto exacto y la logistica al cerrar la reserva.",
+  "groupSize": "Grupo reducido",
+  "insurance": "Incluido",
+  "languages": "ES / EN",
+  "provider": {
+   "id": "stargazing",
+   "name": "OWA Stargazing La Palma Partner",
+   "activityUrl": ""
+  },
+  "cancellationPolicy": {
+   "verifiedOn": "2026-08-11",
+   "noticeHours": 24,
+   "short": "Cancelacion gratuita hasta 24 horas antes.",
+   "details": "Consulta las condiciones finales con el operador antes de confirmar la reserva.",
+   "sourceUrl": ""
+  },
+  "restrictions": [
+   "Abrigo recomendado incluso en verano.",
+   "Actividad sujeta a nubosidad y viento."
+  ],
+  "ticketTypes": [
+   {
+    "id": "adult",
+    "label": "Adultos",
+    "price": 50,
+    "min": 1,
+    "max": 12,
+    "default": 2,
+    "seats": 1
+   }
+  ],
+  "timeSlots": [
+   "Horario a confirmar"
+  ],
+  "priceUnit": "persona",
+  "paymentCurrency": "EUR",
+  "bookingEnabled": true
+ },
+ {
+  "id": "infinity-yacht-sport-private",
+  "title": "Yate Sport Privado — 4 horas",
+  "location": "Puerto Rico, Gran Canaria",
+  "destination": "gran-canaria",
+  "category": "nauticas",
+  "price": 600,
+  "originalPrice": null,
+  "duration": "4 horas",
+  "rating": null,
+  "reviews": 0,
+  "featured": true,
+  "image": "https://images.unsplash.com/photo-1571328532572-cb7899a8be7e?auto=format&fit=crop&w=1200&q=80",
+  "gallery": [
+   "https://images.unsplash.com/photo-1571328532572-cb7899a8be7e?auto=format&fit=crop&w=1200&q=80"
+  ],
+  "shortDescription": "Salida privada en yate para un grupo de hasta 10 personas, con aperitivos, barra libre, snorkel, paddle surf y plataforma flotante.",
+  "description": "Salida privada en yate para un grupo de hasta 10 personas, con aperitivos, barra libre, snorkel, paddle surf y plataforma flotante.",
+  "included": [
+   "Yate privado con capitán",
+   "Aperitivos y bebidas",
+   "Snorkel y paddle surf",
+   "Seguro, impuestos y tasas",
+   "Traslado en el sur con reserva previa"
+  ],
+  "notIncluded": [
+   "Toallas",
+   "Actividades acuáticas opcionales",
+   "Hora extra: 150 €"
+  ],
+  "meetingPoint": "Puerto Escala, Puerto Rico",
+  "pickup": "Recogida y regreso desde alojamientos del sur con reserva previa.",
+  "groupSize": "Hasta 10 pers.",
+  "insurance": "Incluido",
+  "languages": "ES / EN",
+  "restrictions": [
+   "La actividad está sujeta a disponibilidad y condiciones meteorológicas."
+  ],
+  "provider": {
+   "id": "infinity-boat-gc",
+   "name": "Infinity Boat Tours",
+   "activityUrl": "https://www.infinityboatgc.com/excursion-en-yate-sport-privado"
+  },
+  "cancellationPolicy": {
+   "verifiedOn": "2026-08-11",
+   "noticeHours": 48,
+   "short": "Cancelación gratuita hasta 48 horas antes.",
+   "details": "Cancela con al menos 48 horas de antelación para recibir un reembolso completo.",
+   "sourceUrl": "https://www.infinityboatgc.com/"
+  },
+  "ticketTypes": [
+   {
+    "min": 0,
+    "max": 1,
+    "default": 1,
+    "id": "base_group",
+    "label": "Grupo hasta 8 personas",
+    "price": 600
+   },
+   {
+    "min": 0,
+    "max": 2,
+    "default": 0,
+    "id": "extra_guest",
+    "label": "Pasajero extra (máx. 2)",
+    "price": 45
+   }
+  ],
+  "timeSlots": [
+   "10:30",
+   "14:30",
+   "Sunset (verano)"
+  ],
+  "priceUnit": "grupo privado",
+  "paymentCurrency": "EUR",
+  "bookingEnabled": false,
+  "priceVerifiedOn": "2026-08-11",
+  "priceSourceUrl": "https://www.infinityboatgc.com/excursion-en-yate-sport-privado"
+ },
+ {
+  "id": "infinity-yacht-private",
+  "title": "Yate Infinity Privado — 4 horas",
+  "location": "Puerto Rico, Gran Canaria",
+  "destination": "gran-canaria",
+  "category": "nauticas",
+  "price": 680,
+  "originalPrice": null,
+  "duration": "4 horas",
+  "rating": null,
+  "reviews": 0,
+  "featured": true,
+  "image": "https://images.unsplash.com/photo-1526621480041-c4e2027dfe69?auto=format&fit=crop&w=1200&q=80",
+  "gallery": [
+   "https://images.unsplash.com/photo-1526621480041-c4e2027dfe69?auto=format&fit=crop&w=1200&q=80"
+  ],
+  "shortDescription": "Experiencia exclusiva en yate privado por la costa de Mogán con aperitivos, barra libre, snorkel, paddle surf y plataforma flotante.",
+  "description": "Experiencia exclusiva en yate privado por la costa de Mogán con aperitivos, barra libre, snorkel, paddle surf y plataforma flotante.",
+  "included": [
+   "Yate privado con capitán y guía",
+   "Aperitivos y barra libre",
+   "Snorkel y 2 tablas de paddle surf",
+   "Seguro, impuestos y tasas",
+   "Traslado en el sur con reserva previa"
+  ],
+  "notIncluded": [
+   "Toallas",
+   "Actividades acuáticas opcionales",
+   "Hora extra: 170 €"
+  ],
+  "meetingPoint": "Puerto Escala, Puerto Rico",
+  "pickup": "Recogida y regreso desde alojamientos del sur con reserva previa.",
+  "groupSize": "Hasta 12 pers.",
+  "insurance": "Incluido",
+  "languages": "ES / EN",
+  "restrictions": [
+   "La actividad está sujeta a disponibilidad y condiciones meteorológicas."
+  ],
+  "provider": {
+   "id": "infinity-boat-gc",
+   "name": "Infinity Boat Tours",
+   "activityUrl": "https://www.infinityboatgc.com/excursion-privada-en-yate-infinity"
+  },
+  "cancellationPolicy": {
+   "verifiedOn": "2026-08-11",
+   "noticeHours": 48,
+   "short": "Cancelación gratuita hasta 48 horas antes.",
+   "details": "Cancela con al menos 48 horas de antelación para recibir un reembolso completo.",
+   "sourceUrl": "https://www.infinityboatgc.com/"
+  },
+  "ticketTypes": [
+   {
+    "min": 0,
+    "max": 1,
+    "default": 1,
+    "id": "base_group",
+    "label": "Grupo hasta 8 personas",
+    "price": 680
+   },
+   {
+    "min": 0,
+    "max": 4,
+    "default": 0,
+    "id": "extra_guest",
+    "label": "Pasajero extra (máx. 4)",
+    "price": 45
+   }
+  ],
+  "timeSlots": [
+   "09:30",
+   "13:30",
+   "Sunset (verano)"
+  ],
+  "priceUnit": "grupo privado",
+  "paymentCurrency": "EUR",
+  "bookingEnabled": false,
+  "priceVerifiedOn": "2026-08-11",
+  "priceSourceUrl": "https://www.infinityboatgc.com/excursion-privada-en-yate-infinity"
+ },
+ {
+  "id": "buggy-pirates-tour",
+  "title": "Buggy Pirates Tour",
+  "location": "El Tablero, Gran Canaria",
+  "destination": "gran-canaria",
+  "category": "aventura",
+  "price": 120,
+  "originalPrice": null,
+  "duration": "2 h 15 min",
+  "rating": null,
+  "reviews": 0,
+  "featured": true,
+  "image": "https://buggypirates.com/wp-content/uploads/2025/10/websolobuggy-2073h.webp",
+  "gallery": [
+   "https://buggypirates.com/wp-content/uploads/2025/10/websolobuggy-2073h.webp"
+  ],
+  "shortDescription": "Ruta guiada en buggy por el sur de Gran Canaria con salida desde El Tablero y traslados desde zonas turísticas seleccionadas.",
+  "description": "Ruta guiada en buggy por el sur de Gran Canaria con salida desde El Tablero y traslados desde zonas turísticas seleccionadas.",
+  "included": [
+   "Buggy y guía de ruta",
+   "Traslados desde zonas seleccionadas",
+   "Información de seguridad"
+  ],
+  "notIncluded": [
+   "Servicios no indicados en la reserva del operador"
+  ],
+  "meetingPoint": "Base Buggypirates, El Tablero",
+  "pickup": "Traslados incluidos desde zonas turísticas seleccionadas.",
+  "groupSize": "Consultar ocupación por buggy",
+  "insurance": "Según condiciones del proveedor",
+  "languages": "ES / EN",
+  "restrictions": [
+   "La actividad está sujeta a disponibilidad y condiciones meteorológicas."
+  ],
+  "provider": {
+   "id": "buggy-pirates",
+   "name": "Buggypirates",
+   "activityUrl": "https://buggypirates.com/buggies/"
+  },
+  "cancellationPolicy": {
+   "verifiedOn": "2026-08-11",
+   "noticeHours": null,
+   "short": "Condiciones de cancelación a confirmar antes de reservar.",
+   "details": "Buggypirates no muestra una política de cancelación completa y verificable en la página pública consultada. OWA confirmará las condiciones aplicables por WhatsApp antes de cobrar.",
+   "sourceUrl": "https://buggypirates.com/buggies/"
+  },
+  "ticketTypes": [
+   {
+    "min": 0,
+    "max": 6,
+    "default": 1,
+    "id": "buggy",
+    "label": "Buggy",
+    "price": 120
+   }
+  ],
+  "timeSlots": [
+   "Horario a confirmar"
+  ],
+  "priceUnit": "buggy",
+  "paymentCurrency": "EUR",
+  "bookingEnabled": false,
+  "priceVerifiedOn": "2026-08-11",
+  "priceSourceUrl": "https://widgets.bokun.io/online-sales/f48e670d-408e-464d-b220-83ecb660ac59/experience-calendar/608266?lang=es"
+ },
+ {
+  "id": "buggy-pirates-family",
+  "title": "Family & Friends Buggy Tour",
+  "location": "El Tablero, Gran Canaria",
+  "destination": "gran-canaria",
+  "category": "aventura",
+  "price": 270,
+  "originalPrice": null,
+  "duration": "2 h 15 min",
+  "rating": null,
+  "reviews": 0,
+  "featured": false,
+  "image": "https://buggypirates.com/wp-content/uploads/2025/10/websolobuggy-2073h.webp",
+  "gallery": [
+   "https://buggypirates.com/wp-content/uploads/2025/10/websolobuggy-2073h.webp"
+  ],
+  "shortDescription": "Formato familiar y para grupos de amigos del tour en buggy de Buggypirates por el sur de Gran Canaria.",
+  "description": "Formato familiar y para grupos de amigos del tour en buggy de Buggypirates por el sur de Gran Canaria.",
+  "included": [
+   "Gestión de disponibilidad con el operador local",
+   "Información previa a la actividad"
+  ],
+  "notIncluded": [
+   "Servicios opcionales no indicados expresamente"
+  ],
+  "meetingPoint": "Base Buggypirates, El Tablero",
+  "pickup": "Traslados incluidos desde zonas turísticas seleccionadas.",
+  "groupSize": "Configuración familiar para 3 participantes",
+  "insurance": "Según condiciones del proveedor",
+  "languages": "ES / EN",
+  "restrictions": [
+   "La actividad está sujeta a disponibilidad y condiciones meteorológicas."
+  ],
+  "provider": {
+   "id": "buggy-pirates",
+   "name": "Buggypirates",
+   "activityUrl": "https://buggypirates.com/buggies/"
+  },
+  "cancellationPolicy": {
+   "verifiedOn": "2026-08-11",
+   "noticeHours": null,
+   "short": "Condiciones de cancelación a confirmar antes de reservar.",
+   "details": "Buggypirates no muestra una política de cancelación completa y verificable en la página pública consultada. OWA confirmará las condiciones aplicables por WhatsApp antes de cobrar.",
+   "sourceUrl": "https://buggypirates.com/buggies/"
+  },
+  "ticketTypes": [
+   {
+    "min": 0,
+    "max": 1,
+    "default": 1,
+    "id": "family_group",
+    "label": "Grupo de 3 participantes",
+    "price": 270
+   }
+  ],
+  "timeSlots": [
+   "Horario a confirmar"
+  ],
+  "priceUnit": "grupo",
+  "paymentCurrency": "EUR",
+  "bookingEnabled": false,
+  "priceVerifiedOn": "2026-08-11",
+  "priceSourceUrl": "https://widgets.bokun.io/online-sales/f48e670d-408e-464d-b220-83ecb660ac59/experience-calendar/1104378?lang=es"
+ },
+ {
+  "id": "multiacuatic-dolphin-safari",
+  "title": "Dolphin Safari — Delfines y Ballenas",
+  "location": "Puerto Rico, Gran Canaria",
+  "destination": "gran-canaria",
+  "category": "naturaleza",
+  "price": 40,
+  "originalPrice": null,
+  "duration": "3 horas",
+  "rating": null,
+  "reviews": 0,
+  "featured": true,
+  "image": "https://images.unsplash.com/photo-1518399681705-1c1a55e5e883?auto=format&fit=crop&w=1200&q=80",
+  "gallery": [
+   "https://images.unsplash.com/photo-1518399681705-1c1a55e5e883?auto=format&fit=crop&w=1200&q=80"
+  ],
+  "shortDescription": "Navegación por la costa suroeste de Gran Canaria en busca de delfines y ballenas con guías profesionales.",
+  "description": "Navegación por la costa suroeste de Gran Canaria en busca de delfines y ballenas con guías profesionales.",
+  "included": [
+   "Excursión marítima con guía",
+   "Servicio de recogida en las zonas publicadas"
+  ],
+  "notIncluded": [
+   "Servicios no indicados expresamente por el proveedor"
+  ],
+  "meetingPoint": "Puerto Base, Puerto Rico",
+  "pickup": "Recogida incluida de Mogán a Playa del Cura y de Bahía Feliz a Arguineguín, solicitándola al reservar.",
+  "groupSize": "Excursión compartida",
+  "insurance": "Según condiciones del operador marítimo",
+  "languages": "ES / EN",
+  "restrictions": [
+   "La actividad está sujeta a disponibilidad y condiciones meteorológicas."
+  ],
+  "provider": {
+   "id": "multiacuatic",
+   "name": "Multiacuatic Dolphin & Whale",
+   "activityUrl": "https://dolphinwhales.es/product/dolphin-safari"
+  },
+  "cancellationPolicy": {
+   "verifiedOn": "2026-08-11",
+   "noticeHours": null,
+   "short": "Reembolso íntegro si el operador cancela por el estado del mar.",
+   "details": "Si las condiciones del mar no permiten navegar, el operador cancela la salida y devuelve el 100% de lo pagado. Las cancelaciones solicitadas por el cliente deben confirmarse antes de reservar.",
+   "sourceUrl": "https://dolphinwhales.es/product/dolphin-safari"
+  },
+  "ticketTypes": [
+   {
+    "min": 0,
+    "max": 20,
+    "default": 2,
+    "id": "adult",
+    "label": "Adultos",
+    "price": 40
+   },
+   {
+    "min": 0,
+    "max": 20,
+    "default": 0,
+    "id": "child",
+    "label": "Menores (3-12)",
+    "price": 20
+   },
+   {
+    "min": 0,
+    "max": 5,
+    "default": 0,
+    "id": "infant",
+    "label": "Bebés (0-2)",
+    "price": 0
+   }
+  ],
+  "timeSlots": [
+   "10:30"
+  ],
+  "priceUnit": "persona",
+  "paymentCurrency": "EUR",
+  "bookingEnabled": false,
+  "priceVerifiedOn": "2026-08-11",
+  "priceSourceUrl": "https://dolphinwhales.es/product/dolphin-safari"
+ },
+ {
+  "id": "zeus-snorkel-mogan",
+  "title": "Snorkel Guiado desde Puerto de Mogán",
+  "location": "Puerto de Mogán, Gran Canaria",
+  "destination": "gran-canaria",
+  "category": "buceo",
+  "price": 69,
+  "originalPrice": null,
+  "duration": "Duración a confirmar",
+  "rating": null,
+  "reviews": 0,
+  "featured": false,
+  "image": "https://zeusdivecenter.com/wp-content/uploads/2026/02/grancanaria-snorkel-trydive-scubadive-duiken-schnuppertauchen-dive-tauchen-maspalomas182.jpg",
+  "gallery": [
+   "https://zeusdivecenter.com/wp-content/uploads/2026/02/grancanaria-snorkel-trydive-scubadive-duiken-schnuppertauchen-dive-tauchen-maspalomas182.jpg"
+  ],
+  "shortDescription": "Experiencia de snorkel guiada para principiantes en una bahía protegida, desde barco o costa según el estado del mar.",
+  "description": "Experiencia de snorkel guiada para principiantes en una bahía protegida, desde barco o costa según el estado del mar.",
+  "included": [
+   "Guía profesional",
+   "Máscara full face",
+   "Selección del mejor punto según el mar"
+  ],
+  "notIncluded": [
+   "Servicios opcionales no indicados expresamente"
+  ],
+  "meetingPoint": "Puerto de Mogán",
+  "pickup": "Consultar disponibilidad de recogida con OWA.",
+  "groupSize": "Grupo reducido",
+  "insurance": "Según condiciones del proveedor",
+  "languages": "ES / EN",
+  "restrictions": [
+   "Edad mínima: 6 años.",
+   "No apto para personas con problemas de movilidad o en silla de ruedas."
+  ],
+  "provider": {
+   "id": "zeus-dive-center",
+   "name": "Zeus Dive Center",
+   "activityUrl": "https://zeusdivecenter.com/es/reservas-puerto-de-mogan-excursion-de-snorkel-con-barco/"
+  },
+  "cancellationPolicy": {
+   "verifiedOn": "2026-08-11",
+   "noticeHours": 24,
+   "short": "No se admiten cancelaciones con menos de 24 horas.",
+   "details": "El proveedor indica que el cliente no puede cancelar con menos de 24 horas de antelación. La actividad puede cancelarse por motivos organizativos o de seguridad.",
+   "sourceUrl": "https://zeusdivecenter.com/es/precios/"
+  },
+  "ticketTypes": [
+   {
+    "min": 0,
+    "max": 12,
+    "default": 1,
+    "id": "standard",
+    "label": "Personas",
+    "price": 69
+   }
+  ],
+  "timeSlots": [
+   "Horario a confirmar"
+  ],
+  "priceUnit": "persona",
+  "paymentCurrency": "EUR",
+  "bookingEnabled": false,
+  "priceVerifiedOn": "2026-08-11",
+  "priceSourceUrl": "https://zeusdivecenter.com/es/reservas-puerto-de-mogan-excursion-de-snorkel-con-barco/"
+ },
+ {
+  "id": "zeus-certified-diving",
+  "title": "Buceo para Buceadores Certificados",
+  "location": "Sur de Gran Canaria",
+  "destination": "gran-canaria",
+  "category": "buceo",
+  "price": 116,
+  "originalPrice": null,
+  "duration": "Según inmersiones",
+  "rating": null,
+  "reviews": 0,
+  "featured": false,
+  "image": "https://zeusdivecenter.com/wp-content/uploads/2026/02/grancanaria-snorkel-trydive-scubadive-duiken-schnuppertauchen-dive-tauchen-maspalomas188.png",
+  "gallery": [
+   "https://zeusdivecenter.com/wp-content/uploads/2026/02/grancanaria-snorkel-trydive-scubadive-duiken-schnuppertauchen-dive-tauchen-maspalomas188.png"
+  ],
+  "shortDescription": "Inmersiones para buceadores certificados en distintos puntos del sur, este, oeste y noroeste de Gran Canaria.",
+  "description": "Inmersiones para buceadores certificados en distintos puntos del sur, este, oeste y noroeste de Gran Canaria.",
+  "included": [
+   "Guía profesional de buceo",
+   "Planificación según nivel y condiciones"
+  ],
+  "notIncluded": [
+   "Alquiler de equipo cuando no esté incluido en la opción reservada"
+  ],
+  "meetingPoint": "Zeus Dive Center, Playa del Inglés",
+  "pickup": "Consultar disponibilidad de recogida con OWA.",
+  "groupSize": "Grupos reducidos",
+  "insurance": "Según condiciones del proveedor",
+  "languages": "ES / EN",
+  "restrictions": [
+   "Es obligatorio disponer de certificación de buceo válida."
+  ],
+  "provider": {
+   "id": "zeus-dive-center",
+   "name": "Zeus Dive Center",
+   "activityUrl": "https://zeusdivecenter.com/es/reservas-buceo-en-gran-canaria-para-buceadores-certificados/"
+  },
+  "cancellationPolicy": {
+   "verifiedOn": "2026-08-11",
+   "noticeHours": 24,
+   "short": "No se admiten cancelaciones con menos de 24 horas.",
+   "details": "El proveedor indica que el cliente no puede cancelar con menos de 24 horas de antelación. La actividad puede cancelarse por motivos organizativos o de seguridad.",
+   "sourceUrl": "https://zeusdivecenter.com/es/precios/"
+  },
+  "ticketTypes": [
+   {
+    "min": 0,
+    "max": 12,
+    "default": 1,
+    "id": "standard",
+    "label": "Personas",
+    "price": 116
+   }
+  ],
+  "timeSlots": [
+   "Horario a confirmar"
+  ],
+  "priceUnit": "persona",
+  "paymentCurrency": "EUR",
+  "bookingEnabled": false,
+  "priceVerifiedOn": "2026-08-11",
+  "priceSourceUrl": "https://zeusdivecenter.com/es/reservas-buceo-en-gran-canaria-para-buceadores-certificados/"
+ },
+ {
+  "id": "zeus-discover-scuba",
+  "title": "Bautizo de Buceo en Playa de Amadores",
+  "location": "Playa de Amadores, Gran Canaria",
+  "destination": "gran-canaria",
+  "category": "buceo",
+  "price": 85,
+  "originalPrice": null,
+  "duration": "Duración a confirmar",
+  "rating": null,
+  "reviews": 0,
+  "featured": false,
+  "image": "https://zeusdivecenter.com/wp-content/uploads/2026/02/grancanaria-snorkel-trydive-scubadive-duiken-schnuppertauchen-dive-tauchen-maspalomas182.jpg",
+  "gallery": [
+   "https://zeusdivecenter.com/wp-content/uploads/2026/02/grancanaria-snorkel-trydive-scubadive-duiken-schnuppertauchen-dive-tauchen-maspalomas182.jpg"
+  ],
+  "shortDescription": "Primera experiencia de buceo en una bahía protegida, con briefing, equipo personal y profundidad máxima de 6 metros.",
+  "description": "Primera experiencia de buceo en una bahía protegida, con briefing, equipo personal y profundidad máxima de 6 metros.",
+  "included": [
+   "Instructor de buceo",
+   "Equipo personal",
+   "Briefing de seguridad",
+   "Recogida según zona"
+  ],
+  "notIncluded": [
+   "Servicios opcionales no indicados expresamente"
+  ],
+  "meetingPoint": "Playa de Amadores",
+  "pickup": "Recogida en hotel según zona y disponibilidad.",
+  "groupSize": "Máx. 3 pers. por instructor",
+  "insurance": "Según condiciones del proveedor",
+  "languages": "ES / EN",
+  "restrictions": [
+   "Actividad sujeta a cuestionario médico y condiciones del mar."
+  ],
+  "provider": {
+   "id": "zeus-dive-center",
+   "name": "Zeus Dive Center",
+   "activityUrl": "https://zeusdivecenter.com/es/reservas-buceo-al-sur-de-la-isla/"
+  },
+  "cancellationPolicy": {
+   "verifiedOn": "2026-08-11",
+   "noticeHours": 24,
+   "short": "No se admiten cancelaciones con menos de 24 horas.",
+   "details": "El proveedor indica que el cliente no puede cancelar con menos de 24 horas de antelación. La actividad puede cancelarse por motivos organizativos o de seguridad.",
+   "sourceUrl": "https://zeusdivecenter.com/es/precios/"
+  },
+  "ticketTypes": [
+   {
+    "min": 0,
+    "max": 12,
+    "default": 1,
+    "id": "standard",
+    "label": "Personas",
+    "price": 85
+   }
+  ],
+  "timeSlots": [
+   "Horario a confirmar"
+  ],
+  "priceUnit": "persona",
+  "paymentCurrency": "EUR",
+  "bookingEnabled": false,
+  "priceVerifiedOn": "2026-08-11",
+  "priceSourceUrl": "https://zeusdivecenter.com/es/reservas-buceo-al-sur-de-la-isla/"
+ },
+ {
+  "id": "zeus-open-water-course",
+  "title": "Curso Open Water Diver SSI / PADI",
+  "location": "Gran Canaria",
+  "destination": "gran-canaria",
+  "category": "buceo",
+  "price": 450,
+  "originalPrice": null,
+  "duration": "2 días",
+  "rating": null,
+  "reviews": 0,
+  "featured": false,
+  "image": "https://zeusdivecenter.com/wp-content/uploads/2026/02/grancanaria-snorkel-trydive-scubadive-duiken-schnuppertauchen-dive-tauchen-maspalomas188.png",
+  "gallery": [
+   "https://zeusdivecenter.com/wp-content/uploads/2026/02/grancanaria-snorkel-trydive-scubadive-duiken-schnuppertauchen-dive-tauchen-maspalomas188.png"
+  ],
+  "shortDescription": "Curso de certificación internacional con teoría, aguas confinadas e inmersiones en mar abierto.",
+  "description": "Curso de certificación internacional con teoría, aguas confinadas e inmersiones en mar abierto.",
+  "included": [
+   "Formación teórica y práctica",
+   "Inmersiones en mar abierto",
+   "Máscara de buceo de regalo"
+  ],
+  "notIncluded": [
+   "Extras y tasas de certificación que el proveedor no detalla en el precio base"
+  ],
+  "meetingPoint": "Zeus Dive Center, Playa del Inglés",
+  "pickup": "Consultar disponibilidad de recogida con OWA.",
+  "groupSize": "Curso en grupo reducido",
+  "insurance": "Según condiciones del proveedor",
+  "languages": "ES / EN",
+  "restrictions": [
+   "Edad mínima: 10 años.",
+   "Sujeto a requisitos médicos de buceo."
+  ],
+  "provider": {
+   "id": "zeus-dive-center",
+   "name": "Zeus Dive Center",
+   "activityUrl": "https://zeusdivecenter.com/es/curso-open-water-diver-ssi-padi/"
+  },
+  "cancellationPolicy": {
+   "verifiedOn": "2026-08-11",
+   "noticeHours": 24,
+   "short": "No se admiten cancelaciones con menos de 24 horas.",
+   "details": "El proveedor indica que el cliente no puede cancelar con menos de 24 horas de antelación. La actividad puede cancelarse por motivos organizativos o de seguridad.",
+   "sourceUrl": "https://zeusdivecenter.com/es/precios/"
+  },
+  "ticketTypes": [
+   {
+    "min": 0,
+    "max": 12,
+    "default": 1,
+    "id": "standard",
+    "label": "Personas",
+    "price": 450
+   }
+  ],
+  "timeSlots": [
+   "Horario a confirmar"
+  ],
+  "priceUnit": "persona",
+  "paymentCurrency": "EUR",
+  "bookingEnabled": false,
+  "priceVerifiedOn": "2026-08-11",
+  "priceSourceUrl": "https://zeusdivecenter.com/es/curso-open-water-diver-ssi-padi/"
+ },
+ {
+  "id": "zeus-private-sailing-4-5",
+  "title": "Velero Privado Vandross VI — 4,5 horas",
+  "location": "Gran Canaria",
+  "destination": "gran-canaria",
+  "category": "nauticas",
+  "price": 890,
+  "originalPrice": null,
+  "duration": "4 h 30 min",
+  "rating": null,
+  "reviews": 0,
+  "featured": false,
+  "image": "https://images.unsplash.com/photo-1571328532572-cb7899a8be7e?auto=format&fit=crop&w=1200&q=80",
+  "gallery": [
+   "https://images.unsplash.com/photo-1571328532572-cb7899a8be7e?auto=format&fit=crop&w=1200&q=80"
+  ],
+  "shortDescription": "Navegación privada a bordo del Vandross VI con menú gourmet, vino de la casa y paradas para baño si las condiciones lo permiten.",
+  "description": "Navegación privada a bordo del Vandross VI con menú gourmet, vino de la casa y paradas para baño si las condiciones lo permiten.",
+  "included": [
+   "Velero privado",
+   "Menú gourmet",
+   "Vino Vandross",
+   "Patrón y navegación"
+  ],
+  "notIncluded": [
+   "Servicios opcionales no indicados expresamente"
+  ],
+  "meetingPoint": "Punto de embarque a confirmar",
+  "pickup": "Consultar disponibilidad de recogida con OWA.",
+  "groupSize": "Grupo privado · capacidad a confirmar",
+  "insurance": "Según condiciones del proveedor",
+  "languages": "ES / EN",
+  "restrictions": [
+   "La actividad está sujeta a disponibilidad y condiciones meteorológicas."
+  ],
+  "provider": {
+   "id": "zeus-dive-center",
+   "name": "Zeus Dive Center",
+   "activityUrl": "https://zeusdivecenter.com/es/reservas-salida-privada-velero-gran-canaria-4-5-horas/"
+  },
+  "cancellationPolicy": {
+   "verifiedOn": "2026-08-11",
+   "noticeHours": 24,
+   "short": "No se admiten cancelaciones con menos de 24 horas.",
+   "details": "El proveedor indica que el cliente no puede cancelar con menos de 24 horas de antelación. La actividad puede cancelarse por motivos organizativos o de seguridad.",
+   "sourceUrl": "https://zeusdivecenter.com/es/precios/"
+  },
+  "ticketTypes": [
+   {
+    "min": 0,
+    "max": 1,
+    "default": 1,
+    "id": "private_departure",
+    "label": "Salida privada",
+    "price": 890
+   }
+  ],
+  "timeSlots": [
+   "Horario a confirmar"
+  ],
+  "priceUnit": "salida privada",
+  "paymentCurrency": "EUR",
+  "bookingEnabled": false,
+  "priceVerifiedOn": "2026-08-11",
+  "priceSourceUrl": "https://zeusdivecenter.com/es/reservas-salida-privada-velero-gran-canaria-4-5-horas/"
+ },
+ {
+  "id": "zeus-private-sailing-7",
+  "title": "Velero Privado Vandross VI — 7 horas",
+  "location": "Gran Canaria",
+  "destination": "gran-canaria",
+  "category": "nauticas",
+  "price": 1090,
+  "originalPrice": null,
+  "duration": "7 horas",
+  "rating": null,
+  "reviews": 0,
+  "featured": false,
+  "image": "https://images.unsplash.com/photo-1526621480041-c4e2027dfe69?auto=format&fit=crop&w=1200&q=80",
+  "gallery": [
+   "https://images.unsplash.com/photo-1526621480041-c4e2027dfe69?auto=format&fit=crop&w=1200&q=80"
+  ],
+  "shortDescription": "Jornada privada de navegación en el Vandross VI con menú gourmet, vino de la casa y tiempo ampliado para disfrutar del mar.",
+  "description": "Jornada privada de navegación en el Vandross VI con menú gourmet, vino de la casa y tiempo ampliado para disfrutar del mar.",
+  "included": [
+   "Velero privado",
+   "Menú gourmet",
+   "Vino Vandross",
+   "Patrón y navegación"
+  ],
+  "notIncluded": [
+   "Servicios opcionales no indicados expresamente"
+  ],
+  "meetingPoint": "Punto de embarque a confirmar",
+  "pickup": "Consultar disponibilidad de recogida con OWA.",
+  "groupSize": "Grupo privado · capacidad a confirmar",
+  "insurance": "Según condiciones del proveedor",
+  "languages": "ES / EN",
+  "restrictions": [
+   "La actividad está sujeta a disponibilidad y condiciones meteorológicas."
+  ],
+  "provider": {
+   "id": "zeus-dive-center",
+   "name": "Zeus Dive Center",
+   "activityUrl": "https://zeusdivecenter.com/es/gran-canaria-salida-privada-en-velero-de-7-horas/"
+  },
+  "cancellationPolicy": {
+   "verifiedOn": "2026-08-11",
+   "noticeHours": 24,
+   "short": "No se admiten cancelaciones con menos de 24 horas.",
+   "details": "El proveedor indica que el cliente no puede cancelar con menos de 24 horas de antelación. La actividad puede cancelarse por motivos organizativos o de seguridad.",
+   "sourceUrl": "https://zeusdivecenter.com/es/precios/"
+  },
+  "ticketTypes": [
+   {
+    "min": 0,
+    "max": 1,
+    "default": 1,
+    "id": "private_departure",
+    "label": "Salida privada",
+    "price": 1090
+   }
+  ],
+  "timeSlots": [
+   "Horario a confirmar"
+  ],
+  "priceUnit": "salida privada",
+  "paymentCurrency": "EUR",
+  "bookingEnabled": false,
+  "priceVerifiedOn": "2026-08-11",
+  "priceSourceUrl": "https://zeusdivecenter.com/es/gran-canaria-salida-privada-en-velero-de-7-horas/"
+ },
+ {
+  "id": "nirvana-day-cruise",
+  "title": "Nirvana Day Cruise & Snorkeling",
+  "location": "Gran Canaria",
+  "destination": "gran-canaria",
+  "category": "nauticas",
+  "price": 720,
+  "originalPrice": null,
+  "duration": "4 horas",
+  "rating": null,
+  "reviews": 0,
+  "featured": false,
+  "image": "https://images.unsplash.com/photo-1571328532572-cb7899a8be7e?auto=format&fit=crop&w=1200&q=80",
+  "gallery": [
+   "https://images.unsplash.com/photo-1571328532572-cb7899a8be7e?auto=format&fit=crop&w=1200&q=80"
+  ],
+  "shortDescription": "Crucero privado con snorkel, paddle surf, donut tube, bebidas y snacks.",
+  "description": "Crucero privado con snorkel, paddle surf, donut tube, bebidas y snacks.",
+  "included": [
+   "Yate privado con capitán, tripulación y combustible",
+   "Snorkel y 2 tablas SUP",
+   "Donut tube",
+   "Bebidas y snacks"
+  ],
+  "notIncluded": [
+   "Servicios opcionales no indicados expresamente"
+  ],
+  "meetingPoint": "Puerto a confirmar con el proveedor",
+  "pickup": "Consultar disponibilidad de recogida con OWA.",
+  "groupSize": "Hasta 8 pers.",
+  "insurance": "Según condiciones del proveedor",
+  "languages": "ES / EN",
+  "restrictions": [
+   "La actividad está sujeta a disponibilidad y condiciones meteorológicas."
+  ],
+  "provider": {
+   "id": "nirvana-dreams",
+   "name": "Nirvana Dreams",
+   "activityUrl": "https://www.nirvanadreams.com/"
+  },
+  "cancellationPolicy": {
+   "verifiedOn": "2026-08-11",
+   "noticeHours": null,
+   "short": "Condiciones de cancelación a confirmar antes de reservar.",
+   "details": "Nirvana Dreams no muestra una política de cancelación completa y verificable en la página pública consultada. OWA confirmará las condiciones aplicables por WhatsApp antes de cobrar.",
+   "sourceUrl": "https://www.nirvanadreams.com/"
+  },
+  "ticketTypes": [
+   {
+    "min": 0,
+    "max": 1,
+    "default": 1,
+    "id": "private_yacht",
+    "label": "Yate hasta 8 personas",
+    "price": 720
+   }
+  ],
+  "timeSlots": [
+   "Horario a confirmar"
+  ],
+  "priceUnit": "yate privado",
+  "paymentCurrency": "EUR",
+  "bookingEnabled": false,
+  "priceVerifiedOn": "2026-08-11",
+  "priceSourceUrl": "https://www.nirvanadreams.com/"
+ },
+ {
+  "id": "nirvana-gui-gui",
+  "title": "Nirvana Güi Güi Hidden Gem Tour",
+  "location": "Costa oeste de Gran Canaria",
+  "destination": "gran-canaria",
+  "category": "nauticas",
+  "price": 1195,
+  "originalPrice": null,
+  "duration": "6 horas",
+  "rating": null,
+  "reviews": 0,
+  "featured": true,
+  "image": "https://images.unsplash.com/photo-1526621480041-c4e2027dfe69?auto=format&fit=crop&w=1200&q=80",
+  "gallery": [
+   "https://images.unsplash.com/photo-1526621480041-c4e2027dfe69?auto=format&fit=crop&w=1200&q=80"
+  ],
+  "shortDescription": "Excursión privada a la playa de Güi Güi con actividades acuáticas, bebidas premium, snacks y paella.",
+  "description": "Excursión privada a la playa de Güi Güi con actividades acuáticas, bebidas premium, snacks y paella.",
+  "included": [
+   "Yate privado con tripulación y combustible",
+   "Snorkel, SUP, donut tube y sea scooter",
+   "Bebidas premium, snacks y paella"
+  ],
+  "notIncluded": [
+   "Servicios opcionales no indicados expresamente"
+  ],
+  "meetingPoint": "Puerto a confirmar con el proveedor",
+  "pickup": "Consultar disponibilidad de recogida con OWA.",
+  "groupSize": "Hasta 8 pers.",
+  "insurance": "Según condiciones del proveedor",
+  "languages": "ES / EN",
+  "restrictions": [
+   "La actividad está sujeta a disponibilidad y condiciones meteorológicas."
+  ],
+  "provider": {
+   "id": "nirvana-dreams",
+   "name": "Nirvana Dreams",
+   "activityUrl": "https://www.nirvanadreams.com/"
+  },
+  "cancellationPolicy": {
+   "verifiedOn": "2026-08-11",
+   "noticeHours": null,
+   "short": "Condiciones de cancelación a confirmar antes de reservar.",
+   "details": "Nirvana Dreams no muestra una política de cancelación completa y verificable en la página pública consultada. OWA confirmará las condiciones aplicables por WhatsApp antes de cobrar.",
+   "sourceUrl": "https://www.nirvanadreams.com/"
+  },
+  "ticketTypes": [
+   {
+    "min": 0,
+    "max": 1,
+    "default": 1,
+    "id": "private_yacht",
+    "label": "Yate hasta 8 personas",
+    "price": 1195
+   }
+  ],
+  "timeSlots": [
+   "Horario a confirmar"
+  ],
+  "priceUnit": "yate privado",
+  "paymentCurrency": "EUR",
+  "bookingEnabled": false,
+  "priceVerifiedOn": "2026-08-11",
+  "priceSourceUrl": "https://www.nirvanadreams.com/"
+ },
+ {
+  "id": "nirvana-sunset",
+  "title": "Nirvana Sunset Tour",
+  "location": "Gran Canaria",
+  "destination": "gran-canaria",
+  "category": "nauticas",
+  "price": 540,
+  "originalPrice": null,
+  "duration": "3 horas",
+  "rating": null,
+  "reviews": 0,
+  "featured": false,
+  "image": "https://images.unsplash.com/photo-1499403474843-04e72c14df8a?auto=format&fit=crop&w=1200&q=80",
+  "gallery": [
+   "https://images.unsplash.com/photo-1499403474843-04e72c14df8a?auto=format&fit=crop&w=1200&q=80"
+  ],
+  "shortDescription": "Puesta de sol privada en yate con bebidas, snacks, snorkel, paddle surf y parada de baño opcional.",
+  "description": "Puesta de sol privada en yate con bebidas, snacks, snorkel, paddle surf y parada de baño opcional.",
+  "included": [
+   "Yate privado con tripulación y combustible",
+   "Snorkel, SUP y donut tube",
+   "Bebidas y snacks"
+  ],
+  "notIncluded": [
+   "Servicios opcionales no indicados expresamente"
+  ],
+  "meetingPoint": "Puerto a confirmar con el proveedor",
+  "pickup": "Consultar disponibilidad de recogida con OWA.",
+  "groupSize": "Hasta 8 pers.",
+  "insurance": "Según condiciones del proveedor",
+  "languages": "ES / EN",
+  "restrictions": [
+   "La actividad está sujeta a disponibilidad y condiciones meteorológicas."
+  ],
+  "provider": {
+   "id": "nirvana-dreams",
+   "name": "Nirvana Dreams",
+   "activityUrl": "https://www.nirvanadreams.com/"
+  },
+  "cancellationPolicy": {
+   "verifiedOn": "2026-08-11",
+   "noticeHours": null,
+   "short": "Condiciones de cancelación a confirmar antes de reservar.",
+   "details": "Nirvana Dreams no muestra una política de cancelación completa y verificable en la página pública consultada. OWA confirmará las condiciones aplicables por WhatsApp antes de cobrar.",
+   "sourceUrl": "https://www.nirvanadreams.com/"
+  },
+  "ticketTypes": [
+   {
+    "min": 0,
+    "max": 1,
+    "default": 1,
+    "id": "private_yacht",
+    "label": "Yate hasta 8 personas",
+    "price": 540
+   }
+  ],
+  "timeSlots": [
+   "Horario a confirmar"
+  ],
+  "priceUnit": "yate privado",
+  "paymentCurrency": "EUR",
+  "bookingEnabled": false,
+  "priceVerifiedOn": "2026-08-11",
+  "priceSourceUrl": "https://www.nirvanadreams.com/"
+ },
+ {
+  "id": "nirvana-private-yacht",
+  "title": "Nirvana Private Yacht Tour",
+  "location": "Gran Canaria",
+  "destination": "gran-canaria",
+  "category": "nauticas",
+  "price": 540,
+  "originalPrice": null,
+  "duration": "3 horas",
+  "rating": null,
+  "reviews": 0,
+  "featured": false,
+  "image": "https://images.unsplash.com/photo-1571328532572-cb7899a8be7e?auto=format&fit=crop&w=1200&q=80",
+  "gallery": [
+   "https://images.unsplash.com/photo-1571328532572-cb7899a8be7e?auto=format&fit=crop&w=1200&q=80"
+  ],
+  "shortDescription": "Tour privado de relax y navegación con equipo de snorkel, paddle surf, donut tube, bebidas y snacks.",
+  "description": "Tour privado de relax y navegación con equipo de snorkel, paddle surf, donut tube, bebidas y snacks.",
+  "included": [
+   "Yate privado con tripulación y combustible",
+   "Snorkel, SUP y donut tube",
+   "Bebidas y snacks"
+  ],
+  "notIncluded": [
+   "Servicios opcionales no indicados expresamente"
+  ],
+  "meetingPoint": "Puerto a confirmar con el proveedor",
+  "pickup": "Consultar disponibilidad de recogida con OWA.",
+  "groupSize": "Hasta 8 pers.",
+  "insurance": "Según condiciones del proveedor",
+  "languages": "ES / EN",
+  "restrictions": [
+   "La actividad está sujeta a disponibilidad y condiciones meteorológicas."
+  ],
+  "provider": {
+   "id": "nirvana-dreams",
+   "name": "Nirvana Dreams",
+   "activityUrl": "https://www.nirvanadreams.com/"
+  },
+  "cancellationPolicy": {
+   "verifiedOn": "2026-08-11",
+   "noticeHours": null,
+   "short": "Condiciones de cancelación a confirmar antes de reservar.",
+   "details": "Nirvana Dreams no muestra una política de cancelación completa y verificable en la página pública consultada. OWA confirmará las condiciones aplicables por WhatsApp antes de cobrar.",
+   "sourceUrl": "https://www.nirvanadreams.com/"
+  },
+  "ticketTypes": [
+   {
+    "min": 0,
+    "max": 1,
+    "default": 1,
+    "id": "private_yacht",
+    "label": "Yate hasta 8 personas",
+    "price": 540
+   }
+  ],
+  "timeSlots": [
+   "Horario a confirmar"
+  ],
+  "priceUnit": "yate privado",
+  "paymentCurrency": "EUR",
+  "bookingEnabled": false,
+  "priceVerifiedOn": "2026-08-11",
+  "priceSourceUrl": "https://www.nirvanadreams.com/"
+ },
+ {
+  "id": "nirvana-all-inclusive-water-adventure",
+  "title": "Nirvana All Inclusive Water Adventure",
+  "location": "Gran Canaria",
+  "destination": "gran-canaria",
+  "category": "nauticas",
+  "price": 780,
+  "originalPrice": null,
+  "duration": "3 horas",
+  "rating": null,
+  "reviews": 0,
+  "featured": false,
+  "image": "https://images.unsplash.com/photo-1564633351631-e85bd59a91af?auto=format&fit=crop&w=1200&q=80",
+  "gallery": [
+   "https://images.unsplash.com/photo-1564633351631-e85bd59a91af?auto=format&fit=crop&w=1200&q=80"
+  ],
+  "shortDescription": "Salida privada con una aventura acuática a elegir entre jet ski, banana o Crazy UFO, además de snorkel y paddle surf.",
+  "description": "Salida privada con una aventura acuática a elegir entre jet ski, banana o Crazy UFO, además de snorkel y paddle surf.",
+  "included": [
+   "Yate privado con tripulación y combustible",
+   "Una actividad acuática incluida",
+   "Snorkel, SUP, donut tube y sea scooter",
+   "Bebidas y snacks"
+  ],
+  "notIncluded": [
+   "Servicios opcionales no indicados expresamente"
+  ],
+  "meetingPoint": "Puerto a confirmar con el proveedor",
+  "pickup": "Consultar disponibilidad de recogida con OWA.",
+  "groupSize": "Hasta 6 pers. en tarifa base",
+  "insurance": "Según condiciones del proveedor",
+  "languages": "ES / EN",
+  "restrictions": [
+   "La actividad está sujeta a disponibilidad y condiciones meteorológicas."
+  ],
+  "provider": {
+   "id": "nirvana-dreams",
+   "name": "Nirvana Dreams",
+   "activityUrl": "https://www.nirvanadreams.com/"
+  },
+  "cancellationPolicy": {
+   "verifiedOn": "2026-08-11",
+   "noticeHours": null,
+   "short": "Condiciones de cancelación a confirmar antes de reservar.",
+   "details": "Nirvana Dreams no muestra una política de cancelación completa y verificable en la página pública consultada. OWA confirmará las condiciones aplicables por WhatsApp antes de cobrar.",
+   "sourceUrl": "https://www.nirvanadreams.com/"
+  },
+  "ticketTypes": [
+   {
+    "min": 0,
+    "max": 1,
+    "default": 1,
+    "id": "base_group",
+    "label": "Grupo hasta 6 personas",
+    "price": 780
+   },
+   {
+    "min": 0,
+    "max": 1,
+    "default": 0,
+    "id": "extra_couple",
+    "label": "Pareja extra (máx. 2 pers.)",
+    "price": 150
+   }
+  ],
+  "timeSlots": [
+   "Horario a confirmar"
+  ],
+  "priceUnit": "yate privado",
+  "paymentCurrency": "EUR",
+  "bookingEnabled": false,
+  "priceVerifiedOn": "2026-08-11",
+  "priceSourceUrl": "https://www.nirvanadreams.com/"
+ },
+ {
+  "id": "nirvana-dolphin-chill",
+  "title": "Nirvana Dolphin Spotting & Chill Cruise",
+  "location": "Gran Canaria",
+  "destination": "gran-canaria",
+  "category": "nauticas",
+  "price": 900,
+  "originalPrice": null,
+  "duration": "5 horas",
+  "rating": null,
+  "reviews": 0,
+  "featured": false,
+  "image": "https://images.unsplash.com/photo-1518399681705-1c1a55e5e883?auto=format&fit=crop&w=1200&q=80",
+  "gallery": [
+   "https://images.unsplash.com/photo-1518399681705-1c1a55e5e883?auto=format&fit=crop&w=1200&q=80"
+  ],
+  "shortDescription": "Crucero privado orientado a la observación ocasional de delfines, aves y vida marina. Los avistamientos no están garantizados.",
+  "description": "Crucero privado orientado a la observación ocasional de delfines, aves y vida marina. Los avistamientos no están garantizados.",
+  "included": [
+   "Yate privado con tripulación y combustible",
+   "Navegación de observación de fauna"
+  ],
+  "notIncluded": [
+   "Avistamiento garantizado de delfines"
+  ],
+  "meetingPoint": "Puerto a confirmar con el proveedor",
+  "pickup": "Consultar disponibilidad de recogida con OWA.",
+  "groupSize": "Hasta 8 pers.",
+  "insurance": "Según condiciones del proveedor",
+  "languages": "ES / EN",
+  "restrictions": [
+   "La actividad está sujeta a disponibilidad y condiciones meteorológicas."
+  ],
+  "provider": {
+   "id": "nirvana-dreams",
+   "name": "Nirvana Dreams",
+   "activityUrl": "https://www.nirvanadreams.com/"
+  },
+  "cancellationPolicy": {
+   "verifiedOn": "2026-08-11",
+   "noticeHours": null,
+   "short": "Condiciones de cancelación a confirmar antes de reservar.",
+   "details": "Nirvana Dreams no muestra una política de cancelación completa y verificable en la página pública consultada. OWA confirmará las condiciones aplicables por WhatsApp antes de cobrar.",
+   "sourceUrl": "https://www.nirvanadreams.com/"
+  },
+  "ticketTypes": [
+   {
+    "min": 0,
+    "max": 1,
+    "default": 1,
+    "id": "private_yacht",
+    "label": "Yate hasta 8 personas",
+    "price": 900
+   }
+  ],
+  "timeSlots": [
+   "Horario a confirmar"
+  ],
+  "priceUnit": "yate privado",
+  "paymentCurrency": "EUR",
+  "bookingEnabled": false,
+  "priceVerifiedOn": "2026-08-11",
+  "priceSourceUrl": "https://www.nirvanadreams.com/"
+ },
+ {
+  "id": "molina-jet-ski-rental",
+  "title": "Moto Acuática en Anfi del Mar",
+  "location": "Anfi del Mar, Gran Canaria",
+  "destination": "gran-canaria",
+  "category": "nauticas",
+  "price": 60,
+  "originalPrice": null,
+  "duration": "20 o 30 minutos",
+  "rating": null,
+  "reviews": 0,
+  "featured": false,
+  "image": "https://images.unsplash.com/photo-1564633351631-e85bd59a91af?auto=format&fit=crop&w=1200&q=80",
+  "gallery": [
+   "https://images.unsplash.com/photo-1564633351631-e85bd59a91af?auto=format&fit=crop&w=1200&q=80"
+  ],
+  "shortDescription": "Conducción de moto acuática con opciones individuales y dobles de 20 o 30 minutos.",
+  "description": "Conducción de moto acuática con opciones individuales y dobles de 20 o 30 minutos.",
+  "included": [
+   "Gestión de disponibilidad con el operador local",
+   "Información previa a la actividad"
+  ],
+  "notIncluded": [
+   "Servicios opcionales no indicados expresamente"
+  ],
+  "meetingPoint": "Anfi del Mar Water Sports",
+  "pickup": "Consultar recogida y punto exacto con OWA.",
+  "groupSize": "Grupo a confirmar",
+  "insurance": "Según condiciones del proveedor",
+  "languages": "ES / EN",
+  "restrictions": [
+   "La actividad está sujeta a disponibilidad y condiciones meteorológicas."
+  ],
+  "provider": {
+   "id": "watersports-luis-molina",
+   "name": "Watersports Luis Molina",
+   "activityUrl": "https://www.watersportsluismolina.com/precios/"
+  },
+  "cancellationPolicy": {
+   "verifiedOn": "2026-08-11",
+   "noticeHours": null,
+   "short": "Condiciones de cancelación a confirmar antes de reservar.",
+   "details": "Watersports Luis Molina no muestra una política de cancelación completa y verificable en la página pública consultada. OWA confirmará las condiciones aplicables por WhatsApp antes de cobrar.",
+   "sourceUrl": "https://www.watersportsluismolina.com/precios/"
+  },
+  "ticketTypes": [
+   {
+    "min": 0,
+    "max": 12,
+    "default": 1,
+    "id": "single_20",
+    "label": "20 min · 1 persona",
+    "price": 60
+   },
+   {
+    "min": 0,
+    "max": 12,
+    "default": 0,
+    "id": "double_20",
+    "label": "20 min · 2 personas",
+    "price": 70
+   },
+   {
+    "min": 0,
+    "max": 12,
+    "default": 0,
+    "id": "single_30",
+    "label": "30 min · 1 persona",
+    "price": 90
+   },
+   {
+    "min": 0,
+    "max": 12,
+    "default": 0,
+    "id": "double_30",
+    "label": "30 min · 2 personas",
+    "price": 90
+   }
+  ],
+  "timeSlots": [
+   "Horario a confirmar"
+  ],
+  "priceUnit": "opción",
+  "paymentCurrency": "EUR",
+  "bookingEnabled": false,
+  "priceVerifiedOn": "2026-08-11",
+  "priceSourceUrl": "https://www.watersportsluismolina.com/precios/"
+ },
+ {
+  "id": "molina-jet-ski-safari",
+  "title": "Jet Ski Safari",
+  "location": "Anfi del Mar, Gran Canaria",
+  "destination": "gran-canaria",
+  "category": "nauticas",
+  "price": 135,
+  "originalPrice": null,
+  "duration": "1 o 2 horas",
+  "rating": null,
+  "reviews": 0,
+  "featured": true,
+  "image": "https://images.unsplash.com/photo-1564633351631-e85bd59a91af?auto=format&fit=crop&w=1200&q=80",
+  "gallery": [
+   "https://images.unsplash.com/photo-1564633351631-e85bd59a91af?auto=format&fit=crop&w=1200&q=80"
+  ],
+  "shortDescription": "Safari guiado en moto acuática por la costa con opciones individual, doble y recorrido de dos horas.",
+  "description": "Safari guiado en moto acuática por la costa con opciones individual, doble y recorrido de dos horas.",
+  "included": [
+   "Gestión de disponibilidad con el operador local",
+   "Información previa a la actividad"
+  ],
+  "notIncluded": [
+   "Servicios opcionales no indicados expresamente"
+  ],
+  "meetingPoint": "Anfi del Mar Water Sports",
+  "pickup": "Consultar recogida y punto exacto con OWA.",
+  "groupSize": "Grupo a confirmar",
+  "insurance": "Según condiciones del proveedor",
+  "languages": "ES / EN",
+  "restrictions": [
+   "La actividad está sujeta a disponibilidad y condiciones meteorológicas."
+  ],
+  "provider": {
+   "id": "watersports-luis-molina",
+   "name": "Watersports Luis Molina",
+   "activityUrl": "https://www.watersportsluismolina.com/precios/"
+  },
+  "cancellationPolicy": {
+   "verifiedOn": "2026-08-11",
+   "noticeHours": null,
+   "short": "Condiciones de cancelación a confirmar antes de reservar.",
+   "details": "Watersports Luis Molina no muestra una política de cancelación completa y verificable en la página pública consultada. OWA confirmará las condiciones aplicables por WhatsApp antes de cobrar.",
+   "sourceUrl": "https://www.watersportsluismolina.com/precios/"
+  },
+  "ticketTypes": [
+   {
+    "min": 0,
+    "max": 12,
+    "default": 1,
+    "id": "single_60",
+    "label": "1 hora",
+    "price": 135
+   },
+   {
+    "min": 0,
+    "max": 12,
+    "default": 0,
+    "id": "double_60",
+    "label": "Moto doble · 1 hora",
+    "price": 145
+   },
+   {
+    "min": 0,
+    "max": 12,
+    "default": 0,
+    "id": "one_or_two_120",
+    "label": "1 o 2 personas · 2 horas",
+    "price": 235
+   }
+  ],
+  "timeSlots": [
+   "Horario a confirmar"
+  ],
+  "priceUnit": "moto",
+  "paymentCurrency": "EUR",
+  "bookingEnabled": false,
+  "priceVerifiedOn": "2026-08-11",
+  "priceSourceUrl": "https://www.watersportsluismolina.com/precios/"
+ },
+ {
+  "id": "molina-flyboard",
+  "title": "Flyboard",
+  "location": "Anfi del Mar, Gran Canaria",
+  "destination": "gran-canaria",
+  "category": "nauticas",
+  "price": 80,
+  "originalPrice": null,
+  "duration": "20 o 30 minutos",
+  "rating": null,
+  "reviews": 0,
+  "featured": false,
+  "image": "https://images.unsplash.com/photo-1502680390469-be75c86b636f?auto=format&fit=crop&w=1200&q=80",
+  "gallery": [
+   "https://images.unsplash.com/photo-1502680390469-be75c86b636f?auto=format&fit=crop&w=1200&q=80"
+  ],
+  "shortDescription": "Sesión de flyboard en Anfi del Mar con dos duraciones disponibles.",
+  "description": "Sesión de flyboard en Anfi del Mar con dos duraciones disponibles.",
+  "included": [
+   "Gestión de disponibilidad con el operador local",
+   "Información previa a la actividad"
+  ],
+  "notIncluded": [
+   "Servicios opcionales no indicados expresamente"
+  ],
+  "meetingPoint": "Anfi del Mar Water Sports",
+  "pickup": "Consultar recogida y punto exacto con OWA.",
+  "groupSize": "Grupo a confirmar",
+  "insurance": "Según condiciones del proveedor",
+  "languages": "ES / EN",
+  "restrictions": [
+   "La actividad está sujeta a disponibilidad y condiciones meteorológicas."
+  ],
+  "provider": {
+   "id": "watersports-luis-molina",
+   "name": "Watersports Luis Molina",
+   "activityUrl": "https://www.watersportsluismolina.com/precios/"
+  },
+  "cancellationPolicy": {
+   "verifiedOn": "2026-08-11",
+   "noticeHours": null,
+   "short": "Condiciones de cancelación a confirmar antes de reservar.",
+   "details": "Watersports Luis Molina no muestra una política de cancelación completa y verificable en la página pública consultada. OWA confirmará las condiciones aplicables por WhatsApp antes de cobrar.",
+   "sourceUrl": "https://www.watersportsluismolina.com/precios/"
+  },
+  "ticketTypes": [
+   {
+    "min": 0,
+    "max": 12,
+    "default": 1,
+    "id": "flyboard_20",
+    "label": "20 minutos",
+    "price": 80
+   },
+   {
+    "min": 0,
+    "max": 12,
+    "default": 0,
+    "id": "flyboard_30",
+    "label": "30 minutos",
+    "price": 100
+   }
+  ],
+  "timeSlots": [
+   "Horario a confirmar"
+  ],
+  "priceUnit": "persona",
+  "paymentCurrency": "EUR",
+  "bookingEnabled": false,
+  "priceVerifiedOn": "2026-08-11",
+  "priceSourceUrl": "https://www.watersportsluismolina.com/precios/"
+ },
+ {
+  "id": "molina-parasailing",
+  "title": "Paracaídas Acuático — Parasailing",
+  "location": "Anfi del Mar, Gran Canaria",
+  "destination": "gran-canaria",
+  "category": "nauticas",
+  "price": 50,
+  "originalPrice": null,
+  "duration": "10 minutos",
+  "rating": null,
+  "reviews": 0,
+  "featured": false,
+  "image": "https://images.unsplash.com/photo-1502680390469-be75c86b636f?auto=format&fit=crop&w=1200&q=80",
+  "gallery": [
+   "https://images.unsplash.com/photo-1502680390469-be75c86b636f?auto=format&fit=crop&w=1200&q=80"
+  ],
+  "shortDescription": "Vuelo en parasailing para una, dos o tres personas, con un peso máximo conjunto de 200 kg.",
+  "description": "Vuelo en parasailing para una, dos o tres personas, con un peso máximo conjunto de 200 kg.",
+  "included": [
+   "Gestión de disponibilidad con el operador local",
+   "Información previa a la actividad"
+  ],
+  "notIncluded": [
+   "Servicios opcionales no indicados expresamente"
+  ],
+  "meetingPoint": "Anfi del Mar Water Sports",
+  "pickup": "Consultar recogida y punto exacto con OWA.",
+  "groupSize": "Grupo a confirmar",
+  "insurance": "Según condiciones del proveedor",
+  "languages": "ES / EN",
+  "restrictions": [
+   "Peso máximo conjunto para tres personas: 200 kg.",
+   "Actividad sujeta a viento y estado del mar."
+  ],
+  "provider": {
+   "id": "watersports-luis-molina",
+   "name": "Watersports Luis Molina",
+   "activityUrl": "https://www.watersportsluismolina.com/precios/"
+  },
+  "cancellationPolicy": {
+   "verifiedOn": "2026-08-11",
+   "noticeHours": null,
+   "short": "Condiciones de cancelación a confirmar antes de reservar.",
+   "details": "Watersports Luis Molina no muestra una política de cancelación completa y verificable en la página pública consultada. OWA confirmará las condiciones aplicables por WhatsApp antes de cobrar.",
+   "sourceUrl": "https://www.watersportsluismolina.com/precios/"
+  },
+  "ticketTypes": [
+   {
+    "min": 0,
+    "max": 12,
+    "default": 1,
+    "id": "solo",
+    "label": "1 persona",
+    "price": 50
+   },
+   {
+    "min": 0,
+    "max": 12,
+    "default": 0,
+    "id": "double",
+    "label": "2 personas",
+    "price": 90
+   },
+   {
+    "min": 0,
+    "max": 12,
+    "default": 0,
+    "id": "triple",
+    "label": "3 personas · máx. 200 kg",
+    "price": 130
+   },
+   {
+    "min": 0,
+    "max": 12,
+    "default": 0,
+    "id": "spectator",
+    "label": "Espectador a bordo",
+    "price": 15
+   }
+  ],
+  "timeSlots": [
+   "Horario a confirmar"
+  ],
+  "priceUnit": "vuelo",
+  "paymentCurrency": "EUR",
+  "bookingEnabled": false,
+  "priceVerifiedOn": "2026-08-11",
+  "priceSourceUrl": "https://www.watersportsluismolina.com/precios/"
+ },
+ {
+  "id": "molina-speed-boat",
+  "title": "Speed Boat",
+  "location": "Anfi del Mar, Gran Canaria",
+  "destination": "gran-canaria",
+  "category": "nauticas",
+  "price": 40,
+  "originalPrice": null,
+  "duration": "20 min o 1 h 15 min",
+  "rating": null,
+  "reviews": 0,
+  "featured": false,
+  "image": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1200&q=80",
+  "gallery": [
+   "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1200&q=80"
+  ],
+  "shortDescription": "Paseo rápido en embarcación con opción corta de 20 minutos o recorrido ampliado.",
+  "description": "Paseo rápido en embarcación con opción corta de 20 minutos o recorrido ampliado.",
+  "included": [
+   "Gestión de disponibilidad con el operador local",
+   "Información previa a la actividad"
+  ],
+  "notIncluded": [
+   "Servicios opcionales no indicados expresamente"
+  ],
+  "meetingPoint": "Anfi del Mar Water Sports",
+  "pickup": "Consultar recogida y punto exacto con OWA.",
+  "groupSize": "Grupo a confirmar",
+  "insurance": "Según condiciones del proveedor",
+  "languages": "ES / EN",
+  "restrictions": [
+   "La actividad está sujeta a disponibilidad y condiciones meteorológicas."
+  ],
+  "provider": {
+   "id": "watersports-luis-molina",
+   "name": "Watersports Luis Molina",
+   "activityUrl": "https://www.watersportsluismolina.com/precios/"
+  },
+  "cancellationPolicy": {
+   "verifiedOn": "2026-08-11",
+   "noticeHours": null,
+   "short": "Condiciones de cancelación a confirmar antes de reservar.",
+   "details": "Watersports Luis Molina no muestra una política de cancelación completa y verificable en la página pública consultada. OWA confirmará las condiciones aplicables por WhatsApp antes de cobrar.",
+   "sourceUrl": "https://www.watersportsluismolina.com/precios/"
+  },
+  "ticketTypes": [
+   {
+    "min": 0,
+    "max": 12,
+    "default": 1,
+    "id": "speed_20",
+    "label": "20 minutos · 1 persona",
+    "price": 40
+   },
+   {
+    "min": 0,
+    "max": 12,
+    "default": 0,
+    "id": "speed_75",
+    "label": "1 h 15 min · 1 persona",
+    "price": 59
+   }
+  ],
+  "timeSlots": [
+   "Horario a confirmar"
+  ],
+  "priceUnit": "persona",
+  "paymentCurrency": "EUR",
+  "bookingEnabled": false,
+  "priceVerifiedOn": "2026-08-11",
+  "priceSourceUrl": "https://www.watersportsluismolina.com/precios/"
+ },
+ {
+  "id": "molina-banana",
+  "title": "Banana Boat",
+  "location": "Anfi del Mar, Gran Canaria",
+  "destination": "gran-canaria",
+  "category": "nauticas",
+  "price": 15,
+  "originalPrice": null,
+  "duration": "10 minutos",
+  "rating": null,
+  "reviews": 0,
+  "featured": false,
+  "image": "https://images.unsplash.com/photo-1564633351631-e85bd59a91af?auto=format&fit=crop&w=1200&q=80",
+  "gallery": [
+   "https://images.unsplash.com/photo-1564633351631-e85bd59a91af?auto=format&fit=crop&w=1200&q=80"
+  ],
+  "shortDescription": "Recorrido de banana boat arrastrado por lancha para grupos.",
+  "description": "Recorrido de banana boat arrastrado por lancha para grupos.",
+  "included": [
+   "Gestión de disponibilidad con el operador local",
+   "Información previa a la actividad"
+  ],
+  "notIncluded": [
+   "Servicios opcionales no indicados expresamente"
+  ],
+  "meetingPoint": "Anfi del Mar Water Sports",
+  "pickup": "Consultar recogida y punto exacto con OWA.",
+  "groupSize": "Mín. 3 pers.",
+  "insurance": "Según condiciones del proveedor",
+  "languages": "ES / EN",
+  "restrictions": [
+   "Reserva mínima de 3 participantes."
+  ],
+  "provider": {
+   "id": "watersports-luis-molina",
+   "name": "Watersports Luis Molina",
+   "activityUrl": "https://www.watersportsluismolina.com/precios/"
+  },
+  "cancellationPolicy": {
+   "verifiedOn": "2026-08-11",
+   "noticeHours": null,
+   "short": "Condiciones de cancelación a confirmar antes de reservar.",
+   "details": "Watersports Luis Molina no muestra una política de cancelación completa y verificable en la página pública consultada. OWA confirmará las condiciones aplicables por WhatsApp antes de cobrar.",
+   "sourceUrl": "https://www.watersportsluismolina.com/precios/"
+  },
+  "ticketTypes": [
+   {
+    "min": 0,
+    "max": 12,
+    "default": 3,
+    "id": "person",
+    "label": "Personas · mínimo 3",
+    "price": 15
+   }
+  ],
+  "timeSlots": [
+   "Horario a confirmar"
+  ],
+  "priceUnit": "persona",
+  "paymentCurrency": "EUR",
+  "bookingEnabled": false,
+  "priceVerifiedOn": "2026-08-11",
+  "priceSourceUrl": "https://www.watersportsluismolina.com/precios/"
+ },
+ {
+  "id": "molina-crazy-sofa",
+  "title": "Crazy Sofa",
+  "location": "Anfi del Mar, Gran Canaria",
+  "destination": "gran-canaria",
+  "category": "nauticas",
+  "price": 25,
+  "originalPrice": null,
+  "duration": "10 minutos",
+  "rating": null,
+  "reviews": 0,
+  "featured": false,
+  "image": "https://images.unsplash.com/photo-1564633351631-e85bd59a91af?auto=format&fit=crop&w=1200&q=80",
+  "gallery": [
+   "https://images.unsplash.com/photo-1564633351631-e85bd59a91af?auto=format&fit=crop&w=1200&q=80"
+  ],
+  "shortDescription": "Actividad de velocidad sobre sofá hinchable arrastrado por lancha.",
+  "description": "Actividad de velocidad sobre sofá hinchable arrastrado por lancha.",
+  "included": [
+   "Gestión de disponibilidad con el operador local",
+   "Información previa a la actividad"
+  ],
+  "notIncluded": [
+   "Servicios opcionales no indicados expresamente"
+  ],
+  "meetingPoint": "Anfi del Mar Water Sports",
+  "pickup": "Consultar recogida y punto exacto con OWA.",
+  "groupSize": "Grupo a confirmar",
+  "insurance": "Según condiciones del proveedor",
+  "languages": "ES / EN",
+  "restrictions": [
+   "La actividad está sujeta a disponibilidad y condiciones meteorológicas."
+  ],
+  "provider": {
+   "id": "watersports-luis-molina",
+   "name": "Watersports Luis Molina",
+   "activityUrl": "https://www.watersportsluismolina.com/precios/"
+  },
+  "cancellationPolicy": {
+   "verifiedOn": "2026-08-11",
+   "noticeHours": null,
+   "short": "Condiciones de cancelación a confirmar antes de reservar.",
+   "details": "Watersports Luis Molina no muestra una política de cancelación completa y verificable en la página pública consultada. OWA confirmará las condiciones aplicables por WhatsApp antes de cobrar.",
+   "sourceUrl": "https://www.watersportsluismolina.com/precios/"
+  },
+  "ticketTypes": [
+   {
+    "min": 0,
+    "max": 12,
+    "default": 1,
+    "id": "standard",
+    "label": "Personas",
+    "price": 25
+   }
+  ],
+  "timeSlots": [
+   "Horario a confirmar"
+  ],
+  "priceUnit": "persona",
+  "paymentCurrency": "EUR",
+  "bookingEnabled": false,
+  "priceVerifiedOn": "2026-08-11",
+  "priceSourceUrl": "https://www.watersportsluismolina.com/precios/"
+ },
+ {
+  "id": "molina-paddle-surf",
+  "title": "Alquiler de Paddle Surf",
+  "location": "Anfi del Mar, Gran Canaria",
+  "destination": "gran-canaria",
+  "category": "nauticas",
+  "price": 15,
+  "originalPrice": null,
+  "duration": "1 o 2 horas",
+  "rating": null,
+  "reviews": 0,
+  "featured": false,
+  "image": "https://images.unsplash.com/photo-1530789253388-582c481c54b0?auto=format&fit=crop&w=1200&q=80",
+  "gallery": [
+   "https://images.unsplash.com/photo-1530789253388-582c481c54b0?auto=format&fit=crop&w=1200&q=80"
+  ],
+  "shortDescription": "Alquiler de tabla de paddle surf en Anfi del Mar.",
+  "description": "Alquiler de tabla de paddle surf en Anfi del Mar.",
+  "included": [
+   "Gestión de disponibilidad con el operador local",
+   "Información previa a la actividad"
+  ],
+  "notIncluded": [
+   "Servicios opcionales no indicados expresamente"
+  ],
+  "meetingPoint": "Anfi del Mar Water Sports",
+  "pickup": "Consultar recogida y punto exacto con OWA.",
+  "groupSize": "Grupo a confirmar",
+  "insurance": "Según condiciones del proveedor",
+  "languages": "ES / EN",
+  "restrictions": [
+   "La actividad está sujeta a disponibilidad y condiciones meteorológicas."
+  ],
+  "provider": {
+   "id": "watersports-luis-molina",
+   "name": "Watersports Luis Molina",
+   "activityUrl": "https://www.watersportsluismolina.com/precios/"
+  },
+  "cancellationPolicy": {
+   "verifiedOn": "2026-08-11",
+   "noticeHours": null,
+   "short": "Condiciones de cancelación a confirmar antes de reservar.",
+   "details": "Watersports Luis Molina no muestra una política de cancelación completa y verificable en la página pública consultada. OWA confirmará las condiciones aplicables por WhatsApp antes de cobrar.",
+   "sourceUrl": "https://www.watersportsluismolina.com/precios/"
+  },
+  "ticketTypes": [
+   {
+    "min": 0,
+    "max": 12,
+    "default": 1,
+    "id": "sup_60",
+    "label": "1 hora",
+    "price": 15
+   },
+   {
+    "min": 0,
+    "max": 12,
+    "default": 0,
+    "id": "sup_120",
+    "label": "2 horas",
+    "price": 20
+   }
+  ],
+  "timeSlots": [
+   "Horario a confirmar"
+  ],
+  "priceUnit": "persona",
+  "paymentCurrency": "EUR",
+  "bookingEnabled": false,
+  "priceVerifiedOn": "2026-08-11",
+  "priceSourceUrl": "https://www.watersportsluismolina.com/precios/"
+ },
+ {
+  "id": "molina-waterbull",
+  "title": "Water Bull",
+  "location": "Anfi del Mar, Gran Canaria",
+  "destination": "gran-canaria",
+  "category": "nauticas",
+  "price": 25,
+  "originalPrice": null,
+  "duration": "10-12 minutos",
+  "rating": null,
+  "reviews": 0,
+  "featured": false,
+  "image": "https://images.unsplash.com/photo-1564633351631-e85bd59a91af?auto=format&fit=crop&w=1200&q=80",
+  "gallery": [
+   "https://images.unsplash.com/photo-1564633351631-e85bd59a91af?auto=format&fit=crop&w=1200&q=80"
+  ],
+  "shortDescription": "Actividad acuática de arrastre sobre hinchable Water Bull.",
+  "description": "Actividad acuática de arrastre sobre hinchable Water Bull.",
+  "included": [
+   "Gestión de disponibilidad con el operador local",
+   "Información previa a la actividad"
+  ],
+  "notIncluded": [
+   "Servicios opcionales no indicados expresamente"
+  ],
+  "meetingPoint": "Anfi del Mar Water Sports",
+  "pickup": "Consultar recogida y punto exacto con OWA.",
+  "groupSize": "Grupo a confirmar",
+  "insurance": "Según condiciones del proveedor",
+  "languages": "ES / EN",
+  "restrictions": [
+   "La actividad está sujeta a disponibilidad y condiciones meteorológicas."
+  ],
+  "provider": {
+   "id": "watersports-luis-molina",
+   "name": "Watersports Luis Molina",
+   "activityUrl": "https://www.watersportsluismolina.com/precios/"
+  },
+  "cancellationPolicy": {
+   "verifiedOn": "2026-08-11",
+   "noticeHours": null,
+   "short": "Condiciones de cancelación a confirmar antes de reservar.",
+   "details": "Watersports Luis Molina no muestra una política de cancelación completa y verificable en la página pública consultada. OWA confirmará las condiciones aplicables por WhatsApp antes de cobrar.",
+   "sourceUrl": "https://www.watersportsluismolina.com/precios/"
+  },
+  "ticketTypes": [
+   {
+    "min": 0,
+    "max": 12,
+    "default": 1,
+    "id": "standard",
+    "label": "Personas",
+    "price": 25
+   }
+  ],
+  "timeSlots": [
+   "Horario a confirmar"
+  ],
+  "priceUnit": "persona",
+  "paymentCurrency": "EUR",
+  "bookingEnabled": false,
+  "priceVerifiedOn": "2026-08-11",
+  "priceSourceUrl": "https://www.watersportsluismolina.com/precios/"
+ },
+ {
+  "id": "molina-wakeboard",
+  "title": "Wakeboard",
+  "location": "Anfi del Mar, Gran Canaria",
+  "destination": "gran-canaria",
+  "category": "nauticas",
+  "price": 60,
+  "originalPrice": null,
+  "duration": "15 o 30 minutos",
+  "rating": null,
+  "reviews": 0,
+  "featured": false,
+  "image": "https://images.unsplash.com/photo-1530789253388-582c481c54b0?auto=format&fit=crop&w=1200&q=80",
+  "gallery": [
+   "https://images.unsplash.com/photo-1530789253388-582c481c54b0?auto=format&fit=crop&w=1200&q=80"
+  ],
+  "shortDescription": "Sesión de wakeboard con opción de 30 minutos acompañada por profesor.",
+  "description": "Sesión de wakeboard con opción de 30 minutos acompañada por profesor.",
+  "included": [
+   "Gestión de disponibilidad con el operador local",
+   "Información previa a la actividad"
+  ],
+  "notIncluded": [
+   "Servicios opcionales no indicados expresamente"
+  ],
+  "meetingPoint": "Anfi del Mar Water Sports",
+  "pickup": "Consultar recogida y punto exacto con OWA.",
+  "groupSize": "Grupo a confirmar",
+  "insurance": "Según condiciones del proveedor",
+  "languages": "ES / EN",
+  "restrictions": [
+   "La actividad está sujeta a disponibilidad y condiciones meteorológicas."
+  ],
+  "provider": {
+   "id": "watersports-luis-molina",
+   "name": "Watersports Luis Molina",
+   "activityUrl": "https://www.watersportsluismolina.com/precios/"
+  },
+  "cancellationPolicy": {
+   "verifiedOn": "2026-08-11",
+   "noticeHours": null,
+   "short": "Condiciones de cancelación a confirmar antes de reservar.",
+   "details": "Watersports Luis Molina no muestra una política de cancelación completa y verificable en la página pública consultada. OWA confirmará las condiciones aplicables por WhatsApp antes de cobrar.",
+   "sourceUrl": "https://www.watersportsluismolina.com/precios/"
+  },
+  "ticketTypes": [
+   {
+    "min": 0,
+    "max": 12,
+    "default": 1,
+    "id": "wake_15",
+    "label": "15 minutos",
+    "price": 60
+   },
+   {
+    "min": 0,
+    "max": 12,
+    "default": 0,
+    "id": "wake_30_teacher",
+    "label": "30 minutos con profesor",
+    "price": 80
+   }
+  ],
+  "timeSlots": [
+   "Horario a confirmar"
+  ],
+  "priceUnit": "persona",
+  "paymentCurrency": "EUR",
+  "bookingEnabled": false,
+  "priceVerifiedOn": "2026-08-11",
+  "priceSourceUrl": "https://www.watersportsluismolina.com/precios/"
+ },
+ {
+  "id": "molina-pedal-boat",
+  "title": "Coche Patín",
+  "location": "Anfi del Mar, Gran Canaria",
+  "destination": "gran-canaria",
+  "category": "nauticas",
+  "price": 20,
+  "originalPrice": null,
+  "duration": "1 hora",
+  "rating": null,
+  "reviews": 0,
+  "featured": false,
+  "image": "https://images.unsplash.com/photo-1530789253388-582c481c54b0?auto=format&fit=crop&w=1200&q=80",
+  "gallery": [
+   "https://images.unsplash.com/photo-1530789253388-582c481c54b0?auto=format&fit=crop&w=1200&q=80"
+  ],
+  "shortDescription": "Alquiler de coche patín para navegar frente a Anfi del Mar.",
+  "description": "Alquiler de coche patín para navegar frente a Anfi del Mar.",
+  "included": [
+   "Gestión de disponibilidad con el operador local",
+   "Información previa a la actividad"
+  ],
+  "notIncluded": [
+   "Servicios opcionales no indicados expresamente"
+  ],
+  "meetingPoint": "Anfi del Mar Water Sports",
+  "pickup": "Consultar recogida y punto exacto con OWA.",
+  "groupSize": "Hasta 4 pers.",
+  "insurance": "Según condiciones del proveedor",
+  "languages": "ES / EN",
+  "restrictions": [
+   "La actividad está sujeta a disponibilidad y condiciones meteorológicas."
+  ],
+  "provider": {
+   "id": "watersports-luis-molina",
+   "name": "Watersports Luis Molina",
+   "activityUrl": "https://www.watersportsluismolina.com/precios/"
+  },
+  "cancellationPolicy": {
+   "verifiedOn": "2026-08-11",
+   "noticeHours": null,
+   "short": "Condiciones de cancelación a confirmar antes de reservar.",
+   "details": "Watersports Luis Molina no muestra una política de cancelación completa y verificable en la página pública consultada. OWA confirmará las condiciones aplicables por WhatsApp antes de cobrar.",
+   "sourceUrl": "https://www.watersportsluismolina.com/precios/"
+  },
+  "ticketTypes": [
+   {
+    "min": 0,
+    "max": 12,
+    "default": 1,
+    "id": "pedal_boat",
+    "label": "Coche patín hasta 4 personas",
+    "price": 20
+   }
+  ],
+  "timeSlots": [
+   "Horario a confirmar"
+  ],
+  "priceUnit": "embarcación",
+  "paymentCurrency": "EUR",
+  "bookingEnabled": false,
+  "priceVerifiedOn": "2026-08-11",
+  "priceSourceUrl": "https://www.watersportsluismolina.com/precios/"
+ },
+ {
+  "id": "molina-kayak",
+  "title": "Alquiler de Kayak",
+  "location": "Anfi del Mar, Gran Canaria",
+  "destination": "gran-canaria",
+  "category": "nauticas",
+  "price": 10,
+  "originalPrice": null,
+  "duration": "1 hora",
+  "rating": null,
+  "reviews": 0,
+  "featured": false,
+  "image": "https://images.unsplash.com/photo-1530789253388-582c481c54b0?auto=format&fit=crop&w=1200&q=80",
+  "gallery": [
+   "https://images.unsplash.com/photo-1530789253388-582c481c54b0?auto=format&fit=crop&w=1200&q=80"
+  ],
+  "shortDescription": "Alquiler de kayak individual o doble en Anfi del Mar.",
+  "description": "Alquiler de kayak individual o doble en Anfi del Mar.",
+  "included": [
+   "Gestión de disponibilidad con el operador local",
+   "Información previa a la actividad"
+  ],
+  "notIncluded": [
+   "Servicios opcionales no indicados expresamente"
+  ],
+  "meetingPoint": "Anfi del Mar Water Sports",
+  "pickup": "Consultar recogida y punto exacto con OWA.",
+  "groupSize": "Grupo a confirmar",
+  "insurance": "Según condiciones del proveedor",
+  "languages": "ES / EN",
+  "restrictions": [
+   "La actividad está sujeta a disponibilidad y condiciones meteorológicas."
+  ],
+  "provider": {
+   "id": "watersports-luis-molina",
+   "name": "Watersports Luis Molina",
+   "activityUrl": "https://www.watersportsluismolina.com/precios/"
+  },
+  "cancellationPolicy": {
+   "verifiedOn": "2026-08-11",
+   "noticeHours": null,
+   "short": "Condiciones de cancelación a confirmar antes de reservar.",
+   "details": "Watersports Luis Molina no muestra una política de cancelación completa y verificable en la página pública consultada. OWA confirmará las condiciones aplicables por WhatsApp antes de cobrar.",
+   "sourceUrl": "https://www.watersportsluismolina.com/precios/"
+  },
+  "ticketTypes": [
+   {
+    "min": 0,
+    "max": 12,
+    "default": 1,
+    "id": "single_kayak",
+    "label": "Canoa individual",
+    "price": 10
+   },
+   {
+    "min": 0,
+    "max": 12,
+    "default": 0,
+    "id": "double_kayak",
+    "label": "Canoa doble",
+    "price": 15
+   }
+  ],
+  "timeSlots": [
+   "Horario a confirmar"
+  ],
+  "priceUnit": "canoa",
+  "paymentCurrency": "EUR",
+  "bookingEnabled": false,
+  "priceVerifiedOn": "2026-08-11",
+  "priceSourceUrl": "https://www.watersportsluismolina.com/precios/"
+ },
+ {
+  "id": "molina-water-ski",
+  "title": "Esquí Acuático",
+  "location": "Anfi del Mar, Gran Canaria",
+  "destination": "gran-canaria",
+  "category": "nauticas",
+  "price": 60,
+  "originalPrice": null,
+  "duration": "15 o 30 minutos",
+  "rating": null,
+  "reviews": 0,
+  "featured": false,
+  "image": "https://images.unsplash.com/photo-1530789253388-582c481c54b0?auto=format&fit=crop&w=1200&q=80",
+  "gallery": [
+   "https://images.unsplash.com/photo-1530789253388-582c481c54b0?auto=format&fit=crop&w=1200&q=80"
+  ],
+  "shortDescription": "Sesión de esquí acuático con opción de 30 minutos acompañada por profesor.",
+  "description": "Sesión de esquí acuático con opción de 30 minutos acompañada por profesor.",
+  "included": [
+   "Gestión de disponibilidad con el operador local",
+   "Información previa a la actividad"
+  ],
+  "notIncluded": [
+   "Servicios opcionales no indicados expresamente"
+  ],
+  "meetingPoint": "Anfi del Mar Water Sports",
+  "pickup": "Consultar recogida y punto exacto con OWA.",
+  "groupSize": "Grupo a confirmar",
+  "insurance": "Según condiciones del proveedor",
+  "languages": "ES / EN",
+  "restrictions": [
+   "La actividad está sujeta a disponibilidad y condiciones meteorológicas."
+  ],
+  "provider": {
+   "id": "watersports-luis-molina",
+   "name": "Watersports Luis Molina",
+   "activityUrl": "https://www.watersportsluismolina.com/precios/"
+  },
+  "cancellationPolicy": {
+   "verifiedOn": "2026-08-11",
+   "noticeHours": null,
+   "short": "Condiciones de cancelación a confirmar antes de reservar.",
+   "details": "Watersports Luis Molina no muestra una política de cancelación completa y verificable en la página pública consultada. OWA confirmará las condiciones aplicables por WhatsApp antes de cobrar.",
+   "sourceUrl": "https://www.watersportsluismolina.com/precios/"
+  },
+  "ticketTypes": [
+   {
+    "min": 0,
+    "max": 12,
+    "default": 1,
+    "id": "ski_15",
+    "label": "15 minutos",
+    "price": 60
+   },
+   {
+    "min": 0,
+    "max": 12,
+    "default": 0,
+    "id": "ski_30_teacher",
+    "label": "30 minutos con profesor",
+    "price": 80
+   }
+  ],
+  "timeSlots": [
+   "Horario a confirmar"
+  ],
+  "priceUnit": "persona",
+  "paymentCurrency": "EUR",
+  "bookingEnabled": false,
+  "priceVerifiedOn": "2026-08-11",
+  "priceSourceUrl": "https://www.watersportsluismolina.com/precios/"
+ },
+ {
+  "id": "molina-sun-pack",
+  "title": "Sun Pack",
+  "location": "Anfi del Mar, Gran Canaria",
+  "destination": "gran-canaria",
+  "category": "nauticas",
+  "price": 89,
+  "originalPrice": null,
+  "duration": "Pack de actividades",
+  "rating": null,
+  "reviews": 0,
+  "featured": false,
+  "image": "https://images.unsplash.com/photo-1502680390469-be75c86b636f?auto=format&fit=crop&w=1200&q=80",
+  "gallery": [
+   "https://images.unsplash.com/photo-1502680390469-be75c86b636f?auto=format&fit=crop&w=1200&q=80"
+  ],
+  "shortDescription": "Pack con moto acuática, parasailing, banana o Crazy Sofa y servicio de hamaca y sombrilla.",
+  "description": "Pack con moto acuática, parasailing, banana o Crazy Sofa y servicio de hamaca y sombrilla.",
+  "included": [
+   "Moto acuática",
+   "Parasailing",
+   "Banana o Crazy Sofa",
+   "Hamaca y sombrilla"
+  ],
+  "notIncluded": [
+   "Servicios opcionales no indicados expresamente"
+  ],
+  "meetingPoint": "Anfi del Mar Water Sports",
+  "pickup": "Consultar recogida y punto exacto con OWA.",
+  "groupSize": "Grupo a confirmar",
+  "insurance": "Según condiciones del proveedor",
+  "languages": "ES / EN",
+  "restrictions": [
+   "La actividad está sujeta a disponibilidad y condiciones meteorológicas."
+  ],
+  "provider": {
+   "id": "watersports-luis-molina",
+   "name": "Watersports Luis Molina",
+   "activityUrl": "https://www.watersportsluismolina.com/precios/"
+  },
+  "cancellationPolicy": {
+   "verifiedOn": "2026-08-11",
+   "noticeHours": null,
+   "short": "Condiciones de cancelación a confirmar antes de reservar.",
+   "details": "Watersports Luis Molina no muestra una política de cancelación completa y verificable en la página pública consultada. OWA confirmará las condiciones aplicables por WhatsApp antes de cobrar.",
+   "sourceUrl": "https://www.watersportsluismolina.com/precios/"
+  },
+  "ticketTypes": [
+   {
+    "min": 0,
+    "max": 1,
+    "default": 1,
+    "id": "pack_two",
+    "label": "Pack para 2 personas",
+    "price": 178
+   },
+   {
+    "min": 0,
+    "max": 1,
+    "default": 0,
+    "id": "pack_one",
+    "label": "Pack para 1 persona",
+    "price": 109
+   }
+  ],
+  "timeSlots": [
+   "Horario a confirmar"
+  ],
+  "priceUnit": "persona desde",
+  "paymentCurrency": "EUR",
+  "bookingEnabled": false,
+  "priceVerifiedOn": "2026-08-11",
+  "priceSourceUrl": "https://www.watersportsluismolina.com/precios/"
+ },
+ {
+  "id": "molina-fun-pack",
+  "title": "Fun Pack",
+  "location": "Anfi del Mar, Gran Canaria",
+  "destination": "gran-canaria",
+  "category": "nauticas",
+  "price": 73,
+  "originalPrice": null,
+  "duration": "Pack de actividades",
+  "rating": null,
+  "reviews": 0,
+  "featured": false,
+  "image": "https://images.unsplash.com/photo-1564633351631-e85bd59a91af?auto=format&fit=crop&w=1200&q=80",
+  "gallery": [
+   "https://images.unsplash.com/photo-1564633351631-e85bd59a91af?auto=format&fit=crop&w=1200&q=80"
+  ],
+  "shortDescription": "Pack combinado de moto acuática y parasailing.",
+  "description": "Pack combinado de moto acuática y parasailing.",
+  "included": [
+   "Moto acuática",
+   "Parasailing"
+  ],
+  "notIncluded": [
+   "Servicios opcionales no indicados expresamente"
+  ],
+  "meetingPoint": "Anfi del Mar Water Sports",
+  "pickup": "Consultar recogida y punto exacto con OWA.",
+  "groupSize": "Grupo a confirmar",
+  "insurance": "Según condiciones del proveedor",
+  "languages": "ES / EN",
+  "restrictions": [
+   "La actividad está sujeta a disponibilidad y condiciones meteorológicas."
+  ],
+  "provider": {
+   "id": "watersports-luis-molina",
+   "name": "Watersports Luis Molina",
+   "activityUrl": "https://www.watersportsluismolina.com/precios/"
+  },
+  "cancellationPolicy": {
+   "verifiedOn": "2026-08-11",
+   "noticeHours": null,
+   "short": "Condiciones de cancelación a confirmar antes de reservar.",
+   "details": "Watersports Luis Molina no muestra una política de cancelación completa y verificable en la página pública consultada. OWA confirmará las condiciones aplicables por WhatsApp antes de cobrar.",
+   "sourceUrl": "https://www.watersportsluismolina.com/precios/"
+  },
+  "ticketTypes": [
+   {
+    "min": 0,
+    "max": 1,
+    "default": 1,
+    "id": "pack_two",
+    "label": "Pack para 2 personas",
+    "price": 146
+   },
+   {
+    "min": 0,
+    "max": 1,
+    "default": 0,
+    "id": "pack_one",
+    "label": "Pack para 1 persona",
+    "price": 99
+   }
+  ],
+  "timeSlots": [
+   "Horario a confirmar"
+  ],
+  "priceUnit": "persona desde",
+  "paymentCurrency": "EUR",
+  "bookingEnabled": false,
+  "priceVerifiedOn": "2026-08-11",
+  "priceSourceUrl": "https://www.watersportsluismolina.com/precios/"
+ },
+ {
+  "id": "molina-adventure-pack",
+  "title": "Adventure Pack",
+  "location": "Anfi del Mar, Gran Canaria",
+  "destination": "gran-canaria",
+  "category": "nauticas",
+  "price": 99,
+  "originalPrice": null,
+  "duration": "Pack de actividades",
+  "rating": null,
+  "reviews": 0,
+  "featured": false,
+  "image": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1200&q=80",
+  "gallery": [
+   "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1200&q=80"
+  ],
+  "shortDescription": "Pack combinado de Speed Boat, parasailing y Crazy Sofa.",
+  "description": "Pack combinado de Speed Boat, parasailing y Crazy Sofa.",
+  "included": [
+   "Speed Boat · 20 minutos",
+   "Parasailing · 8-10 minutos",
+   "Crazy Sofa · 10-12 minutos"
+  ],
+  "notIncluded": [
+   "Servicios opcionales no indicados expresamente"
+  ],
+  "meetingPoint": "Anfi del Mar Water Sports",
+  "pickup": "Consultar recogida y punto exacto con OWA.",
+  "groupSize": "Grupo a confirmar",
+  "insurance": "Según condiciones del proveedor",
+  "languages": "ES / EN",
+  "restrictions": [
+   "La actividad está sujeta a disponibilidad y condiciones meteorológicas."
+  ],
+  "provider": {
+   "id": "watersports-luis-molina",
+   "name": "Watersports Luis Molina",
+   "activityUrl": "https://www.watersportsluismolina.com/precios/"
+  },
+  "cancellationPolicy": {
+   "verifiedOn": "2026-08-11",
+   "noticeHours": null,
+   "short": "Condiciones de cancelación a confirmar antes de reservar.",
+   "details": "Watersports Luis Molina no muestra una política de cancelación completa y verificable en la página pública consultada. OWA confirmará las condiciones aplicables por WhatsApp antes de cobrar.",
+   "sourceUrl": "https://www.watersportsluismolina.com/precios/"
+  },
+  "ticketTypes": [
+   {
+    "min": 0,
+    "max": 1,
+    "default": 1,
+    "id": "pack_two",
+    "label": "Pack para 2 personas",
+    "price": 198
+   },
+   {
+    "min": 0,
+    "max": 1,
+    "default": 0,
+    "id": "pack_one",
+    "label": "Pack para 1 persona",
+    "price": 105
+   }
+  ],
+  "timeSlots": [
+   "Horario a confirmar"
+  ],
+  "priceUnit": "persona desde",
+  "paymentCurrency": "EUR",
+  "bookingEnabled": false,
+  "priceVerifiedOn": "2026-08-11",
+  "priceSourceUrl": "https://www.watersportsluismolina.com/precios/"
+ },
+ {
+  "id": "molina-stingray-catamaran",
+  "title": "Catamarán Stingray",
+  "location": "Puerto de Mogán, Gran Canaria",
+  "destination": "gran-canaria",
+  "category": "nauticas",
+  "price": 79,
+  "originalPrice": null,
+  "duration": "4 horas",
+  "rating": null,
+  "reviews": 0,
+  "featured": true,
+  "image": "https://images.unsplash.com/photo-1564555449603-b0eefe1b9094?auto=format&fit=crop&w=1200&q=80",
+  "gallery": [
+   "https://images.unsplash.com/photo-1564555449603-b0eefe1b9094?auto=format&fit=crop&w=1200&q=80"
+  ],
+  "shortDescription": "Navegación en catamarán por la costa de Gran Canaria con almuerzo, bebidas, snorkel y paddle surf.",
+  "description": "Navegación en catamarán por la costa de Gran Canaria con almuerzo, bebidas, snorkel y paddle surf.",
+  "included": [
+   "Almuerzo con productos locales",
+   "Bebidas ilimitadas",
+   "Snorkel y paddle surf",
+   "Recogida desde hoteles del sur"
+  ],
+  "notIncluded": [
+   "Servicios opcionales no indicados expresamente"
+  ],
+  "meetingPoint": "Puerto de Mogán",
+  "pickup": "Recogida incluida desde hoteles del sur, según las zonas publicadas.",
+  "groupSize": "Grupo reducido",
+  "insurance": "Según condiciones del proveedor",
+  "languages": "ES / EN",
+  "restrictions": [
+   "La actividad está sujeta a disponibilidad y condiciones meteorológicas."
+  ],
+  "provider": {
+   "id": "watersports-luis-molina",
+   "name": "Watersports Luis Molina",
+   "activityUrl": "https://www.watersportsluismolina.com/actividades/catamaran-stingray/"
+  },
+  "cancellationPolicy": {
+   "verifiedOn": "2026-08-11",
+   "noticeHours": null,
+   "short": "Condiciones de cancelación a confirmar antes de reservar.",
+   "details": "Watersports Luis Molina no muestra una política de cancelación completa y verificable en la página pública consultada. OWA confirmará las condiciones aplicables por WhatsApp antes de cobrar.",
+   "sourceUrl": "https://www.watersportsluismolina.com/precios/"
+  },
+  "ticketTypes": [
+   {
+    "min": 0,
+    "max": 12,
+    "default": 1,
+    "id": "standard",
+    "label": "Personas",
+    "price": 79
+   }
+  ],
+  "timeSlots": [
+   "Horario a confirmar"
+  ],
+  "priceUnit": "persona",
+  "paymentCurrency": "EUR",
+  "bookingEnabled": false,
+  "priceVerifiedOn": "2026-08-11",
+  "priceSourceUrl": "https://www.watersportsluismolina.com/"
+ },
+ {
+  "id": "molina-bluefin-shared",
+  "title": "Catamarán Bluefin — Salida Compartida",
+  "location": "Puerto de Mogán, Gran Canaria",
+  "destination": "gran-canaria",
+  "category": "nauticas",
+  "price": 99,
+  "originalPrice": null,
+  "duration": "Duración a confirmar",
+  "rating": null,
+  "reviews": 0,
+  "featured": false,
+  "image": "https://images.unsplash.com/photo-1564555449603-b0eefe1b9094?auto=format&fit=crop&w=1200&q=80",
+  "gallery": [
+   "https://images.unsplash.com/photo-1564555449603-b0eefe1b9094?auto=format&fit=crop&w=1200&q=80"
+  ],
+  "shortDescription": "Salida compartida en el catamarán Lagoon 42 Bluefin con patrón profesional.",
+  "description": "Salida compartida en el catamarán Lagoon 42 Bluefin con patrón profesional.",
+  "included": [
+   "Patrón profesional",
+   "Navegación en grupo reducido"
+  ],
+  "notIncluded": [
+   "Servicios opcionales no indicados expresamente"
+  ],
+  "meetingPoint": "Puerto de Mogán",
+  "pickup": "Consultar recogida y punto exacto con OWA.",
+  "groupSize": "Hasta 12 pers.",
+  "insurance": "Según condiciones del proveedor",
+  "languages": "ES / EN",
+  "restrictions": [
+   "La actividad está sujeta a disponibilidad y condiciones meteorológicas."
+  ],
+  "provider": {
+   "id": "watersports-luis-molina",
+   "name": "Watersports Luis Molina",
+   "activityUrl": "https://www.watersportsluismolina.com/actividades/catamaran-bluefin/"
+  },
+  "cancellationPolicy": {
+   "verifiedOn": "2026-08-11",
+   "noticeHours": null,
+   "short": "Condiciones de cancelación a confirmar antes de reservar.",
+   "details": "Watersports Luis Molina no muestra una política de cancelación completa y verificable en la página pública consultada. OWA confirmará las condiciones aplicables por WhatsApp antes de cobrar.",
+   "sourceUrl": "https://www.watersportsluismolina.com/precios/"
+  },
+  "ticketTypes": [
+   {
+    "min": 0,
+    "max": 12,
+    "default": 1,
+    "id": "standard",
+    "label": "Personas",
+    "price": 99
+   }
+  ],
+  "timeSlots": [
+   "Horario a confirmar"
+  ],
+  "priceUnit": "persona",
+  "paymentCurrency": "EUR",
+  "bookingEnabled": false,
+  "priceVerifiedOn": "2026-08-11",
+  "priceSourceUrl": "https://www.watersportsluismolina.com/actividades/catamaran-bluefin/"
+ },
+ {
+  "id": "molina-bluefin-private",
+  "title": "Catamarán Bluefin — Salida Privada",
+  "location": "Puerto de Mogán, Gran Canaria",
+  "destination": "gran-canaria",
+  "category": "nauticas",
+  "price": 900,
+  "originalPrice": null,
+  "duration": "2, 3, 4, 6 u 8 horas",
+  "rating": null,
+  "reviews": 0,
+  "featured": false,
+  "image": "https://images.unsplash.com/photo-1564555449603-b0eefe1b9094?auto=format&fit=crop&w=1200&q=80",
+  "gallery": [
+   "https://images.unsplash.com/photo-1564555449603-b0eefe1b9094?auto=format&fit=crop&w=1200&q=80"
+  ],
+  "shortDescription": "Alquiler privado del catamarán Lagoon 42 Bluefin con patrón profesional y duración personalizable.",
+  "description": "Alquiler privado del catamarán Lagoon 42 Bluefin con patrón profesional y duración personalizable.",
+  "included": [
+   "Catamarán privado",
+   "Patrón profesional"
+  ],
+  "notIncluded": [
+   "Servicios opcionales no indicados expresamente"
+  ],
+  "meetingPoint": "Puerto de Mogán",
+  "pickup": "Consultar recogida y punto exacto con OWA.",
+  "groupSize": "Hasta 12 pers.",
+  "insurance": "Según condiciones del proveedor",
+  "languages": "ES / EN",
+  "restrictions": [
+   "La actividad está sujeta a disponibilidad y condiciones meteorológicas."
+  ],
+  "provider": {
+   "id": "watersports-luis-molina",
+   "name": "Watersports Luis Molina",
+   "activityUrl": "https://www.watersportsluismolina.com/actividades/catamaran-bluefin/"
+  },
+  "cancellationPolicy": {
+   "verifiedOn": "2026-08-11",
+   "noticeHours": null,
+   "short": "Condiciones de cancelación a confirmar antes de reservar.",
+   "details": "Watersports Luis Molina no muestra una política de cancelación completa y verificable en la página pública consultada. OWA confirmará las condiciones aplicables por WhatsApp antes de cobrar.",
+   "sourceUrl": "https://www.watersportsluismolina.com/precios/"
+  },
+  "ticketTypes": [
+   {
+    "min": 0,
+    "max": 1,
+    "default": 1,
+    "id": "private_departure",
+    "label": "Salida privada desde",
+    "price": 900
+   }
+  ],
+  "timeSlots": [
+   "Horario a confirmar"
+  ],
+  "priceUnit": "salida privada desde",
+  "paymentCurrency": "EUR",
+  "bookingEnabled": false,
+  "priceVerifiedOn": "2026-08-11",
+  "priceSourceUrl": "https://www.watersportsluismolina.com/actividades/catamaran-bluefin/"
+ },
+ {
+  "id": "obycat-gran-canaria",
+  "title": "Obycat Gran Canaria — Catamarán Todo Incluido",
+  "location": "Puerto Rico, Gran Canaria",
+  "destination": "gran-canaria",
+  "category": "nauticas",
+  "price": 69,
+  "originalPrice": null,
+  "duration": "4 horas",
+  "rating": null,
+  "reviews": 0,
+  "featured": false,
+  "image": "https://images.unsplash.com/photo-1564555449603-b0eefe1b9094?auto=format&fit=crop&w=1200&q=80",
+  "gallery": [
+   "https://images.unsplash.com/photo-1564555449603-b0eefe1b9094?auto=format&fit=crop&w=1200&q=80"
+  ],
+  "shortDescription": "Excursión en catamarán por Gran Canaria con comida, bebidas y material de snorkel.",
+  "description": "Excursión en catamarán por Gran Canaria con comida, bebidas y material de snorkel.",
+  "included": [
+   "Comida y bebidas",
+   "Material de snorkel",
+   "Tripulación profesional"
+  ],
+  "notIncluded": [
+   "Servicios opcionales no indicados expresamente"
+  ],
+  "meetingPoint": "Puerto Rico, punto exacto a confirmar",
+  "pickup": "Consultar disponibilidad de recogida con OWA.",
+  "groupSize": "Excursión compartida",
+  "insurance": "Según condiciones del proveedor",
+  "languages": "ES / EN",
+  "restrictions": [
+   "La actividad está sujeta a disponibilidad y condiciones meteorológicas."
+  ],
+  "provider": {
+   "id": "obycat",
+   "name": "Obycat",
+   "activityUrl": "https://www.obycat.com/"
+  },
+  "cancellationPolicy": {
+   "verifiedOn": "2026-08-11",
+   "noticeHours": null,
+   "short": "Condiciones de cancelación a confirmar antes de reservar.",
+   "details": "Obycat no muestra una política de cancelación completa y verificable en la página pública consultada. OWA confirmará las condiciones aplicables por WhatsApp antes de cobrar.",
+   "sourceUrl": "https://www.obycat.com/"
+  },
+  "ticketTypes": [
+   {
+    "min": 0,
+    "max": 30,
+    "default": 2,
+    "id": "adult",
+    "label": "Adultos",
+    "price": 69
+   },
+   {
+    "min": 0,
+    "max": 20,
+    "default": 0,
+    "id": "child",
+    "label": "Niños",
+    "price": 45
+   }
+  ],
+  "timeSlots": [
+   "Horario a confirmar"
+  ],
+  "priceUnit": "persona",
+  "paymentCurrency": "EUR",
+  "bookingEnabled": false,
+  "priceVerifiedOn": "2026-08-11",
+  "priceSourceUrl": "https://www.facebook.com/obycat/"
+ },
+ {
+  "id": "puerto-rico-boat-party",
+  "title": "Boat Party desde Puerto Rico",
+  "location": "Puerto Rico, Gran Canaria",
+  "destination": "gran-canaria",
+  "category": "nauticas",
+  "price": 60,
+  "originalPrice": null,
+  "duration": "4 horas",
+  "rating": null,
+  "reviews": 0,
+  "featured": true,
+  "image": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1200&q=80",
+  "gallery": [
+   "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1200&q=80"
+  ],
+  "shortDescription": "Fiesta en barco por la costa suroeste de Gran Canaria con DJ, música, bebidas y ambiente para adultos.",
+  "description": "Fiesta en barco por la costa suroeste de Gran Canaria con DJ, música, bebidas y ambiente para adultos.",
+  "included": [
+   "Navegación de 4 horas",
+   "DJ y música",
+   "Bebidas según la opción del operador"
+  ],
+  "notIncluded": [
+   "Extras premium no indicados en la tarifa base"
+  ],
+  "meetingPoint": "Puerto Base, Puerto Rico",
+  "pickup": "Punto de encuentro en el puerto; confirmar instrucciones en la reserva.",
+  "groupSize": "Fiesta compartida · solo adultos",
+  "insurance": "Según condiciones del proveedor",
+  "languages": "ES / EN",
+  "restrictions": [
+   "Actividad para mayores de 18 años.",
+   "Es necesario presentar identificación válida."
+  ],
+  "provider": {
+   "id": "getyourguide-partner",
+   "name": "Operador publicado en GetYourGuide",
+   "activityUrl": "https://www.getyourguide.com/gran-canaria-l418/desde-puerto-rico-fiesta-en-barco-por-la-costa-t754827/"
+  },
+  "cancellationPolicy": {
+   "verifiedOn": "2026-08-11",
+   "noticeHours": 24,
+   "short": "Cancelación gratuita hasta 24 horas antes.",
+   "details": "La actividad enlazada publica cancelación gratuita hasta 24 horas antes del comienzo.",
+   "sourceUrl": "https://www.getyourguide.com/gran-canaria-l418/desde-puerto-rico-fiesta-en-barco-por-la-costa-t754827/"
+  },
+  "ticketTypes": [
+   {
+    "min": 0,
+    "max": 12,
+    "default": 1,
+    "id": "standard",
+    "label": "Personas",
+    "price": 60
+   }
+  ],
+  "timeSlots": [
+   "15:30"
+  ],
+  "priceUnit": "persona",
+  "paymentCurrency": "EUR",
+  "bookingEnabled": false,
+  "priceVerifiedOn": "2026-08-11",
+  "priceSourceUrl": "https://www.getyourguide.com/gran-canaria-l418/desde-puerto-rico-fiesta-en-barco-por-la-costa-t754827/"
+ }
+]

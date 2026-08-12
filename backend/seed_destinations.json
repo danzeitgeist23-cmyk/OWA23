@@ -1,0 +1,38 @@
+[
+ {
+  "id": "gran-canaria",
+  "name": "Gran Canaria",
+  "activityCount": 24,
+  "image": "https://images.unsplash.com/photo-1542401886-65d6c61db217?auto=format&fit=crop&w=800&q=80"
+ },
+ {
+  "id": "fuerteventura",
+  "name": "Fuerteventura",
+  "activityCount": 18,
+  "image": "https://images.unsplash.com/photo-1635463498136-96e4df88bac8?auto=format&fit=crop&w=800&q=80"
+ },
+ {
+  "id": "tenerife",
+  "name": "Tenerife",
+  "activityCount": 21,
+  "image": "https://images.unsplash.com/photo-1671976847791-44be0409b487?auto=format&fit=crop&w=800&q=80"
+ },
+ {
+  "id": "lanzarote",
+  "name": "Lanzarote",
+  "activityCount": 15,
+  "image": "https://images.unsplash.com/photo-1643965304951-07a7ebb783a0?auto=format&fit=crop&w=800&q=80"
+ },
+ {
+  "id": "la-palma",
+  "name": "La Palma",
+  "activityCount": 9,
+  "image": "https://images.unsplash.com/photo-1605714726527-411541ab17f4?auto=format&fit=crop&w=800&q=80"
+ },
+ {
+  "id": "isla-de-lobos",
+  "name": "Isla de Lobos",
+  "activityCount": 5,
+  "image": "https://images.unsplash.com/photo-1696454138713-570f884ba261?auto=format&fit=crop&w=800&q=80"
+ }
+]

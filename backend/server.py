@@ -1072,6 +1072,98 @@ async def sumup_webhook(request: Request):
     return Response(status_code=204)
 
 
+# ---------------------------------------------------------------------------
+# Activities & destinations — Mongo-backed content API (read-only public).
+# Booking/pricing stays in activity_catalog.py; this only serves content.
+# ---------------------------------------------------------------------------
+
+def _localize(value: Any, lang: str) -> Any:
+    """Collapse i18n objects {"es": .., "en": ..} to one language (fallback en).
+    Recurses through dicts and lists; non-i18n values pass through unchanged."""
+    if isinstance(value, dict):
+        if "es" in value or "en" in value:
+            return value.get(lang) or value.get("en") or value.get("es")
+        return {k: _localize(v, lang) for k, v in value.items()}
+    if isinstance(value, list):
+        return [_localize(v, lang) for v in value]
+    return value
+
+
+@api_router.get("/activities")
+async def list_activities(
+    island: str = Query(None),
+    category: str = Query(None),
+    featured: bool = Query(None),
+    q: str = Query(None),
+    lang: str = Query(None),
+    limit: int = Query(60, ge=1, le=200),
+    skip: int = Query(0, ge=0),
+):
+    query: Dict[str, Any] = {"active": True}
+    if island:
+        query["island"] = island
+    if category:
+        query["category"] = category
+    if featured is not None:
+        query["featured"] = featured
+    if q:
+        query["$or"] = [
+            {"title.es": {"$regex": q, "$options": "i"}},
+            {"title.en": {"$regex": q, "$options": "i"}},
+            {"location": {"$regex": q, "$options": "i"}},
+        ]
+    total = await db.activities.count_documents(query)
+    items = await db.activities.find(query, {"_id": 0}).skip(skip).limit(limit).to_list(length=limit)
+    if lang:
+        items = [_localize(it, lang) for it in items]
+    return {"items": items, "total": total}
+
+
+@api_router.get("/activities/{slug}")
+async def get_activity(slug: str, lang: str = Query(None)):
+    doc = await db.activities.find_one({"slug": slug, "active": True}, {"_id": 0})
+    if not doc:
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Activity not found")
+    return _localize(doc, lang) if lang else doc
+
+
+@api_router.get("/activities/{slug}/related")
+async def related_activities(slug: str, limit: int = Query(4, ge=1, le=12), lang: str = Query(None)):
+    base = await db.activities.find_one({"slug": slug}, {"_id": 0, "island": 1, "category": 1})
+    if not base:
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Activity not found")
+    query = {
+        "active": True,
+        "slug": {"$ne": slug},
+        "$or": [{"island": base.get("island")}, {"category": base.get("category")}],
+    }
+    items = await db.activities.find(query, {"_id": 0}).limit(limit).to_list(length=limit)
+    if lang:
+        items = [_localize(it, lang) for it in items]
+    return {"items": items, "total": len(items)}
+
+
+@api_router.get("/destinations")
+async def list_destinations(lang: str = Query(None)):
+    items = await db.destinations.find({"active": True}, {"_id": 0}).to_list(length=100)
+    for it in items:
+        it["activity_count"] = await db.activities.count_documents(
+            {"island": it["slug"], "active": True}
+        )
+    if lang:
+        items = [_localize(it, lang) for it in items]
+    return items
+
+
+@api_router.get("/destinations/{slug}")
+async def get_destination(slug: str, lang: str = Query(None)):
+    doc = await db.destinations.find_one({"slug": slug, "active": True}, {"_id": 0})
+    if not doc:
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Destination not found")
+    doc["activity_count"] = await db.activities.count_documents({"island": slug, "active": True})
+    return _localize(doc, lang) if lang else doc
+
+
 app.include_router(api_router)
 
 app.add_middleware(
@@ -1104,6 +1196,11 @@ async def create_database_indexes():
     await db.media_assets.create_index("id", unique=True)
     await db.media_assets.create_index("deleted_at")
     await db.media_assets.create_index("tags")
+    await db.activities.create_index("slug", unique=True)
+    await db.activities.create_index([("island", 1), ("active", 1)])
+    await db.activities.create_index([("category", 1), ("active", 1)])
+    await db.activities.create_index([("featured", -1)])
+    await db.destinations.create_index("slug", unique=True)
 
 
 @app.on_event("shutdown")

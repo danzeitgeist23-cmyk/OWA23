@@ -1,5 +1,10 @@
 const configuredApiBase = process.env.REACT_APP_API_BASE_URL || '';
 const API_BASE = configuredApiBase.replace(/\/+$/, '');
+
+// True only when a real backend base URL is configured. When false (e.g. the
+// static SiteGround build with no backend yet) the data hooks fall back to the
+// bundled static content, so the site keeps working without an API.
+export const apiEnabled = Boolean(API_BASE);
 const AUTH_STORAGE_KEY = 'owa-auth-session';
 const SESSION_EVENT = 'owa-auth-session-changed';
 

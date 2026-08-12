@@ -1,12 +1,10 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { MapPin, Calendar as CalendarIcon, Search, ChevronRight } from 'lucide-react';
+import { Calendar as CalendarIcon, Search, Users, Minus, Plus } from 'lucide-react';
 import { format } from 'date-fns';
 import { es } from 'date-fns/locale';
 import { Calendar } from '../components/ui/calendar';
 import { Popover, PopoverContent, PopoverTrigger } from '../components/ui/popover';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '../components/ui/select';
-import { destinations } from '../mock';
 import { useT } from '../i18n/LanguageContext';
 
 const heroImage = 'https://images.unsplash.com/photo-1602523034192-56b472acfb94?auto=format&fit=crop&w=2000&q=80';
@@ -14,15 +12,15 @@ const heroImage = 'https://images.unsplash.com/photo-1602523034192-56b472acfb94?
 export default function Hero() {
   const navigate = useNavigate();
   const t = useT();
-  const [location, setLocation] = useState('');
-  const [startDate, setStartDate] = useState();
-  const [endDate, setEndDate] = useState();
+  const [query, setQuery] = useState('');
+  const [date, setDate] = useState();
+  const [participants, setParticipants] = useState(2);
 
   const handleSearch = () => {
     const params = new URLSearchParams();
-    if (location) params.set('destination', location);
-    if (startDate) params.set('from', format(startDate, 'yyyy-MM-dd'));
-    if (endDate) params.set('to', format(endDate, 'yyyy-MM-dd'));
+    if (query.trim()) params.set('q', query.trim());
+    if (date) params.set('from', format(date, 'yyyy-MM-dd'));
+    if (participants) params.set('participants', String(participants));
     navigate(`/activities?${params.toString()}`);
   };
 
@@ -45,68 +43,78 @@ export default function Hero() {
           {t('hero.description')}
         </p>
 
-        {/* Search Bar */}
-        <div className="mt-12 w-full max-w-5xl bg-white rounded-full search-shadow p-1.5 pr-1.5 flex flex-col md:flex-row items-stretch gap-1 animate-fadeup">
-          <div className="flex-1 flex items-center gap-3 px-5 py-3 md:py-4 rounded-full hover:bg-gray-50">
-            <MapPin className="w-5 h-5 text-[#1fa5a3] flex-shrink-0" />
-            <div className="flex-1 text-left">
-              <div className="text-[11px] uppercase tracking-wider font-semibold text-[#14213d]">{t('hero.searchDestination')}</div>
-              <Select value={location} onValueChange={setLocation}>
-                <SelectTrigger className="border-0 h-auto p-0 shadow-none text-[15px] text-gray-500 focus:ring-0 hover:bg-transparent">
-                  <SelectValue placeholder={t('hero.searchPlaceholder')} />
-                </SelectTrigger>
-                <SelectContent>
-                  {destinations.map((d) => (
-                    <SelectItem key={d.id} value={d.id}>{d.name}</SelectItem>
-                  ))}
-                </SelectContent>
-              </Select>
+        {/* Search Bar — civitatis style: stacked on mobile (rounded cards), pill on desktop */}
+        <div className="mt-12 w-full max-w-5xl bg-white rounded-2xl md:rounded-full search-shadow p-1.5 flex flex-col md:flex-row items-stretch gap-1 animate-fadeup">
+          {/* Activity or place */}
+          <div className="relative min-w-0 flex-[1.7]">
+            <div className="flex items-center gap-3 px-4 py-3.5 md:py-4 rounded-xl md:rounded-full hover:bg-[#f7f9fb] focus-within:bg-[#f7f9fb] transition-colors">
+              <Search className="w-5 h-5 text-[#1fa5a3] flex-shrink-0" />
+              <div className="min-w-0 flex-1 text-left">
+                <label htmlFor="hero-q" className="block text-[10px] uppercase tracking-[0.14em] font-semibold text-[#14213d]">{t('hero.searchActivity')}</label>
+                <input
+                  id="hero-q"
+                  value={query}
+                  onChange={(e) => setQuery(e.target.value)}
+                  onKeyDown={(e) => e.key === 'Enter' && handleSearch()}
+                  placeholder={t('hero.searchActivityPlaceholder')}
+                  className="w-full bg-transparent border-0 p-0 text-[15px] text-[#14213d] placeholder:text-gray-400 focus:outline-none"
+                />
+              </div>
             </div>
           </div>
 
           <div className="hidden md:block w-px bg-gray-200 my-3" />
 
+          {/* Date */}
           <Popover>
             <PopoverTrigger asChild>
-              <button className="flex-1 flex items-center gap-3 px-5 py-3 md:py-4 rounded-full hover:bg-gray-50 text-left">
+              <button className="flex min-w-0 flex-1 items-center gap-3 px-4 py-3.5 md:py-4 rounded-xl md:rounded-full text-left hover:bg-[#f7f9fb] transition-colors">
                 <CalendarIcon className="w-5 h-5 text-[#1fa5a3] flex-shrink-0" />
-                <div>
-                  <div className="text-[11px] uppercase tracking-wider font-semibold text-[#14213d]">{t('hero.searchFrom')}</div>
-                  <div className="text-[15px] text-gray-500">
-                    {startDate ? format(startDate, "d MMM yyyy", { locale: es }) : t('hero.searchAddDate')}
-                  </div>
-                </div>
+                <span className="min-w-0">
+                  <span className="block text-[10px] uppercase tracking-[0.14em] font-semibold text-[#14213d]">{t('hero.searchDate')}</span>
+                  <span className="block truncate text-[15px] text-gray-500">
+                    {date ? format(date, 'd MMM yyyy', { locale: es }) : t('hero.searchAnyDate')}
+                  </span>
+                </span>
               </button>
             </PopoverTrigger>
             <PopoverContent className="w-auto p-0" align="start">
-              <Calendar mode="single" selected={startDate} onSelect={setStartDate} locale={es} disabled={(d) => d < new Date(new Date().setHours(0,0,0,0))} />
+              <Calendar mode="single" selected={date} onSelect={setDate} locale={es} disabled={(d) => d < new Date(new Date().setHours(0, 0, 0, 0))} />
             </PopoverContent>
           </Popover>
 
-          <div className="hidden md:flex items-center px-2">
-            <ChevronRight className="w-4 h-4 text-gray-300" />
-          </div>
+          <div className="hidden md:block w-px bg-gray-200 my-3" />
 
+          {/* Participants */}
           <Popover>
             <PopoverTrigger asChild>
-              <button className="flex-1 flex items-center gap-3 px-5 py-3 md:py-4 rounded-full hover:bg-gray-50 text-left">
-                <CalendarIcon className="w-5 h-5 text-[#1fa5a3] flex-shrink-0" />
-                <div>
-                  <div className="text-[11px] uppercase tracking-wider font-semibold text-[#14213d]">{t('hero.searchTo')}</div>
-                  <div className="text-[15px] text-gray-500">
-                    {endDate ? format(endDate, "d MMM yyyy", { locale: es }) : t('hero.searchAddDate')}
-                  </div>
-                </div>
+              <button className="flex min-w-0 flex-1 items-center gap-3 px-4 py-3.5 md:py-4 rounded-xl md:rounded-full text-left hover:bg-[#f7f9fb] transition-colors">
+                <Users className="w-5 h-5 text-[#1fa5a3] flex-shrink-0" />
+                <span className="min-w-0">
+                  <span className="block text-[10px] uppercase tracking-[0.14em] font-semibold text-[#14213d]">{t('hero.searchParticipants')}</span>
+                  <span className="block truncate text-[15px] text-gray-500">{participants} {t('hero.searchPeople')}</span>
+                </span>
               </button>
             </PopoverTrigger>
-            <PopoverContent className="w-auto p-0" align="start">
-              <Calendar mode="single" selected={endDate} onSelect={setEndDate} locale={es} disabled={(d) => d < (startDate || new Date(new Date().setHours(0,0,0,0)))} />
+            <PopoverContent className="w-56 p-4" align="start">
+              <div className="flex items-center justify-between">
+                <span className="text-sm font-medium text-[#14213d]">{t('hero.searchParticipants')}</span>
+                <div className="flex items-center gap-3">
+                  <button type="button" onClick={() => setParticipants((n) => Math.max(1, n - 1))} className="flex h-8 w-8 items-center justify-center rounded-full border border-gray-200 text-[#14213d] hover:border-[#1fa5a3] hover:text-[#1fa5a3]" aria-label="menos">
+                    <Minus className="h-4 w-4" />
+                  </button>
+                  <span className="w-5 text-center font-semibold">{participants}</span>
+                  <button type="button" onClick={() => setParticipants((n) => Math.min(20, n + 1))} className="flex h-8 w-8 items-center justify-center rounded-full border border-gray-200 text-[#14213d] hover:border-[#1fa5a3] hover:text-[#1fa5a3]" aria-label="más">
+                    <Plus className="h-4 w-4" />
+                  </button>
+                </div>
+              </div>
             </PopoverContent>
           </Popover>
 
           <button
             onClick={handleSearch}
-            className="ml-0 md:ml-2 mt-1 md:mt-0 h-14 md:h-auto px-6 md:px-8 bg-[#c8a25a] text-white rounded-full font-semibold hover:bg-[#b08c49] transition-all flex items-center justify-center gap-2 group"
+            className="min-h-14 px-7 md:px-9 mt-2 md:mt-0 md:ml-2 inline-flex items-center justify-center gap-2 rounded-xl md:rounded-full bg-[#c8a25a] text-white font-semibold hover:bg-[#b08c49] transition-colors"
           >
             <Search className="w-4 h-4" /> {t('hero.searchButton')}
           </button>

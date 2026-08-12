@@ -5,7 +5,8 @@ import { Checkbox } from '../components/ui/checkbox';
 import { destinations, categories } from '../mock';
 import { activities } from '../siteData';
 import ActivityCard from '../components/ActivityCard';
-import { Filter, LayoutGrid, List, MapPin, Search } from 'lucide-react';
+import ActivityListCard from '../components/ActivityListCard';
+import { Filter, LayoutGrid, List, Search } from 'lucide-react';
 import { useCurrency } from '../context/CurrencyContext';
 
 export default function Activities() {
@@ -16,10 +17,13 @@ export default function Activities() {
   const [selectedCategories, setSelectedCategories] = useState([]);
   const [price, setPrice] = useState([0, 1200]);
   const [sort, setSort] = useState('featured');
+  const [view, setView] = useState('list');
 
   useEffect(() => {
     const d = params.get('destination');
     if (d) setSelectedDestinations([d]);
+    const query = params.get('q');
+    if (query) setQ(query);
   }, [params]);
 
   const filtered = useMemo(() => {
@@ -113,6 +117,27 @@ export default function Activities() {
           <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-6 gap-3">
             <p className="text-gray-600"><span className="font-semibold text-[#14213d]">{filtered.length}</span> actividades encontradas</p>
             <div className="flex items-center gap-3">
+              {/* View toggle: list (default) / grid */}
+              <div className="hidden sm:flex items-center rounded-lg border border-gray-200 bg-white p-0.5">
+                <button
+                  type="button"
+                  onClick={() => setView('list')}
+                  aria-label="Ver en lista"
+                  aria-pressed={view === 'list'}
+                  className={`flex h-8 w-8 items-center justify-center rounded-md transition-colors ${view === 'list' ? 'bg-[#1fa5a3] text-white' : 'text-gray-500 hover:text-[#1fa5a3]'}`}
+                >
+                  <List className="h-4 w-4" />
+                </button>
+                <button
+                  type="button"
+                  onClick={() => setView('grid')}
+                  aria-label="Ver en cuadrícula"
+                  aria-pressed={view === 'grid'}
+                  className={`flex h-8 w-8 items-center justify-center rounded-md transition-colors ${view === 'grid' ? 'bg-[#1fa5a3] text-white' : 'text-gray-500 hover:text-[#1fa5a3]'}`}
+                >
+                  <LayoutGrid className="h-4 w-4" />
+                </button>
+              </div>
               <label className="text-sm text-gray-500">Ordenar:</label>
               <select value={sort} onChange={(e) => setSort(e.target.value)} className="bg-white border border-gray-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-[#1fa5a3]">
                 <option value="featured">Destacados</option>
@@ -124,9 +149,15 @@ export default function Activities() {
           </div>
 
           {filtered.length ? (
-            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
-              {filtered.map((a) => <ActivityCard key={a.id} activity={a} />)}
-            </div>
+            view === 'grid' ? (
+              <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+                {filtered.map((a) => <ActivityCard key={a.id} activity={a} />)}
+              </div>
+            ) : (
+              <div className="space-y-4">
+                {filtered.map((a) => <ActivityListCard key={a.id} activity={a} />)}
+              </div>
+            )
           ) : (
             <div className="text-center py-20 text-gray-500">No hay actividades con estos filtros.</div>
           )}

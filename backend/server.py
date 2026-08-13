@@ -1290,6 +1290,97 @@ async def admin_delete_destination(
     return Response(status_code=status.HTTP_204_NO_CONTENT)
 
 
+# ---------------------------------------------------------------------------
+# Admin reservations dashboard (protected): list/manage bookings & enquiry
+# requests and a small summary for the admin home. Read/manage only — the
+# booking creation + SumUp flow is unchanged.
+# ---------------------------------------------------------------------------
+
+BOOKING_STATUSES = {
+    "payment_pending", "paid", "confirmed", "cancelled", "refunded", "completed",
+}
+REQUEST_STATUSES = {"inquiry_pending", "contacted", "confirmed", "cancelled"}
+
+
+class StatusUpdate(BaseModel):
+    status: str
+
+
+@api_router.get("/admin/bookings")
+async def admin_list_bookings(
+    status_filter: str = Query(None, alias="status"),
+    limit: int = Query(50, ge=1, le=200),
+    skip: int = Query(0, ge=0),
+    _admin: Dict[str, Any] = Depends(require_admin_user),
+):
+    query: Dict[str, Any] = {}
+    if status_filter:
+        query["status"] = status_filter
+    total = await db.bookings.count_documents(query)
+    items = await db.bookings.find(query, {"_id": 0}).sort("created_at", -1).skip(skip).limit(limit).to_list(length=limit)
+    return {"items": items, "total": total}
+
+
+@api_router.get("/admin/booking-requests")
+async def admin_list_booking_requests(
+    status_filter: str = Query(None, alias="status"),
+    limit: int = Query(50, ge=1, le=200),
+    skip: int = Query(0, ge=0),
+    _admin: Dict[str, Any] = Depends(require_admin_user),
+):
+    query: Dict[str, Any] = {}
+    if status_filter:
+        query["status"] = status_filter
+    total = await db.booking_requests.count_documents(query)
+    items = await db.booking_requests.find(query, {"_id": 0}).sort("created_at", -1).skip(skip).limit(limit).to_list(length=limit)
+    return {"items": items, "total": total}
+
+
+@api_router.patch("/admin/bookings/{booking_id}")
+async def admin_update_booking_status(
+    booking_id: str,
+    payload: StatusUpdate,
+    _admin: Dict[str, Any] = Depends(require_admin_user),
+):
+    if payload.status not in BOOKING_STATUSES:
+        raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail="Estado de reserva no válido.")
+    result = await db.bookings.update_one(
+        {"id": booking_id}, {"$set": {"status": payload.status, "updated_at": datetime.now(timezone.utc)}}
+    )
+    if result.matched_count == 0:
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Booking not found")
+    return {"id": booking_id, "status": payload.status}
+
+
+@api_router.patch("/admin/booking-requests/{request_id}")
+async def admin_update_request_status(
+    request_id: str,
+    payload: StatusUpdate,
+    _admin: Dict[str, Any] = Depends(require_admin_user),
+):
+    if payload.status not in REQUEST_STATUSES:
+        raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail="Estado de solicitud no válido.")
+    result = await db.booking_requests.update_one(
+        {"id": request_id}, {"$set": {"status": payload.status, "updated_at": datetime.now(timezone.utc)}}
+    )
+    if result.matched_count == 0:
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Booking request not found")
+    return {"id": request_id, "status": payload.status}
+
+
+@api_router.get("/admin/summary")
+async def admin_summary(_admin: Dict[str, Any] = Depends(require_admin_user)):
+    return {
+        "activities": await db.activities.count_documents({"active": True}),
+        "activities_bookable": await db.activities.count_documents({"active": True, "bookable": True}),
+        "destinations": await db.destinations.count_documents({"active": True}),
+        "bookings_total": await db.bookings.count_documents({}),
+        "bookings_paid": await db.bookings.count_documents({"status": "paid"}),
+        "bookings_pending": await db.bookings.count_documents({"status": "payment_pending"}),
+        "requests_pending": await db.booking_requests.count_documents({"status": "inquiry_pending"}),
+    }
+
+
 app.include_router(api_router)
 
 app.add_middleware(

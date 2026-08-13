@@ -30,7 +30,7 @@ export default function TopDestinations() {
             return (
             <Link
               key={d.slug}
-              to={`/activities?destination=${d.slug}`}
+              to={`/destinations/${d.slug}`}
               className="group relative min-h-[210px] min-w-0 overflow-hidden rounded-xl bg-[#0b1c26] aspect-[16/10] shadow-[0_16px_35px_-24px_rgba(11,33,61,0.55)]"
             >
               <img

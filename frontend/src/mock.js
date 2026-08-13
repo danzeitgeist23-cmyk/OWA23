@@ -37,6 +37,28 @@ export const destinations = [
     activityCount: 5,
     image: 'https://images.unsplash.com/photo-1696454138713-570f884ba261?auto=format&fit=crop&w=800&q=80',
   },
+  // Multiisla — islas añadidas (imágenes provisionales reutilizadas; reemplazar por fotos reales desde el admin).
+  {
+    id: 'el-hierro',
+    name: 'El Hierro',
+    activityCount: 0,
+    image: 'https://images.unsplash.com/photo-1605714726527-411541ab17f4?auto=format&fit=crop&w=800&q=80',
+    description: 'La isla más pequeña y salvaje del archipiélago, Reserva de la Biosfera, famosa por sus fondos marinos y su calma.',
+  },
+  {
+    id: 'la-gomera',
+    name: 'La Gomera',
+    activityCount: 0,
+    image: 'https://images.unsplash.com/photo-1671976847791-44be0409b487?auto=format&fit=crop&w=800&q=80',
+    description: 'Bosques de laurisilva milenarios, senderos legendarios y calas escondidas en el corazón del Atlántico.',
+  },
+  {
+    id: 'la-graciosa',
+    name: 'La Graciosa',
+    activityCount: 0,
+    image: 'https://images.unsplash.com/photo-1643965304951-07a7ebb783a0?auto=format&fit=crop&w=800&q=80',
+    description: 'Playas vírgenes, calles de arena y aguas turquesas en la octava isla, sin coches y sin prisas.',
+  },
 ];
 
 export const categories = [

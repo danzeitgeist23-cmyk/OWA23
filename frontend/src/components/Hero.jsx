@@ -1,23 +1,26 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Calendar as CalendarIcon, Search, Users, Minus, Plus } from 'lucide-react';
+import { Calendar as CalendarIcon, Search, Users, Minus, Plus, MapPin } from 'lucide-react';
 import { format } from 'date-fns';
 import { es } from 'date-fns/locale';
 import { Calendar } from '../components/ui/calendar';
 import { Popover, PopoverContent, PopoverTrigger } from '../components/ui/popover';
 import { useT } from '../i18n/LanguageContext';
+import { destinations } from '../mock';
 
 const heroImage = 'https://images.unsplash.com/photo-1602523034192-56b472acfb94?auto=format&fit=crop&w=2000&q=80';
 
 export default function Hero() {
   const navigate = useNavigate();
   const t = useT();
+  const [island, setIsland] = useState('');
   const [query, setQuery] = useState('');
   const [date, setDate] = useState();
   const [participants, setParticipants] = useState(2);
 
   const handleSearch = () => {
     const params = new URLSearchParams();
+    if (island) params.set('destination', island);
     if (query.trim()) params.set('q', query.trim());
     if (date) params.set('from', format(date, 'yyyy-MM-dd'));
     if (participants) params.set('participants', String(participants));
@@ -45,6 +48,27 @@ export default function Hero() {
 
         {/* Search Bar — civitatis style: stacked on mobile (rounded cards), pill on desktop */}
         <div className="mt-12 w-full max-w-5xl bg-white rounded-2xl md:rounded-full search-shadow p-1.5 flex flex-col md:flex-row items-stretch gap-1 animate-fadeup">
+          {/* Island */}
+          <div className="relative min-w-0 flex-1">
+            <div className="flex items-center gap-3 px-4 py-3.5 md:py-4 rounded-xl md:rounded-full hover:bg-[#f7f9fb] focus-within:bg-[#f7f9fb] transition-colors">
+              <MapPin className="w-5 h-5 text-[#1fa5a3] flex-shrink-0" />
+              <div className="min-w-0 flex-1 text-left">
+                <label htmlFor="hero-island" className="block text-[10px] uppercase tracking-[0.14em] font-semibold text-[#14213d]">Isla</label>
+                <select
+                  id="hero-island"
+                  value={island}
+                  onChange={(e) => setIsland(e.target.value)}
+                  className="w-full bg-transparent border-0 p-0 text-[15px] text-[#14213d] focus:outline-none cursor-pointer"
+                >
+                  <option value="">Todas las islas</option>
+                  {destinations.map((d) => <option key={d.id} value={d.id}>{d.name}</option>)}
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div className="hidden md:block w-px bg-gray-200 my-3" />
+
           {/* Activity or place */}
           <div className="relative min-w-0 flex-[1.7]">
             <div className="flex items-center gap-3 px-4 py-3.5 md:py-4 rounded-xl md:rounded-full hover:bg-[#f7f9fb] focus-within:bg-[#f7f9fb] transition-colors">

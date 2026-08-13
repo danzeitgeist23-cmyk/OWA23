@@ -35,7 +35,7 @@ export default function Destinations() {
             {items.map((d) => (
               <Link
                 key={d.slug}
-                to={`/activities?destination=${d.slug}`}
+                to={`/destinations/${d.slug}`}
                 className="group relative min-h-[230px] overflow-hidden rounded-2xl aspect-[16/10] bg-[#0b1c26] shadow-[0_16px_40px_-24px_rgba(11,33,61,0.5)]"
               >
                 <img src={d.image} alt={d.name} loading="lazy" className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />

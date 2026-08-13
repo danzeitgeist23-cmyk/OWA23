@@ -3,12 +3,14 @@ import './App.css';
 import { BrowserRouter, Routes, Route, useLocation, Navigate } from 'react-router-dom';
 import Header from './components/Header';
 import LegacyActivityRedirect from './components/LegacyActivityRedirect';
+import LegacyDestinationRedirect from './components/LegacyDestinationRedirect';
 import Footer from './components/Footer';
 import Seo from './components/Seo';
 import Home from './pages/Home';
 import Activities from './pages/Activities';
 import ActivityDetail from './pages/ActivityDetail';
 import Destinations from './pages/Destinations';
+import Destination from './pages/Destination';
 import Blog from './pages/Blog';
 import BlogDetail from './pages/BlogDetail';
 import About from './pages/About';
@@ -83,6 +85,7 @@ function App() {
                 <Route path="/activities" element={<Activities />} />
                 <Route path="/activity/:id" element={<ActivityDetail />} />
                 <Route path="/destinations" element={<Destinations />} />
+                <Route path="/destinations/:slug" element={<Destination />} />
                 <Route path="/blog" element={<Blog />} />
                 <Route path="/blog/:id" element={<BlogDetail />} />
                 <Route path="/about" element={<About />} />
@@ -101,6 +104,7 @@ function App() {
                 {/* Legacy Spanish routes → permanent redirects so previously shared links keep working */}
                 <Route path="/actividades" element={<Navigate to="/activities" replace />} />
                 <Route path="/actividad/:id" element={<LegacyActivityRedirect />} />
+                <Route path="/destinos/:slug" element={<LegacyDestinationRedirect />} />
                 <Route path="/destinos" element={<Navigate to="/destinations" replace />} />
                 <Route path="/nosotros" element={<Navigate to="/about" replace />} />
                 <Route path="/contacto" element={<Navigate to="/contact" replace />} />

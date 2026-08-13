@@ -8,70 +8,85 @@
   <url><loc>https://owawild.com/contact</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
   <url><loc>https://owawild.com/privacy</loc><changefreq>weekly</changefreq><priority>0.3</priority></url>
   <url><loc>https://owawild.com/terms</loc><changefreq>weekly</changefreq><priority>0.3</priority></url>
-  <url><loc>https://owawild.com/activity/banana-boat</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://owawild.com/activity/boat-rental</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://owawild.com/activity/buceo-lanzarote</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://owawild.com/activity/buggy-pirates-family</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://owawild.com/activity/buggy-pirates-tour</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://owawild.com/activity/catamaran-sunset</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://owawild.com/activity/infinity-catamaran-shared</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://owawild.com/activities/barco</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://owawild.com/activities/delfines</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://owawild.com/activities/jet-ski</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://owawild.com/activities/buggy</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://owawild.com/activities/buceo</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://owawild.com/activities/familias</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://owawild.com/destinations/gran-canaria</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://owawild.com/destinations/fuerteventura</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://owawild.com/destinations/tenerife</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://owawild.com/destinations/lanzarote</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://owawild.com/destinations/la-palma</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://owawild.com/destinations/isla-de-lobos</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://owawild.com/destinations/el-hierro</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://owawild.com/destinations/la-gomera</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://owawild.com/destinations/la-graciosa</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://owawild.com/activity/infinity-yacht-premium-shared</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://owawild.com/activity/infinity-yacht-private</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://owawild.com/activity/infinity-yacht-sport-private</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://owawild.com/activity/jet-ski-tenerife</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://owawild.com/activity/kayak-cuevas</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://owawild.com/activity/infinity-catamaran-shared</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://owawild.com/activity/maspalomas-jet-ski-express</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://owawild.com/activity/maspalomas-jet-ski-adventure</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://owawild.com/activity/maspalomas-jet-ski-explorer</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://owawild.com/activity/maspalomas-jet-ski-express</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://owawild.com/activity/maspalomas-jet-ski-gran-canaria</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://owawild.com/activity/molina-adventure-pack</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://owawild.com/activity/molina-banana</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://owawild.com/activity/molina-bluefin-private</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://owawild.com/activity/molina-bluefin-shared</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://owawild.com/activity/molina-crazy-sofa</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://owawild.com/activity/molina-flyboard</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://owawild.com/activity/molina-fun-pack</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://owawild.com/activity/molina-jet-ski-rental</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://owawild.com/activity/molina-jet-ski-safari</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://owawild.com/activity/molina-kayak</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://owawild.com/activity/molina-paddle-surf</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://owawild.com/activity/molina-parasailing</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://owawild.com/activity/molina-pedal-boat</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://owawild.com/activity/molina-speed-boat</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://owawild.com/activity/molina-stingray-catamaran</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://owawild.com/activity/molina-sun-pack</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://owawild.com/activity/molina-wakeboard</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://owawild.com/activity/molina-waterbull</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://owawild.com/activity/molina-water-ski</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://owawild.com/activity/multiacuatic-dolphin-safari</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://owawild.com/activity/nirvana-all-inclusive-water-adventure</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://owawild.com/activity/nirvana-day-cruise</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://owawild.com/activity/nirvana-dolphin-chill</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://owawild.com/activity/nirvana-gui-gui</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://owawild.com/activity/nirvana-private-yacht</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://owawild.com/activity/nirvana-sunset</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://owawild.com/activity/obycat-gran-canaria</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://owawild.com/activity/ocean-giants-cruise</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://owawild.com/activity/paragliding</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://owawild.com/activity/parasailing-lanzarote</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://owawild.com/activity/puerto-rico-boat-party</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://owawild.com/activity/safari-buggy</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://owawild.com/activity/snorkel-teno</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://owawild.com/activity/stand-up-paddle</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://owawild.com/activity/stargazing</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://owawild.com/activity/teide-hike</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://owawild.com/activity/water-taxi-lobos</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://owawild.com/activity/ocean-giants-cruise</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://owawild.com/activity/safari-buggy</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://owawild.com/activity/jet-ski-tenerife</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://owawild.com/activity/parasailing-lanzarote</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://owawild.com/activity/banana-boat</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://owawild.com/activity/boat-rental</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://owawild.com/activity/catamaran-sunset</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://owawild.com/activity/snorkel-teno</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://owawild.com/activity/buceo-lanzarote</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://owawild.com/activity/kayak-cuevas</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://owawild.com/activity/teide-hike</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://owawild.com/activity/paragliding</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://owawild.com/activity/stand-up-paddle</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://owawild.com/activity/wine-tour</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://owawild.com/activity/stargazing</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://owawild.com/activity/infinity-yacht-sport-private</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://owawild.com/activity/infinity-yacht-private</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://owawild.com/activity/buggy-pirates-tour</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://owawild.com/activity/buggy-pirates-family</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://owawild.com/activity/multiacuatic-dolphin-safari</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://owawild.com/activity/zeus-snorkel-mogan</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://owawild.com/activity/zeus-certified-diving</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://owawild.com/activity/zeus-discover-scuba</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://owawild.com/activity/zeus-open-water-course</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://owawild.com/activity/zeus-private-sailing-4-5</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://owawild.com/activity/zeus-private-sailing-7</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://owawild.com/activity/zeus-snorkel-mogan</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://owawild.com/activity/nirvana-day-cruise</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://owawild.com/activity/nirvana-gui-gui</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://owawild.com/activity/nirvana-sunset</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://owawild.com/activity/nirvana-private-yacht</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://owawild.com/activity/nirvana-all-inclusive-water-adventure</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://owawild.com/activity/nirvana-dolphin-chill</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://owawild.com/activity/molina-jet-ski-rental</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://owawild.com/activity/molina-jet-ski-safari</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://owawild.com/activity/molina-flyboard</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://owawild.com/activity/molina-parasailing</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://owawild.com/activity/molina-speed-boat</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://owawild.com/activity/molina-banana</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://owawild.com/activity/molina-crazy-sofa</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://owawild.com/activity/molina-paddle-surf</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://owawild.com/activity/molina-waterbull</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://owawild.com/activity/molina-wakeboard</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://owawild.com/activity/molina-pedal-boat</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://owawild.com/activity/molina-kayak</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://owawild.com/activity/molina-water-ski</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://owawild.com/activity/molina-sun-pack</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://owawild.com/activity/molina-fun-pack</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://owawild.com/activity/molina-adventure-pack</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://owawild.com/activity/molina-stingray-catamaran</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://owawild.com/activity/molina-bluefin-shared</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://owawild.com/activity/molina-bluefin-private</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://owawild.com/activity/obycat-gran-canaria</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://owawild.com/activity/puerto-rico-boat-party</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://owawild.com/blog/lobos-guide</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://owawild.com/blog/teide-experience</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://owawild.com/blog/ballenas-canarias</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://owawild.com/blog/family-canarias</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://owawild.com/blog/lanzarote-volcanes</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://owawild.com/blog/lobos-guide</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://owawild.com/blog/starlight</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://owawild.com/blog/teide-experience</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
 </urlset>

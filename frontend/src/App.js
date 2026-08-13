@@ -9,6 +9,7 @@ import Seo from './components/Seo';
 import Home from './pages/Home';
 import Activities from './pages/Activities';
 import ActivityDetail from './pages/ActivityDetail';
+import CategoryLanding from './pages/CategoryLanding';
 import Destinations from './pages/Destinations';
 import Destination from './pages/Destination';
 import Blog from './pages/Blog';
@@ -83,6 +84,7 @@ function App() {
               <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/activities" element={<Activities />} />
+                <Route path="/activities/:category" element={<CategoryLanding />} />
                 <Route path="/activity/:id" element={<ActivityDetail />} />
                 <Route path="/destinations" element={<Destinations />} />
                 <Route path="/destinations/:slug" element={<Destination />} />

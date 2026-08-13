@@ -24,6 +24,7 @@ import Login from './pages/Login';
 import Register from './pages/Register';
 import MyAccount from './pages/MyAccount';
 import AdminMedia from './pages/AdminMedia';
+import AdminActivities from './pages/AdminActivities';
 import { getRouteSeo } from './lib/seo';
 
 const THEME_STORAGE_KEY = 'owa-theme';
@@ -95,6 +96,7 @@ function App() {
                 <Route path="/privacy" element={<Privacy />} />
                 <Route path="/terms" element={<Terms />} />
                 <Route path="/admin/media" element={<AdminMedia />} />
+                <Route path="/admin/activities" element={<AdminActivities />} />
 
                 {/* Legacy Spanish routes → permanent redirects so previously shared links keep working */}
                 <Route path="/actividades" element={<Navigate to="/activities" replace />} />

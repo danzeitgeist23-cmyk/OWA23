@@ -85,6 +85,12 @@ main() {
     log "Target: $SSH_USER@$SSH_HOST:$SSH_PORT $SSH_REMOTE_PATH"
     check_requirements
     build_frontend
+    if [[ "${SKIP_BACKUP:-}" == "1" ]]; then
+        warn "Backup previo omitido (SKIP_BACKUP=1)."
+    else
+        log "Snapshot del sitio en vivo antes de desplegar..."
+        "$SCRIPT_DIR/site-backup.sh" || warn "Backup previo falló; se continúa sin rollback para esta versión."
+    fi
     deploy_rsync
     verify
     success "🎉 Deploy successful!"

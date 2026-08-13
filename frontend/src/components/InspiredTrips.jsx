@@ -3,35 +3,14 @@ import { Link } from 'react-router-dom';
 import ActivityCard from './ActivityCard';
 import { useT } from '../i18n/LanguageContext';
 import { useActivities } from '../hooks/use-activities';
+import { selectVariety } from '../lib/variety';
 
 export default function InspiredTrips() {
   const t = useT()
   const { data } = useActivities({ limit: 200 })
   const activities = data?.items || []
 
-  const inspired = useMemo(() => {
-    const seenCategories = new Set()
-    const selected = []
-
-    for (const activity of activities) {
-      if (selected.length >= 6) break
-      if (!seenCategories.has(activity.category)) {
-        selected.push(activity)
-        seenCategories.add(activity.category)
-      }
-    }
-
-    if (selected.length < 6) {
-      for (const activity of activities) {
-        if (selected.length >= 6) break
-        if (!selected.includes(activity)) {
-          selected.push(activity)
-        }
-      }
-    }
-
-    return selected
-  }, [activities])
+  const inspired = useMemo(() => selectVariety(activities, 6), [activities])
 
   return (
     <section className="py-20 md:py-28 bg-[#f7f9fb]">

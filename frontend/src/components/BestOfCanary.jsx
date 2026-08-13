@@ -4,6 +4,7 @@ import ActivityCard from './ActivityCard';
 import { Sailboat, Fish, Mountain, Wind, Leaf, UtensilsCrossed } from 'lucide-react';
 import { useT } from '../i18n/LanguageContext';
 import { useActivities } from '../hooks/use-activities';
+import { selectVariety, activityTypeKey } from '../lib/variety';
 
 const iconMap = { Sailboat, Fish, Mountain, Wind, Leaf, UtensilsCrossed };
 
@@ -15,31 +16,15 @@ export default function BestOfCanary() {
 
   const filtered = active === 'all' ? activities : activities.filter((a) => a.category === active);
 
+  // selectVariety avoids near-duplicate activity types (e.g. several jet skis).
+  // For "all" we also exclude what InspiredTrips shows so the home doesn't
+  // repeat the same six activities across both sections.
   const list = useMemo(() => {
-    if (active !== 'all') {
-      return filtered.slice(0, 6);
-    }
-    // When showing all categories, diversify by picking from different categories
-    const seenCategories = new Set();
-    const selected = [];
-    for (const activity of filtered) {
-      if (selected.length >= 6) break;
-      if (!seenCategories.has(activity.category)) {
-        selected.push(activity);
-        seenCategories.add(activity.category);
-      }
-    }
-    // Fill remaining slots if fewer than 6 categories
-    if (selected.length < 6) {
-      for (const activity of filtered) {
-        if (selected.length >= 6) break;
-        if (!selected.includes(activity)) {
-          selected.push(activity);
-        }
-      }
-    }
-    return selected;
-  }, [active, filtered]);
+    if (active !== 'all') return selectVariety(filtered, 6);
+    const inspiredTypes = new Set(selectVariety(activities, 6).map(activityTypeKey));
+    const remaining = activities.filter((a) => !inspiredTypes.has(activityTypeKey(a)));
+    return selectVariety(remaining, 6);
+  }, [active, filtered, activities]);
 
   return (
     <section className="py-20 md:py-28 bg-white">

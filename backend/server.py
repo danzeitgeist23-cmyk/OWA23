@@ -1368,6 +1368,84 @@ async def admin_update_request_status(
     return {"id": request_id, "status": payload.status}
 
 
+class AvailabilityConfig(BaseModel):
+    capacity_per_slot: int = Field(ge=1, le=1000)
+    blackout_dates: List[str] = []
+
+
+@api_router.get("/activities/{slug}/availability")
+async def activity_availability(slug: str, on_date: str = Query(..., alias="date")):
+    activity = await db.activities.find_one(
+        {"slug": slug, "active": True},
+        {"_id": 0, "time_slots": 1, "capacity_per_slot": 1, "blackout_dates": 1},
+    )
+    if not activity:
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Activity not found")
+
+    capacity = int(activity.get("capacity_per_slot") or 12)
+    slots = activity.get("time_slots") or []
+    blackout = set(activity.get("blackout_dates") or [])
+
+    if on_date in blackout:
+        return {
+            "date": on_date,
+            "available": False,
+            "reason": "blackout",
+            "slots": [{"slot": s, "capacity": capacity, "booked": 0, "available": 0} for s in slots],
+        }
+
+    # Seats already taken per slot for this activity+date (active bookings only).
+    booked_by_slot: Dict[str, int] = {}
+    cursor = db.bookings.find(
+        {
+            "activity_id": slug,
+            "service_date": on_date,
+            "status": {"$in": ["paid", "confirmed", "payment_pending"]},
+        },
+        {"_id": 0, "time_slot": 1, "quantities": 1},
+    )
+    async for booking in cursor:
+        seats = sum(int(v) for v in (booking.get("quantities") or {}).values())
+        slot_key = booking.get("time_slot")
+        booked_by_slot[slot_key] = booked_by_slot.get(slot_key, 0) + seats
+
+    slot_data = []
+    for s in slots:
+        booked = booked_by_slot.get(s, 0)
+        slot_data.append(
+            {"slot": s, "capacity": capacity, "booked": booked, "available": max(0, capacity - booked)}
+        )
+
+    return {
+        "date": on_date,
+        "available": any(sd["available"] > 0 for sd in slot_data) or not slots,
+        "slots": slot_data,
+    }
+
+
+@api_router.put("/admin/activities/{slug}/availability")
+async def admin_set_availability(
+    slug: str,
+    payload: AvailabilityConfig,
+    _admin: Dict[str, Any] = Depends(require_admin_user),
+):
+    result = await db.activities.update_one(
+        {"slug": slug},
+        {"$set": {
+            "capacity_per_slot": payload.capacity_per_slot,
+            "blackout_dates": payload.blackout_dates,
+            "updated_at": datetime.now(timezone.utc),
+        }},
+    )
+    if result.matched_count == 0:
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Activity not found")
+    return {
+        "slug": slug,
+        "capacity_per_slot": payload.capacity_per_slot,
+        "blackout_dates": payload.blackout_dates,
+    }
+
+
 @api_router.get("/admin/summary")
 async def admin_summary(_admin: Dict[str, Any] = Depends(require_admin_user)):
     return {

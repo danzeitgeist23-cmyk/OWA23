@@ -8,7 +8,8 @@ import { Popover, PopoverContent, PopoverTrigger } from '../components/ui/popove
 import { useT } from '../i18n/LanguageContext';
 import { destinations } from '../mock';
 
-const heroImage = 'https://images.unsplash.com/photo-1602523034192-56b472acfb94?auto=format&fit=crop&w=2000&q=80';
+// Playa paradisíaca de Fuerteventura (lagunas turquesas de Sotavento / Corralejo).
+const heroImage = 'https://images.unsplash.com/photo-1635463498136-96e4df88bac8?auto=format&fit=crop&w=2400&q=80';
 
 export default function Hero() {
   const navigate = useNavigate();

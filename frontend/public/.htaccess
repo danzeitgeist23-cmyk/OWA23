@@ -23,3 +23,18 @@
   # SPA fallback: send everything else to index.html so React Router handles it
   RewriteRule . /index.html [L]
 </IfModule>
+
+# --- Caching: hashed assets cached long, HTML always revalidated so new deploys
+# show immediately (a new build changes the JS/CSS filenames). Note: SiteGround's
+# server-side Dynamic Cache still needs a purge from Site Tools after each deploy.
+<IfModule mod_headers.c>
+  <FilesMatch "\.(js|css|woff2?|png|jpe?g|webp|gif|svg|ico)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+  <FilesMatch "\.(html|xml|txt)$">
+    Header set Cache-Control "no-cache, must-revalidate"
+  </FilesMatch>
+  <FilesMatch "^service-worker\.js$">
+    Header set Cache-Control "no-cache, must-revalidate"
+  </FilesMatch>
+</IfModule>

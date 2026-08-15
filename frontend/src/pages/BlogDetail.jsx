@@ -25,6 +25,10 @@ export default function BlogDetail() {
     );
   }
 
+  const author = post.author || 'Equipo OWA';
+  const readTime = post.readTime || `${Math.max(2, Math.round((post.content || post.excerpt || '').split(/\s+/).length / 200))} min de lectura`;
+  const related = blogPosts.filter((p) => p.id !== post.id).slice(0, 3);
+
   const renderContent = (content) => {
     if (!content) return null;
 
@@ -186,7 +190,7 @@ export default function BlogDetail() {
           <div className="flex flex-wrap items-center gap-6 text-gray-500 text-sm">
             <div className="flex items-center gap-1.5">
               <User className="w-4 h-4" />
-              <span>{post.author}</span>
+              <span>{author}</span>
             </div>
             <div className="flex items-center gap-1.5">
               <Calendar className="w-4 h-4" />
@@ -194,7 +198,7 @@ export default function BlogDetail() {
             </div>
             <div className="flex items-center gap-1.5">
               <Clock className="w-4 h-4" />
-              <span>{post.readTime}</span>
+              <span>{readTime}</span>
             </div>
           </div>
         </header>
@@ -240,6 +244,26 @@ export default function BlogDetail() {
               </Link>
             </div>
           </div>
+        )}
+
+        {/* Related posts */}
+        {related.length > 0 && (
+          <section className="mt-16 pt-10 border-t border-gray-200">
+            <h2 className="text-2xl font-bold text-[#14213d] mb-6">Sigue leyendo</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+              {related.map((p) => (
+                <Link key={p.id} to={`/blog/${p.id}`} className="group block overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-[0_14px_36px_-26px_rgba(11,33,61,0.4)] hover:-translate-y-0.5 transition-all">
+                  <div className="aspect-[16/10] overflow-hidden bg-gray-100">
+                    <img src={p.image} alt={p.title} loading="lazy" className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                  </div>
+                  <div className="p-4">
+                    <span className="text-[11px] font-bold uppercase tracking-wider text-[#1fa5a3]">{p.category}</span>
+                    <h3 className="mt-1 text-[15px] font-semibold leading-snug text-[#14213d] line-clamp-2 group-hover:text-[#1fa5a3]">{p.title}</h3>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </section>
         )}
 
         {/* Back to Blog */}

@@ -18,6 +18,7 @@ export default function Activities() {
   const [price, setPrice] = useState([0, 1200]);
   const [sort, setSort] = useState('featured');
   const [view, setView] = useState('list');
+  const [showFilters, setShowFilters] = useState(false);
   const { data, isLoading, isError } = useActivities({ limit: 200 });
   const activities = useMemo(() => data?.items || [], [data]);
 
@@ -56,9 +57,21 @@ export default function Activities() {
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-5 md:px-8 py-12 grid grid-cols-1 lg:grid-cols-[280px_1fr] gap-10">
+      {/* Mobile filters toggle */}
+      <div className="lg:hidden max-w-7xl mx-auto px-5 md:px-8 pt-8">
+        <button
+          type="button"
+          onClick={() => setShowFilters((v) => !v)}
+          aria-expanded={showFilters}
+          className="inline-flex items-center gap-2 rounded-full border border-gray-200 bg-white px-5 py-2.5 text-sm font-semibold text-[#14213d] hover:border-[#1fa5a3] hover:text-[#1fa5a3]"
+        >
+          <Filter className="w-4 h-4" /> {showFilters ? 'Ocultar filtros' : 'Filtros'}
+        </button>
+      </div>
+
+      <div className="max-w-7xl mx-auto px-5 md:px-8 py-6 lg:py-12 grid grid-cols-1 lg:grid-cols-[280px_1fr] gap-10">
         {/* Filters */}
-        <aside className="space-y-8 bg-[#f7f9fb] p-6 rounded-2xl h-fit sticky top-24">
+        <aside className={`space-y-8 bg-[#f7f9fb] p-6 rounded-2xl h-fit lg:sticky lg:top-24 ${showFilters ? 'block' : 'hidden'} lg:block`}>
           <div>
             <div className="flex items-center gap-2 font-semibold text-[#14213d] mb-4">
               <Filter className="w-4 h-4" /> Filtros

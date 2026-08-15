@@ -1,6 +1,7 @@
 import React from 'react';
 import Hero from '../components/Hero';
 import CategoryQuickLinks from '../components/CategoryQuickLinks';
+import TrustBar from '../components/TrustBar';
 import TopDestinations from '../components/TopDestinations';
 import InspiredTrips from '../components/InspiredTrips';
 import BestOfCanary from '../components/BestOfCanary';
@@ -14,6 +15,7 @@ export default function Home() {
     <>
       <Hero />
       <CategoryQuickLinks />
+      <TrustBar />
       <TopDestinations />
       <InspiredTrips />
       <WhyOWA />

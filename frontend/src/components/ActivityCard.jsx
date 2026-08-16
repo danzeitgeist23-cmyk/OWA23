@@ -37,10 +37,10 @@ export default function ActivityCard({ activity }) {
             e.preventDefault();
             setSaved(!saved);
           }}
-          className="absolute top-3 right-3 w-9 h-9 rounded-full bg-white/90 backdrop-blur flex items-center justify-center hover:bg-white transition-all"
+          className="absolute top-3 right-3 w-9 h-9 rounded-full bg-white/90 dark:bg-slate-900/70 backdrop-blur flex items-center justify-center hover:bg-white dark:hover:bg-slate-900 transition-all"
           aria-label="guardar"
         >
-          <Heart className={`w-4 h-4 ${saved ? 'fill-[#c8a25a] text-[#c8a25a]' : 'text-[#14213d]'}`} />
+          <Heart className={`w-4 h-4 ${saved ? 'fill-[#c8a25a] text-[#c8a25a]' : 'text-[#14213d] dark:text-white'}`} />
         </button>
       </div>
 

@@ -263,10 +263,10 @@ export default function ActivityDetail() {
             <img src={gallery[selectedImage]} alt={activity.title} className="w-full h-full object-cover" />
             {gallery.length > 1 && (
               <>
-                <button aria-label="Imagen anterior" onClick={() => setSelectedImage((selectedImage - 1 + gallery.length) % gallery.length)} className="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/90 flex items-center justify-center hover:bg-white">
+                <button aria-label="Imagen anterior" onClick={() => setSelectedImage((selectedImage - 1 + gallery.length) % gallery.length)} className="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/90 dark:bg-slate-900/70 text-[#14213d] flex items-center justify-center hover:bg-white dark:hover:bg-slate-900">
                   <ChevronLeft className="w-4 h-4" />
                 </button>
-                <button aria-label="Imagen siguiente" onClick={() => setSelectedImage((selectedImage + 1) % gallery.length)} className="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/90 flex items-center justify-center hover:bg-white">
+                <button aria-label="Imagen siguiente" onClick={() => setSelectedImage((selectedImage + 1) % gallery.length)} className="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/90 dark:bg-slate-900/70 text-[#14213d] flex items-center justify-center hover:bg-white dark:hover:bg-slate-900">
                   <ChevronRight className="w-4 h-4" />
                 </button>
               </>

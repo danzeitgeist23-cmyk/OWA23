@@ -410,24 +410,88 @@ export const blogPosts = [
     category: 'GUÍAS',
     title: 'Guía completa para visitar la Isla de Lobos',
     excerpt: 'Todo lo que debes saber antes de embarcar hacia esta joya virgen del Atlántico: rutas, horarios, qué llevar y cómo reservar.',
-    image: 'https://images.unsplash.com/photo-1547205725-2a24bf99d0b8?auto=format&fit=crop&w=900&q=80',
+    image: 'https://images.unsplash.com/photo-1547205725-2a24bf99d0b8?auto=format&fit=crop&w=1400&q=80',
     date: '15 Jul 2025',
+    seoTitle: 'Cómo visitar la Isla de Lobos: guía 2026 (rutas, horarios y reservas)',
+    seoDescription: 'Guía práctica para visitar la Isla de Lobos desde Corralejo: cómo llegar, permiso de acceso, mejores rutas, qué llevar y cómo reservar tu barco. Todo lo que necesitas saber.',
+    content: `La **Isla de Lobos** es uno de esos lugares que parecen sacados de otro planeta: apenas 4,5 km² de calas turquesas, volcanes dormidos y fondos marinos protegidos, a solo 15 minutos en barco desde Corralejo (Fuerteventura). En esta guía te contamos, paso a paso, cómo organizar tu visita para aprovecharla al máximo.
+
+## Cómo llegar a la Isla de Lobos
+
+Se accede únicamente por mar. La forma más cómoda es el **water taxi desde Corralejo**, con salidas frecuentes durante la mañana y regreso por la tarde. La travesía dura unos 15 minutos por el estrecho de La Bocaina, con vistas a las dunas de Fuerteventura y, al fondo, la silueta de Lanzarote.
+
+![Aguas turquesas de la Isla de Lobos](https://images.unsplash.com/photo-1696454138713-570f884ba261?auto=format&fit=crop&w=1400&q=80)
+
+## Permiso de acceso: reserva con antelación
+
+La isla es **Reserva Natural Especial** y el número de visitantes diarios está limitado para proteger su ecosistema. Necesitas un **permiso de acceso gratuito** del Cabildo de Fuerteventura, además del ticket del barco. Nuestro equipo te ayuda a tener todo listo para que solo te preocupes de disfrutar.
+
+## Las mejores rutas y qué ver
+
+- **El Puertito**: la postal de Lobos, una laguna natural de aguas cristalinas ideal para el baño y el snorkel.
+- **Playa de la Concha**: arena blanca y agua tranquila, perfecta para familias.
+- **Faro de Martiño**: una caminata suave con vistas espectaculares al Atlántico.
+- **Montaña La Caldera**: el punto más alto (127 m), con panorámicas de 360°.
+
+## Qué llevar
+
+Agua abundante (no hay tiendas), protección solar, gorra, calzado cómodo, gafas y tubo de snorkel, y algo de comida. En la isla no hay sombra fácil, así que ve preparado.
+
+> **¿Listo para cruzar a Lobos?** Reserva tu [Water Taxi a la Isla de Lobos](/activity/water-taxi-lobos) con OWA: trayecto de ida y vuelta, guía a bordo y toda la gestión resuelta. Plazas limitadas por reserva natural.
+
+## Consejo final
+
+Ve temprano: la luz de la mañana es la mejor para las fotos y el mar suele estar más tranquilo. Y recuerda: en Lobos todo lo que entra, sale contigo. Es una joya virgen precisamente porque quienes la visitamos la cuidamos.`,
   },
   {
     id: 'teide-experience',
     category: 'AVENTURA',
     title: 'Amanecer en el Teide: la experiencia definitiva',
     excerpt: 'Nuestros guías te llevan a los 3.718m sobre un mar de nubes. Descubre por qué es la actividad más pedida en Tenerife.',
-    image: 'https://images.unsplash.com/photo-1501555088652-021faa106b9b?auto=format&fit=crop&w=900&q=80',
+    image: 'https://images.unsplash.com/photo-1501555088652-021faa106b9b?auto=format&fit=crop&w=1400&q=80',
     date: '08 Jul 2025',
+    seoTitle: 'Amanecer en el Teide: cómo vivir la experiencia (guía + reserva)',
+    seoDescription: 'Sube al Teide para ver el amanecer sobre el mar de nubes a 3.718 m. Cómo funciona el permiso del pico, qué ropa llevar, dificultad y cómo reservar la experiencia en Tenerife.',
+    content: `Ver el **amanecer desde el Teide** es, para muchos, la experiencia más impactante de todo Canarias. A 3.718 metros, sobre un mar de nubes teñido de naranja, el pico más alto de España se convierte en un mirador único del Atlántico. Te contamos cómo prepararte para vivirlo.
+
+## Por qué el Teide es tan especial
+
+El Teide es **Patrimonio de la Humanidad** y el corazón de un Parque Nacional con paisajes casi lunares. Al amanecer, la sombra del volcán se proyecta triangular sobre el horizonte —un fenómeno que solo se ve en muy pocas montañas del mundo— mientras el cielo pasa del violeta al dorado.
+
+![Paisaje volcánico del Teide en Tenerife](https://images.unsplash.com/photo-1671976847791-44be0409b487?auto=format&fit=crop&w=1400&q=80)
+
+## El permiso del pico
+
+Acceder a los últimos 200 metros hasta el cráter requiere un **permiso especial** limitado y muy solicitado. Nosotros nos encargamos de la logística y te guiamos por la ruta adecuada según la disponibilidad del día, para que la subida sea segura y sin complicaciones.
+
+## Dificultad y qué llevar
+
+La experiencia es exigente por la **altitud y el frío** (puede haber varios grados bajo cero al amanecer, incluso en verano). Recomendamos:
+
+- Ropa de abrigo por capas, guantes y gorro.
+- Calzado de montaña con buen agarre.
+- Frontal o linterna, agua y algo de comida energética.
+- Ir con descanso: la altura se nota.
+
+## Alternativas si no hay permiso de cima
+
+Aunque no consigas el permiso del cráter, el amanecer desde las **Cañadas del Teide** o desde los senderos altos es igualmente inolvidable. Nuestros guías locales adaptan la ruta para que la experiencia merezca la pena siempre.
+
+> **Vive el Teide con guía local.** Reserva la experiencia de [Ascenso al Teide](/activity/teide-hike) con OWA: ruta segura, gestión del acceso y el mejor punto para el amanecer.
+
+## Consejo final
+
+Consulta la previsión de viento y nubes: el Teide asoma **por encima del mar de nubes**, así que un día "nublado" abajo suele significar un espectáculo perfecto arriba.`,
   },
   {
     id: 'ballenas-canarias',
     category: 'NATURALEZA',
     title: '5 especies de ballenas que puedes ver en Canarias',
     excerpt: 'Canarias es santuario de cetáceos. Aprende a reconocerlos y descubre cuándo y dónde avistarlos con más probabilidad.',
-    image: 'https://images.unsplash.com/photo-1437622368342-7a3d73a34c8f?auto=format&fit=crop&w=900&q=80',
+    image: 'https://images.unsplash.com/photo-1437622368342-7a3d73a34c8f?auto=format&fit=crop&w=1400&q=80',
     date: '01 Jul 2025',
+    seoTitle: 'Ballenas en Canarias: 5 especies y dónde avistarlas',
+    seoDescription: 'Canarias es santuario de cetáceos: descubre 5 especies de ballenas que puedes ver, cómo identificarlas, la mejor época y dónde avistarlas. Guía y reserva de avistamiento con OWA.',
     readTime: '8 min',
     author: 'Equipo OWA',
     tags: ['ballenas', 'cetáceos', 'avistamiento', 'Gran Canaria', 'Tenerife', 'naturaleza'],
@@ -635,24 +699,127 @@ Sí. Barco pequeño = más movimiento. Toma biodramina/cafeína 30 min antes, mi
     category: 'FAMILIA',
     title: 'Las 10 mejores actividades para disfrutar en familia',
     excerpt: 'Desde el banana boat hasta el kayak transparente: nuestras favoritas para las vacaciones con niños.',
-    image: 'https://images.unsplash.com/photo-1475503572774-15a45e5d60b9?auto=format&fit=crop&w=900&q=80',
+    image: 'https://images.unsplash.com/photo-1475503572774-15a45e5d60b9?auto=format&fit=crop&w=1400&q=80',
     date: '22 Jun 2025',
+    seoTitle: 'Actividades en familia en Canarias: 10 planes con niños (2026)',
+    seoDescription: 'Las mejores actividades para hacer en familia en Canarias: kayak, snorkel, banana boat, avistamiento de delfines y más. Planes seguros y divertidos para niños con OWA.',
+    content: `Viajar a Canarias con niños es acertar seguro: buen clima todo el año, mar tranquilo y un montón de **actividades en familia** para todas las edades. Estas son nuestras 10 favoritas, elegidas por ser divertidas, seguras y aptas para peques.
+
+## 1. Kayak y cuevas marinas
+
+Remar en aguas calmadas y colarse en cuevas es pura aventura para los niños. Con chalecos y guía, es una de las actividades más completas.
+
+> Descúbrela: [Kayak y Cuevas Marinas](/activity/kayak-cuevas).
+
+## 2. Snorkel en reservas marinas
+
+Ver peces de colores con máscara y tubo engancha a cualquier edad. Las [rutas de snorkel](/activity/snorkel-teno) en zonas protegidas son ideales para empezar.
+
+![Familia disfrutando del mar en Canarias](https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1400&q=80)
+
+## 3. Banana boat y hinchables
+
+Risas garantizadas. El [banana boat](/activity/banana-boat) es un clásico para grupos y familias con niños a partir de cierta edad.
+
+## 4. Excursión a la Isla de Lobos
+
+Un día de playa virgen y baño en El Puertito. El [water taxi a Lobos](/activity/water-taxi-lobos) convierte la travesía en parte de la aventura.
+
+## 5-10. Más planes para peques
+
+- **Avistamiento de delfines y ballenas**: emoción y naturaleza en estado puro.
+- **Paddle surf** en aguas tranquilas.
+- **Barco con fondo o snorkel** en calas secretas.
+- **Rutas de senderismo suave** por paisajes volcánicos.
+- **Astronomía** para toda la familia bajo los mejores cielos de Europa.
+- **Piscinas naturales** para el baño seguro.
+
+## Consejos para actividades con niños
+
+- Reserva a primera hora: los peques rinden mejor y hay menos calor.
+- Lleva protección solar, agua y una muda.
+- Consúltanos la **edad mínima** de cada actividad: te recomendamos la mejor opción según las edades.
+
+> **¿Planificas las vacaciones en familia?** Escríbenos por WhatsApp y te preparamos un **itinerario a medida** con actividades seguras para todas las edades.`,
   },
   {
     id: 'lanzarote-volcanes',
     category: 'VIAJE',
     title: 'Ruta en buggy por los volcanes de Lanzarote',
     excerpt: 'Recorremos Timanfaya, La Geria y el Golfo con nuestros guías locales. Un día que no olvidarás.',
-    image: 'https://images.unsplash.com/photo-1720670272553-d352388d54d0?auto=format&fit=crop&w=900&q=80',
+    image: 'https://images.unsplash.com/photo-1720670272553-d352388d54d0?auto=format&fit=crop&w=1400&q=80',
     date: '14 Jun 2025',
+    seoTitle: 'Ruta en buggy por los volcanes de Lanzarote: Timanfaya y La Geria',
+    seoDescription: 'Recorre los volcanes de Lanzarote en buggy: Timanfaya, La Geria y el Golfo con guía local. Ruta off-road por paisajes lunares, consejos y reserva de la experiencia con OWA.',
+    content: `**Lanzarote** parece otro planeta: coladas de lava negra, viñedos plantados en ceniza y montañas de fuego que parecen recién apagadas. Y no hay mejor forma de descubrirla que a bordo de un **buggy**, recorriendo caminos que los autobuses no pisan.
+
+## Timanfaya, las Montañas del Fuego
+
+El Parque Nacional de Timanfaya es el corazón volcánico de la isla. Aquí la tierra todavía guarda calor a pocos metros de profundidad. Desde el buggy accederás a **miradores y pistas** con vistas que quitan el hipo, mientras el guía te cuenta la historia de las erupciones del siglo XVIII.
+
+![Paisaje volcánico de Lanzarote](https://images.unsplash.com/photo-1643965304951-07a7ebb783a0?auto=format&fit=crop&w=1400&q=80)
+
+## La Geria: viñedos sobre ceniza
+
+Uno de los paisajes agrícolas más singulares del mundo: cada vid crece en un hoyo protegido por un muro de piedra volcánica. La ruta atraviesa **La Geria**, la comarca vinícola donde nacen los famosos vinos malvasía de Lanzarote.
+
+## El Golfo y el Charco Verde
+
+La ruta suele acercarse al **Golfo**, un cráter abierto al mar con una laguna verde intensa por las algas, y a las playas de arena negra del oeste. Un contraste brutal de colores.
+
+> **Vive la ruta off-road.** Reserva el [Safari en Buggy](/activity/safari-buggy) con OWA: guía local, cascos y los mejores miradores volcánicos.
+
+## Más experiencias en Lanzarote
+
+Si te queda tiempo, la isla ofrece mucho más:
+
+- **Buceo** en fondos volcánicos de visibilidad excepcional: [Bautismo de buceo](/activity/buceo-lanzarote).
+- **Parasailing** para ver la costa desde el aire: [Parasailing en Lanzarote](/activity/parasailing-lanzarote).
+
+## Consejos para la ruta en buggy
+
+- Lleva gafas de sol, buff o pañuelo para el polvo y ropa que se pueda ensuciar.
+- Protección solar alta: el sol de Lanzarote es intenso todo el año.
+- Reserva con antelación en temporada alta; las plazas de buggy vuelan.`,
   },
   {
     id: 'starlight',
     category: 'ESTRELLAS',
     title: 'La Palma, la isla del cielo más limpio del mundo',
     excerpt: '¿Por qué La Palma tiene el cielo mejor conservado del planeta? Te lo explicamos con datos y las mejores observaciones.',
-    image: 'https://images.unsplash.com/photo-1770838916964-0ae934bf7632?auto=format&fit=crop&w=900&q=80',
+    image: 'https://images.unsplash.com/photo-1770838916964-0ae934bf7632?auto=format&fit=crop&w=1400&q=80',
     date: '05 Jun 2025',
+    seoTitle: 'La Palma, cielo Starlight: la mejor isla para ver las estrellas',
+    seoDescription: 'Descubre por qué La Palma tiene uno de los cielos más limpios del mundo (Reserva Starlight): dónde observar las estrellas, cuándo ir y cómo reservar una observación astronómica guiada.',
+    content: `Si te apasiona el cielo nocturno, **La Palma** es tu isla. Conocida como "La Isla Bonita", es también uno de los **mejores lugares del planeta para observar las estrellas**, con un cielo tan protegido que aquí se han instalado algunos de los telescopios más potentes del mundo.
+
+## Por qué el cielo de La Palma es único
+
+La Palma fue la **primera Reserva Starlight** del mundo. Tres factores la hacen excepcional:
+
+- **Altitud y mar de nubes**: el Roque de los Muchachos supera los 2.400 m, por encima de las nubes y la turbulencia atmosférica.
+- **Ley del Cielo**: una normativa pionera regula la iluminación para evitar la contaminación lumínica.
+- **Estabilidad atmosférica**: el aire limpio del Atlántico ofrece una nitidez rara de encontrar.
+
+![Cielo estrellado sobre La Palma](https://images.unsplash.com/photo-1605714726527-411541ab17f4?auto=format&fit=crop&w=1400&q=80)
+
+## Qué se puede ver
+
+A simple vista se distingue la **Vía Láctea** con un detalle asombroso. Con telescopio, planetas como Saturno y Júpiter, cúmulos, nebulosas y galaxias. En las noches sin luna, el espectáculo es sobrecogedor.
+
+## Cuándo ir
+
+Se puede observar todo el año, pero las **noches de luna nueva** son las mejores. El verano ofrece la Vía Láctea en su máximo esplendor y noches más cálidas.
+
+> **Mira las estrellas con guía experto.** Reserva la [Observación astronómica](/activity/stargazing) con OWA: telescopio profesional, astrónomo guía y los mejores puntos de observación.
+
+## Consejos para la observación
+
+- Abrígate bien: aunque sea verano, en altura hace frío de noche.
+- Evita las luces del móvil para no perder la visión nocturna (usa modo rojo).
+- Deja que tus ojos se adapten a la oscuridad al menos 15 minutos.
+
+Bajo el cielo de La Palma entenderás por qué astrónomos de todo el mundo eligen esta isla. Es, literalmente, mirar al universo con la mejor ventana de Europa.`,
   },
 ];
 

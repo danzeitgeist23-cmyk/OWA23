@@ -3,6 +3,7 @@ import { blogPosts } from '../mock';
 import { useParams, Link } from 'react-router-dom';
 import { ArrowLeft, Calendar, Clock, User, Tag, ChevronRight } from 'lucide-react';
 import { useCurrency } from '../context/CurrencyContext';
+import Seo from '../components/Seo';
 
 export default function BlogDetail() {
   const { id } = useParams();
@@ -41,10 +42,38 @@ export default function BlogDetail() {
 
     lines.forEach((line, index) => {
       const trimmed = line.trim();
-      
+
+      // Inline markdown: **bold** and [text](url) links.
+      const parseInline = (text) => {
+        const parts = text.split(/(\[[^\]]+\]\([^)]+\)|\*\*[^*]+\*\*)/g);
+        return parts.map((part, i) => {
+          const link = part.match(/^\[([^\]]+)\]\(([^)]+)\)$/);
+          if (link) {
+            return link[2].startsWith('/')
+              ? <Link key={i} to={link[2]} className="font-semibold text-[#1fa5a3] underline decoration-[#1fa5a3]/40 hover:text-[#c8a25a]">{link[1]}</Link>
+              : <a key={i} href={link[2]} target="_blank" rel="noreferrer" className="font-semibold text-[#1fa5a3] underline hover:text-[#c8a25a]">{link[1]}</a>;
+          }
+          if (part.startsWith('**') && part.endsWith('**')) return <strong key={i}>{part.slice(2, -2)}</strong>;
+          return <span key={i}>{part}</span>;
+        });
+      };
+
       // Horizontal rule
       if (trimmed === '---') {
         elements.push(<hr key={index} className="my-8 border-gray-200" />);
+        return;
+      }
+
+      // Image ![alt](url)
+      const imgMatch = trimmed.match(/^!\[([^\]]*)\]\(([^)]+)\)$/);
+      if (imgMatch) {
+        if (inList) { elements.push(<ul key={`list-${index}`} className="list-disc list-inside text-gray-700 mb-6 space-y-2">{listItems}</ul>); listItems = []; inList = false; }
+        elements.push(
+          <figure key={index} className="my-8">
+            <img src={imgMatch[2]} alt={imgMatch[1]} loading="lazy" className="w-full aspect-[16/9] object-cover rounded-2xl shadow-[0_18px_40px_-24px_rgba(11,33,61,0.3)]" />
+            {imgMatch[1] ? <figcaption className="mt-2 text-center text-sm text-gray-400">{imgMatch[1]}</figcaption> : null}
+          </figure>
+        );
         return;
       }
 
@@ -67,27 +96,17 @@ export default function BlogDetail() {
         const isHighlight = quoteText.startsWith('**') || quoteText.includes('**¿Listo') || quoteText.includes('**Dato');
         elements.push(
           <blockquote key={index} className={`border-l-4 border-[#c8a25a] pl-6 italic text-gray-600 my-6 ${isHighlight ? 'bg-[#fff5f2] rounded-r-lg p-4' : ''}`}>
-            <p className="whitespace-pre-wrap">{quoteText.replace(/\*\*(.*?)\*\*/g, (match, g1) => `<strong>${g1}</strong>`)}</p>
+            <p className="not-italic">{parseInline(quoteText)}</p>
           </blockquote>
         );
         return;
       }
 
-      // Bold inline **text** handling for paragraphs
-      const parseBold = (text) => {
-        const parts = text.split(/(\*\*.*?\*\*)/);
-        return parts.map((part, i) => 
-          part.startsWith('**') && part.endsWith('**') 
-            ? <strong key={i}>{part.slice(2, -2)}</strong>
-            : <span key={i}>{part}</span>
-        );
-      };
-
       // List items
       if (trimmed.startsWith('- ') || trimmed.startsWith('* ')) {
         if (!inList) inList = true;
         const itemText = trimmed.replace(/^[-*]\s*/, '');
-        listItems.push(<li key={index} className="leading-relaxed">{parseBold(itemText)}</li>);
+        listItems.push(<li key={index} className="leading-relaxed">{parseInline(itemText)}</li>);
         return;
       } else if (inList) {
         elements.push(<ul key={`list-${index}`} className="list-disc list-inside text-gray-700 mb-6 space-y-2">{listItems}</ul>);
@@ -116,7 +135,7 @@ export default function BlogDetail() {
                 <tbody>
                   {rows.map((row, r) => (
                     <tr key={r} className={r % 2 === 0 ? 'bg-gray-50' : ''}>
-                      {row.map((cell, c) => <td key={c} className="border border-gray-300 px-4 py-3">{parseBold(cell)}</td>)}
+                      {row.map((cell, c) => <td key={c} className="border border-gray-300 px-4 py-3">{parseInline(cell)}</td>)}
                     </tr>
                   ))}
                 </tbody>
@@ -130,7 +149,7 @@ export default function BlogDetail() {
 
       // Regular paragraph
       if (trimmed && !trimmed.startsWith('|')) {
-        elements.push(<p key={index} className="text-gray-700 leading-relaxed mb-4">{parseBold(trimmed)}</p>);
+        elements.push(<p key={index} className="text-gray-700 leading-relaxed mb-4">{parseInline(trimmed)}</p>);
       }
     });
 
@@ -152,7 +171,7 @@ export default function BlogDetail() {
             <tbody>
               {rows.map((row, r) => (
                 <tr key={r} className={r % 2 === 0 ? 'bg-gray-50' : ''}>
-                  {row.map((cell, c) => <td key={c} className="border border-gray-300 px-4 py-3">{parseBold(cell)}</td>)}
+                  {row.map((cell, c) => <td key={c} className="border border-gray-300 px-4 py-3">{parseInline(cell)}</td>)}
                 </tr>
               ))}
             </tbody>
@@ -166,6 +185,13 @@ export default function BlogDetail() {
 
   return (
     <article className="pt-24 pb-20 bg-white">
+      <Seo
+        title={post.seoTitle || `${post.title} | OWA Wild Adventure`}
+        description={post.seoDescription || post.excerpt}
+        image={post.image}
+        canonical={`https://owawild.com/blog/${post.id}`}
+        type="article"
+      />
       <div className="max-w-4xl mx-auto px-5 md:px-8">
         {/* Breadcrumb */}
         <nav className="mb-8 flex items-center gap-2 text-sm text-gray-500" aria-label="Breadcrumb">

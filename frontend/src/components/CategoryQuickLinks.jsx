@@ -25,7 +25,7 @@ export default function CategoryQuickLinks() {
                 to={`/activities/${slug}`}
                 className="inline-flex items-center gap-2 rounded-full border border-gray-200 bg-white px-5 py-2.5 text-sm font-medium text-[#14213d] transition-all hover:border-[#1fa5a3] hover:text-[#1fa5a3]"
               >
-                <Icon className="h-4 w-4 text-[#1fa5a3]" /> {label}
+                <Icon className="h-4 w-4 text-[#c8a25a]" /> {label}
               </Link>
             );
           })}

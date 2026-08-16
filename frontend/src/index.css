@@ -239,4 +239,36 @@ code {
   .dark .text-gray-600 {
     color: hsl(var(--muted-foreground)) !important;
   }
+
+  /* Body / heading text that was hardcoded dark — make it readable in dark mode */
+  .dark .text-gray-700,
+  .dark .text-gray-800,
+  .dark .text-gray-900,
+  .dark .text-slate-700,
+  .dark .text-slate-800,
+  .dark .text-slate-900,
+  .dark .text-black,
+  .dark .text-\[\#0b1c26\],
+  .dark .text-\[\#071a2b\] {
+    color: hsl(var(--foreground)) !important;
+  }
+
+  .dark .text-slate-400,
+  .dark .text-slate-500,
+  .dark .text-slate-600 {
+    color: hsl(var(--muted-foreground)) !important;
+  }
+
+  /* Surfaces used by cards/panels that were hardcoded light */
+  .dark .bg-slate-50,
+  .dark .bg-slate-100,
+  .dark .bg-\[\#fbfcfd\],
+  .dark .bg-\[\#f4fbfa\] {
+    background-color: hsl(var(--muted)) !important;
+  }
+
+  .dark .border-slate-100,
+  .dark .border-slate-200 {
+    border-color: hsl(var(--border)) !important;
+  }
 }
